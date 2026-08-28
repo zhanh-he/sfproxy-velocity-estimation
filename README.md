@@ -2,6 +2,8 @@
 
 Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies”**, accepted at **ISMIR 2026**.
 
+- Too busy in recent ... will finalise in mid Septermber :)
+
 ## Overview
 
 Many music datasets provide aligned audio and MIDI note events but lack reliable note-level velocity labels, particularly outside the piano domain. This repository studies cross-instrument MIDI velocity estimation in this label-scarce setting.
