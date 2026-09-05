@@ -2,7 +2,8 @@
 
 Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies”**, accepted at **ISMIR 2026**.
 
-- Too busy in recent ... will finalise in mid Septermber :)
+- Too busy in recent ... will cleanup code and provide DEMO here ~ mid Septermber :)
+- Codes before cleanup are ready in https://github.com/zhanh-he/202604_midiproxy
 
 ## Overview
 
