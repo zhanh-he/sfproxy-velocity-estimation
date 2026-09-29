@@ -36,4 +36,4 @@ The published MP3 previews were then adjusted by [`../scripts/match_listening_ga
 - [GAPS](https://aim-qmul.github.io/GAPS/): Riley, Guo, Edwards, and Dixon (ISMIR 2024). The project team confirmed permission for these 20 s research demo excerpts after applying for dataset access through Zenodo.
 - [FreePats Spanish Classical Guitar](https://freepats.zenvoid.org/Guitar/acoustic-guitar.html): CC0 1.0. [Salamander Grand Piano V3](https://github.com/sfzinstruments/SalamanderGrandPiano) is credited in the site footer.
 
-The public guitar cards remain visibly incomplete until selected final 5 s predictions are recovered. In particular, the older 2 s proxy evaluation files on 5090 are **not** presented as the paper's guitar listening result.
+The public guitar cards remain visibly incomplete until selected final 5 s adapted VeloEst predictions are recovered or regenerated. The [recovery status](GUITAR_RESULT_RECOVERY.md) distinguishes the retained 5 s backend checkpoints from the missing adapted velocity estimators. In particular, the older 2 s proxy evaluation files on 5090 are **not** presented as the paper's guitar listening result.
