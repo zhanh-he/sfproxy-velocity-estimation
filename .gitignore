@@ -9,6 +9,7 @@ wandb/
 /datasets/
 *.ckpt
 *.pth
+!score_hpt/checkpoints/*.pth
 *.pt
 *.h5
 *.hdf5

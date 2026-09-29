@@ -2,7 +2,7 @@ name: Deploy listening demo
 
 on:
   push:
-    branches: [main]
+    branches: [camera-ready-release]
     paths:
       - demo/docs/**
       - .github/workflows/deploy-demo.yml

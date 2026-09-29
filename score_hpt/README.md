@@ -13,9 +13,20 @@ model.input2=onset
 model.input3=null
 ```
 
-The aligned MIDI supplies note identities and timing, the audio supplies performance evidence, and the frontend predicts note velocities. The original [score-informed-amt README](https://github.com/zhanh-he/score-informed-amt) describes other branches (`hppnet`, `dynest`, direct estimation) and `note_editor` inputs (`frame` / `exframe`). Those are options in the upstream project; they are not interchangeable with the onset-only configuration above when loading weights.
+The aligned MIDI supplies note identities and timing, the audio supplies performance evidence, and the frontend predicts note velocities. The original [score-informed-amt README](https://github.com/zhanh-he/score-informed-amt) describes other branches (`hppnet`, `dynest`, direct estimation) and `note_editor` inputs (`frame` / `exframe`). For this paper we selected the **onset-only** piano option. Its 120k checkpoint differs slightly from the upstream repository's public onset+frame 100k example; both projects share authors. We thank the earlier Score-Informed AMT work for the model and release the two paper-era piano weights in [`checkpoints/`](checkpoints/README.md).
 
-**Checkpoint distinction:** the public upstream repository currently contains `hpt+onset+frame+score_note_editor/100000_iterations.pth`. The recovered 5090 piano frontend for this work is named `hpt+onset+score_note_editor/120000_iterations.pth` (no `frame` input). They have different configurations and hashes. The current camera-ready code does not bundle the local weight; see [`../demo/analysis/PROVENANCE.md`](../demo/analysis/PROVENANCE.md). The team should confirm the exact training lineage before saying that the public upstream file is the paper's exact starting checkpoint.
+## Use the released checkpoints
+
+From the repository root, with a performance recording and its aligned piano score:
+
+```bash
+python scripts/infer_compare.py \
+  --audio /path/to/performance.wav \
+  --midi /path/to/aligned_score.mid \
+  --out /path/to/comparison
+```
+
+This writes `veloest.mid`, `diffsfproxy.mid`, `flat64.mid`, `notes.csv`, `comparison.svg`, and `summary.json`. Add `--sfz /path/to/SalamanderGrandPianoV3.sfz` to render WAV and MP3 files with `sfizz_render`. If the input MIDI contains true performance velocities, add `--reference-velocities` to report MAE; otherwise the input velocities are treated as score placeholders. See the [checkpoint details](checkpoints/README.md) and [inference script](../scripts/infer_compare.py).
 
 ## Code map
 
@@ -26,6 +37,7 @@ The aligned MIDI supplies note identities and timing, the audio supplies perform
 - `pytorch/direct_invension/`: prediction and evaluation jobs for the route variants.
 - `pytorch/proxy/`: frozen backend adapters and losses.
 - `pytorch/tests/`: frontend, evaluation, and proxy-gradient tests.
+- `checkpoints/`: the released VeloEst and VeloEst+Diff-SFProxy piano weights.
 - [`README_scoreinf_proxy.md`](README_scoreinf_proxy.md): implementation notes and loss details retained from the research workspace.
 
 ## Setup and example
@@ -37,7 +49,7 @@ python pytorch/train_proxy.py \
   model.type=hpt score_informed.method=note_editor \
   model.input2=onset model.input3=null \
   model.frontend_pretrained_mode=route2_piano_specific \
-  model.frontend_pretrained=/path/to/onset_only_piano_frontend.pth \
+  model.frontend_pretrained=checkpoints/veloest_onset_only_120k.pth \
   backend.checkpoint=/path/to/soundfont_proxy.ckpt \
   backend.backend_segment_seconds=5
 ```

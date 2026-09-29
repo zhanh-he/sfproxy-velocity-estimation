@@ -1,6 +1,24 @@
 # Experiment launchers
 
-Run these from the repository root unless a script states otherwise. The scripts were recovered from the 5090/Kaya research workspaces; they expose experimental settings but require datasets and checkpoints outside Git.
+Run these from the repository root unless a script states otherwise. The training launchers were recovered from the 5090/Kaya research workspaces and still require external datasets and backend checkpoints. The two released VeloEst inference checkpoints are under [`../score_hpt/checkpoints/`](../score_hpt/checkpoints/README.md).
+
+## Inference comparison
+
+[`infer_compare.py`](infer_compare.py) takes one aligned audio/MIDI pair and runs the two released piano checkpoints directly. It preserves the source MIDI's note timing, programs, tempo, and control changes while replacing note velocities. It writes three MIDIs (Flat 64, VeloEst, VeloEst+Diff-SFProxy), `notes.csv`, a 1600 × 860 SVG piano-roll comparison, and `summary.json`. An optional SFZ path adds rendered WAV/MP3 audio. No dataset packing, proxy backend checkpoint, or training step is needed.
+
+```bash
+python scripts/infer_compare.py \
+  --audio /path/to/performance.wav \
+  --midi /path/to/aligned_score.mid \
+  --out /path/to/inference_output \
+  --plot-start 60 --plot-seconds 20 \
+  --reference-velocities \
+  --sfz /path/to/SalamanderGrandPianoV3.sfz
+```
+
+Use `--reference-velocities` only when the input MIDI's note velocities are ground truth. Otherwise the figure shows each approach's mean velocity without an accuracy claim. The onset-assisted HPT is piano trained; the two published files demonstrate the piano comparison and do not assert a validated guitar-domain result. SFZ rendering needs `sfizz_render` and `ffmpeg`; see [`../diff-sfproxy/README.md`](../diff-sfproxy/README.md).
+
+## Training and evaluation launchers
 
 | Directory | Purpose | Main entry points |
 | --- | --- | --- |

@@ -2,7 +2,7 @@
 
 Research code and presentation material for **Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies** (ISMIR 2026).
 
-**[Audio and MIDI demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/)** · **[Camera-ready PDF](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Results and provenance](demo/analysis/README.md)**
+**[Audio and MIDI demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/)** · **[Two inference checkpoints](score_hpt/checkpoints/README.md)** · **[Camera-ready PDF](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Results and provenance](demo/analysis/README.md)**
 
 ## Repository layout
 
@@ -14,17 +14,17 @@ Research code and presentation material for **Beyond Piano: Cross-Instrument MID
 | [`diff-synth/`](diff-synth/README.md) | Adapted piano and guitar differentiable synthesizer backends, with original-project acknowledgements |
 | [`scripts/`](scripts/README.md) | Experiment launchers for local machines and Kaya |
 
-The code starts from the team's previous [cross-machine research repository](https://github.com/zhanh-he/202604_midiproxy). This layout separates the paper and presentation evidence from the training implementations. Large datasets, SoundFont sample libraries, and model checkpoints are external; the [provenance inventory](demo/analysis/PROVENANCE.md) records the recovered files and unresolved gaps.
+The code starts from the team's previous [cross-machine research repository](https://github.com/zhanh-he/202604_midiproxy). This layout separates the paper and presentation evidence from the training implementations. The two VeloEst inference checkpoints are included; large datasets, SoundFont sample libraries, and backend training checkpoints remain external. The [provenance inventory](demo/analysis/PROVENANCE.md) records recovered files and unresolved gaps.
 
 ## Typical order of work
 
 1. Prepare MAESTRO/SMD/GAPS/François Leduc data and a local SoundFont. See [`diff-sfproxy/README.md`](diff-sfproxy/README.md) for the SFZ renderer and paths.
 2. Train or supply a SoundFont proxy checkpoint with `diff-sfproxy/` and `scripts/sfproxy/`.
-3. Supply the piano Score-HPT frontend checkpoint and, for the Diff-Synth comparison, the relevant DDSP checkpoint. See `score_hpt/` and `diff-synth/`.
+3. For immediate inference, run [`scripts/infer_compare.py`](scripts/infer_compare.py) with aligned piano audio/MIDI; its two VeloEst checkpoints are bundled. For retraining and the Diff-Synth comparison, supply the relevant backend checkpoints. See `score_hpt/` and `diff-synth/`.
 4. Run the method launchers under `scripts/route/` or `scripts/kaya/`.
 5. Rebuild paper figures with `python3 demo/analysis/build_figures.py`. Serve the demo locally with `python3 -m http.server 8000 --directory demo/docs`.
 
-The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. Some inherited configuration defaults remain at 2 s; set `backend.backend_segment_seconds=5` for the main comparison. The code and paper tables are available here, but end-to-end retraining still requires the external data and selected checkpoints.
+The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. Some inherited configuration defaults remain at 2 s; set `backend.backend_segment_seconds=5` for the main comparison. The released piano inference path is self-contained apart from Python dependencies; end-to-end retraining still requires external data and backend checkpoints.
 
 ## Citation and release status
 

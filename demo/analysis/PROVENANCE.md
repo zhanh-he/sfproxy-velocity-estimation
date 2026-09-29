@@ -1,6 +1,6 @@
 # Release inventory — 2026-09-29
 
-This file records the source snapshot first assembled on `camera-ready-release` and then reorganized locally into the five-component layout. It is for the team to review before merging or publishing weights.
+This file records the source snapshot first assembled on `camera-ready-release` and then reorganized into the five-component layout. It is for the team to review before merging to `main`.
 
 ## Source code
 
@@ -13,11 +13,11 @@ This file records the source snapshot first assembled on `camera-ready-release` 
 - The supplied camera-ready PDF and LaTeX snapshot are in `demo/paper/`. Table 1 and Table 2 were transcribed to `demo/analysis/proxy_recovery.csv` and `demo/analysis/paper_results.csv`, then checked against the text extracted from the 8-page PDF.
 - `demo/analysis/5090_evaluation_inventory.csv` indexes 28 saved summary files on lab5090: 14 MAESTRO, 12 SMD, one GAPS, and one François Leduc. Three runs report one failed item. These are not automatically the selected paper runs.
 - The GAPS and FL files found on 5090 are only 2 s proxy evaluations. The paper's final 5 s guitar predictions, renders, selected checkpoint list, and per-piece comparison were not found in the inspected 5090/Kaya paths. Do not present the 5090 guitar inventory as the camera-ready guitar result.
-- A matched 20 s MAESTRO audio/MIDI demo was recovered from 5090. It uses one human test recording and the saved 5 s Diff-Synth and 5 s Diff-SFProxy predictions, with a new Flat 64 control rendered through the same Salamander SoundFont. The 20 s excerpt contains 137 aligned notes per method. Demo audio is in `demo/docs/assets/`.
+- A matched 20 s MAESTRO audio/MIDI demo was recovered from 5090. The Diff-Synth file remains a saved 5 s prediction. VeloEst and VeloEst+Diff-SFProxy were then rerun from the two released checkpoints on the retained full-piece HDF5 waveform and MIDI events, with a Flat 64 control rendered through the same Salamander SoundFont. The visual excerpt contains 137 aligned notes per method. Demo audio is in `demo/docs/assets/`; the 721-note inference CSV is under `demo/analysis/inference_example/`.
 
-## Model files still on lab5090
+## Model file provenance
 
-These files were verified by path, byte size, and SHA-256. They are not committed to Git. Paths are relative to `/media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/`.
+These files were verified by path, byte size, and SHA-256. The first and third are now committed under [`score_hpt/checkpoints/`](../../score_hpt/checkpoints/README.md); the Diff-Synth weight is not. Paths below are relative to `/media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/`.
 
 | Role | Relative path | Bytes | SHA-256 |
 | --- | --- | ---: | --- |
@@ -25,7 +25,7 @@ These files were verified by path, byte size, and SHA-256. They are not committe
 | Example Diff-Synth VeloEst | `checkpoints/route3_half_maestro_6k/5s+hpt+onset+score_note_editor+backend_diffsynth_piano+piano_ssm_spectral+sup0+backend1+prior0p1+sat0p2/60000_iterations.pth` | 20,761,532 | `d158caa0efa427434e7c497bd4bb95dbb6697cc2c1e382f01db8c44b465ecf97` |
 | Example Diff-SFProxy VeloEst | `checkpoints/route4_full_piano/5s+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0p5+backend0p5+prior0p1+sat0p2/120000_iterations.pth` | 20,761,642 | `d22e589b2c46b6efd4fbd307c5130b5f083abedda543fdeb50f117b1bb230343` |
 
-The SoundFont proxy and DDSP backend checkpoints used for training/adaptation also remain on 5090 and are not bundled. The public release should name and distribute the exact selected checkpoints only after the experiment owners confirm them.
+The SoundFont proxy and DDSP backend checkpoints used for training/adaptation remain on 5090 and are not bundled. The two released VeloEst files suffice for the published piano inference comparison; they do not replace the missing final guitar experiment files.
 
 ## Review items before merging to main
 
