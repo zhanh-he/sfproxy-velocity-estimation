@@ -2,7 +2,7 @@
 
 Code and research demo for **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies”** (ISMIR 2026), by Zhanhong He, Hanyu Meng, David (Defeng) Huang, and Roberto Togneri.
 
-**[Interactive demo and audio](docs/index.html)** · **[Camera-ready paper](paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Paper result data](analysis/README.md)**
+**[Live demo and audio](https://zhanh-he.github.io/sfproxy-velocity-estimation/)** · **[Camera-ready paper](paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Paper result data](analysis/README.md)**
 
 This `camera-ready-release` branch is a reviewable release candidate. The implementation comes from the team's `202604_midiproxy` code on lab5090, with later Kaya launch scripts. Large datasets, SoundFonts, and training checkpoints stay outside Git. See [release inventory](RELEASE_INVENTORY.md) for what was found and what still needs recovery or redistribution.
 
@@ -68,7 +68,7 @@ This regenerates the presentation-ready SVGs and the site's result JSON from the
 
 ## Audio demo
 
-Open [`docs/index.html`](docs/index.html) through a local static server, or use the GitHub Pages URL once enabled. From the repository root:
+Open the [live demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/) or serve [`docs/index.html`](docs/index.html) locally. From the repository root:
 
 ```bash
 python3 -m http.server 8000 --directory docs
