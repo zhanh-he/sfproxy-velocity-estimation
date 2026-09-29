@@ -77,7 +77,7 @@ class DDSPGuitarSynthProxy:
             if generic:
                 root = Path(generic).expanduser().resolve()
             else:
-                root = Path(__file__).resolve().parents[3] / 'synthesizer' / 'ddsp-guitar-synth'
+                root = Path(__file__).resolve().parents[3] / 'diff-synth' / 'ddsp-guitar-synth'
         return root
 
     def _read_checkpoint_config(self, checkpoint_path: Path) -> dict:

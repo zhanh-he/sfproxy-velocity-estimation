@@ -1,0 +1,94 @@
+defaults:
+  - _self_
+
+# Shared data export config.
+# Use `--config-name data_piano` or `data_guitar` for concrete runs.
+
+boundary_mode: default
+split: train
+task_name: ${sampler_preset}_${seg_tag:${instrument.seg_len_s}}_${boundary_mode}
+reset_output_dir: false
+train_dataset_size: 20000
+val_dataset_size: 2000
+train_seed_offset: 0
+val_seed_offset: 1000
+
+paths:
+  # Default to the launch directory so notebooks/scripts run cleanly from repo root
+  # without requiring PROJECT_ROOT to be exported.
+  repo_root: ${oc.env:PROJECT_ROOT,.}
+  analysis_dir: ../demo/analysis
+
+  # Per-machine data workspace. Override from CLI if needed:
+  # paths.workspace_dir=/some/other/root
+  workspace_dir: /media/mengh/SharedData/zhanh/202601_midisemi_data
+  project_name: synth-proxy
+
+  project_dir: ${paths.workspace_dir}/${paths.project_name}
+  data_dir: ${paths.project_dir}/data
+  proxy_dir: ${paths.project_dir}/proxy
+
+instrument:
+  name: instrument
+  path: ""
+  backend: auto
+  bank: 0
+  program: 0
+  polyphony: 64
+  gain_db: -6.0
+  sfizz_block_size: 1024
+  sfizz_quality: 3
+  sfizz_use_eot: false
+
+  sr: 22050
+  seg_len_s: 2.0
+  nmax: 64
+
+feature:
+  n_fft: 2048
+  hop: 221
+  win_length: null
+
+  harmonic_count: 5
+  band_bins: 1
+
+  energy_window_s: 0.12
+  onset_pre_s: 0.02
+  onset_post_s: 0.08
+
+  include_f0_ratio: false
+
+sampler_preset: mixed_v2
+sampler_velo_present: false
+sampler_options: {}
+sampler_components_v2: {}
+sampler_weights_v2: {}
+
+# Global dataset indexing
+# dataset_size defines the full virtual dataset size for deterministic sampling.
+# start_index/end_index define which range to export to this folder.
+dataset_size: ${split_value:${split},${train_dataset_size},${val_dataset_size}}
+seed_offset: ${split_value:${split},${train_seed_offset},${val_seed_offset}}
+start_index: 0
+end_index: ${dataset_size}
+
+# Export throughput
+batch_size: 8
+num_workers: 8
+prefetch_factor: 2
+
+# Rejection sampling filters
+rms_min: 0.01
+rms_max: 0.30
+peak_abs_max: 0.999
+max_tries: 20
+
+# Export audio waveforms for debugging
+# 0: disable, -1: export all, N>0: export first N
+export_audio: 0
+
+hydra:
+  run:
+    dir: ${paths.data_dir}/${instrument.name}/${task_name}/${split}
+  job:
+    chdir: true

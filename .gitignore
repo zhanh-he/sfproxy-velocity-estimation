@@ -17,6 +17,6 @@ wandb/
 *.wav
 *.flac
 *.mp3
-!docs/assets/*.mp3
+!demo/docs/assets/*.mp3
 *.log
 .DS_Store

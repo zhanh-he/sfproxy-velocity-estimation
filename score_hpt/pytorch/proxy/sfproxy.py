@@ -140,7 +140,7 @@ class SFProxyObjective:
             if generic:
                 root = Path(generic).expanduser().resolve()
             else:
-                root = Path(__file__).resolve().parents[3] / 'synth-proxy'
+                root = Path(__file__).resolve().parents[3] / 'diff-sfproxy'
         return root
 
     @staticmethod

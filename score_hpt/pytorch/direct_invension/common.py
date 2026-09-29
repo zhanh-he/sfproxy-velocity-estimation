@@ -18,8 +18,8 @@ def ensure_repo_imports() -> None:
     candidates = [
         repo_root(),
         repo_root() / "score_hpt",
-        repo_root() / "data_analysis" / "src",
-        repo_root() / "synth-proxy" / "src",
+        repo_root() / "demo" / "analysis" / "src",
+        repo_root() / "diff-sfproxy" / "src",
     ]
     for path in candidates:
         path_str = str(path)

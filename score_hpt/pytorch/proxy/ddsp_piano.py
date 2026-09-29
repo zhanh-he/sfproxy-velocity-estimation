@@ -76,7 +76,7 @@ class DDSPPianoProxy:
             if generic:
                 root = Path(generic).expanduser().resolve()
             else:
-                root = Path(__file__).resolve().parents[3] / 'synthesizer' / 'ddsp-piano-pytorch'
+                root = Path(__file__).resolve().parents[3] / 'diff-synth' / 'ddsp-piano-pytorch'
         return root
 
     def _build_model(self, proxy_root: Path):

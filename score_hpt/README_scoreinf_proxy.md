@@ -10,12 +10,12 @@ differences are **what supervises that prediction**.
 
 ## Training entrypoints
 
-All three entrypoints live under [`pytorch/`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch):
+All three entrypoints live under [`pytorch/`](pytorch):
 
-- [`train.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/train.py) -- Route II, supervised velocity only
-- [`train_ddsp.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/train_ddsp.py) -- Route III, weak supervision via a frozen **Diff-Synth** (DDSP-Piano / DDSP-Guitar) renderer + audio loss
-- [`train_proxy.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/train_proxy.py) -- Route IV, weak supervision via a frozen **Diff-SFProxy** (SoundFont neural proxy) note-wise loss
-- [`train_backend.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/train_backend.py) -- the shared training loop that Route III / IV reuse
+- [`train.py`](pytorch/train.py) -- Route II, supervised velocity only
+- [`train_ddsp.py`](pytorch/train_ddsp.py) -- Route III, weak supervision via a frozen **Diff-Synth** (DDSP-Piano / DDSP-Guitar) renderer + audio loss
+- [`train_proxy.py`](pytorch/train_proxy.py) -- Route IV, weak supervision via a frozen **Diff-SFProxy** (SoundFont neural proxy) note-wise loss
+- [`train_backend.py`](pytorch/train_backend.py) -- the shared training loop that Route III / IV reuse
 
 Route III and Route IV use the same loop and the same total-loss structure:
 
@@ -45,13 +45,13 @@ Operational rules:
 
 ## Route II -- supervised velocity (`train.py`)
 
-Available supervised losses (all defined in [`losses.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py)):
+Available supervised losses (all defined in [`losses.py`](pytorch/losses.py)):
 
-- `velocity_bce`  -- see [losses.py:96](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L96)
-- `velocity_mse`  -- see [losses.py:102](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L102)
-- `kim_bce_l1`    -- see [losses.py:108](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L108), **recommended default**
+- `velocity_bce`  -- see [losses.py:96](pytorch/losses.py#L96)
+- `velocity_mse`  -- see [losses.py:102](pytorch/losses.py#L102)
+- `kim_bce_l1`    -- see [losses.py:108](pytorch/losses.py#L108), **recommended default**
 
-These are the only `loss.loss_type` values accepted by [`get_loss_func`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L549).
+These are the only `loss.loss_type` values accepted by [`get_loss_func`](pytorch/losses.py#L549).
 
 ## Route III -- Diff-Synth backend loss (`train_ddsp.py`)
 
@@ -59,13 +59,13 @@ Route III renders predicted velocities through a frozen DDSP renderer and
 supervises the front-end by matching the rendered audio against the real audio.
 
 Supported backend audio losses (canonical names, see
-[`AUDIO_LOSS_TYPES`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L481)):
+[`AUDIO_LOSS_TYPES`](pytorch/losses.py#L481)):
 
 - `piano_ssm_spectral`               -- multi-resolution spectral loss, Piano-SSM / DDSP style
 - `piano_ssm_spectral_plus_log_rms`  -- spectral loss + small clip-level log-RMS auxiliary (**default**)
 
 The selected audio loss is built by
-[`build_audio_loss`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L515) from `cfg.backend.audio_loss.*`.
+[`build_audio_loss`](pytorch/losses.py#L515) from `cfg.backend.audio_loss.*`.
 
 Typical Route III overrides:
 
@@ -81,14 +81,14 @@ loss.backend_weight=1.0
 ## Route IV -- Diff-SFProxy backend loss (`train_proxy.py`)
 
 Route IV replaces the differentiable renderer with a frozen neural proxy
-(`synth-proxy`). Instead of comparing audio, it compares **per-note feature
+(`diff-sfproxy`). Instead of comparing audio, it compares **per-note feature
 embeddings** (harmonic energy + onset flux) between GT-aligned notes and the
 proxy's prediction driven by the predicted velocities.
 
 The whole pipeline lives in
-[`proxy/sfproxy.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/proxy/sfproxy.py):
+[`proxy/sfproxy.py`](pytorch/proxy/sfproxy.py):
 
-- `SFProxyObjective.compute` -- the top-level entry used by `train_backend.py` ([sfproxy.py:532](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/proxy/sfproxy.py#L532))
+- `SFProxyObjective.compute` -- the top-level entry used by `train_backend.py` ([sfproxy.py:532](pytorch/proxy/sfproxy.py#L532))
 - `_build_note_batch` packs the GT-aligned note list with velocity values read from the predicted roll at each onset frame
 - `_extract_target_features` runs the frozen `extract_note_features_padded` on the real audio to get the target per-note features
 - `self.model(...)` (a frozen `NoteProxyTransformer`) predicts features from `(pitch, onset, duration, velocity)` tokens
@@ -97,7 +97,7 @@ The whole pipeline lives in
 ### Supported Route IV losses
 
 Only three values of `backend.diffproxy.loss_type` are accepted, all implemented
-in [`SFProxyObjective._masked_loss`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/proxy/sfproxy.py#L493):
+in [`SFProxyObjective._masked_loss`](pytorch/proxy/sfproxy.py#L493):
 
 - `smooth_l1` -- `F.smooth_l1_loss(pred, target, beta=loss_beta)` (**default / recommended**)
 - `l1`        -- `|pred - target|`
@@ -108,7 +108,7 @@ Any other value raises `ValueError` at construction time.
 ### How the smooth-L1 supervision is actually wired
 
 All the following happens inside
-[`SFProxyObjective.compute`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/proxy/sfproxy.py#L532):
+[`SFProxyObjective.compute`](pytorch/proxy/sfproxy.py#L532):
 
 1. `_crop_inputs` -- crop audio + rolls to the backend segment (`backend.backend_segment_seconds`, e.g. 2 s or 5 s inside the 10 s Score-HPT segment).
 2. `_crop_note_events_batch` -- crop the dataloader's GT aligned note list to the same window; `use_gt_aligned_note_events=true` means velocities are read from the predicted roll at each GT onset frame (no threshold-based note building).
@@ -116,10 +116,10 @@ All the following happens inside
 4. `_extract_target_features` -- computes target features from the real audio via the frozen `DynamicsFeatureConfig` extractor (no gradients).
 5. `self.model(pitch, cont_norm, mask)` -- frozen transformer predicts features from the note tokens (velocity tokens carry gradients back into `vel_pred`).
 6. `_masked_loss(pred, target, mask)` -- masked, feature-weighted point-wise loss. **This is where the `smooth_l1` is computed**, at
-   [sfproxy.py:501-511](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/proxy/sfproxy.py#L501-L511).
+   [sfproxy.py:501-511](pytorch/proxy/sfproxy.py#L501-L511).
 
 The training loop in `train_backend.py` then does, at
-[train_backend.py:633-643](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/train_backend.py#L633-L643):
+[train_backend.py:633-643](pytorch/train_backend.py#L633-L643):
 
 ```python
 proxy_stats = proxy_objective.compute(batch_data_dict, audio, vel_pred, iteration)
@@ -155,13 +155,13 @@ loss.backend_weight=1.0
 
 ## Prior and saturation losses (shared, kept for both routes)
 
-Two auxiliary regularizers in [`losses.py`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py) complement the backend loss:
+Two auxiliary regularizers in [`losses.py`](pytorch/losses.py) complement the backend loss:
 
 - `velocity_prior_loss` -- weak anti-collapse prior
   `L = (mean(v) - mu)^2 + relu(var_min - var(v))`, on onset positions by default.
-  Enabled with `loss.velocity_prior_weight > 0` (and `loss.velocity_prior_mean`, `loss.velocity_prior_min_var`). See [losses.py:121](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L121).
+  Enabled with `loss.velocity_prior_weight > 0` (and `loss.velocity_prior_mean`, `loss.velocity_prior_min_var`). See [losses.py:121](pytorch/losses.py#L121).
 - `velocity_saturation_loss` -- penalises predictions saturating near the top.
-  Enabled with `loss.velocity_saturation_weight > 0` (and `loss.velocity_saturation_threshold`). See [losses.py:152](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L152).
+  Enabled with `loss.velocity_saturation_weight > 0` (and `loss.velocity_saturation_threshold`). See [losses.py:152](pytorch/losses.py#L152).
 
 These are the **core** regularizers kept on top of the Route III / IV backend
 losses. They are intentionally not ablated away.
@@ -196,7 +196,7 @@ The backend segment length is part of the run name.
 ### Route III extra backend charts
 
 With `piano_ssm_spectral_plus_log_rms`, each sub-term is logged separately by
-[`CompositeAudioLoss`](/media/mengh/SharedData/zhanh/202604_midiproxy/score_hpt/pytorch/losses.py#L334):
+[`CompositeAudioLoss`](pytorch/losses.py#L334):
 
 - `train_backend_spectral_raw`, `train_backend_spectral_weighted`
 - `train_backend_log_rms_raw`, `train_backend_log_rms_weighted`

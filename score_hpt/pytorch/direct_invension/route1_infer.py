@@ -676,11 +676,11 @@ def resolve_route1_stats_json(cfg, dataset_type: str) -> Path:
         return _require_path(configured, field_name="route1.stats_json")
 
     default_map = {
-        "smd": repo_root() / "data_analysis" / "stats" / "midi_sampler" / "SMD_sampler.json",
-        "maestro": repo_root() / "data_analysis" / "stats" / "midi_sampler" / "MAESTRO_v3_sampler.json",
-        "maps": repo_root() / "data_analysis" / "stats" / "midi_sampler" / "MAPS_ENSTDkCl_ENSTDkAm_sampler.json",
-        "francoisleduc": repo_root() / "data_analysis" / "stats" / "midi_sampler" / "FrancoisLeducGuitarDataset_sampler.json",
-        "gaps": repo_root() / "data_analysis" / "stats" / "midi_sampler" / "GAPS_sampler.json",
+        "smd": repo_root() / "demo" / "analysis" / "stats" / "midi_sampler" / "SMD_sampler.json",
+        "maestro": repo_root() / "demo" / "analysis" / "stats" / "midi_sampler" / "MAESTRO_v3_sampler.json",
+        "maps": repo_root() / "demo" / "analysis" / "stats" / "midi_sampler" / "MAPS_ENSTDkCl_ENSTDkAm_sampler.json",
+        "francoisleduc": repo_root() / "demo" / "analysis" / "stats" / "midi_sampler" / "FrancoisLeducGuitarDataset_sampler.json",
+        "gaps": repo_root() / "demo" / "analysis" / "stats" / "midi_sampler" / "GAPS_sampler.json",
     }
     if dataset_type not in default_map:
         raise KeyError(

@@ -170,7 +170,7 @@ backend:
     hop_size: 221                # fixed Route IV contract at 22050 Hz / 100 fps
 
   diffsynth:
-    project_root: ""       # optional backend-specific root. default: ../synthesizer/ddsp-*
+    project_root: ""       # optional backend-specific root. default: ../diff-synth/ddsp-*
 
   audio_loss:
     # Route III backend audio loss. Only two variants are supported:
@@ -223,7 +223,7 @@ backend:
     n_fft: 2048
 
   diffproxy:
-    project_root: ""        # optional backend-specific root. default: ../synth-proxy (flat src/ + configs/)
+    project_root: ""        # optional backend-specific root. default: ../diff-sfproxy (flat src/ + configs/)
     instrument_name: "salamander_piano"
     feature_name: "note_dynamics_v1"
     # Route IV stable export contract.

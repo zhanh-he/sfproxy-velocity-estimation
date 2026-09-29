@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audio and colorized MIDI comparison for Diff-SFProxy, an ISMIR 2026 cross-instrument velocity estimation paper.">
+  <title>Beyond Piano · Diff-SFProxy demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">S<span>F</span></span><span>SFProxy <small>ISMIR 2026</small></span></a>
+    <nav aria-label="Main navigation"><a href="#listen">Listen</a><a href="#results">Results</a><a href="#method">Method</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/main">Code ↗</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="pulse"></span> Beyond Piano · ISMIR 2026</div>
+      <h1>What if every MIDI note <em>knew how loud to play?</em></h1>
+      <p class="hero-copy">A piano-trained velocity estimator meets new instruments. Diff-SFProxy adapts it through two note-wise acoustic cues from a SoundFont, so the estimated dynamics follow the performance.</p>
+      <div class="hero-actions"><a class="button primary" href="#listen">Explore the audio demo <span>↗</span></a><a class="button secondary" href="#results">See paper results</a></div>
+      <div class="hero-facts" aria-label="Headline paper results">
+        <div><strong>0.794</strong><span>GAPS r<sub>BSSL</sub></span></div>
+        <div><strong>0.777</strong><span>FL r<sub>BSSL</sub></span></div>
+        <div><strong>+0.025</strong><span>GAPS vs zero-shot</span></div>
+      </div>
+      <p class="hero-footnote">Dataset-level values from Table 2 of the camera-ready paper. Higher r is better.</p>
+    </section>
+
+    <section id="listen" class="section wrap">
+      <div class="section-heading"><div><span class="kicker">01 / LISTEN & LOOK</span><h2>The same notes. Different dynamics.</h2></div><p>MAESTRO v3 test recording · 2009 performance · 60–80 s excerpt. The three MIDI views below use the same aligned note sequence; color maps note velocity from quiet violet to bright gold.</p></div>
+      <div class="reference-panel">
+        <div class="reference-label"><span class="mini-wave" aria-hidden="true">▂▅▃▇▄▆▂▅</span><div><strong>Human performance</strong><span>Original recorded audio · reference</span></div></div>
+        <audio controls preload="none" src="assets/reference.mp3" aria-label="Human performance reference audio"></audio>
+      </div>
+      <div class="legend"><span>Velocity</span><i>Soft</i><span class="gradient" aria-hidden="true"></span><i>Strong</i><span class="legend-note">MIDI 0–127</span></div>
+      <div class="method-grid" id="demo-cards">
+        <article class="demo-card flat">
+          <div class="card-top"><span class="card-index">01 / CONTROL</span><span class="score">MAE <strong>15.4</strong></span></div>
+          <h3>Flat 64</h3><p>One velocity for every note. Timing and pitch stay aligned, but expression is lost.</p>
+          <div class="roll" id="roll-flat64" role="img" aria-label="Flat velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
+          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/flat64.mp3" aria-label="Flat 64 MIDI rendering"></audio></div>
+          <a class="download" href="assets/flat64.mid" download>Download MIDI with velocities ↓</a>
+        </article>
+        <article class="demo-card synth">
+          <div class="card-top"><span class="card-index">02 / WAVEFORM</span><span class="score">MAE <strong>19.1</strong></span></div>
+          <h3>Diff-Synth</h3><p>Adapts through waveform reconstruction. Timbre mismatch can pull its velocity estimates away from the performance.</p>
+          <div class="roll" id="roll-diffsynth" role="img" aria-label="Diff-Synth velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
+          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/diffsynth.mp3" aria-label="Diff-Synth MIDI rendering"></audio></div>
+          <a class="download" href="assets/diffsynth.mid" download>Download MIDI with velocities ↓</a>
+        </article>
+        <article class="demo-card proxy featured">
+          <div class="card-top"><span class="card-index">03 / NOTE-WISE PROXY</span><span class="score">MAE <strong>10.3</strong></span></div>
+          <h3>Diff-SFProxy <span>proposed</span></h3><p>Adapts with harmonic energy and onset flux. Each note gets a velocity tied to rendered dynamics.</p>
+          <div class="roll" id="roll-sfproxy" role="img" aria-label="Diff-SFProxy velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
+          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/sfproxy.mp3" aria-label="Diff-SFProxy MIDI rendering"></audio></div>
+          <a class="download" href="assets/sfproxy.mid" download>Download MIDI with velocities ↓</a>
+        </article>
+      </div>
+      <p class="fine-print">The MAE badges compare predicted velocities with ground truth over the full 164 s MAESTRO piece (721 notes); the players and MIDI rolls show a 20 s excerpt. The shown Diff-Synth file is a saved 60k-iteration 5 s run, and the Diff-SFProxy file is a saved 120k-iteration 5 s run on 5090. These example scores are separate from the paper aggregates below. All resynthesis uses Salamander Grand Piano V3 with the same render settings; audio is not loudness normalized.</p>
+    </section>
+
+    <section id="results" class="section results-section"><div class="wrap">
+      <div class="section-heading"><div><span class="kicker">02 / PAPER RESULTS</span><h2>Where the proxy helps most.</h2></div><p>On guitar, the paper evaluates how closely the SoundFont-rendered dynamics match the original recording. Pearson correlation is used because guitar ground-truth note velocities are unavailable.</p></div>
+      <div class="results-controls"><span>Compare metric</span><div class="segmented" role="group" aria-label="Choose loudness metric"><button class="active" data-metric="bssl" type="button" aria-pressed="true">r<sub>BSSL</sub></button><button data-metric="bstl" type="button" aria-pressed="false">r<sub>BSTL</sub></button></div></div>
+      <div class="results-grid"><div class="result-panel"><div class="panel-heading"><h3>GAPS</h3><span>Guitar · test set</span></div><div id="bars-gaps" class="bars" aria-live="polite"></div></div><div class="result-panel"><div class="panel-heading"><h3>François Leduc</h3><span>Guitar · cross-dataset</span></div><div id="bars-fl" class="bars" aria-live="polite"></div></div></div>
+      <div class="takeaway"><span class="takeaway-mark">↗</span><p><strong>Diff-SFProxy improves over zero-shot VeloEst on both guitar sets.</strong> With the default 5 s backend, r<sub>BSSL</sub> rises from 0.769 to 0.794 on GAPS and from 0.740 to 0.777 on FL.</p></div>
+      <div class="figure-links"><a href="assets/guitar_results.svg" download>Download guitar result figure ↗</a><a href="assets/recovery.svg" download>Download proxy recovery figure ↗</a><a href="assets/paper_results.json" download>Download table data ↗</a></div>
+      <p class="fine-print">Source: camera-ready paper Table 2. The plot uses the main 5 s backend rows and the flat/zero-shot controls. The paper also reports 2 s ablations and piano metrics; the full values are in <a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/main/demo/analysis/paper_results.csv">demo/analysis/paper_results.csv</a>. Higher correlation is better. Flat 64 is a control, not a trained model.</p>
+    </div></section>
+
+    <section id="method" class="section wrap method-section"><div class="section-heading"><div><span class="kicker">03 / THE IDEA</span><h2>Supervise the control, not every waveform detail.</h2></div><p>Only VeloEst changes during target-instrument adaptation. The differentiable backends remain frozen.</p></div><div class="method-flow"><div><span class="flow-number">1</span><h3>Listen + read score</h3><p>VeloEst combines the performance audio with aligned note events and predicts MIDI velocities.</p></div><span class="flow-arrow">→</span><div><span class="flow-number">2</span><h3>Render through a proxy</h3><p>A frozen Transformer predicts pitch-conditioned harmonic energy (PHE) and onset-window spectral flux (OSF).</p></div><span class="flow-arrow">→</span><div><span class="flow-number">3</span><h3>Match dynamics</h3><p>Compare those note-wise cues with the real recording, then update VeloEst through the proxy.</p></div></div>
+      <div class="method-detail"><div><strong>PHE</strong><span>Energy around the note’s harmonics</span></div><div><strong>OSF</strong><span>Spectral change near note onset</span></div><div><strong>5 s</strong><span>Default backend crop in the paper</span></div></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-grid"><div><strong>Beyond Piano</strong><p>Zhanhong He · Hanyu Meng · David (Defeng) Huang · Roberto Togneri</p><p>ISMIR 2026 · Research demo</p></div><div class="footer-links"><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/main">Code repository ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/main/demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf">Camera-ready paper ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/main/demo/analysis/README.md">Data and provenance ↗</a></div></div><div class="wrap attribution">MAESTRO v3 excerpt: Google LLC, CC BY-NC-SA 4.0. Salamander Grand Piano V3 samples: Alexander Holm / FreePats, CC BY 3.0. Audio demo for research and non-commercial presentation.</div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
