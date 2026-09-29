@@ -4,12 +4,12 @@ This directory holds presentation material and the evidence behind the displayed
 
 | Path | Contents |
 | --- | --- |
-| `docs/` | Static listening site; `assets/` holds the 20 s MAESTRO audio/MIDI example and slide-ready SVG/JSON files |
+| `docs/` | Static listening site; `assets/cases.json` selects 20 s examples from MAESTRO, SMD, FL, and the reserved GAPS slot |
 | `analysis/` | Camera-ready Tables 1–2 as CSV, an inventory of 5090 evaluation summaries, the figure generator, analysis package, statistics, tests, and notebooks |
 | `paper/` | Supplied camera-ready PDF and LaTeX source snapshot |
-| `scripts/` | Scripts to export the audio example and index saved evaluations |
+| `scripts/` | [Documented tools](scripts/README.md) to extract, build, validate, and level the listening cases and index saved evaluations |
 
-The site compares human audio with **Flat 64, VeloEst, Diff-Synth, and VeloEst+Diff-SFProxy** on one matched piano recording. Visitors can select a note in any colorized MIDI roll to see the same note's velocity in every approach and seek the audio players to its onset. The VeloEst and Diff-SFProxy audio/MIDI are regenerated from the two released weights. MAE badges are full-piece values for this one example. The [721-note inference CSV and figure](analysis/inference_example/README.md) document the new checkpoint comparison. Guitar correlations remain dataset-level paper results, with no final 5 s guitar audio example in this repository. See [`analysis/README.md`](analysis/README.md) and [`analysis/PROVENANCE.md`](analysis/PROVENANCE.md).
+The site uses a dataset selector and 20 s case menu. Every case has the same positions: **00 original recording, 01 Flat 64, 02 Diff-Synth, 03 Diff-SFProxy**. MAESTRO and SMD have all four listening conditions; FL currently has the original guitar recording and Flat 64, with both adapted methods awaiting final 5 s MIDI files. The GAPS entry is reserved without hosted media because its publication terms require permission. See the [case inventory and source details](analysis/LISTENING_CASES.md). The [721-note VeloEst checkpoint comparison](analysis/inference_example/README.md) remains available as a separate downloadable figure and CSV. Paper aggregate results appear below the listening cases on the site.
 
 From the repository root:
 

@@ -28,45 +28,18 @@
     </section>
 
     <section id="listen" class="section wrap">
-      <div class="section-heading"><div><span class="kicker">01 / LISTEN & LOOK</span><h2>The same notes. Different dynamics.</h2></div><p>MAESTRO v3 test recording · 2009 performance · 60–80 s excerpt. The four MIDI views below use the same aligned note sequence; color maps note velocity from quiet violet to bright gold. Select any note to compare all estimates.</p></div>
-      <div class="reference-panel">
-        <div class="reference-label"><span class="mini-wave" aria-hidden="true">▂▅▃▇▄▆▂▅</span><div><strong>Human performance</strong><span>Original recorded audio · reference</span></div></div>
-        <audio controls preload="none" src="assets/reference.mp3" aria-label="Human performance reference audio"></audio>
+      <div class="section-heading"><div><span class="kicker">01 / LISTEN & LOOK</span><h2>One performance. Four ways to hear it.</h2></div><p>Choose a dataset and a 20-second excerpt. Available methods share the same score notes and time window. The original recording comes first, followed by Flat 64, Diff-Synth, and Diff-SFProxy.</p></div>
+      <div class="case-toolbar">
+        <div><span class="toolbar-label">DATASET</span><div class="dataset-options" id="dataset-tabs" aria-label="Choose dataset"></div></div>
+        <label class="case-picker"><span class="toolbar-label">20-SECOND EXCERPT</span><select id="case-select" aria-label="Choose an excerpt"></select></label>
       </div>
-      <div class="legend"><span>Velocity</span><i>Soft</i><span class="gradient" aria-hidden="true"></span><i>Strong</i><span class="legend-note">MIDI 0–127</span></div>
-      <div class="method-grid" id="demo-cards">
-        <article class="demo-card flat">
-          <div class="card-top"><span class="card-index">01 / CONTROL</span><span class="score">MAE <strong>15.4</strong></span></div>
-          <h3>Flat 64</h3><p>One velocity for every note. Timing and pitch stay aligned, but expression is lost.</p>
-          <div class="roll" id="roll-flat64" role="img" aria-label="Flat velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
-          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/flat64.mp3" aria-label="Flat 64 MIDI rendering"></audio></div>
-          <a class="download" href="assets/flat64.mid" download>Download MIDI with velocities ↓</a>
-        </article>
-        <article class="demo-card veloest">
-          <div class="card-top"><span class="card-index">02 / PIANO PRETRAINING</span><span class="score">MAE <strong>4.1</strong></span></div>
-          <h3>VeloEst</h3><p>Onset-assisted HPT predicts velocities directly from the aligned piano score and performance audio.</p>
-          <div class="roll" id="roll-veloest" role="img" aria-label="VeloEst velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
-          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/veloest.mp3" aria-label="VeloEst MIDI rendering"></audio></div>
-          <a class="download" href="assets/veloest.mid" download>Download MIDI with velocities ↓</a>
-        </article>
-        <article class="demo-card synth">
-          <div class="card-top"><span class="card-index">03 / WAVEFORM</span><span class="score">MAE <strong>19.1</strong></span></div>
-          <h3>Diff-Synth</h3><p>Adapts through waveform reconstruction. Timbre mismatch can pull its velocity estimates away from the performance.</p>
-          <div class="roll" id="roll-diffsynth" role="img" aria-label="Diff-Synth velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
-          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/diffsynth.mp3" aria-label="Diff-Synth MIDI rendering"></audio></div>
-          <a class="download" href="assets/diffsynth.mid" download>Download MIDI with velocities ↓</a>
-        </article>
-        <article class="demo-card proxy featured">
-          <div class="card-top"><span class="card-index">04 / NOTE-WISE PROXY</span><span class="score">MAE <strong>9.7</strong></span></div>
-          <h3>Diff-SFProxy <span>proposed</span></h3><p>Adapts with harmonic energy and onset flux. Each note gets a velocity tied to rendered dynamics.</p>
-          <div class="roll" id="roll-sfproxy" role="img" aria-label="Diff-SFProxy velocity MIDI piano roll"><span class="loading">Loading MIDI visualization…</span></div>
-          <div class="card-audio"><span>SoundFont resynthesis</span><audio controls preload="none" src="assets/sfproxy.mp3" aria-label="Diff-SFProxy MIDI rendering"></audio></div>
-          <a class="download" href="assets/sfproxy.mid" download>Download MIDI with velocities ↓</a>
-        </article>
-      </div>
-      <div class="note-inspector" aria-live="polite"><div><span class="inspector-kicker">SELECTED NOTE</span><strong id="selected-note">Choose a note in any roll</strong><span id="selected-time">Use the arrows to step through the aligned excerpt.</span></div><div id="selected-velocities" class="inspector-values"></div><div class="inspector-actions"><button id="previous-note" type="button" aria-label="Previous note">←</button><button id="next-note" type="button" aria-label="Next note">→</button></div></div>
-      <div class="figure-links"><a href="assets/checkpoint_comparison.svg" download>Download checkpoint comparison figure ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/camera-ready-release/score_hpt/checkpoints">Get the two VeloEst weights ↗</a></div>
-      <p class="fine-print">The MAE badges compare predicted velocities with ground truth over the full 164.7 s MAESTRO piece (721 notes); the players and MIDI rolls show a 20 s excerpt. VeloEst and Diff-SFProxy were rerun from the two released 120k-iteration checkpoints on the same packed recording. Diff-Synth is the saved 60k-iteration 5 s run. These single-piece scores are separate from the paper aggregates below. All resynthesis uses Salamander Grand Piano V3 with the same render settings; audio is not loudness normalized. <a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md">Example provenance ↗</a></p>
+      <div class="case-heading"><div><span id="case-meta" class="kicker">Loading cases…</span><h3 id="case-title">Select a performance</h3><p id="case-description"></p></div><span id="case-coverage" class="coverage"></span></div>
+      <div class="legend"><span>Velocity</span><i>Soft</i><span class="gradient" aria-hidden="true"></span><i>Strong</i><span class="legend-note" id="legend-note">Select any note to compare velocities</span></div>
+      <div class="method-grid" id="demo-cards" aria-live="polite"></div>
+      <div class="note-inspector" id="note-inspector" aria-live="polite"><div><span class="inspector-kicker">SELECTED NOTE</span><strong id="selected-note">Choose a note in any roll</strong><span id="selected-time">Use the arrows to step through the aligned excerpt.</span></div><div id="selected-velocities" class="inspector-values"></div><div class="inspector-actions"><button id="previous-note" type="button" aria-label="Previous note">←</button><button id="next-note" type="button" aria-label="Next note">→</button></div></div>
+      <div class="figure-links"><a href="assets/checkpoint_comparison.svg" download>Download MAESTRO checkpoint figure ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/camera-ready-release/score_hpt/checkpoints">Get the two VeloEst weights ↗</a></div>
+      <p id="case-provenance" class="fine-print"></p>
+      <p class="fine-print">The preview MP3s use one constant gain per clip for comfortable A/B listening. Note-to-note dynamics, MIDI velocities, and reported metrics are unchanged.</p>
     </section>
 
     <section id="results" class="section results-section"><div class="wrap">
@@ -83,7 +56,7 @@
     </section>
   </main>
 
-  <footer><div class="wrap footer-grid"><div><strong>Beyond Piano</strong><p>Zhanhong He · Hanyu Meng · David (Defeng) Huang · Roberto Togneri</p><p>ISMIR 2026 · Research demo</p></div><div class="footer-links"><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/camera-ready-release">Code repository ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf">Camera-ready paper ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/README.md">Data and provenance ↗</a></div></div><div class="wrap attribution">MAESTRO v3 excerpt: Google LLC, CC BY-NC-SA 4.0. Salamander Grand Piano V3 samples: Alexander Holm / FreePats, CC BY 3.0. Audio demo for research and non-commercial presentation.</div></footer>
+  <footer><div class="wrap footer-grid"><div><strong>Beyond Piano</strong><p>Zhanhong He · Hanyu Meng · David (Defeng) Huang · Roberto Togneri</p><p>ISMIR 2026 · Research demo</p></div><div class="footer-links"><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/camera-ready-release">Code repository ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf">Camera-ready paper ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/README.md">Data and provenance ↗</a></div></div><div class="wrap attribution">Excerpts: MAESTRO v3 (Google LLC, CC BY-NC-SA 4.0), <a href="https://resources.mpi-inf.mpg.de/SMD/">Saarland Music Data</a> (CC BY-NC-SA 3.0), and <a href="https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset">François Leduc Guitar Dataset</a> (MIT). SoundFont samples: Salamander Grand Piano V3 (Alexander Holm / FreePats, CC BY 3.0) and <a href="https://freepats.zenvoid.org/Guitar/acoustic-guitar.html">FreePats Spanish Classical Guitar</a> (CC0). GAPS media is not hosted here. Research and non-commercial presentation.</div></footer>
   <script src="app.js" defer></script>
 </body>
 </html>
