@@ -58,7 +58,7 @@
       "assetBase": "assets/cases/fl-jgdyc-40",
       "notesUrl": "assets/cases/fl-jgdyc-40/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
+      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The archived evaluation for this specific Diff-SFProxy checkpoint gives FL r_BSSL 0.768812; the paper table reports 0.777 from a selected run that this HDD archive has not identified. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
     },
     {
@@ -78,7 +78,7 @@
       "assetBase": "assets/cases/fl-jgdyc-80",
       "notesUrl": "assets/cases/fl-jgdyc-80/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
+      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The archived evaluation for this specific Diff-SFProxy checkpoint gives FL r_BSSL 0.768812; the paper table reports 0.777 from a selected run that this HDD archive has not identified. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
     },
     {
