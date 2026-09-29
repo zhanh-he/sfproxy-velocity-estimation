@@ -1,13 +1,13 @@
 # Listening demo cases
 
-The public site reads [`../docs/assets/cases.json`](../docs/assets/cases.json). Every selection is **exactly 20 seconds** and always presents the same four positions: 00 original recording, 01 Flat 64, 02 Diff-Synth, 03 Diff-SFProxy. Missing runs are shown as unavailable; no substitute predictions or audio are generated for them. The case menu can be extended by adding another manifest entry and its asset directory.
+The public site reads [`../docs/assets/cases.json`](../docs/assets/cases.json). Every selection is **exactly 20 seconds** and presents four playable positions: 00 original recording, 01 Flat 64, 02 Diff-Synth, 03 Diff-SFProxy. The case menu can be extended by adding another manifest entry and its asset directory.
 
 | Dataset | 20 s windows | 00 / 01 | 02 / 03 | Velocity reference |
 | --- | --- | --- | --- | --- |
 | MAESTRO v3 test | Scriabin, 60–80 s and 100–120 s | Ready | Ready; Diff-Synth saved 5 s 60k, Diff-SFProxy rerun from released piano 5 s 120k | Yes; first case badges use full-piece 721-note MAE, second uses 20 s MAE |
 | SMD | Bach BWV 849, 40–60 s and 80–100 s | Ready | Ready; saved piano 5 s 60k Diff-Synth and 5 s 120k Diff-SFProxy runs | Yes; badges use each selected 20 s window |
-| François Leduc (FL) | `JGDyc`, 40–60 s and 80–100 s | Ready | Awaiting selected final 5 s guitar prediction MIDIs | No; aligned score velocities are not ground truth |
-| GAPS | `001_mvswc`, 40–60 s and 80–100 s | Ready | Awaiting selected final 5 s guitar prediction MIDIs | No; aligned score velocities are not ground truth |
+| François Leduc (FL) | `JGDyc`, 40–60 s and 80–100 s | Ready | Ready; archived Diff-Synth MIDI and Diff-SFProxy checkpoint rerun | No; aligned score velocities are not ground truth |
+| GAPS test | `019_Vpswc`, 40–60 s and 80–100 s | Ready | Ready; both methods rerun from recovered 5 s adapted checkpoints | No; aligned score velocities are not ground truth |
 
 ## Recovered source paths
 
@@ -20,9 +20,9 @@ Both use the key `Bach_BWV849-01_001_20090916-SMD.route2.mid`. The SMD 40–60 s
 
 The MAESTRO 100–120 s case uses the same packed Scriabin recording as the first case and contains 117 aligned notes. Its 20 s Flat 64 / Diff-Synth / Diff-SFProxy MAE is 12.658 / 16.026 / 8.487. The first case's badges instead use full-piece metrics, which are labeled as such on the site.
 
-The FL reference pair was reconstructed from `score_hpt/workspaces/hdf5s/francoisleduc_sr22050/JGDyc.h5`. Its two 20 s windows contain 138 and 120 score notes. Flat 64 was rendered with the FreePats Spanish Classical Guitar SFZ. Guitar note velocities are not evaluated against the score.
+The FL reference pair was reconstructed from `score_hpt/workspaces/hdf5s/francoisleduc_sr22050/JGDyc.h5`. Its two 20 s windows contain 138 and 120 score notes. Diff-Synth uses the saved MIDI from `transfer2_results.tar.gz`, while Diff-SFProxy was rerun from the 5 s guitar checkpoint in `transfer1_ckpts.tar.gz`. All three resynthesized clips use the FreePats Spanish Classical Guitar SFZ. Guitar note velocities are not evaluated against the score.
 
-The GAPS reference pair was reconstructed from `score_hpt/workspaces/hdf5s/gaps_sr22050_old/001_mvswc.h5` on lab5090. Its 40–60 s and 80–100 s windows each contain 154 aligned score notes. Original audio and Flat 64 use the same 20 s boundaries; Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The project team confirmed that its GAPS access, obtained through the dataset's Zenodo application process, permits publication of these research demo excerpts. Guitar note velocities are not evaluated against the score.
+The GAPS reference pair was reconstructed from `score_hpt/workspaces/hdf5s/gaps_sr22050_old/019_Vpswc.h5` on lab5090. Its 40–60 s and 80–100 s windows contain 71 and 72 aligned score notes. Both methods were rerun from the recovered 5 s adapted guitar checkpoints. The saved Diff-Synth MIDI for this piece omitted some score notes, so the complete rerun supplies the public example; the [recovery record](GUITAR_RESULT_RECOVERY.md) gives the overlap check and hashes. All three resynthesized clips use the FreePats Spanish Classical Guitar SFZ. The project team confirmed that its GAPS access, obtained through the dataset's Zenodo application process, permits publication of these research demo excerpts. Guitar note velocities are not evaluated against the score.
 
 Run [`../scripts/build_listening_case.py`](../scripts/build_listening_case.py) with the external source pair, available prediction MIDIs, `--start`, the matching SFZ, and `sfizz_render` to regenerate a case directory. The builder checks note pitch/onset/duration alignment and writes clipped MIDI, 20 s MP3, note JSON, and excerpt MAE only when `--velocity-ground-truth` is passed. It refuses windows other than 20 s.
 
@@ -36,4 +36,4 @@ The published MP3 previews were then adjusted by [`../scripts/match_listening_ga
 - [GAPS](https://aim-qmul.github.io/GAPS/): Riley, Guo, Edwards, and Dixon (ISMIR 2024). The project team confirmed permission for these 20 s research demo excerpts after applying for dataset access through Zenodo.
 - [FreePats Spanish Classical Guitar](https://freepats.zenvoid.org/Guitar/acoustic-guitar.html): CC0 1.0. [Salamander Grand Piano V3](https://github.com/sfzinstruments/SalamanderGrandPiano) is credited in the site footer.
 
-The public guitar cards remain visibly incomplete until selected final 5 s adapted VeloEst predictions are recovered or regenerated. The [recovery status](GUITAR_RESULT_RECOVERY.md) distinguishes the retained 5 s backend checkpoints from the missing adapted velocity estimators. In particular, the older 2 s proxy evaluation files on 5090 are **not** presented as the paper's guitar listening result.
+The [guitar recovery record](GUITAR_RESULT_RECOVERY.md) identifies the adapted VeloEst checkpoints and archived Diff-Synth evaluation summaries found on lab5090's second HDD. The older 2 s proxy evaluation files are **not** used in this 5 s listening comparison. The paper's aggregate result bars and individual listening examples are labeled separately.

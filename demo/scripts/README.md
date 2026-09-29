@@ -7,7 +7,7 @@ These scripts turn selected research-workspace results into the small, reviewabl
 | `export_pair_from_h5.py` | Extract an aligned WAV/MIDI pair from a Score-HPT HDF5 item. Requires `h5py`, `numpy`, and `pretty_midi`. |
 | `build_listening_case.py` | Clip one pair and any available saved prediction MIDIs to **exactly 20 s**, verify note alignment, render matching SoundFont audio, and write `notes.json`. Requires `pretty_midi`, `soundfile`, `numpy`, `ffmpeg`, and `sfizz_render`. Pass `--velocity-ground-truth` only for a dataset with measured MIDI velocities. |
 | `validate_listening_cases.py` | Check every manifest entry, advertised file, note alignment, and audio duration. Requires `ffprobe`. |
-| `match_listening_gain.py` | Apply one constant gain to each published MP3 and write the gain report. Requires `ffmpeg`; it does not alter the MIDI or within-clip dynamics. |
+| `match_listening_gain.py` | Apply one constant gain to published MP3s and write the gain report. Pass repeatable `--case-id` to update selected cases while keeping report rows for the rest. Requires `ffmpeg`; it does not alter MIDI or within-clip dynamics. |
 | `export_maestro_demo.py` | Original MAESTRO example exporter using the saved evaluation manifest and renders. |
 | `update_checkpoint_demo.py` | Replace the original MAESTRO example's two checkpoint-derived MIDI/audio conditions. |
 | `inventory_eval_summaries.py` | Index saved run summaries from a Score-HPT workspace for analysis. It does not identify the paper's selected runs automatically. |
@@ -19,4 +19,4 @@ python3 demo/scripts/validate_listening_cases.py
 python3 -m http.server 8000 --directory demo/docs
 ```
 
-Open `http://localhost:8000/` to inspect all dataset selections. GAPS and FL each have two 20 s original/Flat 64 guitar comparisons. Their method slots await the selected final 5 s guitar predictions; the older 2 s evaluation runs are not substitutes.
+Open `http://localhost:8000/` to inspect all dataset selections. GAPS and FL each have two complete 20 s, four-method guitar comparisons. The recovered 5 s guitar checkpoint and prediction provenance is recorded in [`../analysis/GUITAR_RESULT_RECOVERY.md`](../analysis/GUITAR_RESULT_RECOVERY.md); the older 2 s evaluation runs are not used.

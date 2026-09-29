@@ -34,10 +34,17 @@ def main() -> None:
     parser.add_argument("--target-lufs", type=float, default=-24.0)
     parser.add_argument("--max-peak-dbfs", type=float, default=-1.0)
     parser.add_argument("--report", type=Path, default=DOCS.parent / "analysis/listening_gain_report.csv")
+    parser.add_argument("--case-id", action="append", help="Only process these cases; keep existing report rows for the others.")
     args = parser.parse_args()
     cases = json.loads((DOCS / "assets/cases.json").read_text())["cases"]
+    selected = set(args.case_id or (case["id"] for case in cases))
+    unknown = selected - {case["id"] for case in cases}
+    if unknown:
+        parser.error(f"Unknown case IDs: {', '.join(sorted(unknown))}")
     report = []
     for case in cases:
+        if case["id"] not in selected:
+            continue
         for method in case["available"]:
             path = DOCS / case["assetBase"] / f"{method}.mp3"
             before, peak_before = loudness(path)
@@ -58,6 +65,14 @@ def main() -> None:
                            "applied_gain_db": round(gain, 3),
                            "output_lufs": after, "output_peak_dbfs": peak_after})
             print(f"{case['id']}/{method}: {before:.1f} → {after:.1f} LUFS, gain {gain:+.1f} dB")
+    if args.case_id and args.report.is_file():
+        with args.report.open(newline="", encoding="utf-8") as stream:
+            old = list(csv.DictReader(stream))
+        report.extend(row for row in old if row["case_id"] not in selected)
+    order = {(case["id"], method): (i, j)
+             for i, case in enumerate(cases) for j, method in enumerate(case["available"])}
+    report = [row for row in report if (row["case_id"], row["method"]) in order]
+    report.sort(key=lambda row: order[(row["case_id"], row["method"])])
     args.report.parent.mkdir(parents=True, exist_ok=True)
     with args.report.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(report[0]), lineterminator="\n")

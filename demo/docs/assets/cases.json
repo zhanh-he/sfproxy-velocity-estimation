@@ -2,39 +2,43 @@
   "schema_version": 1,
   "cases": [
     {
-      "id": "gaps-001-40",
+      "id": "gaps-019-40",
       "dataset": "GAPS",
-      "selectorLabel": "Guitar performance 001 · 40–60 s",
-      "title": "GAPS · guitar performance 001",
+      "selectorLabel": "Guitar performance 019 · 40–60 s",
+      "title": "GAPS · guitar performance 019",
       "instrument": "Classical guitar",
       "window": "40–60 s",
-      "description": "A matched 20-second GAPS guitar recording and Flat 64 render. The selected final 5 s adaptation predictions are still pending.",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
       "available": [
         "reference",
-        "flat64"
+        "flat64",
+        "diffsynth",
+        "sfproxy"
       ],
-      "assetBase": "assets/cases/gaps-001-40",
-      "notesUrl": "assets/cases/gaps-001-40/notes.json",
+      "assetBase": "assets/cases/gaps-019-40",
+      "notesUrl": "assets/cases/gaps-019-40/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original GAPS recording and aligned MIDI were recovered from the 5090 research cache after project access through the dataset Zenodo application. Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The score has no ground-truth guitar note velocities; no guitar MAE is shown.",
+      "provenance": "GAPS test piece 019_Vpswc from the 5090 HDF5 cache. Diff-Synth and Diff-SFProxy were rerun on its aligned score using adapted 5 s guitar VeloEst checkpoints recovered from the 5090 /storage HDD archives (60k and 120k iterations respectively). The original archived Diff-Synth prediction omits seven score notes across these two windows, so this demo uses a complete rerun from its recovered checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://aim-qmul.github.io/GAPS/"
     },
     {
-      "id": "gaps-001-80",
+      "id": "gaps-019-80",
       "dataset": "GAPS",
-      "selectorLabel": "Guitar performance 001 · 80–100 s",
-      "title": "GAPS · guitar performance 001",
+      "selectorLabel": "Guitar performance 019 · 80–100 s",
+      "title": "GAPS · guitar performance 019",
       "instrument": "Classical guitar",
       "window": "80–100 s",
-      "description": "A matched 20-second GAPS guitar recording and Flat 64 render. The selected final 5 s adaptation predictions are still pending.",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
       "available": [
         "reference",
-        "flat64"
+        "flat64",
+        "diffsynth",
+        "sfproxy"
       ],
-      "assetBase": "assets/cases/gaps-001-80",
-      "notesUrl": "assets/cases/gaps-001-80/notes.json",
+      "assetBase": "assets/cases/gaps-019-80",
+      "notesUrl": "assets/cases/gaps-019-80/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original GAPS recording and aligned MIDI were recovered from the 5090 research cache after project access through the dataset Zenodo application. Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The score has no ground-truth guitar note velocities; no guitar MAE is shown.",
+      "provenance": "GAPS test piece 019_Vpswc from the 5090 HDF5 cache. Diff-Synth and Diff-SFProxy were rerun on its aligned score using adapted 5 s guitar VeloEst checkpoints recovered from the 5090 /storage HDD archives (60k and 120k iterations respectively). The original archived Diff-Synth prediction omits seven score notes across these two windows, so this demo uses a complete rerun from its recovered checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://aim-qmul.github.io/GAPS/"
     },
     {
@@ -44,15 +48,17 @@
       "title": "François Leduc · guitar performance JGDyc",
       "instrument": "Classical guitar",
       "window": "40–60 s",
-      "description": "A real 20-second guitar recording and its Flat 64 SoundFont render. The two adaptation methods are reserved for the selected 5 s prediction files.",
+      "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
       "available": [
         "reference",
-        "flat64"
+        "flat64",
+        "diffsynth",
+        "sfproxy"
       ],
       "assetBase": "assets/cases/fl-jgdyc-40",
       "notesUrl": "assets/cases/fl-jgdyc-40/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "The 20-second audio and aligned MIDI come from the François Leduc dataset cache on lab5090. The score velocities are not guitar ground truth, so the reference roll is neutral and no MAE is shown. Flat 64 uses the FreePats Spanish Classical Guitar SFZ.",
+      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
     },
     {
@@ -62,15 +68,17 @@
       "title": "François Leduc · guitar performance JGDyc",
       "instrument": "Classical guitar",
       "window": "80–100 s",
-      "description": "A second 20-second window from the same guitar performance, ready for direct comparison once both selected 5 s predictions are recovered.",
+      "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
       "available": [
         "reference",
-        "flat64"
+        "flat64",
+        "diffsynth",
+        "sfproxy"
       ],
       "assetBase": "assets/cases/fl-jgdyc-80",
       "notesUrl": "assets/cases/fl-jgdyc-80/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Real François Leduc reference audio and aligned MIDI; Flat 64 is rendered with the FreePats Spanish Classical Guitar SFZ. Guitar note velocities are unavailable as ground truth.",
+      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
       "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
     },
     {

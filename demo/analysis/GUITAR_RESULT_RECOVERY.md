@@ -1,17 +1,16 @@
-# Guitar result recovery status — 2026-09-29
+# Guitar result recovery — 2026-09-29
 
-The guitar listening cards need **adapted VeloEst velocity predictions** for the selected 5 s Diff-Synth and Diff-SFProxy runs. A trained differentiable synthesizer or SoundFont proxy is only the *frozen backend* used during adaptation; it does not itself contain the final per-note velocity estimator or its prediction MIDI.
+The adapted 5 s guitar VeloEst models **were on lab5090**. The earlier inventory searched its SSD and `/media/mengh/SharedData` HDD but missed the second HDD mounted at `/storage`. Its `/storage/zhanh_storage/` directory holds `transfer1_ckpts.tar.gz`, `transfer1_results.tar.gz`, `transfer2_ckpts.tar.gz`, and `transfer2_results.tar.gz`. The earlier conclusion that the guitar models were unavailable was wrong. No retraining is needed for these demos.
 
-| Artifact | Checked location | Status |
-| --- | --- | --- |
-| GAPS / FL aligned source recordings and scores | lab5090 `score_hpt/workspaces/hdf5s/{gaps_sr22050_old,francoisleduc_sr22050}` | Present; the 20 s original and Flat 64 demos were built from these sources. |
-| 5 s guitar Diff-Synth backend | lab5090 `ddsp-guitar-synth/flgd_5s/output/ddsp_guitar_synth_sr22050_fps100_seg5s/latest_model_checkpoint.pt` | Present. This is a synthesizer checkpoint, not an adapted VeloEst checkpoint. |
-| 5 s guitar Diff-SFProxy backend | lab5090 `synth-proxy/proxy/checkpoints/guitar/*_5s_default/*.ckpt` | Present. These are proxy checkpoints, not adapted VeloEst checkpoints. |
-| Guitar prediction MIDI and evaluation renders | lab5090 `score_hpt/workspaces/route3/{gaps_test_guitar,francoisleduc_full_guitar}` and matching `route3_eval` | Only a **2 s Diff-SFProxy** run was found in these directories. It is an ablation and is not used for the site's final 5 s method slots. |
-| Selected 5 s adapted guitar VeloEst checkpoint and its prediction MIDI | lab5090 `score_hpt/workspaces/checkpoints`, `route3`, `route3_eval`, and other accessible paths under `202604_midiproxy_data` | Not found. The retained Score-HPT checkpoint folders are piano runs. |
-| Kaya copies / results | `/scratch/ems011/zhe/202604_midiproxy`, `/home/zhe/202604_midiproxy`, the September scratch archive, and the logged `/group/ems011/zhe/202604_midiproxy_results` location | Scratch and archive retain code copies but no `.pth`/`.pt`/`.ckpt` or prediction MIDI. The logged results directory is absent. |
-| 3090 | Machine unavailable | Cannot inspect its former storage. |
+| Adaptation | Archive member | Size | SHA-256 |
+| --- | --- | ---: | --- |
+| Diff-SFProxy guitar, 5 s backend, 120k steps | `transfer1_ckpts/route4_guitar_12k/5s+auto+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0+backend1+prior0p2+sat0p4/120000_iterations.pth` | 20,761,642 bytes | `2d1e3d0dff33088689ae0a10d318b369625fa89b184e36791b1c943880e38131` |
+| Diff-Synth guitar, 5 s backend, 60k steps | `transfer2_ckpts/route3_gaps_6k/5s+auto+hpt+onset+score_note_editor+backend_diffsynth_guitar+piano_ssm_spectral+sup0+backend1+prior0p2+sat0p4/60000_iterations.pth` | 20,761,532 bytes | `1712310c5b662685f7ed03371e52dd491a48e9c242d6557548a314f20ea860ee` |
 
-**Conclusion:** The backend models have not all been lost, but the paper's selected **5 s adapted guitar VeloEst models and prediction files have not been located** in the accessible 5090/Kaya storage. The site is not merely waiting for an inference command against a recovered final checkpoint. The old 2 s proxy MIDI cannot be presented as a 5 s Diff-SFProxy result, and no guitar Diff-Synth prediction MIDI was found.
+The Diff-Synth prediction MIDIs for `019_Vpswc` (GAPS test) and `JGDyc` (François Leduc) were recovered from `transfer2_results.tar.gz`. The archived evaluation summaries report `r_BSSL = 0.669420` for GAPS test and `0.645489` for FL full, agreeing with camera-ready Table 2 rounded values `0.669` and `0.646`. Copies are in [`guitar_recovery/`](guitar_recovery/). The saved `JGDyc` MIDI matches all score notes in the two 20 s windows and is used directly in the FL demo.
 
-The remaining routes are to recover the selected checkpoints/predictions from another backup, or to rerun 5 s guitar adaptation with the retained code, source data, and backend checkpoints, then infer and validate matched 20 s clips. Any rerun should be identified as a regenerated example until its recipe and metrics are checked against the camera-ready results.
+The archived GAPS `019_Vpswc` Diff-Synth MIDI has 443 notes; the aligned source score has 462. Seven of the missing notes fall in the two published windows. To retain an identical note set across all four conditions, we reran inference over the complete source audio and score from the **same recovered 60k checkpoint**, producing 462 velocities. Of the 443 notes shared with the saved MIDI, 362 have identical integer velocity; the mean absolute difference is 0.449/127. This is a regenerated example from the archived checkpoint, not a claim that the regenerated MIDI is byte-identical to the paper's saved prediction.
+
+The Diff-SFProxy guitar demo for both datasets was rerun from the recovered 5 s, 120k checkpoint. Its recipe matches the camera-ready 1:0.2:0.4 loss weights. We have not yet matched an archived Diff-SFProxy evaluation summary to the paper's aggregate numbers, so the demo describes these as checkpoint reruns and displays the paper's aggregate table separately. Guitar score velocity is not ground truth; the site therefore shows no guitar note-velocity MAE.
+
+The two guitar checkpoints are backed up separately from the Git repository for review. The repository's public `score_hpt/checkpoints/` still contains the two previously requested piano inference weights; the guitar files have not been added as additional public release weights. The 5090 source paths, archive members, and hashes above allow the guitar examples to be reproduced while the release choice is reviewed.

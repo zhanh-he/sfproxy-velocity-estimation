@@ -30,9 +30,10 @@ DEFAULT_WEIGHTS = {
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--audio", type=Path, required=True, help="Performance audio (WAV, FLAC, or MP3).")
-    p.add_argument("--midi", type=Path, required=True, help="Piano score aligned to the audio.")
+    p.add_argument("--midi", type=Path, required=True, help="Score aligned to the audio.")
     p.add_argument("--out", type=Path, required=True, help="Directory for predictions and figures.")
     p.add_argument("--veloest-ckpt", type=Path, default=DEFAULT_WEIGHTS["veloest"])
+    p.add_argument("--diffsynth-ckpt", type=Path, help="Optional adapted Diff-Synth VeloEst checkpoint.")
     p.add_argument("--diffsfproxy-ckpt", type=Path, default=DEFAULT_WEIGHTS["diffsfproxy"])
     p.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     p.add_argument("--velocity-method", choices=("onset_only", "max_frame"), default="onset_only")
@@ -65,19 +66,23 @@ def velocity_color(value: int) -> str:
 
 
 def make_svg(rows: list[dict], out: Path, start: float, seconds: float, reference: bool, metrics: dict) -> None:
-    """Slide-sized three-method piano roll with a common pitch/time scale."""
+    """Slide-sized piano-roll comparison with a common pitch/time scale."""
     end = start + seconds
     visible = [r for r in rows if r["start_s"] < end and r["end_s"] > start]
-    width, height, left, right = 1600, 860, 172, 58
+    width, left, right = 1600, 172, 58
     panel_top, panel_height, panel_gap = 130, 177, 33
     lo = max(21, min((r["pitch"] for r in visible), default=48) - 2)
     hi = min(108, max((r["pitch"] for r in visible), default=84) + 2)
     pitch_range = max(1, hi - lo + 1)
     plot_width = width - left - right
     panels = [("Flat 64", "flat64", "#a8b6c5"),
-              ("VeloEst", "veloest", "#e8c779"),
-              ("VeloEst + Diff-SFProxy", "diffsfproxy", "#69d7c3")]
-    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Aligned MIDI velocities from three approaches">',
+              ("VeloEst", "veloest", "#e8c779")]
+    if "diffsynth" in rows[0]:
+        panels.append(("VeloEst + Diff-Synth", "diffsynth", "#ec876c"))
+    panels.append(("VeloEst + Diff-SFProxy", "diffsfproxy", "#69d7c3"))
+    shift = (len(panels) - 3) * (panel_height + panel_gap)
+    height = 860 + shift
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Aligned MIDI velocities from {len(panels)} approaches">',
              '<rect width="100%" height="100%" fill="#0b1421"/>',
              '<text x="58" y="58" fill="#f7f2e7" font-family="Arial,sans-serif" font-size="31" font-weight="700">Same notes, different velocities</text>',
              f'<text x="58" y="88" fill="#aabacc" font-family="Arial,sans-serif" font-size="17">{len(visible)} notes · {start:g}–{end:g} s · identical pitch and onset across methods</text>']
@@ -102,12 +107,12 @@ def make_svg(rows: list[dict], out: Path, start: float, seconds: float, referenc
             y = top + 21 + (hi - row["pitch"]) / pitch_range * 125
             color = velocity_color(row[field])
             parts.append(f'<rect x="{x0:.1f}" y="{y:.1f}" width="{max(2, x1-x0):.1f}" height="5.5" rx="1.5" fill="{color}"/>')
-    parts.append('<text x="58" y="804" fill="#aabacc" font-family="Arial,sans-serif" font-size="15">Velocity 1–127</text>')
+    parts.append(f'<text x="58" y="{804+shift}" fill="#aabacc" font-family="Arial,sans-serif" font-size="15">Velocity 1–127</text>')
     for value in (1, 32, 64, 96, 127):
         x = 215 + (value - 1) / 126 * 485
-        parts.append(f'<rect x="{x:.1f}" y="786" width="44" height="14" rx="3" fill="{velocity_color(value)}"/>')
-        parts.append(f'<text x="{x+12:.1f}" y="823" fill="#aabacc" font-family="Arial,sans-serif" font-size="13">{value}</text>')
-    parts.append('<text x="58" y="849" fill="#7f96aa" font-family="Arial,sans-serif" font-size="13">Bars show note pitch, onset, duration, and predicted velocity. MAE appears only when the input MIDI is declared ground truth.</text>')
+        parts.append(f'<rect x="{x:.1f}" y="{786+shift}" width="44" height="14" rx="3" fill="{velocity_color(value)}"/>')
+        parts.append(f'<text x="{x+12:.1f}" y="{823+shift}" fill="#aabacc" font-family="Arial,sans-serif" font-size="13">{value}</text>')
+    parts.append(f'<text x="58" y="{849+shift}" fill="#7f96aa" font-family="Arial,sans-serif" font-size="13">Bars show note pitch, onset, duration, and predicted velocity. MAE appears only when the input MIDI is declared ground truth.</text>')
     parts.append('</svg>')
     out.write_text("\n".join(parts) + "\n", encoding="utf-8")
 
@@ -119,13 +124,13 @@ def renderer_binary(explicit: str | None) -> str:
     return str(Path(binary).expanduser().resolve())
 
 
-def render_audio(sfz: Path, binary: str, ffmpeg: str, out: Path) -> None:
+def render_audio(sfz: Path, binary: str, ffmpeg: str, out: Path, labels: tuple[str, ...]) -> None:
     sfz = sfz.expanduser().resolve()
     if not sfz.is_file():
         raise FileNotFoundError(f"SFZ instrument not found: {sfz}")
     if not shutil.which(ffmpeg) and not Path(ffmpeg).is_file():
         raise FileNotFoundError(f"ffmpeg not found: {ffmpeg}")
-    for label in ("flat64", "veloest", "diffsfproxy"):
+    for label in labels:
         wav = out / f"{label}.wav"
         subprocess.run([binary, "--sfz", str(sfz), "--midi", str(out / f"{label}.mid"),
                         "--wav", str(wav), "--samplerate", "44100", "--blocksize", "1024",
@@ -144,8 +149,10 @@ def run(args: argparse.Namespace) -> dict:
     from utilities import load_mono_audio
 
     audio_path, midi_path = args.audio.expanduser().resolve(), args.midi.expanduser().resolve()
-    weights = {key: path.expanduser().resolve() for key, path in
-               (("veloest", args.veloest_ckpt), ("diffsfproxy", args.diffsfproxy_ckpt))}
+    weights = {"veloest": args.veloest_ckpt.expanduser().resolve()}
+    if args.diffsynth_ckpt:
+        weights["diffsynth"] = args.diffsynth_ckpt.expanduser().resolve()
+    weights["diffsfproxy"] = args.diffsfproxy_ckpt.expanduser().resolve()
     for path in (audio_path, midi_path, *weights.values()):
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -205,7 +212,7 @@ def run(args: argparse.Namespace) -> dict:
     replace_note_velocities(midi_path, flat, out / "flat64.mid")
     rows = [{"start_s": round(n.onset, 6), "end_s": round(n.offset, 6), "pitch": n.pitch,
              "input_velocity": n.velocity, "flat64": 64,
-             "veloest": predictions["veloest"][i], "diffsfproxy": predictions["diffsfproxy"][i]}
+             **{label: values[i] for label, values in predictions.items()}}
             for i, n in enumerate(notes)]
     with (out / "notes.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -225,13 +232,14 @@ def run(args: argparse.Namespace) -> dict:
         "reference_velocities": args.reference_velocities,
         "checkpoints": {k: {"path": str(v), "sha256": file_hash(v)} for k, v in weights.items()},
         "metrics": metrics,
-        "outputs": {name: name for name in ("flat64.mid", "veloest.mid", "diffsfproxy.mid", "notes.csv", "comparison.svg")},
+        "outputs": {name: name for name in ("flat64.mid", *(f"{label}.mid" for label in weights), "notes.csv", "comparison.svg")},
     }
     if args.sfz:
-        render_audio(args.sfz, renderer_binary(args.sfizz_render), args.ffmpeg, out)
+        labels = ("flat64", *weights)
+        render_audio(args.sfz, renderer_binary(args.sfizz_render), args.ffmpeg, out, labels)
         summary["rendered_sfz"] = str(args.sfz.expanduser().resolve())
         summary["outputs"].update({f"{name}.{ext}": f"{name}.{ext}" for name in
-                                   ("flat64", "veloest", "diffsfproxy") for ext in ("wav", "mp3")})
+                                   labels for ext in ("wav", "mp3")})
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     return summary
 
