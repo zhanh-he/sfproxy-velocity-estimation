@@ -1,100 +1,92 @@
-# SFProxy Velocity Estimation
+# Beyond Piano: Diff-SFProxy
 
-Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies”**, accepted at **ISMIR 2026**.
+Code and research demo for **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies”** (ISMIR 2026), by Zhanhong He, Hanyu Meng, David (Defeng) Huang, and Roberto Togneri.
 
-- Too busy in recent ... will cleanup code and provide DEMO here ~ mid Septermber :)
-- Codes before cleanup are ready in https://github.com/zhanh-he/202604_midiproxy
+**[Interactive demo and audio](docs/index.html)** · **[Camera-ready paper](paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Paper result data](analysis/README.md)**
 
-## Overview
+This `camera-ready-release` branch is a reviewable release candidate. The implementation comes from the team's `202604_midiproxy` code on lab5090, with later Kaya launch scripts. Large datasets, SoundFonts, and training checkpoints stay outside Git. See [release inventory](RELEASE_INVENTORY.md) for what was found and what still needs recovery or redistribution.
 
-Many music datasets provide aligned audio and MIDI note events but lack reliable note-level velocity labels, particularly outside the piano domain. This repository studies cross-instrument MIDI velocity estimation in this label-scarce setting.
+## What the model does
 
-Starting from a velocity estimator trained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording.
+VeloEst takes performance audio and aligned MIDI note events and predicts note velocities. The piano-pretrained front end can be adapted to a target instrument without velocity labels:
 
-We compare two adaptation strategies:
+1. **Diff-Synth** renders predicted velocities with a frozen differentiable synthesizer and compares the waveform with the recording.
+2. **Diff-SFProxy** sends predicted velocities through a frozen Transformer proxy for a SoundFont renderer. Its two targets are pitch-conditioned harmonic energy (PHE) and onset-window spectral flux (OSF).
 
-- **Diff-Synth**: waveform-domain supervision through a differentiable synthesiser.
-- **Diff-SFProxy**: note-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
+Only VeloEst is updated during adaptation. In the camera-ready results, Diff-SFProxy gives the strongest guitar loudness-correlation scores: `r_BSSL = 0.794` on GAPS and `0.777` on François Leduc. Guitar note-velocity MAE cannot be reported because those datasets lack ground-truth velocity labels.
 
-Diff-SFProxy predicts two loudness-related acoustic parameters:
+## Repository map
 
-- **Pitch-conditioned harmonic energy (PHE)**
-- **Onset-window spectral flux (OSF)**
+| Path | Contents |
+| --- | --- |
+| [`score_hpt/pytorch`](score_hpt/pytorch) | VeloEst training, Diff-Synth / Diff-SFProxy adaptation, inference, evaluation, configs, tests |
+| [`synth-proxy`](synth-proxy) | SoundFont teacher-data export, proxy training and recovery evaluation |
+| [`synthesizer`](synthesizer) | DDSP piano and guitar backends used by Diff-Synth |
+| [`data_analysis`](data_analysis) | Loudness metrics, MIDI/audio evaluation utilities, dataset statistics |
+| [`run_scripts`](run_scripts) | Local research launchers |
+| [`kaya_scripts`](kaya_scripts) | Kaya SLURM launchers retained for provenance |
+| [`analysis`](analysis) | Paper tables as CSV and reproducible SVG figure generator |
+| [`docs`](docs) | Static demo site, matched audio, velocity-colored MIDI example |
 
-This focuses the adaptation signal on velocity-dependent intensity and attack behaviour rather than full waveform reconstruction.
+## Environment and data
 
-## Paper
+The code was developed for Linux with CUDA, Python 3.11, PyTorch, Hydra, and external `sfizz_render` or FluidSynth renderers. The original environment files are retained in [`score_hpt/environment.yml`](score_hpt/environment.yml) and [`synth-proxy/environment.yml`](synth-proxy/environment.yml). They include machine-specific pinned packages; adapt the CUDA/PyTorch builds to your host.
 
-**Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies**  
-ISMIR 2026
+The core data inputs are aligned audio/MIDI from MAESTRO v3, SMD, GAPS, and François Leduc. Training also requires the relevant SoundFonts (Salamander Grand Piano and Spanish Classical Guitar) and preprocessed HDF5 files. Paths live in [`score_hpt/pytorch/config/config.yaml`](score_hpt/pytorch/config/config.yaml) and the proxy YAMLs under [`synth-proxy/configs`](synth-proxy/configs). Override local paths before training; the inherited defaults point to the original research machines.
 
-Paper and supplementary materials will be added here when available.
+The proxy package can be installed from its directory:
 
-## Method
+```bash
+cd synth-proxy
+python -m pip install -r requirements.txt
+```
 
-The framework contains three main components:
+`score_hpt` uses its research environment and runs from the `score_hpt` directory. See [`run_scripts/train_route.md`](run_scripts/train_route.md), [`score_hpt/README_scoreinf_proxy.md`](score_hpt/README_scoreinf_proxy.md), and [`synth-proxy/README.md`](synth-proxy/README.md) for entry points. Key commands are:
 
-1. **VeloEst**  
-   A score-informed MIDI velocity estimator pretrained with piano velocity labels.
+```bash
+# SoundFont proxy teacher data and proxy training (from synth-proxy/)
+python src/export_dataset_pkl.py --config-name data_piano paths.workspace_dir=/path/to/workspace paths.analysis_dir=../data_analysis instrument.path=/path/to/SalamanderGrandPianoV3.sfz
+python src/train.py --config-name train dataset.train.path=/path/to/train dataset.val.path=/path/to/val
+python src/eval.py ckpt_path=/path/to/proxy.ckpt device=cuda
 
-2. **Diff-Synth**  
-   A frozen differentiable waveform synthesiser used to adapt VeloEst through an audio reconstruction objective.
+# Velocity adaptation (from score_hpt/; override dataset/backend paths in config)
+python pytorch/train_ddsp.py backend.checkpoint=/path/to/ddsp.pt backend.backend_segment_seconds=5
+python pytorch/train_proxy.py backend.checkpoint=/path/to/proxy.ckpt backend.backend_segment_seconds=5
+```
 
-3. **Diff-SFProxy**  
-   A frozen differentiable proxy trained to reproduce the PHE and OSF responses of a selected SoundFont renderer.
+The camera-ready study uses a 10 s VeloEst front end and 5 s backend crops for its main runs (2 s is an ablation), 22,050 Hz mono audio, 2048-point FFT, and about 100 frames/s. Some inherited YAML defaults still say 2 s, so set `backend.backend_segment_seconds=5` explicitly for the main comparison. The model launch scripts expose the method variants, but this branch does not claim end-to-end reproducibility without the external data and selected checkpoints.
 
-During target-instrument adaptation, only VeloEst is updated.
+## Evaluation and figures
 
-## Experiments
+The guitar primary metric is Pearson `r` between Bark-scale specific loudness (BSSL) contours of the real recording and SoundFont resynthesis. Bark-scale total loudness (BSTL) is the companion metric. The MAESTRO/SMD piano results also include per-note velocity MAE.
 
-The paper evaluates the framework on piano and guitar recordings using:
+```bash
+python3 analysis/build_figures.py
+```
 
-- **MAESTRO**
-- **Saarland Music Data (SMD)**
-- **GAPS**
-- **François Leduc guitar dataset**
+This regenerates the presentation-ready SVGs and the site's result JSON from the transcribed camera-ready tables. The [analysis notes](analysis/README.md) explain the distinction between paper aggregates and the single audio example.
 
-The results show that Diff-SFProxy improves guitar velocity estimation over zero-shot transfer, whereas waveform-domain Diff-Synth adaptation can degrade performance under timbral mismatch.
+## Audio demo
 
-## Repository Status
+Open [`docs/index.html`](docs/index.html) through a local static server, or use the GitHub Pages URL once enabled. From the repository root:
 
-The camera-ready implementation and documentation are being prepared.
+```bash
+python3 -m http.server 8000 --directory docs
+```
 
-Planned release contents:
+The demo compares a 20 s MAESTRO test excerpt (60–80 s of one 2009 performance): human reference audio, Flat 64, a saved 5 s Diff-Synth run, and a saved 5 s Diff-SFProxy run. The three rendered examples use the same Salamander SoundFont and render settings. Each method has a velocity-colored piano roll, audio playback, and a downloadable MIDI excerpt. The [export script](scripts/export_maestro_demo.py) documents how to regenerate those files from the saved prediction MIDI and renders. The score badges are full-recording velocity MAE for that one piece, not the paper's dataset averages.
 
-- Training and adaptation code
-- Diff-SFProxy training scripts
-- Pretrained checkpoints
-- Evaluation scripts
-- Configuration files
-- Audio examples
-
-## Installation
-
-Installation instructions will be added with the code release.
-
-## Usage
-
-Training, adaptation, inference, and evaluation commands will be added with the code release.
+The MAESTRO excerpt is attributed to Google LLC under CC BY-NC-SA 4.0. Salamander Grand Piano V3 samples are attributed to Alexander Holm / FreePats under CC BY 3.0. The demo is intended for research and non-commercial presentation. Dataset recordings and SoundFont sample libraries are not included beyond the short attributed demo audio.
 
 ## Citation
 
-Please cite the paper if you use this repository:
-
 ```bibtex
 @inproceedings{he2026beyond,
-  title     = {Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies},
+  author = {Zhanhong He and Hanyu Meng and David Defeng Huang and Roberto Togneri},
+  title = {Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies},
   booktitle = {Proceedings of the International Society for Music Information Retrieval Conference},
-  year      = {2026}
+  year = {2026}
 }
 ```
 
-The BibTeX entry will be updated with the final author list and proceedings metadata.
-
-## Licence
-
-The licence will be specified with the public code release.
-
-## Contact
-
-For questions, please open a GitHub issue.
+The `score_hpt` component retains its existing MIT license. Review the license terms for the whole release and upstream DDSP components before merging this branch to `main`.

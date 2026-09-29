@@ -1,0 +1,13 @@
+# Paper result data
+
+`paper_results.csv` transcribes Table 2 (evaluation across MAESTRO, SMD, GAPS, and FL) from the supplied camera-ready manuscript. `proxy_recovery.csv` transcribes Table 1. They are paper aggregates, not a recomputation from the example audio files.
+
+`5090_evaluation_inventory.csv` indexes 28 saved evaluation summaries found in the lab5090 workspace. It includes run names, checkpoint paths relative to that workspace, evaluated item counts, failures, velocity MAE (when available), and BSSL/BSTL Pearson correlations. It is an **exploratory run inventory**, not the selected paper table. The two guitar entries are 2 s proxy runs; the inventory does not contain the paper's final 5 s guitar comparison. Rebuild it on the source machine with `python3 scripts/inventory_eval_summaries.py /path/to/score_hpt/workspaces analysis/5090_evaluation_inventory.csv`.
+
+The primary guitar metric is Pearson correlation between real and SoundFont-rendered Bark-scale specific loudness (`r_BSSL`); `r_BSTL` is the companion total-loudness metric. Guitar datasets have no ground-truth velocity labels, so there is no guitar velocity MAE. The `5 s` adaptation backend is the main method; `2 s` is an ablation. MAESTRO/SMD have ground-truth velocity labels.
+
+Run `python3 analysis/build_figures.py` from the repository root to regenerate `docs/assets/guitar_results.svg`, `docs/assets/recovery.svg`, and `docs/assets/paper_results.json`. The script uses only the Python standard library.
+
+The available 5090 workspace includes saved prediction MIDI and renders for a matched MAESTRO test piece used in the listening demo. Its local evaluation summaries are not numerically identical to the rounded paper table, so the site keeps the paper aggregates and demo example clearly separate. The 3090 results are unavailable.
+
+Source: *Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies*, ISMIR 2026 camera-ready manuscript, Tables 1–2. All decimal values should be checked once more against the final proceedings version before merging to `main`.

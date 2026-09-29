@@ -1,0 +1,3565 @@
+{
+  "dataset": "GuitarSet (mono mix)",
+  "audio_file_count": 360,
+  "total_frames": 548652,
+  "hist_counts": [
+    27518,
+    22471,
+    22470,
+    21886,
+    20978,
+    21223,
+    21667,
+    22393,
+    22392,
+    21976,
+    21635,
+    20436,
+    19940,
+    19245,
+    18544,
+    17780,
+    16951,
+    16363,
+    15382,
+    14603,
+    13667,
+    12818,
+    11905,
+    11003,
+    9966,
+    9192,
+    8316,
+    7538,
+    6868,
+    6233,
+    5629,
+    4988,
+    4554,
+    3879,
+    3437,
+    3061,
+    2671,
+    2399,
+    2081,
+    1774,
+    1599,
+    1408,
+    1182,
+    1049,
+    895,
+    750,
+    612,
+    560,
+    489,
+    363,
+    332,
+    291,
+    229,
+    193,
+    135,
+    135,
+    114,
+    117,
+    89,
+    47,
+    45,
+    40,
+    32,
+    31,
+    18,
+    13,
+    18,
+    9,
+    8,
+    5,
+    7,
+    2,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bin_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5,
+    33.0,
+    33.5,
+    34.0,
+    34.5,
+    35.0,
+    35.5,
+    36.0,
+    36.5,
+    37.0,
+    37.5,
+    38.0,
+    38.5,
+    39.0,
+    39.5,
+    40.0,
+    40.5,
+    41.0,
+    41.5,
+    42.0,
+    42.5,
+    43.0,
+    43.5,
+    44.0,
+    44.5,
+    45.0,
+    45.5,
+    46.0,
+    46.5,
+    47.0,
+    47.5,
+    48.0,
+    48.5,
+    49.0,
+    49.5,
+    50.0,
+    50.5,
+    51.0,
+    51.5,
+    52.0,
+    52.5,
+    53.0,
+    53.5,
+    54.0,
+    54.5,
+    55.0,
+    55.5,
+    56.0,
+    56.5,
+    57.0,
+    57.5,
+    58.0,
+    58.5,
+    59.0,
+    59.5,
+    60.0,
+    60.5,
+    61.0,
+    61.5,
+    62.0,
+    62.5,
+    63.0,
+    63.5,
+    64.0,
+    64.5,
+    65.0,
+    65.5,
+    66.0,
+    66.5,
+    67.0,
+    67.5,
+    68.0,
+    68.5,
+    69.0,
+    69.5,
+    70.0,
+    70.5,
+    71.0,
+    71.5,
+    72.0,
+    72.5,
+    73.0,
+    73.5,
+    74.0,
+    74.5,
+    75.0,
+    75.5,
+    76.0,
+    76.5,
+    77.0,
+    77.5,
+    78.0,
+    78.5,
+    79.0,
+    79.5,
+    80.0
+  ],
+  "zero_bins": [
+    [
+      36.5,
+      37.0
+    ],
+    [
+      37.5,
+      38.0
+    ],
+    [
+      38.5,
+      39.0
+    ],
+    [
+      39.0,
+      39.5
+    ],
+    [
+      39.5,
+      40.0
+    ],
+    [
+      40.0,
+      40.5
+    ],
+    [
+      40.5,
+      41.0
+    ],
+    [
+      41.0,
+      41.5
+    ],
+    [
+      41.5,
+      42.0
+    ],
+    [
+      42.0,
+      42.5
+    ],
+    [
+      42.5,
+      43.0
+    ],
+    [
+      43.0,
+      43.5
+    ],
+    [
+      43.5,
+      44.0
+    ],
+    [
+      44.0,
+      44.5
+    ],
+    [
+      44.5,
+      45.0
+    ],
+    [
+      45.0,
+      45.5
+    ],
+    [
+      45.5,
+      46.0
+    ],
+    [
+      46.0,
+      46.5
+    ],
+    [
+      46.5,
+      47.0
+    ],
+    [
+      47.0,
+      47.5
+    ],
+    [
+      47.5,
+      48.0
+    ],
+    [
+      48.0,
+      48.5
+    ],
+    [
+      48.5,
+      49.0
+    ],
+    [
+      49.0,
+      49.5
+    ],
+    [
+      49.5,
+      50.0
+    ],
+    [
+      50.0,
+      50.5
+    ],
+    [
+      50.5,
+      51.0
+    ],
+    [
+      51.0,
+      51.5
+    ],
+    [
+      51.5,
+      52.0
+    ],
+    [
+      52.0,
+      52.5
+    ],
+    [
+      52.5,
+      53.0
+    ],
+    [
+      53.0,
+      53.5
+    ],
+    [
+      53.5,
+      54.0
+    ],
+    [
+      54.0,
+      54.5
+    ],
+    [
+      54.5,
+      55.0
+    ],
+    [
+      55.0,
+      55.5
+    ],
+    [
+      55.5,
+      56.0
+    ],
+    [
+      56.0,
+      56.5
+    ],
+    [
+      56.5,
+      57.0
+    ],
+    [
+      57.0,
+      57.5
+    ],
+    [
+      57.5,
+      58.0
+    ],
+    [
+      58.0,
+      58.5
+    ],
+    [
+      58.5,
+      59.0
+    ],
+    [
+      59.0,
+      59.5
+    ],
+    [
+      59.5,
+      60.0
+    ],
+    [
+      60.0,
+      60.5
+    ],
+    [
+      60.5,
+      61.0
+    ],
+    [
+      61.0,
+      61.5
+    ],
+    [
+      61.5,
+      62.0
+    ],
+    [
+      62.0,
+      62.5
+    ],
+    [
+      62.5,
+      63.0
+    ],
+    [
+      63.0,
+      63.5
+    ],
+    [
+      63.5,
+      64.0
+    ],
+    [
+      64.0,
+      64.5
+    ],
+    [
+      64.5,
+      65.0
+    ],
+    [
+      65.0,
+      65.5
+    ],
+    [
+      65.5,
+      66.0
+    ],
+    [
+      66.0,
+      66.5
+    ],
+    [
+      66.5,
+      67.0
+    ],
+    [
+      67.0,
+      67.5
+    ],
+    [
+      67.5,
+      68.0
+    ],
+    [
+      68.0,
+      68.5
+    ],
+    [
+      68.5,
+      69.0
+    ],
+    [
+      69.0,
+      69.5
+    ],
+    [
+      69.5,
+      70.0
+    ],
+    [
+      70.0,
+      70.5
+    ],
+    [
+      70.5,
+      71.0
+    ],
+    [
+      71.0,
+      71.5
+    ],
+    [
+      71.5,
+      72.0
+    ],
+    [
+      72.0,
+      72.5
+    ],
+    [
+      72.5,
+      73.0
+    ],
+    [
+      73.0,
+      73.5
+    ],
+    [
+      73.5,
+      74.0
+    ],
+    [
+      74.0,
+      74.5
+    ],
+    [
+      74.5,
+      75.0
+    ],
+    [
+      75.0,
+      75.5
+    ],
+    [
+      75.5,
+      76.0
+    ],
+    [
+      76.0,
+      76.5
+    ],
+    [
+      76.5,
+      77.0
+    ],
+    [
+      77.0,
+      77.5
+    ],
+    [
+      77.5,
+      78.0
+    ],
+    [
+      78.0,
+      78.5
+    ],
+    [
+      78.5,
+      79.0
+    ],
+    [
+      79.0,
+      79.5
+    ],
+    [
+      79.5,
+      80.0
+    ]
+  ],
+  "per_file_stats": [
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN1-129-Eb_comp_mix.wav",
+      "mean": 5.483256816864014,
+      "median": 5.113299369812012,
+      "std": 2.9924073219299316,
+      "min": 0.2309270203113556,
+      "max": 15.803021430969238
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN1-129-Eb_solo_mix.wav",
+      "mean": 9.55473804473877,
+      "median": 9.005334854125977,
+      "std": 5.291452884674072,
+      "min": 1.2901432514190674,
+      "max": 31.71009063720703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN1-147-Gb_comp_mix.wav",
+      "mean": 6.484364032745361,
+      "median": 5.952250957489014,
+      "std": 3.8899965286254883,
+      "min": 0.29644468426704407,
+      "max": 18.626617431640625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN1-147-Gb_solo_mix.wav",
+      "mean": 9.211928367614746,
+      "median": 8.959760665893555,
+      "std": 3.424110174179077,
+      "min": 2.786015510559082,
+      "max": 24.281400680541992
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN2-131-B_comp_mix.wav",
+      "mean": 5.939558982849121,
+      "median": 5.687404632568359,
+      "std": 3.9659628868103027,
+      "min": 0.07956807315349579,
+      "max": 23.15854835510254
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN2-131-B_solo_mix.wav",
+      "mean": 12.432677268981934,
+      "median": 12.929719924926758,
+      "std": 6.979974269866943,
+      "min": 0.3032054603099823,
+      "max": 34.93486785888672
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN2-166-Ab_comp_mix.wav",
+      "mean": 5.974257469177246,
+      "median": 5.552746772766113,
+      "std": 3.6784346103668213,
+      "min": 0.0710880309343338,
+      "max": 19.732303619384766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN2-166-Ab_solo_mix.wav",
+      "mean": 10.003279685974121,
+      "median": 10.802669525146484,
+      "std": 6.06856632232666,
+      "min": 0.10044321417808533,
+      "max": 32.81577682495117
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN3-119-G_comp_mix.wav",
+      "mean": 7.380199909210205,
+      "median": 6.77750301361084,
+      "std": 4.232754230499268,
+      "min": 0.2830843925476074,
+      "max": 29.714317321777344
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN3-119-G_solo_mix.wav",
+      "mean": 8.665741920471191,
+      "median": 8.789710998535156,
+      "std": 3.9996039867401123,
+      "min": 0.4597579836845398,
+      "max": 22.675167083740234
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN3-154-E_comp_mix.wav",
+      "mean": 9.134989738464355,
+      "median": 8.022441864013672,
+      "std": 5.246963977813721,
+      "min": 0.5111181735992432,
+      "max": 29.439369201660156
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_BN3-154-E_solo_mix.wav",
+      "mean": 11.876052856445312,
+      "median": 11.470008850097656,
+      "std": 4.749474048614502,
+      "min": 2.0275208950042725,
+      "max": 27.3137264251709
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk1-114-Ab_comp_mix.wav",
+      "mean": 7.940003871917725,
+      "median": 7.289858818054199,
+      "std": 5.450175762176514,
+      "min": 0.14252892136573792,
+      "max": 29.943740844726562
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk1-114-Ab_solo_mix.wav",
+      "mean": 3.1923351287841797,
+      "median": 2.8531675338745117,
+      "std": 1.848987340927124,
+      "min": 0.007591720670461655,
+      "max": 10.195125579833984
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk1-97-C_comp_mix.wav",
+      "mean": 8.640844345092773,
+      "median": 8.611607551574707,
+      "std": 6.252923965454102,
+      "min": 0.0,
+      "max": 31.529253005981445
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk1-97-C_solo_mix.wav",
+      "mean": 3.009000539779663,
+      "median": 2.9568123817443848,
+      "std": 1.9645239114761353,
+      "min": 0.00030956193222664297,
+      "max": 11.39113998413086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk2-108-Eb_comp_mix.wav",
+      "mean": 10.365928649902344,
+      "median": 10.099146842956543,
+      "std": 4.886497974395752,
+      "min": 0.18650174140930176,
+      "max": 26.672393798828125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk2-108-Eb_solo_mix.wav",
+      "mean": 3.5002927780151367,
+      "median": 3.3370583057403564,
+      "std": 2.024868965148926,
+      "min": 0.011491216719150543,
+      "max": 10.568655014038086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk2-119-G_comp_mix.wav",
+      "mean": 12.471637725830078,
+      "median": 12.167829513549805,
+      "std": 5.383432865142822,
+      "min": 0.2105269730091095,
+      "max": 28.39754867553711
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk2-119-G_solo_mix.wav",
+      "mean": 5.007493019104004,
+      "median": 4.712869167327881,
+      "std": 2.8078269958496094,
+      "min": 4.5708547986578196e-05,
+      "max": 18.36518669128418
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk3-112-C#_comp_mix.wav",
+      "mean": 12.44337272644043,
+      "median": 12.194158554077148,
+      "std": 5.364011287689209,
+      "min": 0.10946016013622284,
+      "max": 29.40591049194336
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk3-112-C#_solo_mix.wav",
+      "mean": 5.055115699768066,
+      "median": 4.792327404022217,
+      "std": 2.7538647651672363,
+      "min": 0.08502677828073502,
+      "max": 17.988576889038086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk3-98-A_comp_mix.wav",
+      "mean": 8.433344841003418,
+      "median": 7.978553771972656,
+      "std": 4.80912446975708,
+      "min": 0.2393973469734192,
+      "max": 26.6820068359375
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Funk3-98-A_solo_mix.wav",
+      "mean": 4.486297130584717,
+      "median": 4.379336357116699,
+      "std": 2.0412023067474365,
+      "min": 0.1708490252494812,
+      "max": 12.349029541015625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz1-130-D_comp_mix.wav",
+      "mean": 7.774780750274658,
+      "median": 6.771259307861328,
+      "std": 4.144646644592285,
+      "min": 0.8575259447097778,
+      "max": 29.314163208007812
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz1-130-D_solo_mix.wav",
+      "mean": 3.671795606613159,
+      "median": 3.706019639968872,
+      "std": 2.0458333492279053,
+      "min": 0.03489158675074577,
+      "max": 11.378422737121582
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz1-200-B_comp_mix.wav",
+      "mean": 7.595158100128174,
+      "median": 6.130677223205566,
+      "std": 6.118459224700928,
+      "min": 0.06831979006528854,
+      "max": 28.002849578857422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz1-200-B_solo_mix.wav",
+      "mean": 3.7569103240966797,
+      "median": 3.8412704467773438,
+      "std": 1.9503535032272339,
+      "min": 0.5669348835945129,
+      "max": 9.563987731933594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 9.58584213256836,
+      "median": 8.767232894897461,
+      "std": 5.516241073608398,
+      "min": 0.2616605758666992,
+      "max": 31.774887084960938
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 5.552369594573975,
+      "median": 5.134472846984863,
+      "std": 3.3422117233276367,
+      "min": 0.11515896022319794,
+      "max": 21.235759735107422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz2-187-F#_comp_mix.wav",
+      "mean": 6.4188055992126465,
+      "median": 4.983623504638672,
+      "std": 5.069714069366455,
+      "min": 0.24322736263275146,
+      "max": 28.41933822631836
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz2-187-F#_solo_mix.wav",
+      "mean": 8.030047416687012,
+      "median": 7.792593955993652,
+      "std": 4.339313983917236,
+      "min": 0.11806005239486694,
+      "max": 24.620290756225586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 10.516544342041016,
+      "median": 10.114835739135742,
+      "std": 5.23363733291626,
+      "min": 0.3979506194591522,
+      "max": 30.317707061767578
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 8.027386665344238,
+      "median": 7.133782386779785,
+      "std": 4.343264579772949,
+      "min": 0.47689491510391235,
+      "max": 26.049659729003906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz3-150-C_comp_mix.wav",
+      "mean": 9.870689392089844,
+      "median": 9.50914192199707,
+      "std": 5.997791290283203,
+      "min": 0.38768312335014343,
+      "max": 30.737150192260742
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Jazz3-150-C_solo_mix.wav",
+      "mean": 6.545943260192871,
+      "median": 6.202228546142578,
+      "std": 2.9409406185150146,
+      "min": 0.7670630216598511,
+      "max": 16.881975173950195
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock1-130-A_comp_mix.wav",
+      "mean": 10.577220916748047,
+      "median": 9.791251182556152,
+      "std": 3.8369033336639404,
+      "min": 3.8031420707702637,
+      "max": 28.20164680480957
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock1-130-A_solo_mix.wav",
+      "mean": 7.342515468597412,
+      "median": 7.357566833496094,
+      "std": 3.12003493309021,
+      "min": 0.9749320149421692,
+      "max": 17.48194694519043
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock1-90-C#_comp_mix.wav",
+      "mean": 9.297429084777832,
+      "median": 8.668927192687988,
+      "std": 3.541796922683716,
+      "min": 1.2902636528015137,
+      "max": 26.104461669921875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock1-90-C#_solo_mix.wav",
+      "mean": 6.348109245300293,
+      "median": 6.605634689331055,
+      "std": 2.63360857963562,
+      "min": 0.32402175664901733,
+      "max": 15.612323760986328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock2-142-D_comp_mix.wav",
+      "mean": 12.427138328552246,
+      "median": 12.304718017578125,
+      "std": 4.388621807098389,
+      "min": 2.5079827308654785,
+      "max": 29.18521499633789
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock2-142-D_solo_mix.wav",
+      "mean": 7.011227130889893,
+      "median": 6.52227783203125,
+      "std": 4.325952053070068,
+      "min": 0.037012550979852676,
+      "max": 28.97904396057129
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock2-85-F_comp_mix.wav",
+      "mean": 9.229742050170898,
+      "median": 8.521183967590332,
+      "std": 4.008792877197266,
+      "min": 1.8724416494369507,
+      "max": 28.072986602783203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock2-85-F_solo_mix.wav",
+      "mean": 8.509064674377441,
+      "median": 7.221014022827148,
+      "std": 5.436957359313965,
+      "min": 0.7453022599220276,
+      "max": 31.7961368560791
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock3-117-Bb_comp_mix.wav",
+      "mean": 10.942353248596191,
+      "median": 10.347973823547363,
+      "std": 4.760789394378662,
+      "min": 1.0738457441329956,
+      "max": 28.503639221191406
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock3-117-Bb_solo_mix.wav",
+      "mean": 6.247617721557617,
+      "median": 6.415078639984131,
+      "std": 3.7152414321899414,
+      "min": 0.2074953019618988,
+      "max": 17.8399715423584
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock3-148-C_comp_mix.wav",
+      "mean": 11.830255508422852,
+      "median": 11.445028305053711,
+      "std": 3.4693729877471924,
+      "min": 0.0,
+      "max": 24.569602966308594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_Rock3-148-C_solo_mix.wav",
+      "mean": 9.214004516601562,
+      "median": 8.962778091430664,
+      "std": 5.321165561676025,
+      "min": 0.017070110887289047,
+      "max": 25.774078369140625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS1-100-C#_comp_mix.wav",
+      "mean": 10.366912841796875,
+      "median": 9.746824264526367,
+      "std": 3.4674925804138184,
+      "min": 2.051952838897705,
+      "max": 27.421674728393555
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS1-100-C#_solo_mix.wav",
+      "mean": 9.898380279541016,
+      "median": 9.472738265991211,
+      "std": 5.300765514373779,
+      "min": 0.161432147026062,
+      "max": 27.080026626586914
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS1-68-E_comp_mix.wav",
+      "mean": 5.4390668869018555,
+      "median": 5.163446426391602,
+      "std": 2.472872495651245,
+      "min": 0.3553614318370819,
+      "max": 16.10544204711914
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS1-68-E_solo_mix.wav",
+      "mean": 11.0183744430542,
+      "median": 10.909467697143555,
+      "std": 5.007715225219727,
+      "min": 0.8835244178771973,
+      "max": 31.376266479492188
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS2-107-Ab_comp_mix.wav",
+      "mean": 4.463624477386475,
+      "median": 4.257132530212402,
+      "std": 1.6612783670425415,
+      "min": 0.38555908203125,
+      "max": 11.417787551879883
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS2-107-Ab_solo_mix.wav",
+      "mean": 7.225879669189453,
+      "median": 5.74656867980957,
+      "std": 4.988423824310303,
+      "min": 0.6381678581237793,
+      "max": 28.550189971923828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS2-88-F_comp_mix.wav",
+      "mean": 4.749614238739014,
+      "median": 4.607133865356445,
+      "std": 2.553609848022461,
+      "min": 0.005970092490315437,
+      "max": 11.835624694824219
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS2-88-F_solo_mix.wav",
+      "mean": 6.515966892242432,
+      "median": 5.958374977111816,
+      "std": 3.5570051670074463,
+      "min": 0.41405874490737915,
+      "max": 26.729272842407227
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS3-84-Bb_comp_mix.wav",
+      "mean": 3.5525481700897217,
+      "median": 3.345154285430908,
+      "std": 1.8322023153305054,
+      "min": 0.008731423877179623,
+      "max": 11.030643463134766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS3-84-Bb_solo_mix.wav",
+      "mean": 4.419107437133789,
+      "median": 3.685537815093994,
+      "std": 3.555131196975708,
+      "min": 0.01129504106938839,
+      "max": 28.90070915222168
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS3-98-C_comp_mix.wav",
+      "mean": 4.752657413482666,
+      "median": 4.627301216125488,
+      "std": 1.242087721824646,
+      "min": 1.2933043241500854,
+      "max": 10.428324699401855
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/00_SS3-98-C_solo_mix.wav",
+      "mean": 7.891009330749512,
+      "median": 7.196919918060303,
+      "std": 3.698796272277832,
+      "min": 0.5783842206001282,
+      "max": 31.70056915283203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN1-129-Eb_comp_mix.wav",
+      "mean": 6.0484795570373535,
+      "median": 5.397556304931641,
+      "std": 3.7275352478027344,
+      "min": 0.1432470679283142,
+      "max": 24.08306121826172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN1-129-Eb_solo_mix.wav",
+      "mean": 7.54749059677124,
+      "median": 7.851662635803223,
+      "std": 4.984511375427246,
+      "min": 0.013911237008869648,
+      "max": 28.95111846923828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN1-147-Gb_comp_mix.wav",
+      "mean": 8.3589506149292,
+      "median": 8.024224281311035,
+      "std": 4.458785533905029,
+      "min": 0.6169077157974243,
+      "max": 30.011295318603516
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN1-147-Gb_solo_mix.wav",
+      "mean": 12.090011596679688,
+      "median": 12.809877395629883,
+      "std": 6.834825038909912,
+      "min": 0.1284281611442566,
+      "max": 38.34314727783203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN2-131-B_comp_mix.wav",
+      "mean": 6.749313831329346,
+      "median": 6.36012077331543,
+      "std": 4.815340042114258,
+      "min": 0.015073606744408607,
+      "max": 27.97087860107422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN2-131-B_solo_mix.wav",
+      "mean": 9.031414985656738,
+      "median": 9.273183822631836,
+      "std": 4.751012802124023,
+      "min": 0.007862863130867481,
+      "max": 25.027381896972656
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN2-166-Ab_comp_mix.wav",
+      "mean": 7.825071334838867,
+      "median": 7.861630916595459,
+      "std": 4.293575286865234,
+      "min": 0.3093189597129822,
+      "max": 24.047847747802734
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN2-166-Ab_solo_mix.wav",
+      "mean": 9.517661094665527,
+      "median": 9.954938888549805,
+      "std": 4.737402439117432,
+      "min": 0.026120388880372047,
+      "max": 23.359615325927734
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN3-119-G_comp_mix.wav",
+      "mean": 8.04061222076416,
+      "median": 7.124746799468994,
+      "std": 6.148273944854736,
+      "min": 0.01101631112396717,
+      "max": 29.553361892700195
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN3-119-G_solo_mix.wav",
+      "mean": 8.418503761291504,
+      "median": 8.690372467041016,
+      "std": 4.778621196746826,
+      "min": 0.007500351872295141,
+      "max": 22.537866592407227
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN3-154-E_comp_mix.wav",
+      "mean": 7.753848075866699,
+      "median": 7.71068000793457,
+      "std": 5.496373653411865,
+      "min": 0.15298494696617126,
+      "max": 25.027360916137695
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_BN3-154-E_solo_mix.wav",
+      "mean": 13.421002388000488,
+      "median": 13.802841186523438,
+      "std": 6.367153167724609,
+      "min": 0.05005010962486267,
+      "max": 33.38747024536133
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk1-114-Ab_comp_mix.wav",
+      "mean": 8.827149391174316,
+      "median": 7.504219055175781,
+      "std": 6.88797664642334,
+      "min": 0.09408611804246902,
+      "max": 28.667865753173828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk1-114-Ab_solo_mix.wav",
+      "mean": 10.191100120544434,
+      "median": 10.289051055908203,
+      "std": 6.352855205535889,
+      "min": 0.01931189000606537,
+      "max": 27.985157012939453
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk1-97-C_comp_mix.wav",
+      "mean": 7.36462926864624,
+      "median": 6.258266448974609,
+      "std": 6.282621383666992,
+      "min": 0.0019724885933101177,
+      "max": 28.536922454833984
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk1-97-C_solo_mix.wav",
+      "mean": 6.786717891693115,
+      "median": 7.026384353637695,
+      "std": 4.931459426879883,
+      "min": 9.112938278121874e-05,
+      "max": 24.823469161987305
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk2-108-Eb_comp_mix.wav",
+      "mean": 6.876984596252441,
+      "median": 5.646937370300293,
+      "std": 5.513797760009766,
+      "min": 0.14727577567100525,
+      "max": 23.422103881835938
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk2-108-Eb_solo_mix.wav",
+      "mean": 10.359447479248047,
+      "median": 10.734848022460938,
+      "std": 6.306516170501709,
+      "min": 0.003255586139857769,
+      "max": 32.4513053894043
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk2-119-G_comp_mix.wav",
+      "mean": 7.756575584411621,
+      "median": 6.517147064208984,
+      "std": 5.964696407318115,
+      "min": 0.19957496225833893,
+      "max": 26.172283172607422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk2-119-G_solo_mix.wav",
+      "mean": 8.705788612365723,
+      "median": 8.413015365600586,
+      "std": 6.964192867279053,
+      "min": 0.009027097374200821,
+      "max": 29.111839294433594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk3-112-C#_comp_mix.wav",
+      "mean": 7.021537780761719,
+      "median": 6.975081443786621,
+      "std": 5.508979320526123,
+      "min": 0.00015283629181794822,
+      "max": 26.763774871826172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk3-112-C#_solo_mix.wav",
+      "mean": 6.831483364105225,
+      "median": 7.204514503479004,
+      "std": 4.339540481567383,
+      "min": 1.4541909877152648e-05,
+      "max": 21.49985122680664
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk3-98-A_comp_mix.wav",
+      "mean": 8.123199462890625,
+      "median": 6.397340774536133,
+      "std": 6.635184288024902,
+      "min": 0.01202569529414177,
+      "max": 28.75425148010254
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Funk3-98-A_solo_mix.wav",
+      "mean": 7.562536716461182,
+      "median": 7.799442768096924,
+      "std": 4.561173439025879,
+      "min": 0.004508476238697767,
+      "max": 23.600019454956055
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz1-130-D_comp_mix.wav",
+      "mean": 8.011873245239258,
+      "median": 8.914875030517578,
+      "std": 4.246248722076416,
+      "min": 0.043019283562898636,
+      "max": 18.176179885864258
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz1-130-D_solo_mix.wav",
+      "mean": 11.352307319641113,
+      "median": 11.534448623657227,
+      "std": 6.760795593261719,
+      "min": 0.050383418798446655,
+      "max": 31.91645622253418
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz1-200-B_comp_mix.wav",
+      "mean": 6.954582214355469,
+      "median": 6.515227317810059,
+      "std": 4.370624542236328,
+      "min": 0.14655378460884094,
+      "max": 16.82561492919922
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz1-200-B_solo_mix.wav",
+      "mean": 12.702496528625488,
+      "median": 13.716690063476562,
+      "std": 6.274645805358887,
+      "min": 0.0957179069519043,
+      "max": 30.951187133789062
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 5.886023044586182,
+      "median": 4.680639266967773,
+      "std": 4.737875938415527,
+      "min": 0.03777315840125084,
+      "max": 28.253559112548828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 6.420979022979736,
+      "median": 6.8640360832214355,
+      "std": 3.908582925796509,
+      "min": 0.006213588640093803,
+      "max": 22.658260345458984
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz2-187-F#_comp_mix.wav",
+      "mean": 6.510960578918457,
+      "median": 4.17779016494751,
+      "std": 6.29458475112915,
+      "min": 0.054393500089645386,
+      "max": 27.174640655517578
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz2-187-F#_solo_mix.wav",
+      "mean": 7.959395885467529,
+      "median": 8.631637573242188,
+      "std": 3.5380470752716064,
+      "min": 0.0565166100859642,
+      "max": 18.923337936401367
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 5.7956037521362305,
+      "median": 4.40205192565918,
+      "std": 4.693019390106201,
+      "min": 0.08342257142066956,
+      "max": 26.216190338134766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 10.367467880249023,
+      "median": 10.883550643920898,
+      "std": 4.56354284286499,
+      "min": 0.01206240989267826,
+      "max": 22.82735824584961
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz3-150-C_comp_mix.wav",
+      "mean": 6.314913749694824,
+      "median": 4.026982307434082,
+      "std": 6.482217788696289,
+      "min": 0.06087064743041992,
+      "max": 28.09885025024414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Jazz3-150-C_solo_mix.wav",
+      "mean": 8.205558776855469,
+      "median": 8.968387603759766,
+      "std": 4.3221516609191895,
+      "min": 0.00428069569170475,
+      "max": 21.99327278137207
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock1-130-A_comp_mix.wav",
+      "mean": 9.801419258117676,
+      "median": 9.690753936767578,
+      "std": 5.631377220153809,
+      "min": 0.9284207820892334,
+      "max": 23.70814323425293
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock1-130-A_solo_mix.wav",
+      "mean": 10.918346405029297,
+      "median": 10.668148040771484,
+      "std": 6.25396203994751,
+      "min": 0.004345101770013571,
+      "max": 29.021656036376953
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock1-90-C#_comp_mix.wav",
+      "mean": 11.363683700561523,
+      "median": 11.35690689086914,
+      "std": 5.370138168334961,
+      "min": 0.8112049102783203,
+      "max": 29.220443725585938
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock1-90-C#_solo_mix.wav",
+      "mean": 9.726244926452637,
+      "median": 10.088233947753906,
+      "std": 5.145693302154541,
+      "min": 0.01502025406807661,
+      "max": 26.17241668701172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock2-142-D_comp_mix.wav",
+      "mean": 11.363393783569336,
+      "median": 11.265518188476562,
+      "std": 5.580892562866211,
+      "min": 1.5915822982788086,
+      "max": 28.511672973632812
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock2-142-D_solo_mix.wav",
+      "mean": 10.63870620727539,
+      "median": 10.86154556274414,
+      "std": 5.1097822189331055,
+      "min": 0.013832097873091698,
+      "max": 27.598247528076172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock2-85-F_comp_mix.wav",
+      "mean": 10.067153930664062,
+      "median": 9.931761741638184,
+      "std": 5.1142988204956055,
+      "min": 0.204784095287323,
+      "max": 25.7512264251709
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock2-85-F_solo_mix.wav",
+      "mean": 12.333871841430664,
+      "median": 12.679028511047363,
+      "std": 6.279297351837158,
+      "min": 0.0317855067551136,
+      "max": 33.7430305480957
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock3-117-Bb_comp_mix.wav",
+      "mean": 10.594718933105469,
+      "median": 11.444798469543457,
+      "std": 6.703262805938721,
+      "min": 0.004921351093798876,
+      "max": 29.820640563964844
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock3-117-Bb_solo_mix.wav",
+      "mean": 9.399457931518555,
+      "median": 10.065807342529297,
+      "std": 5.304563999176025,
+      "min": 0.00321554415859282,
+      "max": 24.031829833984375
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock3-148-C_comp_mix.wav",
+      "mean": 8.6704683303833,
+      "median": 9.134774208068848,
+      "std": 4.716691017150879,
+      "min": 0.0034779715351760387,
+      "max": 23.814373016357422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_Rock3-148-C_solo_mix.wav",
+      "mean": 10.38893985748291,
+      "median": 10.456880569458008,
+      "std": 5.388631820678711,
+      "min": 0.032767340540885925,
+      "max": 29.433650970458984
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS1-100-C#_comp_mix.wav",
+      "mean": 9.812166213989258,
+      "median": 10.91673469543457,
+      "std": 5.273122310638428,
+      "min": 0.5442785024642944,
+      "max": 25.095176696777344
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS1-100-C#_solo_mix.wav",
+      "mean": 8.902129173278809,
+      "median": 9.019845962524414,
+      "std": 5.959585666656494,
+      "min": 0.006736865732818842,
+      "max": 30.502960205078125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS1-68-E_comp_mix.wav",
+      "mean": 7.500707149505615,
+      "median": 7.018193244934082,
+      "std": 2.3922951221466064,
+      "min": 1.4610579013824463,
+      "max": 17.906970977783203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS1-68-E_solo_mix.wav",
+      "mean": 6.6695709228515625,
+      "median": 6.520160675048828,
+      "std": 5.366917133331299,
+      "min": 0.001321763964369893,
+      "max": 26.93671226501465
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS2-107-Ab_comp_mix.wav",
+      "mean": 6.441324710845947,
+      "median": 4.4789509773254395,
+      "std": 5.762171745300293,
+      "min": 0.033709704875946045,
+      "max": 28.02600860595703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS2-107-Ab_solo_mix.wav",
+      "mean": 12.56777572631836,
+      "median": 12.778914451599121,
+      "std": 6.5593180656433105,
+      "min": 0.26695016026496887,
+      "max": 31.587112426757812
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS2-88-F_comp_mix.wav",
+      "mean": 6.287721633911133,
+      "median": 5.369145393371582,
+      "std": 4.81357479095459,
+      "min": 0.009948285296559334,
+      "max": 20.748851776123047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS2-88-F_solo_mix.wav",
+      "mean": 9.786002159118652,
+      "median": 9.756341934204102,
+      "std": 4.977804183959961,
+      "min": 0.04156144708395004,
+      "max": 28.796842575073242
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS3-84-Bb_comp_mix.wav",
+      "mean": 10.445442199707031,
+      "median": 10.313201904296875,
+      "std": 3.4147729873657227,
+      "min": 0.5530076026916504,
+      "max": 23.088905334472656
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS3-84-Bb_solo_mix.wav",
+      "mean": 12.46002197265625,
+      "median": 12.896053314208984,
+      "std": 6.143019676208496,
+      "min": 0.04982231184840202,
+      "max": 35.16138458251953
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS3-98-C_comp_mix.wav",
+      "mean": 12.674844741821289,
+      "median": 12.578914642333984,
+      "std": 2.216313600540161,
+      "min": 4.02905797958374,
+      "max": 21.40979766845703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/01_SS3-98-C_solo_mix.wav",
+      "mean": 16.04041862487793,
+      "median": 16.97109031677246,
+      "std": 6.849368572235107,
+      "min": 0.1237955242395401,
+      "max": 34.3692741394043
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN1-129-Eb_comp_mix.wav",
+      "mean": 6.47226619720459,
+      "median": 6.309805870056152,
+      "std": 2.5483157634735107,
+      "min": 0.24632443487644196,
+      "max": 17.595754623413086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN1-129-Eb_solo_mix.wav",
+      "mean": 7.441799640655518,
+      "median": 7.162171363830566,
+      "std": 4.502912521362305,
+      "min": 0.11006193608045578,
+      "max": 18.172252655029297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN1-147-Gb_comp_mix.wav",
+      "mean": 4.52990198135376,
+      "median": 4.569504737854004,
+      "std": 2.329214334487915,
+      "min": 0.1130332201719284,
+      "max": 11.847625732421875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN1-147-Gb_solo_mix.wav",
+      "mean": 4.679531097412109,
+      "median": 4.681396961212158,
+      "std": 3.1464946269989014,
+      "min": 0.004019481595605612,
+      "max": 14.73078727722168
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN2-131-B_comp_mix.wav",
+      "mean": 5.288993835449219,
+      "median": 5.079902648925781,
+      "std": 2.4255361557006836,
+      "min": 0.2375376969575882,
+      "max": 15.207124710083008
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN2-131-B_solo_mix.wav",
+      "mean": 7.0795769691467285,
+      "median": 7.1671857833862305,
+      "std": 4.025022029876709,
+      "min": 0.03236380219459534,
+      "max": 19.102027893066406
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN2-166-Ab_comp_mix.wav",
+      "mean": 3.6580376625061035,
+      "median": 3.4821043014526367,
+      "std": 1.862513780593872,
+      "min": 0.23219197988510132,
+      "max": 10.290939331054688
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN2-166-Ab_solo_mix.wav",
+      "mean": 5.423375129699707,
+      "median": 5.210420608520508,
+      "std": 3.4012224674224854,
+      "min": 0.006135421805083752,
+      "max": 14.463788032531738
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN3-119-G_comp_mix.wav",
+      "mean": 5.670594215393066,
+      "median": 5.472224712371826,
+      "std": 2.5707809925079346,
+      "min": 0.10777147859334946,
+      "max": 16.64373779296875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN3-119-G_solo_mix.wav",
+      "mean": 8.738017082214355,
+      "median": 8.91923713684082,
+      "std": 4.856362342834473,
+      "min": 0.02897987887263298,
+      "max": 22.211158752441406
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN3-154-E_comp_mix.wav",
+      "mean": 5.780675411224365,
+      "median": 5.6308393478393555,
+      "std": 2.5944571495056152,
+      "min": 0.10948975384235382,
+      "max": 13.854844093322754
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_BN3-154-E_solo_mix.wav",
+      "mean": 9.344766616821289,
+      "median": 9.366884231567383,
+      "std": 5.495748519897461,
+      "min": 0.019671320915222168,
+      "max": 27.925430297851562
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk1-114-Ab_comp_mix.wav",
+      "mean": 3.449873685836792,
+      "median": 3.169680118560791,
+      "std": 2.090959310531616,
+      "min": 0.029530322179198265,
+      "max": 12.7278413772583
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk1-114-Ab_solo_mix.wav",
+      "mean": 4.482869625091553,
+      "median": 3.4101643562316895,
+      "std": 3.520547866821289,
+      "min": 0.022901078686118126,
+      "max": 15.229911804199219
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk1-97-C_comp_mix.wav",
+      "mean": 3.165774345397949,
+      "median": 2.77956485748291,
+      "std": 2.2061612606048584,
+      "min": 0.050985708832740784,
+      "max": 15.894439697265625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk1-97-C_solo_mix.wav",
+      "mean": 8.006326675415039,
+      "median": 8.045816421508789,
+      "std": 4.9808244705200195,
+      "min": 0.016690567135810852,
+      "max": 21.877073287963867
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk2-108-Eb_comp_mix.wav",
+      "mean": 4.43754768371582,
+      "median": 4.137185096740723,
+      "std": 2.7757046222686768,
+      "min": 0.018603412434458733,
+      "max": 20.319316864013672
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk2-108-Eb_solo_mix.wav",
+      "mean": 7.2457451820373535,
+      "median": 7.211282730102539,
+      "std": 5.115767478942871,
+      "min": 0.02895396389067173,
+      "max": 22.686452865600586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk2-119-G_comp_mix.wav",
+      "mean": 4.345927715301514,
+      "median": 3.7336416244506836,
+      "std": 3.0542120933532715,
+      "min": 0.04914211481809616,
+      "max": 23.13327407836914
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk2-119-G_solo_mix.wav",
+      "mean": 6.766554355621338,
+      "median": 6.180594444274902,
+      "std": 4.705909252166748,
+      "min": 0.06593349575996399,
+      "max": 22.106035232543945
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk3-112-C#_comp_mix.wav",
+      "mean": 2.412081241607666,
+      "median": 2.239285945892334,
+      "std": 1.766602873802185,
+      "min": 0.0006116796284914017,
+      "max": 13.686872482299805
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk3-112-C#_solo_mix.wav",
+      "mean": 6.131141662597656,
+      "median": 6.4587249755859375,
+      "std": 3.345832586288452,
+      "min": 0.007005874998867512,
+      "max": 15.822685241699219
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk3-98-A_comp_mix.wav",
+      "mean": 3.4790027141571045,
+      "median": 3.1619391441345215,
+      "std": 2.3885419368743896,
+      "min": 0.026522580534219742,
+      "max": 16.419937133789062
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Funk3-98-A_solo_mix.wav",
+      "mean": 6.033084392547607,
+      "median": 6.477962493896484,
+      "std": 3.7411699295043945,
+      "min": 0.030192309990525246,
+      "max": 16.44816780090332
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz1-130-D_comp_mix.wav",
+      "mean": 4.495214462280273,
+      "median": 4.526503562927246,
+      "std": 2.2558703422546387,
+      "min": 0.05448462814092636,
+      "max": 12.396178245544434
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz1-130-D_solo_mix.wav",
+      "mean": 7.699901103973389,
+      "median": 6.625576019287109,
+      "std": 3.843080520629883,
+      "min": 0.4246538281440735,
+      "max": 20.138032913208008
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz1-200-B_comp_mix.wav",
+      "mean": 4.4244256019592285,
+      "median": 4.399901390075684,
+      "std": 1.8447657823562622,
+      "min": 0.7414950132369995,
+      "max": 15.150489807128906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz1-200-B_solo_mix.wav",
+      "mean": 7.208980083465576,
+      "median": 6.902011394500732,
+      "std": 4.946438312530518,
+      "min": 0.04277891665697098,
+      "max": 21.680328369140625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 5.72020959854126,
+      "median": 5.648947715759277,
+      "std": 2.6278469562530518,
+      "min": 0.14130544662475586,
+      "max": 13.252225875854492
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 8.516514778137207,
+      "median": 8.241308212280273,
+      "std": 4.52294397354126,
+      "min": 0.06065484881401062,
+      "max": 23.240055084228516
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz2-187-F#_comp_mix.wav",
+      "mean": 5.300764083862305,
+      "median": 4.945574760437012,
+      "std": 2.7231476306915283,
+      "min": 0.6200592517852783,
+      "max": 13.37826156616211
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz2-187-F#_solo_mix.wav",
+      "mean": 6.530625343322754,
+      "median": 6.458978652954102,
+      "std": 4.057596683502197,
+      "min": 0.04060231149196625,
+      "max": 19.418367385864258
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 4.935608863830566,
+      "median": 4.755784511566162,
+      "std": 2.0659263134002686,
+      "min": 0.4976911246776581,
+      "max": 12.136802673339844
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 8.556497573852539,
+      "median": 8.849300384521484,
+      "std": 5.255603790283203,
+      "min": 0.04793047904968262,
+      "max": 24.94539451599121
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz3-150-C_comp_mix.wav",
+      "mean": 5.5228142738342285,
+      "median": 5.292500972747803,
+      "std": 1.80558443069458,
+      "min": 1.6418325901031494,
+      "max": 14.319840431213379
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Jazz3-150-C_solo_mix.wav",
+      "mean": 12.231301307678223,
+      "median": 13.076132774353027,
+      "std": 6.96518087387085,
+      "min": 0.1424589455127716,
+      "max": 32.09776306152344
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock1-130-A_comp_mix.wav",
+      "mean": 6.063195705413818,
+      "median": 6.018845558166504,
+      "std": 3.310258150100708,
+      "min": 0.11052656918764114,
+      "max": 15.913711547851562
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock1-130-A_solo_mix.wav",
+      "mean": 7.255453586578369,
+      "median": 7.35855770111084,
+      "std": 4.025765895843506,
+      "min": 0.002876075217500329,
+      "max": 18.15342903137207
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock1-90-C#_comp_mix.wav",
+      "mean": 4.922823905944824,
+      "median": 3.958859443664551,
+      "std": 3.5299272537231445,
+      "min": 0.3858109414577484,
+      "max": 15.800559997558594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock1-90-C#_solo_mix.wav",
+      "mean": 5.976653575897217,
+      "median": 6.029400825500488,
+      "std": 3.6023972034454346,
+      "min": 0.006963040679693222,
+      "max": 17.30026626586914
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock2-142-D_comp_mix.wav",
+      "mean": 4.530072212219238,
+      "median": 4.020811080932617,
+      "std": 2.607025146484375,
+      "min": 0.050325825810432434,
+      "max": 16.834392547607422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock2-142-D_solo_mix.wav",
+      "mean": 4.27449369430542,
+      "median": 4.3804240226745605,
+      "std": 2.3138253688812256,
+      "min": 9.005143510876223e-05,
+      "max": 12.869915962219238
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock2-85-F_comp_mix.wav",
+      "mean": 4.789245128631592,
+      "median": 3.979948043823242,
+      "std": 2.9535675048828125,
+      "min": 0.7243056893348694,
+      "max": 16.947223663330078
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock2-85-F_solo_mix.wav",
+      "mean": 4.102592945098877,
+      "median": 4.184225082397461,
+      "std": 2.186307191848755,
+      "min": 0.0014554645167663693,
+      "max": 12.68155288696289
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock3-117-Bb_comp_mix.wav",
+      "mean": 7.0737104415893555,
+      "median": 6.573114395141602,
+      "std": 4.00237512588501,
+      "min": 0.036973174661397934,
+      "max": 25.48314666748047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock3-117-Bb_solo_mix.wav",
+      "mean": 4.585550308227539,
+      "median": 4.649174690246582,
+      "std": 2.502548933029175,
+      "min": 0.0016799188451841474,
+      "max": 12.982904434204102
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock3-148-C_comp_mix.wav",
+      "mean": 8.372637748718262,
+      "median": 8.537618637084961,
+      "std": 2.9269371032714844,
+      "min": 0.06893894076347351,
+      "max": 16.933856964111328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_Rock3-148-C_solo_mix.wav",
+      "mean": 6.451891899108887,
+      "median": 6.477457046508789,
+      "std": 3.4511115550994873,
+      "min": 0.02377326413989067,
+      "max": 17.206533432006836
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS1-100-C#_comp_mix.wav",
+      "mean": 7.494338512420654,
+      "median": 7.080358982086182,
+      "std": 2.3273050785064697,
+      "min": 0.9396762251853943,
+      "max": 17.392929077148438
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS1-100-C#_solo_mix.wav",
+      "mean": 9.015303611755371,
+      "median": 8.84013843536377,
+      "std": 5.295292377471924,
+      "min": 0.046524085104465485,
+      "max": 23.789379119873047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS1-68-E_comp_mix.wav",
+      "mean": 7.0520124435424805,
+      "median": 6.666563034057617,
+      "std": 2.5315558910369873,
+      "min": 1.6536998748779297,
+      "max": 18.538259506225586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS1-68-E_solo_mix.wav",
+      "mean": 9.175230026245117,
+      "median": 8.411397933959961,
+      "std": 6.266388416290283,
+      "min": 0.0900353267788887,
+      "max": 28.985992431640625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS2-107-Ab_comp_mix.wav",
+      "mean": 5.0240478515625,
+      "median": 4.492622375488281,
+      "std": 2.4626331329345703,
+      "min": 0.3473513722419739,
+      "max": 15.79192066192627
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS2-107-Ab_solo_mix.wav",
+      "mean": 5.429244518280029,
+      "median": 5.371959209442139,
+      "std": 2.8879592418670654,
+      "min": 0.019246386364102364,
+      "max": 16.83607292175293
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS2-88-F_comp_mix.wav",
+      "mean": 5.219244956970215,
+      "median": 4.978755950927734,
+      "std": 2.5946614742279053,
+      "min": 0.8270598649978638,
+      "max": 16.385677337646484
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS2-88-F_solo_mix.wav",
+      "mean": 8.458259582519531,
+      "median": 8.35351848602295,
+      "std": 3.418281078338623,
+      "min": 0.13830529153347015,
+      "max": 21.04720115661621
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS3-84-Bb_comp_mix.wav",
+      "mean": 6.187436103820801,
+      "median": 5.753683090209961,
+      "std": 2.921661138534546,
+      "min": 0.0031212037429213524,
+      "max": 19.11954116821289
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS3-84-Bb_solo_mix.wav",
+      "mean": 6.243871688842773,
+      "median": 6.570167541503906,
+      "std": 2.5227906703948975,
+      "min": 0.00712919095531106,
+      "max": 13.864280700683594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS3-98-C_comp_mix.wav",
+      "mean": 4.645937919616699,
+      "median": 4.040069580078125,
+      "std": 2.5220959186553955,
+      "min": 0.008276879787445068,
+      "max": 16.145151138305664
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/02_SS3-98-C_solo_mix.wav",
+      "mean": 5.726053237915039,
+      "median": 5.880312919616699,
+      "std": 3.153372049331665,
+      "min": 0.009228179231286049,
+      "max": 15.749126434326172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN1-129-Eb_comp_mix.wav",
+      "mean": 7.601606369018555,
+      "median": 7.909111022949219,
+      "std": 3.780855417251587,
+      "min": 0.3009386360645294,
+      "max": 17.54513931274414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN1-129-Eb_solo_mix.wav",
+      "mean": 9.499876976013184,
+      "median": 8.635013580322266,
+      "std": 6.98170280456543,
+      "min": 0.09230577945709229,
+      "max": 36.251502990722656
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN1-147-Gb_comp_mix.wav",
+      "mean": 6.946082592010498,
+      "median": 7.25869083404541,
+      "std": 3.2323591709136963,
+      "min": 0.3255482614040375,
+      "max": 15.822627067565918
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN1-147-Gb_solo_mix.wav",
+      "mean": 9.745830535888672,
+      "median": 9.802326202392578,
+      "std": 6.43110990524292,
+      "min": 0.11224524676799774,
+      "max": 32.35554504394531
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN2-131-B_comp_mix.wav",
+      "mean": 4.6126179695129395,
+      "median": 4.4766845703125,
+      "std": 2.7794668674468994,
+      "min": 0.1441601663827896,
+      "max": 14.285687446594238
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN2-131-B_solo_mix.wav",
+      "mean": 8.675333976745605,
+      "median": 8.479588508605957,
+      "std": 6.071086406707764,
+      "min": 0.04799962043762207,
+      "max": 28.494274139404297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN2-166-Ab_comp_mix.wav",
+      "mean": 6.778645992279053,
+      "median": 6.627707004547119,
+      "std": 3.6609227657318115,
+      "min": 0.3020848035812378,
+      "max": 16.389301300048828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN2-166-Ab_solo_mix.wav",
+      "mean": 8.650094985961914,
+      "median": 7.817377090454102,
+      "std": 6.833136081695557,
+      "min": 0.08072778582572937,
+      "max": 34.9283561706543
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN3-119-G_comp_mix.wav",
+      "mean": 6.485236167907715,
+      "median": 6.593825817108154,
+      "std": 3.6444804668426514,
+      "min": 0.31473296880722046,
+      "max": 16.862396240234375
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN3-119-G_solo_mix.wav",
+      "mean": 10.414616584777832,
+      "median": 10.100442886352539,
+      "std": 7.247819423675537,
+      "min": 0.0737389400601387,
+      "max": 35.14368438720703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN3-154-E_comp_mix.wav",
+      "mean": 6.342607021331787,
+      "median": 5.827855587005615,
+      "std": 3.827965021133423,
+      "min": 0.26659542322158813,
+      "max": 16.097673416137695
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_BN3-154-E_solo_mix.wav",
+      "mean": 8.584961891174316,
+      "median": 7.651359558105469,
+      "std": 6.767726421356201,
+      "min": 0.08138608932495117,
+      "max": 34.78071975708008
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk1-114-Ab_comp_mix.wav",
+      "mean": 7.358736991882324,
+      "median": 5.465075492858887,
+      "std": 6.196997165679932,
+      "min": 0.0302874818444252,
+      "max": 25.172027587890625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk1-114-Ab_solo_mix.wav",
+      "mean": 5.720798492431641,
+      "median": 4.77218770980835,
+      "std": 4.95335578918457,
+      "min": 0.006584771443158388,
+      "max": 24.199731826782227
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk1-97-C_comp_mix.wav",
+      "mean": 7.325578212738037,
+      "median": 6.299479961395264,
+      "std": 5.651224613189697,
+      "min": 0.05154682695865631,
+      "max": 24.492389678955078
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk1-97-C_solo_mix.wav",
+      "mean": 6.7068190574646,
+      "median": 5.83602237701416,
+      "std": 5.625529766082764,
+      "min": 0.01637815684080124,
+      "max": 27.160011291503906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk2-108-Eb_comp_mix.wav",
+      "mean": 8.821493148803711,
+      "median": 9.098458290100098,
+      "std": 6.115126609802246,
+      "min": 0.08568468689918518,
+      "max": 24.438007354736328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk2-108-Eb_solo_mix.wav",
+      "mean": 5.704224586486816,
+      "median": 5.013998985290527,
+      "std": 4.655707836151123,
+      "min": 0.01808742806315422,
+      "max": 22.10357666015625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk2-119-G_comp_mix.wav",
+      "mean": 7.919106483459473,
+      "median": 7.211169242858887,
+      "std": 6.41459321975708,
+      "min": 0.06583075225353241,
+      "max": 26.969764709472656
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk2-119-G_solo_mix.wav",
+      "mean": 6.185428142547607,
+      "median": 4.744297504425049,
+      "std": 5.343605041503906,
+      "min": 0.02508091926574707,
+      "max": 25.775432586669922
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk3-112-C#_comp_mix.wav",
+      "mean": 6.951672554016113,
+      "median": 6.625795841217041,
+      "std": 5.029837608337402,
+      "min": 0.04354315996170044,
+      "max": 26.231056213378906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk3-112-C#_solo_mix.wav",
+      "mean": 5.408141613006592,
+      "median": 4.555651664733887,
+      "std": 4.3829216957092285,
+      "min": 0.017520722001791,
+      "max": 23.166690826416016
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk3-98-A_comp_mix.wav",
+      "mean": 9.616589546203613,
+      "median": 9.055002212524414,
+      "std": 6.742210388183594,
+      "min": 0.0800575464963913,
+      "max": 29.573070526123047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Funk3-98-A_solo_mix.wav",
+      "mean": 7.263455390930176,
+      "median": 6.360400676727295,
+      "std": 5.936105251312256,
+      "min": 0.02331412583589554,
+      "max": 28.04443359375
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz1-130-D_comp_mix.wav",
+      "mean": 6.957762718200684,
+      "median": 3.307525634765625,
+      "std": 6.243313789367676,
+      "min": 0.1394163817167282,
+      "max": 23.212528228759766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz1-130-D_solo_mix.wav",
+      "mean": 8.940979957580566,
+      "median": 8.762285232543945,
+      "std": 6.0604376792907715,
+      "min": 0.07338057458400726,
+      "max": 27.9531192779541
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz1-200-B_comp_mix.wav",
+      "mean": 6.615281581878662,
+      "median": 3.479804515838623,
+      "std": 5.423835754394531,
+      "min": 0.12739688158035278,
+      "max": 23.767553329467773
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz1-200-B_solo_mix.wav",
+      "mean": 7.958771705627441,
+      "median": 5.788331031799316,
+      "std": 6.877613067626953,
+      "min": 0.08299589157104492,
+      "max": 35.20539855957031
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 7.675056457519531,
+      "median": 7.260021209716797,
+      "std": 5.838703632354736,
+      "min": 0.1512271761894226,
+      "max": 25.792980194091797
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 9.048833847045898,
+      "median": 8.54013729095459,
+      "std": 6.864753723144531,
+      "min": 0.07819756865501404,
+      "max": 34.622684478759766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz2-187-F#_comp_mix.wav",
+      "mean": 6.927372932434082,
+      "median": 6.419223785400391,
+      "std": 4.6914825439453125,
+      "min": 0.1517922580242157,
+      "max": 19.69534683227539
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz2-187-F#_solo_mix.wav",
+      "mean": 8.473794937133789,
+      "median": 7.405597686767578,
+      "std": 6.85103178024292,
+      "min": 0.07913713157176971,
+      "max": 37.16328811645508
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 8.145322799682617,
+      "median": 6.012314796447754,
+      "std": 6.790177822113037,
+      "min": 0.14567025005817413,
+      "max": 28.211750030517578
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 9.020874977111816,
+      "median": 8.555306434631348,
+      "std": 6.274391174316406,
+      "min": 0.07972018420696259,
+      "max": 29.076202392578125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz3-150-C_comp_mix.wav",
+      "mean": 6.962879180908203,
+      "median": 4.453039169311523,
+      "std": 5.851348876953125,
+      "min": 0.08394988626241684,
+      "max": 27.72176742553711
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Jazz3-150-C_solo_mix.wav",
+      "mean": 8.2669677734375,
+      "median": 6.737138748168945,
+      "std": 6.95336389541626,
+      "min": 0.045872077345848083,
+      "max": 31.271366119384766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock1-130-A_comp_mix.wav",
+      "mean": 9.295597076416016,
+      "median": 8.596314430236816,
+      "std": 5.101121425628662,
+      "min": 0.04687628149986267,
+      "max": 23.732845306396484
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock1-130-A_solo_mix.wav",
+      "mean": 8.950080871582031,
+      "median": 8.770793914794922,
+      "std": 6.861802577972412,
+      "min": 0.01665719598531723,
+      "max": 32.9109001159668
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock1-90-C#_comp_mix.wav",
+      "mean": 8.755511283874512,
+      "median": 8.258810997009277,
+      "std": 4.815443515777588,
+      "min": 0.17079772055149078,
+      "max": 25.267704010009766
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock1-90-C#_solo_mix.wav",
+      "mean": 6.457849979400635,
+      "median": 6.031877517700195,
+      "std": 5.655622959136963,
+      "min": 0.0026745502837002277,
+      "max": 29.51831817626953
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock2-142-D_comp_mix.wav",
+      "mean": 9.372227668762207,
+      "median": 9.251903533935547,
+      "std": 5.628274917602539,
+      "min": 0.19188281893730164,
+      "max": 26.444747924804688
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock2-142-D_solo_mix.wav",
+      "mean": 7.453439712524414,
+      "median": 6.557276725769043,
+      "std": 5.737218856811523,
+      "min": 0.01345755159854889,
+      "max": 27.08856201171875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock2-85-F_comp_mix.wav",
+      "mean": 7.451966285705566,
+      "median": 7.303847789764404,
+      "std": 4.523332118988037,
+      "min": 0.027701839804649353,
+      "max": 20.803049087524414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock2-85-F_solo_mix.wav",
+      "mean": 5.490173816680908,
+      "median": 4.99832820892334,
+      "std": 4.778406620025635,
+      "min": 0.00744706392288208,
+      "max": 28.26211166381836
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock3-117-Bb_comp_mix.wav",
+      "mean": 7.87367057800293,
+      "median": 7.554750919342041,
+      "std": 5.25461483001709,
+      "min": 0.036376118659973145,
+      "max": 24.02387046813965
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock3-117-Bb_solo_mix.wav",
+      "mean": 8.249130249023438,
+      "median": 8.863455772399902,
+      "std": 4.683093070983887,
+      "min": 0.016751140356063843,
+      "max": 30.06890869140625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock3-148-C_comp_mix.wav",
+      "mean": 10.21290111541748,
+      "median": 10.648746490478516,
+      "std": 4.375452041625977,
+      "min": 0.693939208984375,
+      "max": 22.996856689453125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_Rock3-148-C_solo_mix.wav",
+      "mean": 8.70545768737793,
+      "median": 7.235860824584961,
+      "std": 7.541146755218506,
+      "min": 0.015781955793499947,
+      "max": 34.20716094970703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS1-100-C#_comp_mix.wav",
+      "mean": 11.28149127960205,
+      "median": 11.063920974731445,
+      "std": 4.90439510345459,
+      "min": 0.38898003101348877,
+      "max": 26.723779678344727
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS1-100-C#_solo_mix.wav",
+      "mean": 8.922096252441406,
+      "median": 8.685371398925781,
+      "std": 7.0792012214660645,
+      "min": 0.05850816145539284,
+      "max": 29.878604888916016
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS1-68-E_comp_mix.wav",
+      "mean": 8.513915061950684,
+      "median": 8.512411117553711,
+      "std": 2.841139078140259,
+      "min": 0.44712337851524353,
+      "max": 22.16377067565918
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS1-68-E_solo_mix.wav",
+      "mean": 8.692780494689941,
+      "median": 8.289427757263184,
+      "std": 6.7965779304504395,
+      "min": 0.027353595942258835,
+      "max": 32.02742004394531
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS2-107-Ab_comp_mix.wav",
+      "mean": 9.894448280334473,
+      "median": 9.81191635131836,
+      "std": 5.325977325439453,
+      "min": 0.0763055756688118,
+      "max": 25.105743408203125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS2-107-Ab_solo_mix.wav",
+      "mean": 6.980250358581543,
+      "median": 5.35305118560791,
+      "std": 6.3872504234313965,
+      "min": 0.0128614017739892,
+      "max": 34.063499450683594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS2-88-F_comp_mix.wav",
+      "mean": 9.735184669494629,
+      "median": 10.245039939880371,
+      "std": 4.475798606872559,
+      "min": 0.16823017597198486,
+      "max": 24.27476692199707
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS2-88-F_solo_mix.wav",
+      "mean": 7.811474323272705,
+      "median": 7.569159507751465,
+      "std": 5.761360168457031,
+      "min": 0.02237045392394066,
+      "max": 30.040870666503906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS3-84-Bb_comp_mix.wav",
+      "mean": 9.75812816619873,
+      "median": 10.363739013671875,
+      "std": 3.890580415725708,
+      "min": 0.4562038779258728,
+      "max": 21.938711166381836
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS3-84-Bb_solo_mix.wav",
+      "mean": 8.161479949951172,
+      "median": 7.87091064453125,
+      "std": 6.448324203491211,
+      "min": 0.042327798902988434,
+      "max": 32.58711624145508
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS3-98-C_comp_mix.wav",
+      "mean": 12.439666748046875,
+      "median": 12.971101760864258,
+      "std": 4.450565338134766,
+      "min": 0.7422400712966919,
+      "max": 25.055160522460938
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/03_SS3-98-C_solo_mix.wav",
+      "mean": 9.317337036132812,
+      "median": 8.809921264648438,
+      "std": 6.681606769561768,
+      "min": 0.04061373695731163,
+      "max": 31.758512496948242
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN1-129-Eb_comp_mix.wav",
+      "mean": 5.447057723999023,
+      "median": 5.5251030921936035,
+      "std": 2.9672985076904297,
+      "min": 0.1764422506093979,
+      "max": 13.225756645202637
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN1-129-Eb_solo_mix.wav",
+      "mean": 5.655601501464844,
+      "median": 4.03773832321167,
+      "std": 4.679534912109375,
+      "min": 0.10012499243021011,
+      "max": 20.466793060302734
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN1-147-Gb_comp_mix.wav",
+      "mean": 3.5277702808380127,
+      "median": 3.579105854034424,
+      "std": 1.706830382347107,
+      "min": 0.04575398564338684,
+      "max": 11.676876068115234
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN1-147-Gb_solo_mix.wav",
+      "mean": 5.7426347732543945,
+      "median": 5.224480628967285,
+      "std": 4.64463472366333,
+      "min": 0.03914432227611542,
+      "max": 30.041118621826172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN2-131-B_comp_mix.wav",
+      "mean": 5.7170329093933105,
+      "median": 5.3046956062316895,
+      "std": 3.634934663772583,
+      "min": 0.12220914661884308,
+      "max": 21.183984756469727
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN2-131-B_solo_mix.wav",
+      "mean": 8.055570602416992,
+      "median": 6.784837245941162,
+      "std": 6.160545349121094,
+      "min": 0.09359943866729736,
+      "max": 34.03685760498047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN2-166-Ab_comp_mix.wav",
+      "mean": 6.150957107543945,
+      "median": 5.806109428405762,
+      "std": 3.3659706115722656,
+      "min": 0.15422597527503967,
+      "max": 16.084333419799805
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN2-166-Ab_solo_mix.wav",
+      "mean": 6.3532280921936035,
+      "median": 5.440701484680176,
+      "std": 4.490021228790283,
+      "min": 0.19407398998737335,
+      "max": 24.92556381225586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN3-119-G_comp_mix.wav",
+      "mean": 4.507707595825195,
+      "median": 3.4773499965667725,
+      "std": 3.0306456089019775,
+      "min": 0.10174868255853653,
+      "max": 13.357490539550781
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN3-119-G_solo_mix.wav",
+      "mean": 6.831090927124023,
+      "median": 5.311413764953613,
+      "std": 5.527780532836914,
+      "min": 0.040759142488241196,
+      "max": 31.563613891601562
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN3-154-E_comp_mix.wav",
+      "mean": 6.667514324188232,
+      "median": 5.316115379333496,
+      "std": 4.22470760345459,
+      "min": 0.5418916940689087,
+      "max": 18.91792869567871
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_BN3-154-E_solo_mix.wav",
+      "mean": 8.66995620727539,
+      "median": 7.8434343338012695,
+      "std": 6.128794193267822,
+      "min": 0.1315048635005951,
+      "max": 35.24938201904297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk1-114-Ab_comp_mix.wav",
+      "mean": 5.860683917999268,
+      "median": 5.216388702392578,
+      "std": 4.09414529800415,
+      "min": 0.19928975403308868,
+      "max": 20.04045867919922
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk1-114-Ab_solo_mix.wav",
+      "mean": 6.21016788482666,
+      "median": 5.656491279602051,
+      "std": 4.687193393707275,
+      "min": 0.01705973967909813,
+      "max": 28.9503173828125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk1-97-C_comp_mix.wav",
+      "mean": 4.726441860198975,
+      "median": 3.8260929584503174,
+      "std": 3.57352614402771,
+      "min": 0.017678240314126015,
+      "max": 19.804065704345703
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk1-97-C_solo_mix.wav",
+      "mean": 6.611601829528809,
+      "median": 6.1172051429748535,
+      "std": 5.0853471755981445,
+      "min": 0.010208819061517715,
+      "max": 26.917308807373047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk2-108-Eb_comp_mix.wav",
+      "mean": 8.700329780578613,
+      "median": 8.474723815917969,
+      "std": 5.873300075531006,
+      "min": 0.13880577683448792,
+      "max": 31.059534072875977
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk2-108-Eb_solo_mix.wav",
+      "mean": 7.127440452575684,
+      "median": 6.218871116638184,
+      "std": 4.940676212310791,
+      "min": 0.08730541169643402,
+      "max": 28.923736572265625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk2-119-G_comp_mix.wav",
+      "mean": 9.893324851989746,
+      "median": 9.839686393737793,
+      "std": 6.091833114624023,
+      "min": 0.6694731712341309,
+      "max": 31.28278350830078
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk2-119-G_solo_mix.wav",
+      "mean": 6.953945636749268,
+      "median": 6.601568222045898,
+      "std": 5.325078010559082,
+      "min": 0.05285659432411194,
+      "max": 30.48853302001953
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk3-112-C#_comp_mix.wav",
+      "mean": 8.732995986938477,
+      "median": 8.171541213989258,
+      "std": 5.415348052978516,
+      "min": 0.2551492750644684,
+      "max": 30.74984359741211
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk3-112-C#_solo_mix.wav",
+      "mean": 6.813480377197266,
+      "median": 6.377582550048828,
+      "std": 4.93187952041626,
+      "min": 0.03614576905965805,
+      "max": 21.504812240600586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk3-98-A_comp_mix.wav",
+      "mean": 8.201677322387695,
+      "median": 7.977674961090088,
+      "std": 5.646726131439209,
+      "min": 0.11686922609806061,
+      "max": 31.54851531982422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Funk3-98-A_solo_mix.wav",
+      "mean": 6.395137310028076,
+      "median": 5.522529125213623,
+      "std": 5.164781093597412,
+      "min": 0.029432445764541626,
+      "max": 25.62515640258789
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz1-130-D_comp_mix.wav",
+      "mean": 5.820241928100586,
+      "median": 4.828001976013184,
+      "std": 3.920997381210327,
+      "min": 0.16197234392166138,
+      "max": 17.322786331176758
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz1-130-D_solo_mix.wav",
+      "mean": 6.15843391418457,
+      "median": 4.635108947753906,
+      "std": 5.903224468231201,
+      "min": 0.04435296729207039,
+      "max": 33.140663146972656
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz1-200-B_comp_mix.wav",
+      "mean": 9.222369194030762,
+      "median": 8.20531940460205,
+      "std": 5.3829026222229,
+      "min": 0.5085646510124207,
+      "max": 25.067270278930664
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz1-200-B_solo_mix.wav",
+      "mean": 10.97049617767334,
+      "median": 10.068276405334473,
+      "std": 7.783355712890625,
+      "min": 0.1276133954524994,
+      "max": 33.94482421875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 4.821664810180664,
+      "median": 4.543241500854492,
+      "std": 2.8908257484436035,
+      "min": 0.09966973960399628,
+      "max": 13.35226821899414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 6.342526912689209,
+      "median": 4.78116512298584,
+      "std": 5.499414443969727,
+      "min": 0.06068979203701019,
+      "max": 35.16313934326172
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz2-187-F#_comp_mix.wav",
+      "mean": 7.218649387359619,
+      "median": 6.831445217132568,
+      "std": 4.2425761222839355,
+      "min": 0.3660431206226349,
+      "max": 20.675975799560547
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz2-187-F#_solo_mix.wav",
+      "mean": 6.866483688354492,
+      "median": 5.847440242767334,
+      "std": 5.519805908203125,
+      "min": 0.04313379153609276,
+      "max": 30.098716735839844
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 6.808365345001221,
+      "median": 7.218817234039307,
+      "std": 3.5872013568878174,
+      "min": 0.1060781255364418,
+      "max": 16.494871139526367
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 8.267908096313477,
+      "median": 7.694814205169678,
+      "std": 5.83600378036499,
+      "min": 0.08758044242858887,
+      "max": 32.58173370361328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz3-150-C_comp_mix.wav",
+      "mean": 6.073110103607178,
+      "median": 5.910332679748535,
+      "std": 3.3223040103912354,
+      "min": 0.1435961276292801,
+      "max": 20.719449996948242
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Jazz3-150-C_solo_mix.wav",
+      "mean": 8.403770446777344,
+      "median": 8.175679206848145,
+      "std": 6.4151411056518555,
+      "min": 0.05546744167804718,
+      "max": 35.780616760253906
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock1-130-A_comp_mix.wav",
+      "mean": 6.939827919006348,
+      "median": 6.119626522064209,
+      "std": 3.286057472229004,
+      "min": 0.8457242846488953,
+      "max": 20.347131729125977
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock1-130-A_solo_mix.wav",
+      "mean": 9.089677810668945,
+      "median": 8.267556190490723,
+      "std": 6.6274027824401855,
+      "min": 0.004213456995785236,
+      "max": 28.69064712524414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock1-90-C#_comp_mix.wav",
+      "mean": 9.650090217590332,
+      "median": 8.486626625061035,
+      "std": 5.878140449523926,
+      "min": 0.17316186428070068,
+      "max": 29.298568725585938
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock1-90-C#_solo_mix.wav",
+      "mean": 6.017336368560791,
+      "median": 4.595630645751953,
+      "std": 5.400450706481934,
+      "min": 0.00870975386351347,
+      "max": 28.16872787475586
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock2-142-D_comp_mix.wav",
+      "mean": 10.29284381866455,
+      "median": 9.897762298583984,
+      "std": 4.60635232925415,
+      "min": 0.20991487801074982,
+      "max": 28.499916076660156
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock2-142-D_solo_mix.wav",
+      "mean": 4.6995320320129395,
+      "median": 4.030789852142334,
+      "std": 3.678187608718872,
+      "min": 0.0,
+      "max": 19.95049476623535
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock2-85-F_comp_mix.wav",
+      "mean": 8.236913681030273,
+      "median": 8.28731632232666,
+      "std": 2.8880527019500732,
+      "min": 0.5139029026031494,
+      "max": 17.162710189819336
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock2-85-F_solo_mix.wav",
+      "mean": 6.754182815551758,
+      "median": 5.530980110168457,
+      "std": 5.559438705444336,
+      "min": 0.031495463103055954,
+      "max": 29.31985092163086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock3-117-Bb_comp_mix.wav",
+      "mean": 8.579605102539062,
+      "median": 7.382045745849609,
+      "std": 4.943551063537598,
+      "min": 0.5326088666915894,
+      "max": 28.965984344482422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock3-117-Bb_solo_mix.wav",
+      "mean": 6.066527843475342,
+      "median": 5.6244893074035645,
+      "std": 3.862257719039917,
+      "min": 8.021978828764986e-06,
+      "max": 19.02280044555664
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock3-148-C_comp_mix.wav",
+      "mean": 6.522271156311035,
+      "median": 4.821517467498779,
+      "std": 4.743797302246094,
+      "min": 0.5276163220405579,
+      "max": 24.484195709228516
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_Rock3-148-C_solo_mix.wav",
+      "mean": 6.6992411613464355,
+      "median": 6.267192840576172,
+      "std": 4.649412631988525,
+      "min": 0.0039619458839297295,
+      "max": 24.347675323486328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS1-100-C#_comp_mix.wav",
+      "mean": 7.726932525634766,
+      "median": 7.622922897338867,
+      "std": 2.5477001667022705,
+      "min": 1.1781489849090576,
+      "max": 16.138809204101562
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS1-100-C#_solo_mix.wav",
+      "mean": 4.942533016204834,
+      "median": 3.8816919326782227,
+      "std": 4.795647621154785,
+      "min": 0.03981222212314606,
+      "max": 31.48617935180664
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS1-68-E_comp_mix.wav",
+      "mean": 10.373738288879395,
+      "median": 9.909076690673828,
+      "std": 2.784287691116333,
+      "min": 1.3399466276168823,
+      "max": 27.327064514160156
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS1-68-E_solo_mix.wav",
+      "mean": 6.219854831695557,
+      "median": 5.318296909332275,
+      "std": 4.744174480438232,
+      "min": 0.006140172015875578,
+      "max": 23.012706756591797
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS2-107-Ab_comp_mix.wav",
+      "mean": 6.551158905029297,
+      "median": 6.635197639465332,
+      "std": 2.3407983779907227,
+      "min": 0.4242020845413208,
+      "max": 14.738784790039062
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS2-107-Ab_solo_mix.wav",
+      "mean": 4.366724491119385,
+      "median": 3.229348659515381,
+      "std": 3.65347957611084,
+      "min": 0.024066152051091194,
+      "max": 24.554412841796875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS2-88-F_comp_mix.wav",
+      "mean": 9.198543548583984,
+      "median": 9.537542343139648,
+      "std": 2.55307674407959,
+      "min": 1.1755043268203735,
+      "max": 15.438346862792969
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS2-88-F_solo_mix.wav",
+      "mean": 6.1590070724487305,
+      "median": 4.417723655700684,
+      "std": 5.063022136688232,
+      "min": 0.05491379648447037,
+      "max": 30.63318634033203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS3-84-Bb_comp_mix.wav",
+      "mean": 9.302586555480957,
+      "median": 9.224929809570312,
+      "std": 3.6017165184020996,
+      "min": 0.2915306091308594,
+      "max": 25.729434967041016
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS3-84-Bb_solo_mix.wav",
+      "mean": 7.501743793487549,
+      "median": 6.572155475616455,
+      "std": 5.725709915161133,
+      "min": 0.020306169986724854,
+      "max": 29.096540451049805
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS3-98-C_comp_mix.wav",
+      "mean": 5.221249580383301,
+      "median": 5.250710487365723,
+      "std": 1.762516736984253,
+      "min": 0.7867946028709412,
+      "max": 11.632966041564941
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/04_SS3-98-C_solo_mix.wav",
+      "mean": 7.052393436431885,
+      "median": 6.521146774291992,
+      "std": 5.0631422996521,
+      "min": 0.01682591810822487,
+      "max": 28.673412322998047
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN1-129-Eb_comp_mix.wav",
+      "mean": 4.087198734283447,
+      "median": 4.126605987548828,
+      "std": 2.040013313293457,
+      "min": 0.10046836733818054,
+      "max": 9.279747009277344
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN1-129-Eb_solo_mix.wav",
+      "mean": 4.022215366363525,
+      "median": 3.190225839614868,
+      "std": 3.926980972290039,
+      "min": 0.051131781190633774,
+      "max": 24.59320068359375
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN1-147-Gb_comp_mix.wav",
+      "mean": 4.172257900238037,
+      "median": 4.200634956359863,
+      "std": 1.5215198993682861,
+      "min": 0.29320093989372253,
+      "max": 8.437216758728027
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN1-147-Gb_solo_mix.wav",
+      "mean": 3.3473432064056396,
+      "median": 1.9903090000152588,
+      "std": 3.957550287246704,
+      "min": 0.043270256370306015,
+      "max": 20.499853134155273
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN2-131-B_comp_mix.wav",
+      "mean": 5.531689167022705,
+      "median": 5.390270233154297,
+      "std": 2.315962553024292,
+      "min": 0.5322664380073547,
+      "max": 14.74078369140625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN2-131-B_solo_mix.wav",
+      "mean": 3.929858446121216,
+      "median": 2.7860889434814453,
+      "std": 3.6625707149505615,
+      "min": 0.0476190522313118,
+      "max": 19.462186813354492
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN2-166-Ab_comp_mix.wav",
+      "mean": 4.309000492095947,
+      "median": 4.441999435424805,
+      "std": 2.113647937774658,
+      "min": 0.077806755900383,
+      "max": 12.596675872802734
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN2-166-Ab_solo_mix.wav",
+      "mean": 3.6334919929504395,
+      "median": 2.759523868560791,
+      "std": 3.7610487937927246,
+      "min": 0.05901794880628586,
+      "max": 26.611591339111328
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN3-119-G_comp_mix.wav",
+      "mean": 4.154215335845947,
+      "median": 3.957887649536133,
+      "std": 2.538013458251953,
+      "min": 0.07398474216461182,
+      "max": 14.754434585571289
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN3-119-G_solo_mix.wav",
+      "mean": 4.232692718505859,
+      "median": 3.334710121154785,
+      "std": 3.5303428173065186,
+      "min": 0.044961802661418915,
+      "max": 19.17303466796875
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN3-154-E_comp_mix.wav",
+      "mean": 3.4560577869415283,
+      "median": 3.382936477661133,
+      "std": 1.6651256084442139,
+      "min": 0.15227872133255005,
+      "max": 9.578601837158203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_BN3-154-E_solo_mix.wav",
+      "mean": 4.199466228485107,
+      "median": 2.907996654510498,
+      "std": 4.158932685852051,
+      "min": 0.04174024611711502,
+      "max": 20.550321578979492
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk1-114-Ab_comp_mix.wav",
+      "mean": 5.114377498626709,
+      "median": 1.5105143785476685,
+      "std": 5.491100788116455,
+      "min": 0.006366676650941372,
+      "max": 29.181991577148438
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk1-114-Ab_solo_mix.wav",
+      "mean": 3.224579334259033,
+      "median": 1.3810920715332031,
+      "std": 3.8727245330810547,
+      "min": 0.004943796433508396,
+      "max": 20.989707946777344
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk1-97-C_comp_mix.wav",
+      "mean": 5.261997699737549,
+      "median": 0.7179847955703735,
+      "std": 6.462584495544434,
+      "min": 0.0009755203500390053,
+      "max": 23.232589721679688
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk1-97-C_solo_mix.wav",
+      "mean": 3.495595693588257,
+      "median": 2.5171287059783936,
+      "std": 3.5602242946624756,
+      "min": 0.001123898196965456,
+      "max": 20.079532623291016
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk2-108-Eb_comp_mix.wav",
+      "mean": 6.094247817993164,
+      "median": 2.4147090911865234,
+      "std": 6.286177635192871,
+      "min": 0.0031142085790634155,
+      "max": 28.258365631103516
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk2-108-Eb_solo_mix.wav",
+      "mean": 4.187344074249268,
+      "median": 3.4701008796691895,
+      "std": 3.8374898433685303,
+      "min": 0.005213710479438305,
+      "max": 18.549705505371094
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk2-119-G_comp_mix.wav",
+      "mean": 4.853183746337891,
+      "median": 0.5178418159484863,
+      "std": 6.713494300842285,
+      "min": 0.004516056273132563,
+      "max": 25.13289451599121
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk2-119-G_solo_mix.wav",
+      "mean": 4.446088790893555,
+      "median": 3.847607135772705,
+      "std": 3.4038245677948,
+      "min": 0.005964354611933231,
+      "max": 17.18758773803711
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk3-112-C#_comp_mix.wav",
+      "mean": 4.043601036071777,
+      "median": 0.8533258438110352,
+      "std": 4.8842597007751465,
+      "min": 0.0008799079805612564,
+      "max": 21.478599548339844
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk3-112-C#_solo_mix.wav",
+      "mean": 3.874319553375244,
+      "median": 3.5143842697143555,
+      "std": 3.060495376586914,
+      "min": 0.0008012153557501733,
+      "max": 14.213981628417969
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk3-98-A_comp_mix.wav",
+      "mean": 4.348875522613525,
+      "median": 0.5245460867881775,
+      "std": 5.866224765777588,
+      "min": 0.0011207489296793938,
+      "max": 22.228561401367188
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Funk3-98-A_solo_mix.wav",
+      "mean": 2.917168617248535,
+      "median": 2.3825342655181885,
+      "std": 2.716818332672119,
+      "min": 0.0007004819344729185,
+      "max": 14.820082664489746
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz1-130-D_comp_mix.wav",
+      "mean": 4.42549991607666,
+      "median": 2.3939473628997803,
+      "std": 4.522771835327148,
+      "min": 0.052020784467458725,
+      "max": 18.846866607666016
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz1-130-D_solo_mix.wav",
+      "mean": 4.600552558898926,
+      "median": 3.91451358795166,
+      "std": 3.957066535949707,
+      "min": 0.050609707832336426,
+      "max": 21.625045776367188
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz1-200-B_comp_mix.wav",
+      "mean": 4.445300102233887,
+      "median": 4.038390159606934,
+      "std": 2.6489784717559814,
+      "min": 0.4428512454032898,
+      "max": 15.873183250427246
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz1-200-B_solo_mix.wav",
+      "mean": 5.22836971282959,
+      "median": 4.9640350341796875,
+      "std": 4.398542881011963,
+      "min": 0.04250656068325043,
+      "max": 24.58251953125
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz2-110-Bb_comp_mix.wav",
+      "mean": 3.411827564239502,
+      "median": 2.851158618927002,
+      "std": 2.656558036804199,
+      "min": 0.03063763678073883,
+      "max": 12.200955390930176
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz2-110-Bb_solo_mix.wav",
+      "mean": 3.9192380905151367,
+      "median": 3.2619729042053223,
+      "std": 3.8072121143341064,
+      "min": 0.00435647601261735,
+      "max": 21.390514373779297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz2-187-F#_comp_mix.wav",
+      "mean": 4.7297234535217285,
+      "median": 4.253105163574219,
+      "std": 3.041451930999756,
+      "min": 0.392760694026947,
+      "max": 13.044601440429688
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz2-187-F#_solo_mix.wav",
+      "mean": 5.532796382904053,
+      "median": 5.242502212524414,
+      "std": 4.439599990844727,
+      "min": 0.029032384976744652,
+      "max": 22.787506103515625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz3-137-Eb_comp_mix.wav",
+      "mean": 4.782707691192627,
+      "median": 3.90193510055542,
+      "std": 3.8041155338287354,
+      "min": 0.061241764575242996,
+      "max": 25.077777862548828
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz3-137-Eb_solo_mix.wav",
+      "mean": 5.133311748504639,
+      "median": 4.980081558227539,
+      "std": 3.605347156524658,
+      "min": 0.04539690166711807,
+      "max": 23.19005584716797
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz3-150-C_comp_mix.wav",
+      "mean": 4.701077938079834,
+      "median": 3.012014865875244,
+      "std": 4.1523895263671875,
+      "min": 0.1339171826839447,
+      "max": 25.34231948852539
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Jazz3-150-C_solo_mix.wav",
+      "mean": 5.620495319366455,
+      "median": 5.180093765258789,
+      "std": 4.665867328643799,
+      "min": 0.025244276970624924,
+      "max": 22.852048873901367
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock1-130-A_comp_mix.wav",
+      "mean": 9.878931045532227,
+      "median": 9.96793270111084,
+      "std": 3.6466100215911865,
+      "min": 0.5541277527809143,
+      "max": 25.572643280029297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock1-130-A_solo_mix.wav",
+      "mean": 5.47659158706665,
+      "median": 5.295433044433594,
+      "std": 3.9404513835906982,
+      "min": 0.016692180186510086,
+      "max": 20.15920639038086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock1-90-C#_comp_mix.wav",
+      "mean": 8.495140075683594,
+      "median": 8.193876266479492,
+      "std": 3.829238176345825,
+      "min": 0.06699125468730927,
+      "max": 24.523488998413086
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock1-90-C#_solo_mix.wav",
+      "mean": 4.254561901092529,
+      "median": 3.9161081314086914,
+      "std": 3.4745101928710938,
+      "min": 0.009609895758330822,
+      "max": 21.70612144470215
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock2-142-D_comp_mix.wav",
+      "mean": 6.067437648773193,
+      "median": 5.628226280212402,
+      "std": 2.9304847717285156,
+      "min": 0.611274242401123,
+      "max": 19.82144546508789
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock2-142-D_solo_mix.wav",
+      "mean": 4.374194622039795,
+      "median": 3.717231273651123,
+      "std": 3.759913682937622,
+      "min": 0.016713589429855347,
+      "max": 21.933908462524414
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock2-85-F_comp_mix.wav",
+      "mean": 5.077136039733887,
+      "median": 4.251301288604736,
+      "std": 3.412893295288086,
+      "min": 0.016268176957964897,
+      "max": 19.883024215698242
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock2-85-F_solo_mix.wav",
+      "mean": 3.7313826084136963,
+      "median": 2.771393299102783,
+      "std": 3.8070995807647705,
+      "min": 0.005485828034579754,
+      "max": 18.224674224853516
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock3-117-Bb_comp_mix.wav",
+      "mean": 7.4286274909973145,
+      "median": 7.016938209533691,
+      "std": 3.938957452774048,
+      "min": 0.26046866178512573,
+      "max": 26.883893966674805
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock3-117-Bb_solo_mix.wav",
+      "mean": 6.17553186416626,
+      "median": 5.753495216369629,
+      "std": 4.397477149963379,
+      "min": 0.011698346585035324,
+      "max": 20.743431091308594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock3-148-C_comp_mix.wav",
+      "mean": 8.216950416564941,
+      "median": 9.020479202270508,
+      "std": 3.843386173248291,
+      "min": 0.10894248634576797,
+      "max": 23.651744842529297
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_Rock3-148-C_solo_mix.wav",
+      "mean": 3.566444158554077,
+      "median": 3.098325252532959,
+      "std": 3.336768627166748,
+      "min": 0.0038872261065989733,
+      "max": 17.556684494018555
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS1-100-C#_comp_mix.wav",
+      "mean": 5.659882068634033,
+      "median": 5.5387492179870605,
+      "std": 1.6384698152542114,
+      "min": 0.7470488548278809,
+      "max": 11.590076446533203
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS1-100-C#_solo_mix.wav",
+      "mean": 2.9847586154937744,
+      "median": 2.4423418045043945,
+      "std": 2.676762104034424,
+      "min": 0.032048821449279785,
+      "max": 22.529903411865234
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS1-68-E_comp_mix.wav",
+      "mean": 4.595301151275635,
+      "median": 4.226408958435059,
+      "std": 1.6070163249969482,
+      "min": 0.08058739453554153,
+      "max": 14.668968200683594
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS1-68-E_solo_mix.wav",
+      "mean": 3.2535688877105713,
+      "median": 2.413910150527954,
+      "std": 3.341917037963867,
+      "min": 0.03235519304871559,
+      "max": 22.34685516357422
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS2-107-Ab_comp_mix.wav",
+      "mean": 4.100840091705322,
+      "median": 4.217433929443359,
+      "std": 1.690035104751587,
+      "min": 0.10236413776874542,
+      "max": 10.75494384765625
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS2-107-Ab_solo_mix.wav",
+      "mean": 3.645498514175415,
+      "median": 3.101689338684082,
+      "std": 2.672529935836792,
+      "min": 0.03317227587103844,
+      "max": 20.87417984008789
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS2-88-F_comp_mix.wav",
+      "mean": 3.8053767681121826,
+      "median": 3.8036577701568604,
+      "std": 1.0108290910720825,
+      "min": 0.8072484135627747,
+      "max": 7.652050971984863
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS2-88-F_solo_mix.wav",
+      "mean": 4.456603050231934,
+      "median": 3.3021578788757324,
+      "std": 4.08889102935791,
+      "min": 0.036288075149059296,
+      "max": 22.773761749267578
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS3-84-Bb_comp_mix.wav",
+      "mean": 4.657319068908691,
+      "median": 4.308051109313965,
+      "std": 2.4919683933258057,
+      "min": 0.06325089931488037,
+      "max": 11.376123428344727
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS3-84-Bb_solo_mix.wav",
+      "mean": 4.823558330535889,
+      "median": 3.987323522567749,
+      "std": 3.9670112133026123,
+      "min": 0.03769273683428764,
+      "max": 25.38608741760254
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS3-98-C_comp_mix.wav",
+      "mean": 3.9575328826904297,
+      "median": 3.9049863815307617,
+      "std": 1.1428024768829346,
+      "min": 0.6208691000938416,
+      "max": 9.596755981445312
+    },
+    {
+      "path": "/media/datadisk/home/22828187/zhanh/Dataset/guitarset/audio_mono-pickup_mix/05_SS3-98-C_solo_mix.wav",
+      "mean": 4.80860710144043,
+      "median": 3.624850034713745,
+      "std": 4.054121971130371,
+      "min": 0.05359778553247452,
+      "max": 22.749486923217773
+    }
+  ],
+  "errors": [],
+  "config": {
+    "target_sample_rate": 22050,
+    "frames_per_second": 50.0,
+    "fft_size": 1024,
+    "hist_range": [
+      0.0,
+      80.0
+    ],
+    "hist_bin_size": 0.5
+  }
+}
