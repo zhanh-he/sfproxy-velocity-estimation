@@ -7,7 +7,7 @@ The public site reads [`../docs/assets/cases.json`](../docs/assets/cases.json). 
 | MAESTRO v3 test | Scriabin, 60–80 s and 100–120 s | Ready | Ready; Diff-Synth saved 5 s 60k, Diff-SFProxy rerun from released piano 5 s 120k | Yes; first case badges use full-piece 721-note MAE, second uses 20 s MAE |
 | SMD | Bach BWV 849, 40–60 s and 80–100 s | Ready | Ready; saved piano 5 s 60k Diff-Synth and 5 s 120k Diff-SFProxy runs | Yes; badges use each selected 20 s window |
 | François Leduc (FL) | `JGDyc`, 40–60 s and 80–100 s | Ready | Awaiting selected final 5 s guitar prediction MIDIs | No; aligned score velocities are not ground truth |
-| GAPS | Reserved 20 s slot | Awaiting publication permission | Awaiting final 5 s guitar predictions | No |
+| GAPS | `001_mvswc`, 40–60 s and 80–100 s | Ready | Awaiting selected final 5 s guitar prediction MIDIs | No; aligned score velocities are not ground truth |
 
 ## Recovered source paths
 
@@ -22,6 +22,8 @@ The MAESTRO 100–120 s case uses the same packed Scriabin recording as the firs
 
 The FL reference pair was reconstructed from `score_hpt/workspaces/hdf5s/francoisleduc_sr22050/JGDyc.h5`. Its two 20 s windows contain 138 and 120 score notes. Flat 64 was rendered with the FreePats Spanish Classical Guitar SFZ. Guitar note velocities are not evaluated against the score.
 
+The GAPS reference pair was reconstructed from `score_hpt/workspaces/hdf5s/gaps_sr22050_old/001_mvswc.h5` on lab5090. Its 40–60 s and 80–100 s windows each contain 154 aligned score notes. Original audio and Flat 64 use the same 20 s boundaries; Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The project team confirmed that its GAPS access, obtained through the dataset's Zenodo application process, permits publication of these research demo excerpts. Guitar note velocities are not evaluated against the score.
+
 Run [`../scripts/build_listening_case.py`](../scripts/build_listening_case.py) with the external source pair, available prediction MIDIs, `--start`, the matching SFZ, and `sfizz_render` to regenerate a case directory. The builder checks note pitch/onset/duration alignment and writes clipped MIDI, 20 s MP3, note JSON, and excerpt MAE only when `--velocity-ground-truth` is passed. It refuses windows other than 20 s.
 
 The published MP3 previews were then adjusted by [`../scripts/match_listening_gain.py`](../scripts/match_listening_gain.py) toward −24 LUFS with a −1 dBFS peak ceiling. The [gain report](listening_gain_report.csv) records one scalar gain per clip. This adjustment makes switching players more comfortable while preserving within-clip dynamics; the MIDI and MAE values are untouched. The first MAESTRO reference clip reaches the peak ceiling before the loudness target.
@@ -31,7 +33,7 @@ The published MP3 previews were then adjusted by [`../scripts/match_listening_ga
 - [MAESTRO v3](https://magenta.withgoogle.com/datasets/maestro): Google LLC, CC BY-NC-SA 4.0.
 - [Saarland Music Data](https://resources.mpi-inf.mpg.de/SMD/): CC BY-NC-SA 3.0; the dataset authors ask for citation.
 - [François Leduc Guitar Dataset](https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset): current dataset page lists MIT; cite Riley, Edwards, and Dixon (ICASSP 2024).
-- [GAPS](https://aim-qmul.github.io/GAPS/): its public terms prohibit distributing the dataset or reproduction-enabling data to third parties without written permission. Therefore the site's GAPS case contains no hosted media, MIDI, or note JSON. Its dataset link points to the authors' site.
+- [GAPS](https://aim-qmul.github.io/GAPS/): Riley, Guo, Edwards, and Dixon (ISMIR 2024). The project team confirmed permission for these 20 s research demo excerpts after applying for dataset access through Zenodo.
 - [FreePats Spanish Classical Guitar](https://freepats.zenvoid.org/Guitar/acoustic-guitar.html): CC0 1.0. [Salamander Grand Piano V3](https://github.com/sfzinstruments/SalamanderGrandPiano) is credited in the site footer.
 
 The public guitar cards remain visibly incomplete until selected final 5 s predictions are recovered. In particular, the older 2 s proxy evaluation files on 5090 are **not** presented as the paper's guitar listening result.

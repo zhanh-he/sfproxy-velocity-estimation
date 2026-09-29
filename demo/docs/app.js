@@ -186,7 +186,7 @@ async function init() {
   }));
   cases=manifest.cases;
   const requested=new URLSearchParams(location.search).get("case");
-  const selectedCase=cases.find(c=>c.id===requested)||cases.find(c=>c.id==="maestro-scriabin-60")||cases[0];
+  const selectedCase=cases.find(c=>c.id===requested)||cases.find(c=>c.id==="gaps-001-40")||cases[0];
   document.getElementById("case-select").addEventListener("change",event=>loadCase(event.target.value));
   renderDatasetTabs(selectedCase.dataset);
   const select=document.getElementById("case-select");

@@ -1,4 +1,8 @@
 case_id,method,original_lufs,original_peak_dbfs,applied_gain_db,output_lufs,output_peak_dbfs
+gaps-001-40,reference,-23.1,-0.5,-0.9,-24.4,-1.8
+gaps-001-40,flat64,-31.3,-14.1,7.3,-24.4,-7.3
+gaps-001-80,reference,-24.8,-5.0,0.8,-24.5,-4.7
+gaps-001-80,flat64,-31.2,-15.7,7.2,-24.4,-9.0
 fl-jgdyc-40,reference,-14.1,-0.9,-9.9,-24.4,-11.3
 fl-jgdyc-40,flat64,-31.8,-15.5,7.8,-24.4,-8.2
 fl-jgdyc-80,reference,-13.7,-0.9,-10.3,-24.4,-11.7

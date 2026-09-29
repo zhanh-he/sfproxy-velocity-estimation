@@ -19,4 +19,4 @@ python3 demo/scripts/validate_listening_cases.py
 python3 -m http.server 8000 --directory demo/docs
 ```
 
-Open `http://localhost:8000/` to inspect all dataset selections. The FL method slots await selected final 5 s guitar predictions. The GAPS slot intentionally has no hosted media under that dataset's publication terms; do not fill it by copying source data into this public repository without permission.
+Open `http://localhost:8000/` to inspect all dataset selections. GAPS and FL each have two 20 s original/Flat 64 guitar comparisons. Their method slots await the selected final 5 s guitar predictions; the older 2 s evaluation runs are not substitutes.

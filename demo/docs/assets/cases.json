@@ -2,17 +2,39 @@
   "schema_version": 1,
   "cases": [
     {
-      "id": "gaps-awaiting",
+      "id": "gaps-001-40",
       "dataset": "GAPS",
-      "selectorLabel": "Classical guitar · 20 s slot",
-      "title": "GAPS classical guitar",
+      "selectorLabel": "Guitar performance 001 · 40–60 s",
+      "title": "GAPS · guitar performance 001",
       "instrument": "Classical guitar",
-      "window": "20 s slot",
-      "description": "The 20-second case and four aligned method slots are reserved. The dataset's published terms require permission before we can host its audio or MIDI here.",
-      "available": [],
-      "pending": {"reference": "Publication permission needed", "flat64": "Publication permission needed", "diffsynth": "Awaiting 5 s prediction", "sfproxy": "Awaiting 5 s prediction"},
+      "window": "40–60 s",
+      "description": "A matched 20-second GAPS guitar recording and Flat 64 render. The selected final 5 s adaptation predictions are still pending.",
+      "available": [
+        "reference",
+        "flat64"
+      ],
+      "assetBase": "assets/cases/gaps-001-40",
+      "notesUrl": "assets/cases/gaps-001-40/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "GAPS is named in the paper results below. No GAPS media or paper-final 5 s predictions are bundled in this public demo.",
+      "provenance": "Original GAPS recording and aligned MIDI were recovered from the 5090 research cache after project access through the dataset Zenodo application. Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The score has no ground-truth guitar note velocities; no guitar MAE is shown.",
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/"
+    },
+    {
+      "id": "gaps-001-80",
+      "dataset": "GAPS",
+      "selectorLabel": "Guitar performance 001 · 80–100 s",
+      "title": "GAPS · guitar performance 001",
+      "instrument": "Classical guitar",
+      "window": "80–100 s",
+      "description": "A matched 20-second GAPS guitar recording and Flat 64 render. The selected final 5 s adaptation predictions are still pending.",
+      "available": [
+        "reference",
+        "flat64"
+      ],
+      "assetBase": "assets/cases/gaps-001-80",
+      "notesUrl": "assets/cases/gaps-001-80/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original GAPS recording and aligned MIDI were recovered from the 5090 research cache after project access through the dataset Zenodo application. Flat 64 uses the FreePats Spanish Classical Guitar SFZ. The score has no ground-truth guitar note velocities; no guitar MAE is shown.",
       "sourceUrl": "https://aim-qmul.github.io/GAPS/"
     },
     {
@@ -23,7 +45,10 @@
       "instrument": "Classical guitar",
       "window": "40–60 s",
       "description": "A real 20-second guitar recording and its Flat 64 SoundFont render. The two adaptation methods are reserved for the selected 5 s prediction files.",
-      "available": ["reference", "flat64"],
+      "available": [
+        "reference",
+        "flat64"
+      ],
       "assetBase": "assets/cases/fl-jgdyc-40",
       "notesUrl": "assets/cases/fl-jgdyc-40/notes.json",
       "velocityGroundTruth": false,
@@ -38,7 +63,10 @@
       "instrument": "Classical guitar",
       "window": "80–100 s",
       "description": "A second 20-second window from the same guitar performance, ready for direct comparison once both selected 5 s predictions are recovered.",
-      "available": ["reference", "flat64"],
+      "available": [
+        "reference",
+        "flat64"
+      ],
       "assetBase": "assets/cases/fl-jgdyc-80",
       "notesUrl": "assets/cases/fl-jgdyc-80/notes.json",
       "velocityGroundTruth": false,
@@ -53,11 +81,20 @@
       "instrument": "Grand piano",
       "window": "60–80 s",
       "description": "One matched 20-second piano excerpt with the original performance, a constant-velocity control, and both saved adaptation methods.",
-      "available": ["reference", "flat64", "diffsynth", "sfproxy"],
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
       "assetBase": "assets",
       "notesUrl": "assets/demo_notes.json",
       "velocityGroundTruth": true,
-      "metrics": {"flat64": 15.401, "diffsynth": 19.1, "sfproxy": 9.738},
+      "metrics": {
+        "flat64": 15.401,
+        "diffsynth": 19.1,
+        "sfproxy": 9.738
+      },
       "provenance": "MAE badges cover the full 164.7-second, 721-note piece; audio and MIDI show only 60–80 s. Diff-Synth is a saved 5 s, 60k run. Diff-SFProxy was rerun from the released piano 5 s, 120k checkpoint. This single-piece example is separate from the paper aggregates.",
       "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md"
     },
@@ -69,7 +106,12 @@
       "instrument": "Grand piano",
       "window": "100–120 s",
       "description": "A second 20-second passage from the same MAESTRO performance, with all four aligned listening conditions.",
-      "available": ["reference", "flat64", "diffsynth", "sfproxy"],
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
       "assetBase": "assets/cases/maestro-scriabin-100",
       "notesUrl": "assets/cases/maestro-scriabin-100/notes.json",
       "velocityGroundTruth": true,
@@ -84,7 +126,12 @@
       "instrument": "Grand piano",
       "window": "40–60 s",
       "description": "A real 20-second Disklavier recording with both saved 5 s adaptation predictions on the same aligned notes.",
-      "available": ["reference", "flat64", "diffsynth", "sfproxy"],
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
       "assetBase": "assets/cases/smd-bach-40",
       "notesUrl": "assets/cases/smd-bach-40/notes.json",
       "velocityGroundTruth": true,
@@ -99,7 +146,12 @@
       "instrument": "Grand piano",
       "window": "80–100 s",
       "description": "A second 20-second SMD window with the same four aligned listening conditions.",
-      "available": ["reference", "flat64", "diffsynth", "sfproxy"],
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
       "assetBase": "assets/cases/smd-bach-80",
       "notesUrl": "assets/cases/smd-bach-80/notes.json",
       "velocityGroundTruth": true,
