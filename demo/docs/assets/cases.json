@@ -19,7 +19,25 @@
       "notesUrl": "assets/cases/gaps-019-40/notes.json",
       "velocityGroundTruth": false,
       "provenance": "GAPS test piece 019_Vpswc from the 5090 HDF5 cache. Diff-Synth and Diff-SFProxy were rerun on its aligned score using adapted 5 s guitar VeloEst checkpoints recovered from the 5090 /storage HDD archives (60k and 120k iterations respectively). The original archived Diff-Synth prediction omits seven score notes across these two windows, so this demo uses a complete rerun from its recovered checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
-      "sourceUrl": "https://aim-qmul.github.io/GAPS/"
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.69,
+          "bstl": 0.563
+        },
+        "diffsynth": {
+          "bssl": 0.669,
+          "bstl": 0.647
+        },
+        "sfproxy": {
+          "bssl": 0.741,
+          "bstl": 0.739
+        }
+      }
     },
     {
       "id": "gaps-019-80",
@@ -39,13 +57,31 @@
       "notesUrl": "assets/cases/gaps-019-80/notes.json",
       "velocityGroundTruth": false,
       "provenance": "GAPS test piece 019_Vpswc from the 5090 HDF5 cache. Diff-Synth and Diff-SFProxy were rerun on its aligned score using adapted 5 s guitar VeloEst checkpoints recovered from the 5090 /storage HDD archives (60k and 120k iterations respectively). The original archived Diff-Synth prediction omits seven score notes across these two windows, so this demo uses a complete rerun from its recovered checkpoint. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
-      "sourceUrl": "https://aim-qmul.github.io/GAPS/"
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.701,
+          "bstl": 0.532
+        },
+        "diffsynth": {
+          "bssl": 0.592,
+          "bstl": 0.576
+        },
+        "sfproxy": {
+          "bssl": 0.755,
+          "bstl": 0.777
+        }
+      }
     },
     {
-      "id": "fl-jgdyc-40",
+      "id": "fl-qdc4c-40",
       "dataset": "FL",
-      "selectorLabel": "Guitar performance JGDyc · 40–60 s",
-      "title": "François Leduc · guitar performance JGDyc",
+      "selectorLabel": "Guitar performance QDC4c · 40–60 s",
+      "title": "François Leduc · guitar performance QDC4c",
       "instrument": "Classical guitar",
       "window": "40–60 s",
       "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
@@ -55,17 +91,35 @@
         "diffsynth",
         "sfproxy"
       ],
-      "assetBase": "assets/cases/fl-jgdyc-40",
-      "notesUrl": "assets/cases/fl-jgdyc-40/notes.json",
+      "assetBase": "assets/cases/fl-qdc4c-40",
+      "notesUrl": "assets/cases/fl-qdc4c-40/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The archived evaluation for this specific Diff-SFProxy checkpoint gives FL r_BSSL 0.768812; the paper table reports 0.777 from a selected run that this HDD archive has not identified. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
-      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
+      "provenance": "Original François Leduc recording and aligned score from the 5090 HDF5 cache (QDC4c). Diff-Synth and Diff-SFProxy predictions were rerun over the full piece from the recovered 5 s guitar checkpoints (60k and 120k steps), keeping every score note aligned. These example-specific results are separate from the paper aggregates; the archived Diff-SFProxy checkpoint’s FL aggregate does not reproduce the paper-selected 0.777. All resynthesized clips use FreePats Spanish Classical Guitar SFZ. The aligned guitar score has no verified velocity labels, so no MAE is shown.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.723,
+          "bstl": 0.515
+        },
+        "diffsynth": {
+          "bssl": 0.701,
+          "bstl": 0.597
+        },
+        "sfproxy": {
+          "bssl": 0.783,
+          "bstl": 0.688
+        }
+      }
     },
     {
-      "id": "fl-jgdyc-80",
+      "id": "fl-qdc4c-80",
       "dataset": "FL",
-      "selectorLabel": "Guitar performance JGDyc · 80–100 s",
-      "title": "François Leduc · guitar performance JGDyc",
+      "selectorLabel": "Guitar performance QDC4c · 80–100 s",
+      "title": "François Leduc · guitar performance QDC4c",
       "instrument": "Classical guitar",
       "window": "80–100 s",
       "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
@@ -75,11 +129,29 @@
         "diffsynth",
         "sfproxy"
       ],
-      "assetBase": "assets/cases/fl-jgdyc-80",
-      "notesUrl": "assets/cases/fl-jgdyc-80/notes.json",
+      "assetBase": "assets/cases/fl-qdc4c-80",
+      "notesUrl": "assets/cases/fl-qdc4c-80/notes.json",
       "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and score from the 5090 HDF5 cache. Diff-Synth is the saved 5 s, 60k prediction MIDI from the 5090 /storage archive; its full-dataset r_BSSL 0.645489 agrees with the paper’s rounded 0.646. Diff-SFProxy was rerun from the recovered 5 s, 120k guitar VeloEst checkpoint. The archived evaluation for this specific Diff-SFProxy checkpoint gives FL r_BSSL 0.768812; the paper table reports 0.777 from a selected run that this HDD archive has not identified. The score has no ground-truth guitar velocities, so no guitar MAE is shown. Both renders use FreePats Spanish Classical Guitar SFZ.",
-      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset"
+      "provenance": "Original François Leduc recording and aligned score from the 5090 HDF5 cache (QDC4c). Diff-Synth and Diff-SFProxy predictions were rerun over the full piece from the recovered 5 s guitar checkpoints (60k and 120k steps), keeping every score note aligned. These example-specific results are separate from the paper aggregates; the archived Diff-SFProxy checkpoint’s FL aggregate does not reproduce the paper-selected 0.777. All resynthesized clips use FreePats Spanish Classical Guitar SFZ. The aligned guitar score has no verified velocity labels, so no MAE is shown.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.748,
+          "bstl": 0.643
+        },
+        "diffsynth": {
+          "bssl": 0.661,
+          "bstl": 0.51
+        },
+        "sfproxy": {
+          "bssl": 0.788,
+          "bstl": 0.782
+        }
+      }
     },
     {
       "id": "maestro-scriabin-60",
@@ -98,13 +170,30 @@
       "assetBase": "assets",
       "notesUrl": "assets/demo_notes.json",
       "velocityGroundTruth": true,
-      "metrics": {
-        "flat64": 15.401,
-        "diffsynth": 19.1,
-        "sfproxy": 9.738
-      },
-      "provenance": "MAE badges cover the full 164.7-second, 721-note piece; audio and MIDI show only 60–80 s. Diff-Synth is a saved 5 s, 60k run. Diff-SFProxy was rerun from the released piano 5 s, 120k checkpoint. This single-piece example is separate from the paper aggregates.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md"
+      "provenance": "20-second Scriabin excerpt with 137 aligned notes. Diff-Synth is a saved 5 s, 60k prediction; Diff-SFProxy was rerun from the released piano 5 s, 120k checkpoint. Card scores are computed on this excerpt, separate from full-piece and paper aggregate metrics.",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.74,
+          "bstl": 0.662,
+          "mae": 17.708
+        },
+        "diffsynth": {
+          "bssl": 0.802,
+          "bstl": 0.821,
+          "mae": 28.869
+        },
+        "sfproxy": {
+          "bssl": 0.849,
+          "bstl": 0.883,
+          "mae": 12.058
+        }
+      }
     },
     {
       "id": "maestro-scriabin-100",
@@ -124,7 +213,29 @@
       "notesUrl": "assets/cases/maestro-scriabin-100/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAE badges are computed over this 20-second, 117-note passage. Diff-Synth is a saved 5 s, 60k run; Diff-SFProxy uses the released piano 5 s, 120k checkpoint. These case values are separate from the full-piece example and paper aggregates.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md"
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.75,
+          "bstl": 0.693,
+          "mae": 12.658
+        },
+        "diffsynth": {
+          "bssl": 0.768,
+          "bstl": 0.795,
+          "mae": 16.026
+        },
+        "sfproxy": {
+          "bssl": 0.852,
+          "bstl": 0.903,
+          "mae": 8.487
+        }
+      }
     },
     {
       "id": "smd-bach-40",
@@ -144,7 +255,29 @@
       "notesUrl": "assets/cases/smd-bach-40/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAE badges are computed over the selected 20 seconds (113 score notes), not the full SMD piece or the paper aggregate. Diff-Synth is the saved 5 s, 60k sup0/backend1 run; Diff-SFProxy is the saved 5 s, 120k smooth-L1 run. All renders use Salamander Grand Piano V3.",
-      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/"
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.742,
+          "bstl": 0.434,
+          "mae": 13.46
+        },
+        "diffsynth": {
+          "bssl": 0.784,
+          "bstl": 0.6,
+          "mae": 11.735
+        },
+        "sfproxy": {
+          "bssl": 0.851,
+          "bstl": 0.788,
+          "mae": 6.735
+        }
+      }
     },
     {
       "id": "smd-bach-80",
@@ -164,7 +297,29 @@
       "notesUrl": "assets/cases/smd-bach-80/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAE badges are computed over this 20-second excerpt (108 score notes). The saved 5 s Diff-Synth and Diff-SFProxy predictions are demonstration runs, not a claim that these are the exact Table 2 aggregate checkpoints.",
-      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/"
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.742,
+          "bstl": 0.373,
+          "mae": 14.824
+        },
+        "diffsynth": {
+          "bssl": 0.82,
+          "bstl": 0.699,
+          "mae": 11.435
+        },
+        "sfproxy": {
+          "bssl": 0.862,
+          "bstl": 0.783,
+          "mae": 5.25
+        }
+      }
     }
   ]
 }

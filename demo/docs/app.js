@@ -94,11 +94,18 @@ function renderCard(method, item, notes) {
   card.className=`demo-card ${method.key}${method.key==="sfproxy"?" featured":""}${ready?"":" pending"}`;
   const top=document.createElement("div");top.className="card-top";
   const index=document.createElement("span");index.className="card-index";index.textContent=`${method.number} / ${method.kind}`;
-  const badge=document.createElement("span");badge.className="score";
-  const mae=item.metrics?.[method.key] ?? notes?.stats?.[method.key]?.mae_20s;
-  if (mae!=null && method.key!=="reference") {
-    badge.textContent="MAE ";const strong=document.createElement("strong");strong.textContent=Number(mae).toFixed(1);badge.append(strong);
-  } else badge.textContent=ready?(method.key==="reference"?"Recorded":"20 s"):(item.pending?.[method.key]||"Awaiting 5 s");
+  const badge=document.createElement("div");badge.className="score";
+  const scores=item.scores?.[method.key];
+  if (ready && scores) {
+    const fields=item.velocityGroundTruth?["mae","bssl","bstl"]:["bssl","bstl"];
+    for (const field of fields) {
+      const metric=document.createElement("span");metric.className="score-metric";
+      const label=document.createElement("small");label.textContent=field.toUpperCase();
+      const value=document.createElement("strong");value.textContent=Number(scores[field]).toFixed(field==="mae"?1:3);
+      metric.append(label,value);badge.append(metric);
+    }
+    badge.setAttribute("aria-label",fields.map(field=>`${field.toUpperCase()} ${scores[field]}`).join(", "));
+  } else badge.textContent=ready?"20 s":(item.pending?.[method.key]||"Awaiting 5 s");
   top.append(index,badge);
   const title=document.createElement("h3");title.textContent=method.title;
   if (method.key==="sfproxy") {const mark=document.createElement("span");mark.textContent="proposed";title.append(" ",mark);}

@@ -42,3 +42,10 @@
 .inspector-values{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:980px){.case-toolbar{align-items:stretch;flex-direction:column}.case-picker{min-width:0;width:100%}.inspector-values{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.case-toolbar{padding:18px}.dataset-options{display:grid;grid-template-columns:repeat(2,1fr)}.dataset-options button{padding:9px}.case-heading{display:block}.coverage{display:inline-block;margin-top:12px}.legend{flex-wrap:wrap}.legend-note{margin-left:0;flex-basis:100%}}
+.card-index{flex-shrink:0}
+.score{display:flex;align-items:center;gap:10px;border-radius:9px;padding:5px 9px;font-variant-numeric:tabular-nums}
+.score-metric{display:flex;flex-direction:column;align-items:flex-end;gap:2px;line-height:1.1}
+.score-metric+.score-metric{border-left:1px solid #465970;padding-left:10px}
+.score-metric small{font-size:9px;color:#9fb1c4;font-weight:800;letter-spacing:.07em}
+.score-metric strong{font-size:14px;font-weight:800;margin:0;color:var(--text)}
+@media(max-width:620px){.card-top{flex-wrap:wrap}.score{margin-left:auto}}

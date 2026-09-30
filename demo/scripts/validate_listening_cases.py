@@ -3,7 +3,9 @@
 
 from __future__ import annotations
 
+import csv
 import json
+import math
 import shutil
 import statistics
 import subprocess
@@ -18,6 +20,7 @@ def main() -> None:
     manifest = json.loads((DOCS / "assets/cases.json").read_text())
     ids = set()
     total_audio = 0
+    expected_scores = {}
     for case in manifest["cases"]:
         case_id = case["id"]
         if case_id in ids:
@@ -40,6 +43,8 @@ def main() -> None:
         if payload.get("case_id") != case_id and case_id != "maestro-scriabin-60":
             raise ValueError(f"{case_id}: note JSON belongs to {payload.get('case_id')}")
         reference = payload["notes"]["reference"]
+        if set(case.get("scores", {})) != set(available):
+            raise ValueError(f"{case_id}: missing or unexpected card scores")
         for method in available:
             base = DOCS / case["assetBase"] / method
             for ext in ("mp3", "mid"):
@@ -58,6 +63,18 @@ def main() -> None:
                 measured = statistics.mean(abs(a["v"] - b["v"]) for a, b in zip(reference, notes))
                 if abs(measured - payload["stats"][method]["mae_20s"]) > 0.001:
                     raise ValueError(f"{case_id}/{method}: displayed MAE differs from note data")
+            score = case["scores"][method]
+            for metric in ("bssl", "bstl"):
+                value = score.get(metric)
+                if not isinstance(value, (int, float)) or not math.isfinite(value) or not -1 <= value <= 1:
+                    raise ValueError(f"{case_id}/{method}: invalid {metric} card score")
+            if case["velocityGroundTruth"]:
+                measured = statistics.mean(abs(a["v"] - b["v"]) for a, b in zip(reference, notes))
+                if abs(measured - score.get("mae", float("inf"))) > 0.001:
+                    raise ValueError(f"{case_id}/{method}: card MAE differs from aligned MIDI")
+            elif "mae" in score:
+                raise ValueError(f"{case_id}/{method}: guitar has no verified velocity MAE")
+            expected_scores[(case_id, method)] = score
             if shutil.which("ffprobe"):
                 result = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                          "-of", "default=noprint_wrappers=1:nokey=1", str(base.with_suffix(".mp3"))],
@@ -66,6 +83,21 @@ def main() -> None:
                     raise ValueError(f"{case_id}/{method}: audio is not 20 seconds")
             total_audio += 1
         print(f"{case_id}: {len(reference)} aligned notes, {len(available)} audio methods")
+    report = DOCS.parent / "analysis/listening_case_scores.csv"
+    with report.open(newline="", encoding="utf-8") as stream:
+        score_rows = list(csv.DictReader(stream))
+    if len(score_rows) != len(expected_scores):
+        raise ValueError("Card score report length differs from the manifest")
+    for row in score_rows:
+        key = (row["case_id"], row["method"])
+        score = expected_scores.pop(key, None)
+        if score is None or any(float(row[metric]) != score[metric] for metric in ("bssl", "bstl")):
+            raise ValueError(f"Card score CSV differs from manifest for {key}")
+        mae_matches = (float(row["mae"]) == score["mae"]) if "mae" in score else (row["mae"] == "")
+        if not mae_matches:
+            raise ValueError(f"Card MAE CSV differs from manifest for {key}")
+    if expected_scores:
+        raise ValueError(f"Card score CSV omits {len(expected_scores)} methods")
     print(f"Validated {len(ids)} cases and {total_audio} 20-second audio files")
 
 
