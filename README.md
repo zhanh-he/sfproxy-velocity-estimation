@@ -1,8 +1,25 @@
-# Beyond Piano: Diff-SFProxy
+# SFProxy Velocity Estimation
 
-Research code and presentation material for **Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies** (ISMIR 2026).
+Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies” [PDF](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)**, accepted at **ISMIR 2026**. This repo contains:
 
-**[Audio and MIDI demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/)** · **[Two inference checkpoints](score_hpt/checkpoints/README.md)** · **[Camera-ready PDF](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)** · **[Results and provenance](demo/analysis/README.md)**
+- **[DEMO Audio & MIDI](https://zhanh-he.github.io/sfproxy-velocity-estimation/)**
+- **[Checkpoints and Inference Instructions](score_hpt/checkpoints/README.md)**
+
+## Overview
+Many music datasets provide aligned audio and MIDI note events but lack reliable velocity labels, particularly out-of-the-piano. This repository studies cross-instrument MIDI velocity estimation in this label-scarce setting.
+
+Starting from a velocity estimator pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording. We compare two adaptation strategies:
+
+- **Diff-Synth**: waveform-domain supervision through a differentiable synthesiser.
+- **Diff-SFProxy**: note-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
+
+Diff-SFProxy predicts two loudness-related acoustic parameters:
+
+- **Pitch-conditioned harmonic energy (PHE)**
+- **Onset-window spectral flux (OSF)**
+
+This focuses the adaptation signal on velocity-dependent intensity and attack behaviour rather than full waveform reconstruction.
+
 
 ## Repository layout
 
