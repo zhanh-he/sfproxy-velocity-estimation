@@ -1,17 +1,17 @@
 # SFProxy Velocity Estimation
 
-Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies” [PDF](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)**, accepted at **ISMIR 2026**. This repo contains:
+Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies” [[PDF]](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)**, accepted at **ISMIR 2026**. This repo contains:
 
-- **[DEMO Audio & MIDI](https://zhanh-he.github.io/sfproxy-velocity-estimation/)**
+- **[Online Demo (Audio & MIDI)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)**
 - **[Checkpoints and Inference Instructions](score_hpt/checkpoints/README.md)**
 
 ## Overview
-Many music datasets provide aligned audio and MIDI note events but lack reliable velocity labels, particularly out-of-the-piano. This repository studies cross-instrument MIDI velocity estimation in this label-scarce setting.
+Many music datasets provide aligned audio and MIDI note events but lack reliable velocity labels, particularly out-of-the-piano. We explore cross-instrument MIDI velocity estimation in this label-scarce setting, using **Guitars** as target instruments.
 
-Starting from a velocity estimator pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording. We compare two adaptation strategies:
+Starting from a velocity estimator (VeloEst) pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording in "[GAPS](https://zenodo.org/records/13962272) and [Francois Leduc (FL)](https://zenodo.org/records/10984521) datasets". We compare two adaptation strategies:
 
-- **Diff-Synth**: waveform-domain supervision through a differentiable synthesiser.
-- **Diff-SFProxy**: note-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
+- **Diff-Synth (DDSP)**: waveform-domain supervision through a differentiable synthesiser.
+- **Diff-SFProxy**: loudness parameter-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
 
 Diff-SFProxy predicts two loudness-related acoustic parameters:
 
@@ -26,7 +26,7 @@ This focuses the adaptation signal on velocity-dependent intensity and attack be
 | Directory | Purpose |
 | --- | --- |
 | [`demo/`](demo/README.md) | Listening website, matched MIDI/audio, paper PDF and LaTeX source, result tables, analysis code, and slide-ready SVG figures |
-| [`diff-sfproxy/`](diff-sfproxy/README.md) | SoundFont teacher-data export, note-wise proxy training and recovery evaluation; includes SFZ/`sfizz_render` setup |
+| [`diff-sfproxy/`](diff-sfproxy/README.md) | SoundFont teacher-data export, note-wise proxy training and recovery evaluation; includes `sfizz_render` setup |
 | [`score_hpt/`](score_hpt/README.md) | Onset-assisted Score-HPT/VeloEst frontend and Diff-Synth/Diff-SFProxy adaptation, inference, evaluation, and tests |
 | [`diff-synth/`](diff-synth/README.md) | Adapted piano and guitar differentiable synthesizer backends, with original-project acknowledgements |
 | [`scripts/`](scripts/README.md) | Experiment launchers for local machines and Kaya |
