@@ -1,0 +1,28 @@
+Metadata
+CHECKPOINT_PATH = /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/checkpoints/route4_guitar_12k/5s+auto+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0+backend1+prior0p2+sat0p4/120000_iterations.pth
+DATASET_TYPE = francoisleduc
+EVAL_SCOPE = full
+COMPUTE_VELOCITY_MAE = False
+INSTRUMENT_KEY = guitar
+
+Summary
+  dataset: francoisleduc
+  label: route4_francoisleduc_full_guitar_5s_auto_hpt_onset_score_note_editor_backend_diffproxy_smooth_l1_sup0_backend1_prior0p2_
+  num_items/ok/fail: 79/79/0
+  instrument: /media/mengh/SharedData/zhanh/202604_midiproxy_data/soundfont/SpanishClassicalGuitar/SpanishClassicalGuitar-20190618.sfz
+  prediction_dir: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route4/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffproxy_smooth_l1_sup0_backend1_prior0p2_sat0p4_120000_iterations/pred_midis
+  manifest: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route4_eval/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffproxy_smooth_l1_sup0_backend1_prior0p2_sat0p4_120000_iterations/route4_francoisleduc_full_guitar_5s_auto_hpt_onset_score_note_editor_backend_diffproxy_smooth_l1_sup0_backend1_prior0p2_manifest.json
+  out_dir: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route4_eval/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffproxy_smooth_l1_sup0_backend1_prior0p2_sat0p4_120000_iterations
+  requested_split: full
+  effective_split: full
+  resolved_split: all
+  compute_velocity_mae: False
+  bstl_source: raw ntot metrics from data_analysis.evaluation.bssl_eval
+velocity_mae (0-127): disabled
+
+real_vs_synth_pred_bssl
+  pearson     cosine      mae         spearman
+  0.768812    0.889585    0.625431    0.782083
+real_vs_synth_pred_bstl
+  pearson     cosine      mae         spearman
+  0.750307    0.953179    2.736926    0.738860

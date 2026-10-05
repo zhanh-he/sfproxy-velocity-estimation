@@ -1,0 +1,442 @@
+wandb:
+  project: "202604_sfproxy"
+  name: ""
+  comment: "mel229"
+  tag: "kaya" #5090 3090 kaya
+
+exp:
+  workspace: "./workspaces" # kaya / scratch-friendly default
+  # workspace: "/media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces"
+  # workspace: "/media/datadisk/home/22828187/zhanh/202604_midiproxy_data/score_hpt/workspaces"
+
+  total_iteration: 30_000  # 120_000 # 300_000 # 360_000
+  save_iteration: 6_000     # 6_000 # 10_000
+  eval_iteration: 6_000     # 6_000 # 6_000
+
+  optim: "adam"             # "adam" | "adamw" | "ranger"
+  learnrate: 1e-4           # 3e-4 # 1e-4
+  weight_decay: 0.0
+  decay: True # False
+  reduce_iteration: 10_000 # 6_000
+  random_seed: 86
+
+  mini_data: False # True when developing model
+  cuda: True
+  num_workers: 12 # 6 for Score Calculating
+  batch_size: 8 #12
+
+  # Infer and Eval
+  run_infer: 'single' # 'multi'
+
+optim:
+  name: "adam"          # "adam" | "adamw"
+  lr: ${exp.learnrate}
+  weight_decay: 0.0
+
+
+feature:
+  audio_feature: "logmel"
+  classes_num: 88
+  # ---------------------------
+  # dataloader.py params
+  # Route IV keeps the Score-HPT / VeloEst front-end at 10 s.
+  # Only the frozen backend crop is ablated separately via backend.backend_segment_seconds.
+  segment_seconds: 10.
+  hop_seconds: 1.
+  # ---------------------------
+  # feature_extractor.py params
+  # mel_bins: 229 # 去feature extractor里面手动定义吧
+  sample_rate: 22050
+  fft_size: 2048
+  frames_per_second: 100
+  augmentor: null
+  # ---------------------------
+  begin_note: 21
+  velocity_scale: 128
+  max_note_shift: 0
+
+
+dataset:
+  # Current built-in packers support maestro / smd / maps / francoisleduc / gaps.
+  train_set: "maestro"
+  eval_sets: ["train", "maestro", "smd"] # "maps", "francoisleduc", "gaps"
+  test_set: "smd"
+  has_velocity_target: true
+
+  # Use the same workspace root as features.py packs to
+  train_h5: "${exp.workspace}/hdf5s/${dataset.train_set}_sr${feature.sample_rate}"
+  test_h5: "${exp.workspace}/hdf5s/${dataset.test_set}_sr${feature.sample_rate}"
+
+  # Provide dataset dir to process the features.py
+  smd_dir: "../../Dataset/SMD"
+  maestro_dir: "../../Dataset/maestro-v3.0.0"
+  maps_dir: "../../Dataset/MAPS"
+  francoisleduc_dir: "../../Dataset/FrancoisLeducGuitarDataset"
+  gaps_dir: "../../Dataset/GAPS"
+
+
+# ---------------------------
+# AMT modules (base model + adapter + conditioning)
+# ---------------------------
+model:
+  type: "hpt"  # main model: hpt
+  params: {}
+  # Simplified training combinations in this project:
+  # hpt + direct       -> input2=null
+  # hpt + note_editor  -> input2=onset
+  input2: null # null | onset
+  input3: null # keep null
+  frontend_pretrained_mode: "scratch" # scratch | route2_piano_auto | route2_piano_specific
+  frontend_pretrained: "" # used only when frontend_pretrained_mode=route2_piano_specific
+  hppnet_model_size: 128
+
+
+score_informed:
+  method: "direct"            # direct | note_editor
+  params: {}
+  train_mode: "joint"         # joint | adapter_then_score | adapter_then_joint
+  switch_iteration: 100_000   # phase switch point for staged modes
+
+
+post:
+  post_processor_type: 'regression' # 'onsets_frames'
+  # regression (0.1, 0.3, 0.3), onsets_frames (0.5, 0.1, 0.3)
+  frame_threshold: 0.3 # 0.1 in RegressionPostProcessor, 0.3 in score_calculator
+  onset_threshold: 0.3
+  offset_threshold: 0.3
+  pedal_offset_threshold: 0.2
+
+# ---------------------------
+# Loss configuration
+# ---------------------------
+loss:
+  loss_type: "kim_bce_l1" # "velocity_bce" | "velocity_mse" | "kim_bce_l1"
+  kim_loss_alpha: 0.5  # Weight of BCE term in Kim et al. 2024 BCE+L1 loss
+  # Neutral defaults. Route-specific entrypoints set their own loss weights:
+  # Route II -> supervised=1, backend=0, prior=0
+  # Route III/IV -> supervised=0, backend=1, prior=0 unless overridden
+  supervised_weight: 0.0
+  backend_weight: 0.0
+  velocity_prior_weight: 0.0
+  velocity_prior_mean: 0.5
+  velocity_prior_min_var: 0.01
+  velocity_prior_onset_only: true
+  velocity_saturation_weight: 0.0
+  velocity_saturation_threshold: 0.95
+  velocity_saturation_onset_only: true
+
+train_eval:
+  audio_metrics:
+    enabled: false                    # turn on only on machines that can render via SF2/SFZ
+    include_train: false              # keep training-time rendering cost focused on validation splits
+    max_segments: 4                   # rendered segments per evaluated loader and eval interval
+    instrument_path: ${route2.eval.instrument_path}
+    render_sr: ${route2.eval.render_sr}
+    eval_sr: ${route2.eval.eval_sr}
+    frames_per_second: ${route2.eval.frames_per_second}
+    fft_size: ${route2.eval.fft_size}
+    bssl_mode: ${route2.eval.bssl_mode}
+    num_samples: ${route2.eval.num_samples}
+    normalization: ${route2.eval.normalization}
+    backend: ${route2.eval.backend}
+    device: ""                        # empty -> let the BSSL evaluator choose
+    velocity_method: ${route2.infer.velocity_method}
+
+# ---------------------------
+# Frozen differentiable supervision backend (weak supervision)
+# ---------------------------
+backend:
+  enabled: false
+  # Frozen differentiable supervision backend.
+  # Supported backends: diffsynth_piano | diffsynth_guitar | diffproxy
+  type: "diffsynth_piano"   # diffsynth_piano | diffsynth_guitar | diffproxy
+  checkpoint: ""            # backend ckpt path: DDSP uses .pth/.pt, SFProxy uses Lightning .ckpt
+  project_root: ""          # generic backend root fallback
+
+  # Backend-length ablation inside the fixed Score-HPT segment.
+  # Score-HPT / VeloEst stays at feature.segment_seconds=10.0 by default.
+  # DiffProxy can still run on 2 / 5 / 10 s backend crops inside that fixed front-end segment.
+  # Use 0 to fall back to each backend native/default segment length.
+  backend_segment_seconds: 2.0   # Route IV default backend crop; ablate with 5 | 10
+  crop_mode: "random"           # random | center | full
+  warmup_iterations: 0           # delay proxy loss until base velocity branch stabilizes
+
+  # Unified supervision contract used by Score-HPT-side losses.
+  # Audio losses are evaluated after resampling rendered audio to this contract.
+  supervision:
+    sample_rate: ${feature.sample_rate}
+    frame_rate: ${feature.frames_per_second}
+    fft_size: ${feature.fft_size}
+    hop_size: 221                # fixed Route IV contract at 22050 Hz / 100 fps
+
+  diffsynth:
+    project_root: ""       # optional backend-specific root. default: ../diff-synth/ddsp-*
+
+  audio_loss:
+    # Route III backend audio loss. Only two variants are supported:
+    #   piano_ssm_spectral               -- multi-resolution spectral loss (main term)
+    #   piano_ssm_spectral_plus_log_rms  -- spectral loss + small clip-level log-RMS auxiliary (default)
+    type: "piano_ssm_spectral_plus_log_rms"
+
+    # Piano-SSM / DDSP-style multi-resolution spectral loss.
+    # Set fft_sizes: [] to use the Piano-SSM repo default scaling.
+    piano_ssm_spectral:
+      fft_sizes: []
+      loss_type: "L1"          # L1 | L2 | COSINE
+      mag_weight: 1.0
+      logmag_weight: 1.0
+      overlap: 0.75
+      eps: 1.0e-5
+
+    # Default proxy objective: main spectral branch + small log-RMS auxiliary.
+    piano_ssm_spectral_plus_log_rms:
+      spectral_weight: 1.0
+      log_rms_weight: 0.05
+
+  diffsynth_piano:
+    # Native DDSP-Piano training / checkpoint contract.
+    native_sample_rate: 22050
+    native_frame_rate: 100
+    native_segment_seconds: 10.0
+    # Current repo default contract for newly trained DDSP-Piano checkpoints.
+    # Historical upstream checkpoints may still use 16000 / 250 / 3.0.
+    sample_rate: 22050
+    frame_rate: 100
+    n_synths: 16
+    n_substrings: 2
+    n_piano_models: 10
+    piano_model_index: 0         # fallback instrument id when batch does not provide one
+    piano_model_batch_key: ""   # optional dataset key carrying per-sample piano model id
+    score_keys:
+      frame: "frame_roll"
+      onset: "onset_roll"
+      pedal: "pedal_frame_roll"
+
+  diffsynth_guitar:
+    max_fret: 24
+    native_sample_rate: 22050
+    native_frame_rate: 100
+    native_segment_seconds: 10.0
+    sample_rate: 22050
+    frame_rate: 100
+    hop_size: 0
+    n_fft: 2048
+
+  diffproxy:
+    project_root: ""        # optional backend-specific root. default: ../diff-sfproxy (flat src/ + configs/)
+    instrument_name: "salamander_piano"
+    feature_name: "note_dynamics_v1"
+    # Route IV stable export contract.
+    native_sample_rate: 22050
+    native_segment_seconds: 2.0   # DiffProxy native/default contract; Route IV can still override to 5 | 10 s crops
+    sample_rate: 0            # 0 -> use backend.supervision.sample_rate to align DiffProxy with Score-HPT
+    loss_type: "smooth_l1"   # smooth_l1 | l1 | mse
+    loss_beta: 1.0
+    feature_weights: [1.0, 1.0]   # [harmonic energy, onset flux] weighting inside Route IV proxy loss
+    use_gt_aligned_note_events: true   # use GT aligned note list; velocity is read from the predicted roll at each GT onset frame
+    use_onset_window_pooling: false
+    onset_window_left: 1
+    onset_window_right: 2
+    onset_window_reduction: "max"   # max | mean
+    note_builder:
+      onset_threshold: 0.5
+      frame_threshold: 0.5
+      max_notes: 512
+      min_duration_frames: 1
+    feature:
+      n_fft: 0                # 0 -> use backend.supervision.fft_size
+      hop: 221                # fixed Route IV contract at 22050 Hz / 100 fps
+      win_length: null
+      harmonic_count: 5
+      band_bins: 1
+      energy_window_s: 0.12
+      onset_pre_s: 0.02
+      onset_post_s: 0.08
+      include_f0_ratio: false
+    model:
+      tokenizer:
+        d_model: 256
+        pitch_vocab: 128
+        use_onset_pos: true
+      num_layers: 6
+      nhead: 8
+      dim_feedforward: 1024
+      dropout: 0.1
+      d_note: 2
+      d_seg: 0
+
+
+# ---------------------------
+# Route I direct inversion helpers
+# ---------------------------
+route1:
+  stats_json: ""    # empty -> auto pick by dataset.test_set
+
+  infer:
+    out_dir: "${exp.workspace}/route1/${dataset.test_set}"
+    split: "test"
+    maps_pianos: "both"
+    overwrite: false
+    flat_velocity: 64
+    mapping_mode: "rank_blend"
+    harmonic_weight: 1.0
+    flux_weight: 0.25
+    fallback_velocity: 64
+    note_sample_rate: ${feature.sample_rate}
+    note_fft_size: ${feature.fft_size}
+    note_hop: ${backend.supervision.hop_size}
+    harmonic_count: 5
+    band_bins: 1
+    energy_window_s: 0.12
+    onset_pre_s: 0.02
+    onset_post_s: 0.08
+
+  eval:
+    label: "route1"
+    pred_midi_dir: "${route1.infer.out_dir}/pred_midis"
+    out_dir: "${exp.workspace}/route1_eval/${dataset.test_set}"
+    manifest_mode: "dataset"          # dataset | folder
+    audio_reference_mode: "dataset"   # dataset | folder | none
+    gt_midi_dir: ""                   # required when manifest_mode=folder
+    reference_audio_dir: ""           # required when audio_reference_mode=folder
+    instrument_path: ""
+    split: "test"
+    maps_pianos: "both"
+    compute_velocity_mae: true
+    compute_synth_gt_metrics: false
+    render_sr: 44100
+    eval_sr: ${backend.supervision.sample_rate}
+    frames_per_second: ${feature.frames_per_second}
+    fft_size: ${backend.supervision.fft_size}
+    bssl_mode: "sone"
+    num_samples: 2048
+    normalization: "zscore"
+    backend: "auto"
+    overwrite_render: false
+
+flat:
+  infer:
+    out_dir: "${exp.workspace}/flat/${dataset.test_set}"
+    split: "test"
+    maps_pianos: "both"
+    overwrite: false
+    flat_velocity: 64
+
+  eval:
+    label: "flat_velocity_${flat.infer.flat_velocity}"
+    pred_midi_dir: "${flat.infer.out_dir}/pred_midis"
+    out_dir: "${exp.workspace}/flat_eval/${dataset.test_set}"
+    manifest_mode: "dataset"          # dataset | folder
+    audio_reference_mode: "dataset"   # dataset | folder | none
+    gt_midi_dir: ""                   # required when manifest_mode=folder
+    reference_audio_dir: ""           # required when audio_reference_mode=folder
+    instrument_path: ""
+    split: "test"
+    maps_pianos: "both"
+    compute_velocity_mae: true
+    compute_synth_gt_metrics: false
+    render_sr: 44100
+    eval_sr: ${backend.supervision.sample_rate}
+    frames_per_second: ${feature.frames_per_second}
+    fft_size: ${backend.supervision.fft_size}
+    bssl_mode: "sone"
+    num_samples: 2048
+    normalization: "zscore"
+    backend: "auto"
+    overwrite_render: false
+
+route2:
+  infer:
+    checkpoint_path: ""                      # empty -> resolve from model.frontend_pretrained or latest checkpoint
+    out_dir: "${exp.workspace}/route2/${dataset.test_set}"
+    split: "test"
+    maps_pianos: "both"
+    overwrite: false
+    velocity_method: "onset_only"           # onset_only | max_frame
+
+  eval:
+    label: "route2"
+    pred_midi_dir: "${route2.infer.out_dir}/pred_midis"
+    out_dir: "${exp.workspace}/route2_eval/${dataset.test_set}"
+    manifest_mode: "dataset"          # dataset | folder
+    audio_reference_mode: "dataset"   # dataset | folder | none
+    gt_midi_dir: ""                   # required when manifest_mode=folder
+    reference_audio_dir: ""           # required when audio_reference_mode=folder
+    # instrument_path: ""
+    instrument_path: "/media/mengh/SharedData/zhanh/202604_midiproxy_data/soundfont/SalamanderGrandPiano/SalamanderGrandPianoV3.sfz"
+    # instrument_path: "/media/datadisk/home/22828187/zhanh/202604_midiproxy_data/soundfont/SalamanderGrandPiano/SalamanderGrandPianoV3.sfz"
+    split: "test"
+    maps_pianos: "both"
+    compute_velocity_mae: true
+    compute_synth_gt_metrics: false
+    render_sr: 44100
+    eval_sr: ${backend.supervision.sample_rate}
+    frames_per_second: ${feature.frames_per_second}
+    fft_size: ${backend.supervision.fft_size}
+    bssl_mode: "sone"
+    num_samples: 2048
+    normalization: "zscore"
+    backend: "auto"
+    overwrite_render: false
+
+route3:
+  infer:
+    checkpoint_path: ""                      # empty -> resolve from model.frontend_pretrained or latest checkpoint
+    out_dir: "${exp.workspace}/route3/${dataset.test_set}"
+    split: "test"                            # "test" | "full" (mapped to "all")
+    maps_pianos: "both"
+    overwrite: false
+    velocity_method: "onset_only"           # onset_only | max_frame
+
+  eval:
+    label: "route3"
+    pred_midi_dir: "${route3.infer.out_dir}/pred_midis"
+    out_dir: "${exp.workspace}/route3_eval/${dataset.test_set}"
+    manifest_mode: "dataset"          # dataset | folder
+    audio_reference_mode: "dataset"   # dataset | folder | none
+    gt_midi_dir: ""                   # required when manifest_mode=folder
+    reference_audio_dir: ""           # required when audio_reference_mode=folder
+    instrument_path: ""
+    split: "test"                     # "test" | "full" (mapped to "all")
+    maps_pianos: "both"
+    compute_velocity_mae: true
+    render_sr: 44100
+    eval_sr: ${backend.supervision.sample_rate}
+    frames_per_second: ${feature.frames_per_second}
+    fft_size: ${backend.supervision.fft_size}
+    bssl_mode: "sone"
+    num_samples: 2048
+    normalization: "zscore"
+    backend: "auto"
+    overwrite_render: false
+
+route4:
+  infer:
+    checkpoint_path: ""                      # empty -> resolve from model.frontend_pretrained or latest checkpoint
+    out_dir: "${exp.workspace}/route4/${dataset.test_set}"
+    split: "test"                            # "test" | "full" (mapped to "all")
+    maps_pianos: "both"
+    overwrite: false
+    velocity_method: "onset_only"           # onset_only | max_frame
+
+  eval:
+    label: "route4"
+    pred_midi_dir: "${route4.infer.out_dir}/pred_midis"
+    out_dir: "${exp.workspace}/route4_eval/${dataset.test_set}"
+    manifest_mode: "dataset"          # dataset | folder
+    audio_reference_mode: "dataset"   # dataset | folder | none
+    gt_midi_dir: ""                   # required when manifest_mode=folder
+    reference_audio_dir: ""           # required when audio_reference_mode=folder
+    instrument_path: ""
+    split: "test"                     # "test" | "full" (mapped to "all")
+    maps_pianos: "both"
+    compute_velocity_mae: true
+    render_sr: 44100
+    eval_sr: ${backend.supervision.sample_rate}
+    frames_per_second: ${feature.frames_per_second}
+    fft_size: ${backend.supervision.fft_size}
+    bssl_mode: "sone"
+    num_samples: 2048
+    normalization: "zscore"
+    backend: "auto"
+    overwrite_render: false

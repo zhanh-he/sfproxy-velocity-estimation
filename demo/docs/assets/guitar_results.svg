@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Guitar dynamics: Diff-SFProxy leads">
+<rect width="1280" height="720" fill="#101a29"/>
+<text x="76" y="82" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="38" font-weight="700">Guitar dynamics: Diff-SFProxy leads</text>
+<text x="76" y="122" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="19">Pearson r on rendered vs real Bark-scale loudness  |  ISMIR 2026 Table 2</text>
+<text x="75" y="192" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="26" font-weight="700">GAPS test</text>
+<line x1="297" y1="225" x2="297" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="289" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0</text>
+<line x1="372.5" y1="225" x2="372.5" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="364.5" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.25</text>
+<line x1="448.0" y1="225" x2="448.0" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="440.0" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.5</text>
+<line x1="523.5" y1="225" x2="523.5" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="515.5" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.75</text>
+<line x1="599" y1="225" x2="599" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="591" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">1</text>
+<text x="75" y="271" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Flat velocity</text>
+<rect x="297" y="245" width="222.6" height="38" rx="8" fill="#8a95a7"/>
+<text x="529.574" y="272" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.737</text>
+<text x="75" y="358" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">VeloEst</text>
+<rect x="297" y="332" width="232.2" height="38" rx="8" fill="#d9b869"/>
+<text x="539.238" y="359" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.769</text>
+<text x="75" y="445" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Diff-Synth</text>
+<rect x="297" y="419" width="202.0" height="38" rx="8" fill="#ec876c"/>
+<text x="509.038" y="446" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.669</text>
+<text x="75" y="532" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Diff-SFProxy</text>
+<rect x="297" y="506" width="239.8" height="38" rx="8" fill="#55c8b6"/>
+<text x="546.788" y="533" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.794</text>
+<text x="695" y="192" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="26" font-weight="700">François Leduc</text>
+<line x1="917" y1="225" x2="917" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="909" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0</text>
+<line x1="992.5" y1="225" x2="992.5" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="984.5" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.25</text>
+<line x1="1068.0" y1="225" x2="1068.0" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="1060.0" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.5</text>
+<line x1="1143.5" y1="225" x2="1143.5" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="1135.5" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">0.75</text>
+<line x1="1219" y1="225" x2="1219" y2="585" stroke="#344255" stroke-width="1"/>
+<text x="1211" y="610" fill="#93a2b4" font-family="Arial,sans-serif" font-size="14" font-weight="400">1</text>
+<text x="695" y="271" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Flat velocity</text>
+<rect x="917" y="245" width="215.6" height="38" rx="8" fill="#8a95a7"/>
+<text x="1142.628" y="272" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.714</text>
+<text x="695" y="358" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">VeloEst</text>
+<rect x="917" y="332" width="223.5" height="38" rx="8" fill="#d9b869"/>
+<text x="1150.48" y="359" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.740</text>
+<text x="695" y="445" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Diff-Synth</text>
+<rect x="917" y="419" width="195.1" height="38" rx="8" fill="#ec876c"/>
+<text x="1122.092" y="446" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.646</text>
+<text x="695" y="532" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="600">Diff-SFProxy</text>
+<rect x="917" y="506" width="234.7" height="38" rx="8" fill="#55c8b6"/>
+<text x="1161.654" y="533" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="18" font-weight="700">0.777</text>
+<text x="76" y="666" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="16" font-weight="400">5 s backend for both adaptation methods. Guitar velocity MAE is unavailable because labels are absent.</text>
+</svg>

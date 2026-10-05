@@ -1,0 +1,384 @@
+"""
+Signal Processing Basics:
+- sample_rate: number of samples per second (e.g., 44100 Hz).
+- hop_size: step size (in samples) between frames.
+- FPS (frames per second) = sample_rate / hop_size.
+
+Window Overlap:
+- fft_size: length of each analysis window (in samples).
+- overlap % = (fft_size - hop_size) / fft_size * 100
+  e.g., fft_size=1024, hop_size=256 → 75% overlap;
+        fft_size=1024, hop_size=512 → 50% overlap.
+
+=============================== Literature ================================
+- Pampalk "ma_sone.m" matlab toolbox (2007):
+    https://www.pampalk.at/ma/documentation.html
+- Joyti ISMIR2024 paper:   
+    https://arxiv.org/pdf/2410.20540
+
+==================== Joyti's ISMIR2024 FFT parameters ====================
+- logMel (short):
+    sample_rate=44100, fft_size=1024, hop_size=256 (75% overlap)
+    → FPS≈172; downsample x3 → effective FPS≈57    (17.4ms temporal resolution)
+    → segment length 4096 frames x 17.4ms ≈ 71s    (71s each segment)
+- logMel (long):
+    sample_rate=44100, fft_size=1024, hop_size=256 (75% overlap)
+    → FPS≈172; downsample x5 → effective FPS≈34    (29ms temporal resolution)
+    → segment length 10000 frames x 29ms ≈ 290s    (290s each segment)
+- Bark (short):
+    sample_rate=48000, fft_size=256, hop_size=96   (63% overlap)
+    → FPS≈500; downsample x8 → effective FPS≈62    (16ms temporal resolution)
+    → segment length 4096 frames x 16ms ≈ 66s      (66s each segment)
+- Bark (long):
+    sample_rate=48000, fft_size=256, hop_size=96   (63% overlap)
+    → FPS≈500; downsample x15 → effective FPS≈33   (30ms temporal resolution)
+    → segment length 10000 frames x 30ms ≈ 300s    (300s each segment)
+    
+=============================================================================
+
+Common Defaults:
+- Librosa Log-Mel:
+    sample_rate=22050, fft_size=2048, hop_size=512 (75% overlap) → FPS≈43, mel_bins=229
+- MATLAB 2007 Bark:
+    sample_rate=16000, fft_size=1024, hop_size=512 (50% overlap) → FPS≈86, bark_bands=24
+
+Our Development:
+- Bark @16kHz: 
+    Fix 50% overlap ratio for the bark feature, same as the MATLAB 2007 defaults.
+    → sample_rate=16000, fft_size=256,  fps=125    (~50% ovarlap)
+                         fft_size=512,  fps=62     (~50% ovarlap)
+                         fft_size=1024, fps=31     (~50% ovarlap)
+- Log-Mel @16kHz: 
+    Fix 75% overlap for the log-mel feature, same as the librosa defaults.
+    → sample_rate=16000, fft_size=512,  fps=60     (~75% ovarlap)
+"""
+import torch
+import torch.nn as nn
+import torchaudio
+from nnAudio.Spectrogram import CQT as NNAudioCQT
+import numpy as np
+import pandas as pd
+import os, time, argparse, h5py
+from typing import Literal
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
+
+# Utility function for feature extractor and freq_bins selection
+def get_feature_extractor_and_bins(audio_feature, sample_rate, fft_size, frames_per_second):
+    if audio_feature == "logmel":
+        feature_extractor = LogMelExtractor(sample_rate=sample_rate, fft_size=fft_size, frames_per_second=frames_per_second, return_mode="logmel")
+        freq_bins = feature_extractor.mel_bins
+    elif audio_feature == "mel":
+        feature_extractor = LogMelExtractor(sample_rate=sample_rate, fft_size=fft_size, frames_per_second=frames_per_second, return_mode="mel")
+        freq_bins = feature_extractor.mel_bins
+    elif audio_feature == "bark":
+        feature_extractor = PsychoFeatureExtractor(sample_rate=sample_rate, fft_size=fft_size, frames_per_second=frames_per_second, db_max=96.0, return_mode="bark")
+        freq_bins = feature_extractor.bark_bands
+    elif audio_feature == "sone":
+        feature_extractor = PsychoFeatureExtractor(sample_rate=sample_rate, fft_size=fft_size, frames_per_second=frames_per_second, db_max=96.0, return_mode="sone")
+        freq_bins = feature_extractor.bark_bands
+    elif audio_feature == "ntot":
+        feature_extractor = PsychoFeatureExtractor(sample_rate=sample_rate, fft_size=fft_size, frames_per_second=frames_per_second, db_max=96.0, return_mode="ntot")
+        freq_bins = 1
+    elif audio_feature == "cqt":
+        feature_extractor = CQTFeatureExtractor(
+            sample_rate=sample_rate,
+            frames_per_second=frames_per_second,
+            fallback_fft_size=fft_size,
+        )
+        freq_bins = feature_extractor.freq_bins
+    else:
+        raise ValueError(f"Invalid audio_feature: {audio_feature}")
+    return feature_extractor, freq_bins
+
+
+class CQTFeatureExtractor(nn.Module):
+    """Constant-Q transform front-end compatible with HPPNet."""
+
+    def __init__(
+        self,
+        sample_rate: int,
+        frames_per_second: int,
+        bins_per_semitone: int = 4,
+        n_pitches: int = 88,
+        top_db: float = 80.0,
+        fallback_fft_size: int = 2048,
+    ) -> None:
+        super().__init__()
+        if bins_per_semitone <= 0:
+            raise ValueError("bins_per_semitone must be positive.")
+        self.sample_rate = sample_rate
+        self.frames_per_second = frames_per_second
+        self.hop_length = max(1, int(round(sample_rate / frames_per_second)))
+        self.bins_per_octave = bins_per_semitone * 12
+        self.freq_bins = n_pitches * bins_per_semitone
+        extra = 2 ** (1.0 / self.bins_per_octave)
+        fmin = 27.5 / extra
+
+        self.amplitude_to_db = torchaudio.transforms.AmplitudeToDB(
+            stype="magnitude", top_db=top_db
+        )
+        self.backend: Optional[str] = None
+
+        self.cqt = NNAudioCQT(
+            sr=sample_rate,
+            hop_length=self.hop_length,
+            fmin=fmin,
+            n_bins=self.freq_bins,
+            bins_per_octave=self.bins_per_octave,
+            output_format="Magnitude",
+        )
+
+    def forward(self, wav: torch.Tensor) -> torch.Tensor:
+        spec = self.cqt(wav)
+        if torch.is_complex(spec):
+            spec = torch.abs(spec)
+        spec = torch.clamp(spec, min=1e-10)
+        spec_db = self.amplitude_to_db(spec)
+        return spec_db
+
+
+class PsychoFeatureExtractor(nn.Module):
+    """
+    Bark-based Psychoacoustic Feature Extractor.
+
+    References:
+      - Zwicker & Fastl (1999): Bark scale bands.
+      - Terhardt (1979): Outer ear weighting.
+      - Schroeder et al. (1979): Spreading function.
+      - MATLAB toolbox (Pampalk, 2004): matlab implementation for "bark/sone" extraction.
+      - Stevens method (Hartmann, 1997): Total loudness (sone -> "ntot").
+
+    Input:
+      - wav: (B, T)  audio waveform in time samples
+
+    Output (depends on return_mode):
+      - bark: (B, C, F) Bark bands loudness in dB
+      - sone: (B, C, F) Bark bands loudness in sones
+      - ntot: (B, F)    Total avergae bank bands loudness in sones (avg per frame)
+
+    Where:
+      B = batch size
+      T = samples per recording
+      C = number of Bark bands (e.g., 24)
+      F = number of frames
+
+    Parameters:
+      - sample_rate: audio sample rate
+      - fft_size: FFT window size
+      - db_max: max dB scale for waveform normalization
+      - outer_ear: outer ear model ['terhardt', 'modified_terhardt', 'none']
+      - return_mode: feature to return ['bark', 'sone', 'ntot']
+      - frames_per_second: desired frames per second (determines hop_size)
+    """
+    def __init__(self, sample_rate=44100, fft_size=1024, frames_per_second=86, db_max=96.0,  # default params in matlab 2007 implementation
+                 outer_ear: Literal["terhardt", "modified_terhardt", "none"] = "terhardt",
+                 return_mode: Literal["bark", "sone", "ntot"] = "ntot"):
+        super().__init__()
+        self.sample_rate = sample_rate
+        self.fft_size = fft_size
+        self.db_max = db_max
+        self.outer_ear = outer_ear
+        self.return_mode = return_mode
+        self.hop_size = int(round(sample_rate / frames_per_second))
+        self.window = torch.hann_window(fft_size)
+        self.fft_freq = torch.linspace(0, sample_rate/2, fft_size//2 + 1) # FFT bin frequencies
+
+        # Valid Bark bands (up to 24) in Nyquist fequency range
+        bark_upper = torch.tensor([100,200,300,400,510,630,770,920,1080,1270,1480,1720,
+            2000,2320,2700,3150,3700,4400,5300,6400,7700,9500,12000,15500])
+        bark_center = torch.tensor([50,150,250,350,450,570,700,840,1000,1170,1370,1600,
+            1850,2150,2500,2900,3400,4000,4800,5800,7000,8500,10500,13500])
+        self.bark_upper = bark_upper[bark_upper <= sample_rate/2]
+        self.bark_center = bark_center[bark_center <= sample_rate/2]
+        self.bark_bands = len(self.bark_upper)
+
+    def _outer_ear_weighting(self, power):
+        # Outer ear weighting (Default to Terhardt model) is designed in dB-domain
+        W_Adb = torch.zeros_like(self.fft_freq)
+        f_kHz = self.fft_freq[1:] / 1000
+        if self.outer_ear == "terhardt":
+            W_Adb[1:] = -3.64 * f_kHz ** -0.8 + 6.5 * torch.exp(-0.6 * (f_kHz - 3.3) ** 2) - 0.001 * f_kHz ** 4
+        elif self.outer_ear == "modified_terhardt":
+            W_Adb[1:] = 0.6 * (-3.64 * f_kHz ** -0.8) + 0.5 * torch.exp(-0.6 * (f_kHz - 3.3) ** 2) - 0.001 * f_kHz ** 4
+        # Power spectrogram is in linear domain, so W_Adb should convert to linear domain before it applied
+        W = (10 ** (W_Adb / 20)) ** 2 
+        return power * W.to(power.device).view(1, -1, 1)
+    
+    def _bark_scaling(self, W_power, device):
+        bands, k = [], 0
+        for i in range(self.bark_bands):
+            idx = torch.arange(k, k + (self.fft_freq[k:] <= self.bark_upper[i]).sum().item(), device=device)
+            bands.append(W_power[:, idx, :].sum(dim=1))
+            k = idx[-1]+1
+        return torch.stack(bands, dim=1)
+
+    def _schroeder_spreading(self, bark):
+        # Schroeder spreading matrix (psychoacoustic masking)
+        b = torch.arange(1, self.bark_bands + 1, device=bark.device).unsqueeze(1) - torch.arange(1, self.bark_bands + 1, device=bark.device).unsqueeze(0) + 0.474
+        spread = 10 ** ((15.81 + 7.5 * b - 17.5 * torch.sqrt(1 + b ** 2)) / 10)
+        return torch.matmul(spread, bark)
+    
+    def _compute_ntot(self, sone):
+            # Stevens method: max band + 15% of the rest
+            max_val, idx = torch.max(sone, dim=1, keepdim=True)
+            rest = (sone * torch.ones_like(sone).scatter(1, idx, 0)).sum(dim=1)
+            ntot = max_val.squeeze(1) + 0.15 * rest
+            # Normalize per recording to [0, 1]
+            # ntot_norm = ntot / (ntot.max(dim=1, keepdim=True).values + 1e-9)
+            return ntot # ntot_norm
+    
+    def forward(self, wav: torch.Tensor):
+        wav = wav * (10 ** (self.db_max/20))                        # 1) Scale waveform to max dB range, B, T = wav.shape
+        spec = torch.stft(wav, n_fft=self.fft_size,                 # 2) Compute STFT > complex spectrogram
+            hop_length=self.hop_size, window=self.window.to(wav.device), return_complex=True)
+        power = spec.abs() ** 2 / self.window.sum() ** 2            # 3) Power spectrogram
+        W_power = self._outer_ear_weighting(power)                  # 4) Apply outer ear weighting
+        bark = self._bark_scaling(W_power, wav.device)              # 5) Group freq bins by Bark bands > Bark-scale specific loudness (BSSL) in linear power
+        Sp_bark = self._schroeder_spreading(bark)                   # 6) Apply spectral spreading
+        bark_db = 10 * torch.log10(torch.clamp(Sp_bark, min=1.0))   # 7) Convert BSSL linear power to dB; prevent log(0) issues with torch.clamp
+        
+        # 8) Convert BSSL dB to sone
+        sone = torch.where(bark_db >= 40, 2 ** ((bark_db - 40) / 10), (bark_db / 40) ** 2.642)
+        # 9) Intergrate Bark-scale specific loudness (BSSL) to Bark-scale total loudness (Ntot), unit is sone
+        ntot = self._compute_ntot(sone) 
+
+        if self.return_mode == "bark":   # BSSL in dB
+            return bark_db
+        elif self.return_mode == "sone": # BSSL in sone, our paper focus on this
+            return sone
+        elif self.return_mode == "ntot": # Bark total loudness in sone, used for visualization
+            return ntot
+        else:
+            raise ValueError(f"Invalid return_mode: {self.return_mode}")
+
+
+class LogMelExtractor(nn.Module):
+    """
+    Log-Mel spectrogram extractor (torchaudio-based).
+    Usage profiles:
+        - ISMIR2024 (Narang): sr=44100, n_fft=1024, fps=86, mel_bins=128
+        - BeatThis ISMIR2024: sr=22050, n_fft=1024, fps=86, mel_bins=128
+        - HPT (Kong et al. 2020): sr=16000, n_fft=2048, fps=100, mel_bins=229
+    Notes:
+        - "slaney" scale suits perceptual tasks (dynamics, timbre)
+        - "htk" scale suits pitch/transcription tasks
+        - FPS≈sr/fps → hop_size controls temporal density
+        - Output: (B, M, F) → batch × mel_bins × frames
+    """
+    def __init__(self, sample_rate=44100, fft_size=1024, frames_per_second=86,
+                 return_mode: Literal["logmel", "mel"] = "logmel"):
+        super().__init__()
+        self.mel_bins = 128 #229
+        # Alt settings:
+        # sample_rate=22050, fft_size=1024, frames_per_second=86  # BeatThis
+        # sample_rate=16000, fft_size=2048, frames_per_second=100; self.mel_bins=229  # HPT
+        hop_size, fmin, fmax = int(sample_rate // frames_per_second), 30, int(sample_rate // 2)
+        self.mel_spectrogram = torchaudio.transforms.MelSpectrogram(
+            sample_rate=sample_rate, n_fft=fft_size, hop_length=hop_size, n_mels=self.mel_bins,
+            center=True, pad_mode='reflect', f_min=fmin, f_max=fmax,
+            power=2.0, norm="slaney", mel_scale="slaney"
+        )
+        self.amplitude_to_db = torchaudio.transforms.AmplitudeToDB(stype='power')
+        self.return_mode = return_mode
+
+    def forward(self, wav: torch.Tensor):
+        mel = self.mel_spectrogram(wav)
+        if self.return_mode == "logmel": return self.amplitude_to_db(mel)
+        elif self.return_mode == "mel": return mel
+        else: raise ValueError(f"Invalid return_mode: {self.return_mode}")
+
+# ---------- This __main__ block is for data visualization --------------------------
+# In practice, import and use the classes above directly to PyTorch Dataset or Model.
+def save_feature_csv(features, times, columns, output_csv_path):
+    os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
+    df = pd.DataFrame(features, columns=columns)
+    df.insert(0, "time", times)
+    df.to_csv(output_csv_path, index=False, float_format='%.7f')
+    print(f"Saved CSV {output_csv_path}")
+
+def save_feature_plot(features, times, mode, output_png_path,
+        t_start=None, t_end=None, duration=None, figsize=(6,3.4), dpi=200):
+    if output_png_path is None: return
+    if duration and not t_end:
+        t_start = 0.0 if t_start is None else t_start
+        t_end = t_start + duration
+    if t_start or t_end:
+        t0_, t1_ = t_start or times[0], t_end or times[-1]
+        i0,i1 = np.searchsorted(times,t0_,"left"), np.searchsorted(times,t1_,"right")
+        features, times = features[i0:i1], times[i0:i1]
+    unit = {"bark":"dB","sone":"sones","ntot":"sones",
+            "logmel":"dB","mel":"power"}.get(mode,"")
+    fig = plt.figure(figsize=figsize)
+    f = features if features.ndim==2 else features.reshape(-1,1)
+    if f.shape[1]==1:
+        plt.plot(times,f[:,0]); plt.xlabel("Time (s)"); plt.ylabel(f"{mode} ({unit})" if unit else mode)
+    else:
+        im=plt.imshow(f.T,aspect="auto", origin="lower",
+                      extent=[times[0],times[-1],0,f.shape[1]],
+                      interpolation="nearest", rasterized=True,
+                      vmin=(np.percentile(f,10) if mode in ["logmel"] else None),
+                      vmax=(np.percentile(f,99.99) if mode in ["sone","bark"] else None))
+        plt.xlabel("Time (s)"); plt.ylabel("Channels"); plt.colorbar(im).set_label(unit or "amplitude")
+        plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))
+    plt.tight_layout()
+    os.makedirs(os.path.dirname(output_png_path), exist_ok=True)
+    plt.savefig(output_png_path,dpi=dpi); plt.close(fig)
+    print(f"Saved plot {output_png_path}")
+
+def compare_sones_diff_methods(csv_files, titles):
+    """
+    - PyTorch (ours, origin BSSL, up to 24 Bark-bands)
+    - Matlab2007 (ma_sone, origin BSSL, up to 24 Bark-bands)
+    - Paper2018 (used MATLAB2007, origin BSSL, up to 24 Bark-bands)
+    """
+    assert len(csv_files) == len(titles) and len(csv_files) >= 2
+    dfs = [pd.read_csv(f) for f in csv_files]
+    fig, axes = plt.subplots(len(csv_files), 1, figsize=(12, 2.5 * len(csv_files)), sharex=True)
+    if len(csv_files) == 1: axes = [axes]
+    for ax, df, title in zip(axes, dfs, titles):
+        x, y = df.iloc[:, 0].values, df.iloc[:, 1].values
+        ax.plot(x, y, lw=1)
+        ax.set_title(title)
+        ax.set_ylabel('Ntot')
+        ax.grid(True)
+    axes[-1].set_xlabel('Time (s)')
+    plt.tight_layout(); plt.show()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Extract Bark or (Log-)Mel features from .h5 waveform.")
+    parser.add_argument("h5_input_path", type=str, help="Path to the input .h5 file")
+    parser.add_argument("output_csv_path", type=str, help="Path to the output .csv file")
+    parser.add_argument("--mode", type=str, default="sone",
+                        choices=["sone", "bark", "ntot", "logmel", "mel"],
+                        help="Feature to extract: sone | ntot | logmel | mel")
+    parser.add_argument("--sample_rate", type=int, default=44100, help="Waveform sample rate (default: 44100)")
+    parser.add_argument("--fft_size", type=int, default=1024, help="FFT size (default: 1024)")
+    parser.add_argument("--frames_per_second", type=float, default=86, help="Frames per second for feature extraction")
+    parser.add_argument("--plot_path", type=str, default=None, help="Optional PNG path to save a visualization")
+    args = parser.parse_args()
+
+    # Load waveform
+    with h5py.File(args.h5_input_path, 'r') as hf:
+        waveform = hf['waveform'][:].astype(np.float32) / 32768.0
+    wav_tensor = torch.tensor(waveform, dtype=torch.float32).unsqueeze(0)
+
+    # Start counting time for the feature extractor
+    _t0 = time.perf_counter()
+    if args.mode in ["logmel", "mel"]:
+        extractor = LogMelExtractor(sample_rate=args.sample_rate, fft_size=args.fft_size, frames_per_second=args.frames_per_second, return_mode=args.mode)
+        features = extractor(wav_tensor).squeeze(0).numpy().T
+        hop_duration = extractor.mel_spectrogram.hop_length / extractor.mel_spectrogram.sample_rate
+        times = np.arange(features.shape[0]) * hop_duration
+        columns = [f"mel_{i+1}" for i in range(features.shape[1])]
+    else: # Our PyTorch implementaion of BSSL extractor
+        extractor = PsychoFeatureExtractor(sample_rate=args.sample_rate, fft_size=args.fft_size, frames_per_second=args.frames_per_second, return_mode=args.mode)
+        features = extractor(wav_tensor).squeeze(0).numpy().T if args.mode not in ["ntot"] else extractor(wav_tensor).squeeze(0).numpy()
+        hop_duration = extractor.hop_size / extractor.sample_rate
+        times = np.arange(features.shape[0]) * hop_duration
+        columns = [f"{args.mode}_{i+1}" for i in range(features.shape[1])] if args.mode not in ["ntot"] else [args.mode]
+    # End the time counting of feature extractor
+    print(f"Total time: {time.perf_counter() - _t0:.3f}s")
+
+    save_feature_csv(features, times, columns, args.output_csv_path)
+    save_feature_plot(features, times, args.mode, args.plot_path, t_start=10, duration=50)

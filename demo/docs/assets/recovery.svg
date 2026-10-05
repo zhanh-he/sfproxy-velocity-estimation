@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Proxy gradients recover velocity">
+<rect width="1280" height="720" fill="#101a29"/>
+<text x="76" y="82" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="38" font-weight="700">Proxy gradients recover velocity</text>
+<text x="76" y="122" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="19">Velocity MAE reduction after inversion  |  ISMIR 2026 Table 1</text>
+<text x="75" y="190" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="27" font-weight="700">Piano</text>
+<text x="75" y="261" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="400">2 s</text>
+<rect x="175" y="238" width="257.4" height="38" rx="8" fill="#687c94"/>
+<text x="442.40000000000003" y="265" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">49.5%</text>
+<text x="175" y="306" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 38.6 → 19.5</text>
+<text x="75" y="373" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="700">5 s</text>
+<rect x="175" y="350" width="280.8" height="38" rx="8" fill="#55c8b6"/>
+<text x="465.8" y="377" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">54.0%</text>
+<text x="175" y="418" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 38.5 → 17.7</text>
+<text x="75" y="485" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="400">10 s</text>
+<rect x="175" y="462" width="279.2" height="38" rx="8" fill="#687c94"/>
+<text x="464.24" y="489" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">53.7%</text>
+<text x="175" y="530" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 38.5 → 17.8</text>
+<text x="695" y="190" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="27" font-weight="700">Guitar</text>
+<text x="695" y="261" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="400">2 s</text>
+<rect x="795" y="238" width="348.4" height="38" rx="8" fill="#687c94"/>
+<text x="1153.4" y="265" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">67.0%</text>
+<text x="795" y="306" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 34.2 → 11.3</text>
+<text x="695" y="373" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="700">5 s</text>
+<rect x="795" y="350" width="355.2" height="38" rx="8" fill="#55c8b6"/>
+<text x="1160.16" y="377" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">68.3%</text>
+<text x="795" y="418" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 33.8 → 10.7</text>
+<text x="695" y="485" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="21" font-weight="400">10 s</text>
+<rect x="795" y="462" width="353.6" height="38" rx="8" fill="#687c94"/>
+<text x="1158.6" y="489" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">68.0%</text>
+<text x="795" y="530" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">stress MAE 33.8 → 10.8</text>
+<text x="76" y="666" fill="#aeb9c9" font-family="Arial,sans-serif" font-size="17" font-weight="400">5 s is the default: longer 10 s segments add cost without meaningful recovery gain.</text>
+</svg>

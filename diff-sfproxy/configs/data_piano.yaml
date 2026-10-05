@@ -1,0 +1,121 @@
+defaults:
+  - data
+  - _self_
+
+v2_boundary_path: ${paths.analysis_dir}/stats/sfproxy_boundaries/salamander_piano_boundaries.json
+v2_boundary_strategy: register
+
+instrument:
+  name: salamander_piano
+  path: /media/mengh/SharedData/zhanh/202601_midisemi_data/soundfont/SalamanderGrandPiano/SalamanderGrandPianoV3.sfz
+  backend: auto
+  bank: 0
+  program: 0
+  polyphony: 64
+  gain_db: -6.0
+
+  sr: 22050
+  seg_len_s: 2.0
+  nmax: 64
+
+sampler_preset: mixed_v2
+sampler_velo_present: false
+
+sampler_components_v2:
+  boundary:
+    type: coverage
+    seg_len_s: ${instrument.seg_len_s}
+    pitch_range: [21, 108]
+    max_notes: ${instrument.nmax}
+    polyphony_limit: 2
+    chord_prob: 0.12
+    max_chord_size: 2
+    duration_range: [0.10, 0.55]
+    ioi_range: [0.10, 0.35]
+    velocity_boundaries_01: [0.33, 0.66]
+    velocity_boundary_path: ${v2_boundary_path}
+    velocity_boundary_strategy: ${v2_boundary_strategy}
+    register_pitch_splits: [48, 72]
+    chord_velocity_mode: mixed
+    p_chord_velocity_shared: 0.10
+    p_chord_velocity_independent: 0.80
+    p_chord_velocity_correlated: 0.10
+    correlated_jitter_01: 0.04
+    p_uniform: 0.15
+    p_near_boundary: 0.60
+    p_extreme: 0.25
+    boundary_width_01: 0.025
+
+  coverage:
+    type: coverage
+    seg_len_s: ${instrument.seg_len_s}
+    pitch_range: [21, 108]
+    max_notes: ${instrument.nmax}
+    polyphony_limit: 14
+    chord_prob: 0.30
+    max_chord_size: 6
+    duration_range: [0.08, 0.80]
+    ioi_range: [0.03, 0.35]
+    velocity_boundaries_01: [0.33, 0.66]
+    velocity_boundary_path: ${v2_boundary_path}
+    velocity_boundary_strategy: ${v2_boundary_strategy}
+    register_pitch_splits: [48, 72]
+    chord_velocity_mode: mixed
+    p_chord_velocity_shared: 0.10
+    p_chord_velocity_independent: 0.70
+    p_chord_velocity_correlated: 0.20
+    correlated_jitter_01: 0.05
+    p_uniform: 0.50
+    p_near_boundary: 0.30
+    p_extreme: 0.20
+    boundary_width_01: 0.03
+
+  stress:
+    type: coverage
+    seg_len_s: ${instrument.seg_len_s}
+    pitch_range: [21, 108]
+    max_notes: ${instrument.nmax}
+    polyphony_limit: 16
+    chord_prob: 0.60
+    max_chord_size: 8
+    duration_range: [0.12, 1.20]
+    ioi_range: [0.01, 0.15]
+    velocity_boundaries_01: [0.33, 0.66]
+    velocity_boundary_path: ${v2_boundary_path}
+    velocity_boundary_strategy: ${v2_boundary_strategy}
+    register_pitch_splits: [48, 72]
+    chord_velocity_mode: mixed
+    p_chord_velocity_shared: 0.10
+    p_chord_velocity_independent: 0.65
+    p_chord_velocity_correlated: 0.25
+    correlated_jitter_01: 0.06
+    p_uniform: 0.10
+    p_near_boundary: 0.55
+    p_extreme: 0.35
+    boundary_width_01: 0.03
+
+sampler_weights_v2:
+  boundary_v2: {boundary: 1.0, coverage: 0.0, stress: 0.0}
+  coverage_v2: {boundary: 0.0, coverage: 1.0, stress: 0.0}
+  stress_v2:   {boundary: 0.0, coverage: 0.0, stress: 1.0}
+  mixed_v2:    {boundary: 0.3, coverage: 0.5, stress: 0.2}
+
+sampler_options:
+  coverage_v1: &coverage_v1
+    type: coverage
+    seg_len_s: ${instrument.seg_len_s}
+    pitch_range: [21, 108]
+    max_notes: ${instrument.nmax}
+    polyphony_limit: 16
+    chord_prob: 0.25
+    max_chord_size: 6
+    duration_range: [0.08, 0.80]
+    ioi_range: [0.03, 0.35]
+    velocity_boundaries_01: [0.33, 0.66]
+    chord_velocity_mode: shared
+    p_uniform: 0.50
+    p_near_boundary: 0.30
+    p_extreme: 0.20
+    boundary_width_01: 0.03
+
+  coverage_shared_legacy: *coverage_v1

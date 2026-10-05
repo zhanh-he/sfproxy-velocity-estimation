@@ -1,0 +1,178 @@
+{
+  "evaluation": [
+    {
+      "method": "Flat velocity",
+      "variant": "64",
+      "maestro_mae": "14.8",
+      "maestro_r_bssl": "0.757",
+      "maestro_r_bstl": "0.622",
+      "smd_mae": "15.4",
+      "smd_r_bssl": "0.701",
+      "smd_r_bstl": "0.582",
+      "gaps_r_bssl": "0.737",
+      "gaps_r_bstl": "0.701",
+      "fl_r_bssl": "0.714",
+      "fl_r_bstl": "0.587"
+    },
+    {
+      "method": "VeloEst",
+      "variant": "zero-shot",
+      "maestro_mae": "3.9",
+      "maestro_r_bssl": "0.878",
+      "maestro_r_bstl": "0.892",
+      "smd_mae": "8.0",
+      "smd_r_bssl": "0.829",
+      "smd_r_bstl": "0.816",
+      "gaps_r_bssl": "0.769",
+      "gaps_r_bstl": "0.798",
+      "fl_r_bssl": "0.740",
+      "fl_r_bstl": "0.699"
+    },
+    {
+      "method": "Diff-Synth",
+      "variant": "5 s",
+      "maestro_mae": "19.2",
+      "maestro_r_bssl": "0.776",
+      "maestro_r_bstl": "0.752",
+      "smd_mae": "19.7",
+      "smd_r_bssl": "0.789",
+      "smd_r_bstl": "0.742",
+      "gaps_r_bssl": "0.669",
+      "gaps_r_bstl": "0.624",
+      "fl_r_bssl": "0.646",
+      "fl_r_bstl": "0.547"
+    },
+    {
+      "method": "Diff-Synth",
+      "variant": "2 s",
+      "maestro_mae": "25.0",
+      "maestro_r_bssl": "0.702",
+      "maestro_r_bstl": "0.553",
+      "smd_mae": "25.9",
+      "smd_r_bssl": "0.662",
+      "smd_r_bstl": "0.520",
+      "gaps_r_bssl": "0.760",
+      "gaps_r_bstl": "0.770",
+      "fl_r_bssl": "0.729",
+      "fl_r_bstl": "0.636"
+    },
+    {
+      "method": "Diff-SFProxy",
+      "variant": "5 s",
+      "maestro_mae": "10.5",
+      "maestro_r_bssl": "0.869",
+      "maestro_r_bstl": "0.881",
+      "smd_mae": "11.3",
+      "smd_r_bssl": "0.821",
+      "smd_r_bstl": "0.806",
+      "gaps_r_bssl": "0.794",
+      "gaps_r_bstl": "0.860",
+      "fl_r_bssl": "0.777",
+      "fl_r_bstl": "0.788"
+    },
+    {
+      "method": "Diff-SFProxy",
+      "variant": "2 s",
+      "maestro_mae": "10.9",
+      "maestro_r_bssl": "0.858",
+      "maestro_r_bstl": "0.870",
+      "smd_mae": "11.8",
+      "smd_r_bssl": "0.820",
+      "smd_r_bstl": "0.804",
+      "gaps_r_bssl": "0.787",
+      "gaps_r_bstl": "0.836",
+      "fl_r_bssl": "0.771",
+      "fl_r_bstl": "0.756"
+    },
+    {
+      "method": "Diff-SFProxy",
+      "variant": "w/o regularizers",
+      "maestro_mae": "12.9",
+      "maestro_r_bssl": "0.789",
+      "maestro_r_bstl": "0.698",
+      "smd_mae": "14.4",
+      "smd_r_bssl": "0.735",
+      "smd_r_bstl": "0.653",
+      "gaps_r_bssl": "0.740",
+      "gaps_r_bstl": "0.705",
+      "fl_r_bssl": "0.723",
+      "fl_r_bstl": "0.614"
+    },
+    {
+      "method": "Diff-SFProxy",
+      "variant": "w/o piano pretraining",
+      "maestro_mae": "20.5",
+      "maestro_r_bssl": "0.770",
+      "maestro_r_bstl": "0.757",
+      "smd_mae": "21.2",
+      "smd_r_bssl": "0.723",
+      "smd_r_bstl": "0.703",
+      "gaps_r_bssl": "0.702",
+      "gaps_r_bstl": "0.686",
+      "fl_r_bssl": "0.683",
+      "fl_r_bstl": "0.600"
+    }
+  ],
+  "recovery": [
+    {
+      "instrument": "Piano",
+      "segment_s": "2",
+      "in_domain_init_mae": "37.2",
+      "in_domain_recovered_mae": "12.3",
+      "in_domain_gain_pct": "66.9",
+      "stress_init_mae": "38.6",
+      "stress_recovered_mae": "19.5",
+      "stress_gain_pct": "49.5"
+    },
+    {
+      "instrument": "Piano",
+      "segment_s": "5",
+      "in_domain_init_mae": "37.9",
+      "in_domain_recovered_mae": "12.2",
+      "in_domain_gain_pct": "67.8",
+      "stress_init_mae": "38.5",
+      "stress_recovered_mae": "17.7",
+      "stress_gain_pct": "54.0"
+    },
+    {
+      "instrument": "Piano",
+      "segment_s": "10",
+      "in_domain_init_mae": "38.2",
+      "in_domain_recovered_mae": "12.5",
+      "in_domain_gain_pct": "67.3",
+      "stress_init_mae": "38.5",
+      "stress_recovered_mae": "17.8",
+      "stress_gain_pct": "53.7"
+    },
+    {
+      "instrument": "Guitar",
+      "segment_s": "2",
+      "in_domain_init_mae": "33.6",
+      "in_domain_recovered_mae": "9.3",
+      "in_domain_gain_pct": "72.3",
+      "stress_init_mae": "34.2",
+      "stress_recovered_mae": "11.3",
+      "stress_gain_pct": "67.0"
+    },
+    {
+      "instrument": "Guitar",
+      "segment_s": "5",
+      "in_domain_init_mae": "34.6",
+      "in_domain_recovered_mae": "9.1",
+      "in_domain_gain_pct": "73.7",
+      "stress_init_mae": "33.8",
+      "stress_recovered_mae": "10.7",
+      "stress_gain_pct": "68.3"
+    },
+    {
+      "instrument": "Guitar",
+      "segment_s": "10",
+      "in_domain_init_mae": "34.6",
+      "in_domain_recovered_mae": "9.5",
+      "in_domain_gain_pct": "72.5",
+      "stress_init_mae": "33.8",
+      "stress_recovered_mae": "10.8",
+      "stress_gain_pct": "68.0"
+    }
+  ]
+}
