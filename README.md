@@ -41,10 +41,10 @@ The code starts from the team's previous [cross-machine research repository](htt
 4. Run the method launchers under `scripts/route/` or `scripts/kaya/`.
 5. Rebuild paper figures with `python3 demo/analysis/build_figures.py`. Serve the demo locally with `python3 -m http.server 8000 --directory demo/docs`.
 
-The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. Some inherited configuration defaults remain at 2 s; set `backend.backend_segment_seconds=5` for the main comparison. The released piano inference path is self-contained apart from Python dependencies; end-to-end retraining still requires external data and backend checkpoints.
+The main paper comparison uses a 10s HPT-input and a 5s backend-input windows. Ablation study configuration can be 2s or 10s via modify `backend.backend_segment_seconds=5`.
 
-## Citation
-We release our work under CC BY 4.0 license.
+## Citation and Acknowledgement
+We release our work under CC BY 4.0 License. This repo was cleaned up with the help of *ChatGPT*, and my original code is available at [[202604_midiproxy]](https://github.com/zhanh-he/202604_midiproxy). We have verified the implementation details, any question please contact: zhanh.he.uwa@gmail.com
 
 ```bibtex
 @inproceedings{he2026beyond,
@@ -53,4 +53,3 @@ We release our work under CC BY 4.0 license.
   booktitle = {Proceedings of the International Society for Music Information Retrieval Conference},
   year = {2026}
 }
-```
