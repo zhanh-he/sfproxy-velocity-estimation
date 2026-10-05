@@ -8,7 +8,7 @@ Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Est
 ## Overview
 Many music datasets provide aligned audio and MIDI note events but lack reliable velocity labels, particularly out-of-the-piano. We explore cross-instrument MIDI velocity estimation in this label-scarce setting, using **Guitars** as target instruments.
 
-Starting from a velocity estimator (VeloEst) pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording in "[GAPS](https://zenodo.org/records/13962272) and [Francois Leduc (FL)](https://zenodo.org/records/10984521) datasets". We compare two adaptation strategies:
+Starting from a velocity estimator (VeloEst) pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording in "[GAPS](https://zenodo.org/records/13962272) and [François Leduc (FL)](https://zenodo.org/records/10984521) datasets". We compare two adaptation strategies:
 
 - **Diff-Synth (DDSP)**: waveform-domain supervision through a differentiable synthesiser.
 - **Diff-SFProxy**: loudness parameter-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
@@ -43,7 +43,8 @@ The code starts from the team's previous [cross-machine research repository](htt
 
 The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. Some inherited configuration defaults remain at 2 s; set `backend.backend_segment_seconds=5` for the main comparison. The released piano inference path is self-contained apart from Python dependencies; end-to-end retraining still requires external data and backend checkpoints.
 
-## Citation and release status
+## Citation
+We release our work under CC BY 4.0 license.
 
 ```bibtex
 @inproceedings{he2026beyond,
@@ -53,5 +54,3 @@ The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. S
   year = {2026}
 }
 ```
-
-See each component README for upstream attribution. The 5 s guitar adaptation checkpoints were recovered from the lab5090 HDD archives; the [recovery record](demo/analysis/GUITAR_RESULT_RECOVERY.md) documents their hashes and the remaining difference between one archived FL evaluation and the paper's selected aggregate. The website has aligned 20 s examples from GAPS, François Leduc, MAESTRO, and SMD, with individual example scores labeled separately from the paper aggregates.
