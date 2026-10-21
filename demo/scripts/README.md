@@ -14,6 +14,8 @@ These scripts turn selected research-workspace results into the small, reviewabl
 | `inventory_eval_summaries.py` | Index saved run summaries from a Score-HPT workspace for analysis. It does not identify the paper's selected runs automatically. |
 | `screen_fl_candidates.py` | Run both recovered 5 s guitar checkpoints once per FL recording, then summarize every 20 s window's note-velocity spread, fraction at 102, and source-audio RMS. Writes a CSV and checkpoint-hash metadata file for review; it does not change MIDI. |
 | `prepare_fl_review.py` | Rebuild selected FL candidate excerpts from their original HDF5 pairs, the recovered 5 s guitar checkpoints, and the FreePats SFZ. Pass repeatable `--selection PIECE:START`; it uses the normal inference and listening-case builders. |
+| `screen_piece_windows.py` | Check 20 s windows in an aligned full-piece reference/Diff-Synth/Diff-SFProxy MIDI triple; for piano, report excerpt velocity MAE before audio rendering. |
+| `prepare_piece_windows.py` | Build repeatable 20 s cases from a verified full-piece WAV/MIDI pair and both prediction MIDIs, with a dataset-matched SFZ. It reuses `build_listening_case.py` and does not change note velocities. |
 | `plot_fl_saturation.py` | Render a slide-sized SVG/PNG scatter figure of FL source-audio level versus the velocity-102 fraction from the candidate-screen CSV. Requires `matplotlib` and `numpy`. |
 
 The website reads [`../docs/assets/cases.json`](../docs/assets/cases.json). To add a case, first recover its real aligned source pair and the selected final prediction files, build the assets, then add a manifest entry with only the methods actually present. Run:
@@ -23,4 +25,4 @@ python3 demo/scripts/validate_listening_cases.py
 python3 -m http.server 8000 --directory demo/docs
 ```
 
-Open `http://localhost:8000/` to inspect all dataset selections and `http://localhost:8000/fl-review.html` to compare the FL candidates side by side. The recovered 5 s guitar checkpoint and prediction provenance is recorded in [`../analysis/GUITAR_RESULT_RECOVERY.md`](../analysis/GUITAR_RESULT_RECOVERY.md); the older 2 s evaluation runs are not used. [`../analysis/FL_CANDIDATES.md`](../analysis/FL_CANDIDATES.md) describes the full FL screen and candidate choices.
+Open `http://localhost:8000/` to inspect all dataset selections and `http://localhost:8000/fl-review.html` to compare the FL candidates side by side. The [additional-window screen](../analysis/additional_window_screen.csv) records all 16 evaluated GAPS, MAESTRO, and SMD candidates and the 12 selected for the site. The recovered 5 s guitar checkpoint and prediction provenance is recorded in [`../analysis/GUITAR_RESULT_RECOVERY.md`](../analysis/GUITAR_RESULT_RECOVERY.md); the older 2 s evaluation runs are not used. [`../analysis/FL_CANDIDATES.md`](../analysis/FL_CANDIDATES.md) describes the full FL screen and candidate choices.

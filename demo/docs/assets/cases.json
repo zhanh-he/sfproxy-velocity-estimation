@@ -2,6 +2,44 @@
   "schema_version": 1,
   "cases": [
     {
+      "id": "gaps-019-0",
+      "dataset": "GAPS",
+      "selectorLabel": "Guitar performance 019 · 0–20 s",
+      "title": "GAPS · guitar performance 019",
+      "instrument": "Classical guitar",
+      "window": "0–20 s",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/gaps-019-0",
+      "notesUrl": "assets/cases/gaps-019-0/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "GAPS test piece 019_Vpswc from the lab5090 HDF5 cache. Both full-piece predictions were rerun from the recovered 5 s adapted guitar checkpoints (Diff-Synth 60k, Diff-SFProxy 120k); velocities are unchanged. The aligned score has no verified guitar velocity ground truth, so no MAE is reported. All MIDI renders use FreePats Spanish Classical Guitar SFZ. This is a selected 20 s excerpt, not a paper aggregate.",
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.698,
+          "bstl": 0.495
+        },
+        "diffsynth": {
+          "bssl": 0.617,
+          "bstl": 0.602
+        },
+        "sfproxy": {
+          "bssl": 0.761,
+          "bstl": 0.795
+        }
+      }
+    },
+    {
       "id": "gaps-019-40",
       "dataset": "GAPS",
       "selectorLabel": "Guitar performance 019 · 40–60 s",
@@ -40,6 +78,44 @@
       }
     },
     {
+      "id": "gaps-019-60",
+      "dataset": "GAPS",
+      "selectorLabel": "Guitar performance 019 · 60–80 s",
+      "title": "GAPS · guitar performance 019",
+      "instrument": "Classical guitar",
+      "window": "60–80 s",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/gaps-019-60",
+      "notesUrl": "assets/cases/gaps-019-60/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "GAPS test piece 019_Vpswc from the lab5090 HDF5 cache. Both full-piece predictions were rerun from the recovered 5 s adapted guitar checkpoints (Diff-Synth 60k, Diff-SFProxy 120k); velocities are unchanged. The aligned score has no verified guitar velocity ground truth, so no MAE is reported. All MIDI renders use FreePats Spanish Classical Guitar SFZ. This is a selected 20 s excerpt, not a paper aggregate.",
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.662,
+          "bstl": 0.413
+        },
+        "diffsynth": {
+          "bssl": 0.625,
+          "bstl": 0.585
+        },
+        "sfproxy": {
+          "bssl": 0.771,
+          "bstl": 0.802
+        }
+      }
+    },
+    {
       "id": "gaps-019-80",
       "dataset": "GAPS",
       "selectorLabel": "Guitar performance 019 · 80–100 s",
@@ -74,6 +150,82 @@
         "sfproxy": {
           "bssl": 0.755,
           "bstl": 0.777
+        }
+      }
+    },
+    {
+      "id": "gaps-019-100",
+      "dataset": "GAPS",
+      "selectorLabel": "Guitar performance 019 · 100–120 s",
+      "title": "GAPS · guitar performance 019",
+      "instrument": "Classical guitar",
+      "window": "100–120 s",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/gaps-019-100",
+      "notesUrl": "assets/cases/gaps-019-100/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "GAPS test piece 019_Vpswc from the lab5090 HDF5 cache. Both full-piece predictions were rerun from the recovered 5 s adapted guitar checkpoints (Diff-Synth 60k, Diff-SFProxy 120k); velocities are unchanged. The aligned score has no verified guitar velocity ground truth, so no MAE is reported. All MIDI renders use FreePats Spanish Classical Guitar SFZ. This is a selected 20 s excerpt, not a paper aggregate.",
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.677,
+          "bstl": 0.439
+        },
+        "diffsynth": {
+          "bssl": 0.701,
+          "bstl": 0.718
+        },
+        "sfproxy": {
+          "bssl": 0.803,
+          "bstl": 0.851
+        }
+      }
+    },
+    {
+      "id": "gaps-019-120",
+      "dataset": "GAPS",
+      "selectorLabel": "Guitar performance 019 · 120–140 s",
+      "title": "GAPS · guitar performance 019",
+      "instrument": "Classical guitar",
+      "window": "120–140 s",
+      "description": "Four aligned 20-second guitar conditions: original GAPS recording, Flat 64, 5 s Diff-Synth, and 5 s Diff-SFProxy.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/gaps-019-120",
+      "notesUrl": "assets/cases/gaps-019-120/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "GAPS test piece 019_Vpswc from the lab5090 HDF5 cache. Both full-piece predictions were rerun from the recovered 5 s adapted guitar checkpoints (Diff-Synth 60k, Diff-SFProxy 120k); velocities are unchanged. The aligned score has no verified guitar velocity ground truth, so no MAE is reported. All MIDI renders use FreePats Spanish Classical Guitar SFZ. This is a selected 20 s excerpt, not a paper aggregate.",
+      "sourceUrl": "https://aim-qmul.github.io/GAPS/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.683,
+          "bstl": 0.32
+        },
+        "diffsynth": {
+          "bssl": 0.607,
+          "bstl": 0.493
+        },
+        "sfproxy": {
+          "bssl": 0.731,
+          "bstl": 0.632
         }
       }
     },
@@ -306,78 +458,86 @@
       }
     },
     {
-      "id": "fl-qdc4c-40",
-      "dataset": "FL",
-      "selectorLabel": "Current example · Guitar performance QDC4c · 40–60 s",
-      "title": "François Leduc · guitar performance QDC4c",
-      "instrument": "Classical guitar",
-      "window": "40–60 s",
-      "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
+      "id": "maestro-scriabin-0",
+      "dataset": "MAESTRO",
+      "selectorLabel": "Scriabin, Entragete Op. 63 · 0–20 s",
+      "title": "Scriabin, Entragete · 2009 performance",
+      "instrument": "Grand piano",
+      "window": "0–20 s",
+      "description": "One matched 20-second piano excerpt with the original performance, a constant-velocity control, and both saved adaptation methods.",
       "available": [
         "reference",
         "flat64",
         "diffsynth",
         "sfproxy"
       ],
-      "assetBase": "assets/cases/fl-qdc4c-40",
-      "notesUrl": "assets/cases/fl-qdc4c-40/notes.json",
-      "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and aligned score from the 5090 HDF5 cache (QDC4c). Diff-Synth and Diff-SFProxy predictions were rerun over the full piece from the recovered 5 s guitar checkpoints (60k and 120k steps), keeping every score note aligned. These example-specific results are separate from the paper aggregates; the archived Diff-SFProxy checkpoint’s FL aggregate does not reproduce the paper-selected 0.777. All resynthesized clips use FreePats Spanish Classical Guitar SFZ. The aligned guitar score has no verified velocity labels, so no MAE is shown.",
-      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "assetBase": "assets/cases/maestro-scriabin-0",
+      "notesUrl": "assets/cases/maestro-scriabin-0/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
-          "bstl": 1.0
+          "bstl": 1.0,
+          "mae": 0
         },
         "flat64": {
-          "bssl": 0.723,
-          "bstl": 0.515
+          "bssl": 0.705,
+          "bstl": 0.683,
+          "mae": 15.348
         },
         "diffsynth": {
-          "bssl": 0.701,
-          "bstl": 0.597
+          "bssl": 0.689,
+          "bstl": 0.74,
+          "mae": 21.36
         },
         "sfproxy": {
-          "bssl": 0.783,
-          "bstl": 0.688
+          "bssl": 0.816,
+          "bstl": 0.896,
+          "mae": 8.034
         }
       }
     },
     {
-      "id": "fl-qdc4c-80",
-      "dataset": "FL",
-      "selectorLabel": "Current example · Guitar performance QDC4c · 80–100 s",
-      "title": "François Leduc · guitar performance QDC4c",
-      "instrument": "Classical guitar",
-      "window": "80–100 s",
-      "description": "Four aligned 20-second guitar conditions from the same François Leduc performance, with 5 s adapted models.",
+      "id": "maestro-scriabin-40",
+      "dataset": "MAESTRO",
+      "selectorLabel": "Scriabin, Entragete Op. 63 · 40–60 s",
+      "title": "Scriabin, Entragete · 2009 performance",
+      "instrument": "Grand piano",
+      "window": "40–60 s",
+      "description": "One matched 20-second piano excerpt with the original performance, a constant-velocity control, and both saved adaptation methods.",
       "available": [
         "reference",
         "flat64",
         "diffsynth",
         "sfproxy"
       ],
-      "assetBase": "assets/cases/fl-qdc4c-80",
-      "notesUrl": "assets/cases/fl-qdc4c-80/notes.json",
-      "velocityGroundTruth": false,
-      "provenance": "Original François Leduc recording and aligned score from the 5090 HDF5 cache (QDC4c). Diff-Synth and Diff-SFProxy predictions were rerun over the full piece from the recovered 5 s guitar checkpoints (60k and 120k steps), keeping every score note aligned. These example-specific results are separate from the paper aggregates; the archived Diff-SFProxy checkpoint’s FL aggregate does not reproduce the paper-selected 0.777. All resynthesized clips use FreePats Spanish Classical Guitar SFZ. The aligned guitar score has no verified velocity labels, so no MAE is shown.",
-      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "assetBase": "assets/cases/maestro-scriabin-40",
+      "notesUrl": "assets/cases/maestro-scriabin-40/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
-          "bstl": 1.0
+          "bstl": 1.0,
+          "mae": 0
         },
         "flat64": {
-          "bssl": 0.748,
-          "bstl": 0.643
+          "bssl": 0.681,
+          "bstl": 0.568,
+          "mae": 15.765
         },
         "diffsynth": {
-          "bssl": 0.661,
-          "bstl": 0.51
+          "bssl": 0.677,
+          "bstl": 0.633,
+          "mae": 17.024
         },
         "sfproxy": {
-          "bssl": 0.788,
-          "bstl": 0.782
+          "bssl": 0.793,
+          "bstl": 0.871,
+          "mae": 10.329
         }
       }
     },
@@ -424,6 +584,48 @@
       }
     },
     {
+      "id": "maestro-scriabin-80",
+      "dataset": "MAESTRO",
+      "selectorLabel": "Scriabin, Entragete Op. 63 · 80–100 s",
+      "title": "Scriabin, Entragete · 2009 performance",
+      "instrument": "Grand piano",
+      "window": "80–100 s",
+      "description": "One matched 20-second piano excerpt with the original performance, a constant-velocity control, and both saved adaptation methods.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/maestro-scriabin-80",
+      "notesUrl": "assets/cases/maestro-scriabin-80/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.665,
+          "bstl": 0.668,
+          "mae": 15.01
+        },
+        "diffsynth": {
+          "bssl": 0.717,
+          "bstl": 0.79,
+          "mae": 15.229
+        },
+        "sfproxy": {
+          "bssl": 0.807,
+          "bstl": 0.899,
+          "mae": 9.458
+        }
+      }
+    },
+    {
       "id": "maestro-scriabin-100",
       "dataset": "MAESTRO",
       "selectorLabel": "Scriabin · 100–120 s",
@@ -462,6 +664,132 @@
           "bssl": 0.852,
           "bstl": 0.903,
           "mae": 8.487
+        }
+      }
+    },
+    {
+      "id": "maestro-scriabin-140",
+      "dataset": "MAESTRO",
+      "selectorLabel": "Scriabin, Entragete Op. 63 · 140–160 s",
+      "title": "Scriabin, Entragete · 2009 performance",
+      "instrument": "Grand piano",
+      "window": "140–160 s",
+      "description": "One matched 20-second piano excerpt with the original performance, a constant-velocity control, and both saved adaptation methods.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/maestro-scriabin-140",
+      "notesUrl": "assets/cases/maestro-scriabin-140/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.708,
+          "bstl": 0.693,
+          "mae": 15.494
+        },
+        "diffsynth": {
+          "bssl": 0.673,
+          "bstl": 0.683,
+          "mae": 16.987
+        },
+        "sfproxy": {
+          "bssl": 0.761,
+          "bstl": 0.843,
+          "mae": 10.089
+        }
+      }
+    },
+    {
+      "id": "smd-bach-0",
+      "dataset": "SMD",
+      "selectorLabel": "Bach BWV 849 · 0–20 s",
+      "title": "Bach BWV 849 · SMD piano performance",
+      "instrument": "Grand piano",
+      "window": "0–20 s",
+      "description": "A real 20-second Disklavier recording with both saved 5 s adaptation predictions on the same aligned notes.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/smd-bach-0",
+      "notesUrl": "assets/cases/smd-bach-0/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "SMD Bach BWV 849 recording from the lab5090 HDF5 cache. Both predictions are saved full-piece 5 s runs: Diff-Synth 60k and Diff-SFProxy 120k smooth L1. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.796,
+          "bstl": 0.73,
+          "mae": 17.575
+        },
+        "diffsynth": {
+          "bssl": 0.818,
+          "bstl": 0.776,
+          "mae": 13.275
+        },
+        "sfproxy": {
+          "bssl": 0.877,
+          "bstl": 0.87,
+          "mae": 6.112
+        }
+      }
+    },
+    {
+      "id": "smd-bach-20",
+      "dataset": "SMD",
+      "selectorLabel": "Bach BWV 849 · 20–40 s",
+      "title": "Bach BWV 849 · SMD piano performance",
+      "instrument": "Grand piano",
+      "window": "20–40 s",
+      "description": "A real 20-second Disklavier recording with both saved 5 s adaptation predictions on the same aligned notes.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/smd-bach-20",
+      "notesUrl": "assets/cases/smd-bach-20/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "SMD Bach BWV 849 recording from the lab5090 HDF5 cache. Both predictions are saved full-piece 5 s runs: Diff-Synth 60k and Diff-SFProxy 120k smooth L1. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.772,
+          "bstl": 0.406,
+          "mae": 14.376
+        },
+        "diffsynth": {
+          "bssl": 0.818,
+          "bstl": 0.595,
+          "mae": 10.516
+        },
+        "sfproxy": {
+          "bssl": 0.865,
+          "bstl": 0.743,
+          "mae": 4.591
         }
       }
     },
@@ -508,6 +836,48 @@
       }
     },
     {
+      "id": "smd-bach-60",
+      "dataset": "SMD",
+      "selectorLabel": "Bach BWV 849 · 60–80 s",
+      "title": "Bach BWV 849 · SMD piano performance",
+      "instrument": "Grand piano",
+      "window": "60–80 s",
+      "description": "A real 20-second Disklavier recording with both saved 5 s adaptation predictions on the same aligned notes.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/smd-bach-60",
+      "notesUrl": "assets/cases/smd-bach-60/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "SMD Bach BWV 849 recording from the lab5090 HDF5 cache. Both predictions are saved full-piece 5 s runs: Diff-Synth 60k and Diff-SFProxy 120k smooth L1. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.778,
+          "bstl": 0.433,
+          "mae": 12.677
+        },
+        "diffsynth": {
+          "bssl": 0.788,
+          "bstl": 0.46,
+          "mae": 12.042
+        },
+        "sfproxy": {
+          "bssl": 0.854,
+          "bstl": 0.72,
+          "mae": 4.333
+        }
+      }
+    },
+    {
       "id": "smd-bach-80",
       "dataset": "SMD",
       "selectorLabel": "Bach BWV 849 · 80–100 s",
@@ -546,6 +916,48 @@
           "bssl": 0.862,
           "bstl": 0.783,
           "mae": 5.25
+        }
+      }
+    },
+    {
+      "id": "smd-bach-120",
+      "dataset": "SMD",
+      "selectorLabel": "Bach BWV 849 · 120–140 s",
+      "title": "Bach BWV 849 · SMD piano performance",
+      "instrument": "Grand piano",
+      "window": "120–140 s",
+      "description": "A real 20-second Disklavier recording with both saved 5 s adaptation predictions on the same aligned notes.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/smd-bach-120",
+      "notesUrl": "assets/cases/smd-bach-120/notes.json",
+      "velocityGroundTruth": true,
+      "provenance": "SMD Bach BWV 849 recording from the lab5090 HDF5 cache. Both predictions are saved full-piece 5 s runs: Diff-Synth 60k and Diff-SFProxy 120k smooth L1. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
+      "sourceUrl": "https://resources.mpi-inf.mpg.de/SMD/",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0,
+          "mae": 0
+        },
+        "flat64": {
+          "bssl": 0.737,
+          "bstl": 0.553,
+          "mae": 19.242
+        },
+        "diffsynth": {
+          "bssl": 0.816,
+          "bstl": 0.766,
+          "mae": 12.295
+        },
+        "sfproxy": {
+          "bssl": 0.854,
+          "bstl": 0.848,
+          "mae": 5.895
         }
       }
     }
