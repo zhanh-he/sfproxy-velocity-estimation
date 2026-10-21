@@ -2,6 +2,8 @@
 
 `paper_results.csv` transcribes Table 2 (evaluation across MAESTRO, SMD, GAPS, and FL) from the supplied camera-ready manuscript. `proxy_recovery.csv` transcribes Table 1. They are paper aggregates, not a recomputation from the example audio files.
 
+[`FL_CANDIDATES.md`](FL_CANDIDATES.md) documents the expanded François Leduc 20 s listening review, its 79-recording screen, the original example's velocity-102 anomaly, and the recovered 5 s checkpoint hashes.
+
 `5090_evaluation_inventory.csv` indexes 28 saved evaluation summaries found in the lab5090 **working directory** during the initial search. It includes run names, checkpoint paths relative to that workspace, evaluated item counts, failures, velocity MAE (when available), and BSSL/BSTL Pearson correlations. It is an **exploratory run inventory**, not the selected paper table, and excludes the second HDD archives discovered later. Those archives contain the 5 s adapted guitar checkpoints and Diff-Synth result summaries; see [`GUITAR_RESULT_RECOVERY.md`](GUITAR_RESULT_RECOVERY.md) and [`guitar_recovery/`](guitar_recovery/README.md). Rebuild the original workspace inventory on the source machine with `python3 demo/scripts/inventory_eval_summaries.py /path/to/score_hpt/workspaces demo/analysis/5090_evaluation_inventory.csv`.
 
 The primary guitar metric is Pearson correlation between real and SoundFont-rendered Bark-scale specific loudness (`r_BSSL`); `r_BSTL` is the companion total-loudness metric. Guitar datasets have no ground-truth velocity labels, so there is no guitar velocity MAE. The `5 s` adaptation backend is the main method; `2 s` is an ablation. MAESTRO/SMD have ground-truth velocity labels.

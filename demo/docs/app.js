@@ -138,6 +138,7 @@ function renderCard(method, item, notes) {
 
 function renderDatasetTabs(dataset) {
   const target=document.getElementById("dataset-tabs");target.replaceChildren();
+  document.getElementById("fl-review-prompt").hidden=dataset!=="FL";
   for (const name of ["GAPS","FL","MAESTRO","SMD"]) {
     const button=document.createElement("button");button.type="button";button.className=name===dataset?"active":"";
     button.setAttribute("aria-pressed",String(name===dataset));button.textContent=name;

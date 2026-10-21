@@ -1,0 +1,20 @@
+{
+  "source": "/media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/hdf5s/francoisleduc_sr22050",
+  "pieces": 79,
+  "windows": 683,
+  "model": "HPT + onset-assisted note_editor",
+  "velocity_method": "onset_only",
+  "sample_rate": 22050,
+  "frames_per_second": 100,
+  "weights": {
+    "diffsynth": {
+      "path": "/tmp/sfproxy-layout-20260929-Vrb58i/recovered/transfer2_ckpts/route3_gaps_6k/5s+auto+hpt+onset+score_note_editor+backend_diffsynth_guitar+piano_ssm_spectral+sup0+backend1+prior0p2+sat0p4/60000_iterations.pth",
+      "sha256": "1712310c5b662685f7ed03371e52dd491a48e9c242d6557548a314f20ea860ee"
+    },
+    "sfproxy": {
+      "path": "/tmp/sfproxy-layout-20260929-Vrb58i/recovered/transfer1_ckpts/route4_guitar_12k/5s+auto+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0+backend1+prior0p2+sat0p4/120000_iterations.pth",
+      "sha256": "2d1e3d0dff33088689ae0a10d318b369625fa89b184e36791b1c943880e38131"
+    }
+  },
+  "audio_gain": 1.0
+}

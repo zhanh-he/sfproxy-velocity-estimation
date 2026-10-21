@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare François Leduc guitar demo excerpts and their raw predicted MIDI velocities.">
+  <title>FL excerpt review · Diff-SFProxy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S<span>F</span></span><span>SFProxy <small>ISMIR 2026</small></span></a>
+    <nav aria-label="Main navigation"><a href="index.html#listen">Full demo</a><a href="index.html#results">Paper results</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/camera-ready-release">Code ↗</a></nav>
+  </header>
+  <main class="wrap fl-review-main">
+    <div class="eyebrow"><span class="pulse"></span> François Leduc · guitar</div>
+    <h1>Choose an FL excerpt</h1>
+    <p class="hero-copy">Compare 20-second passages from different recordings. Each method uses its own recovered 5-second guitar checkpoint consistently across all excerpts. The colors show the MIDI velocities directly, without display-only rescaling.</p>
+    <p class="fine-print">The original recording has no verified note-velocity labels. BSSL and BSTL compare each rendered excerpt with that recording; they are excerpt scores, not the paper's dataset-level results. “At 102” shows the share of notes predicted at velocity 102, where the current Diff-SFProxy example clusters.</p>
+    <div class="legend"><span>Predicted velocity</span><i>Soft</i><span class="gradient" aria-hidden="true"></span><i>Strong</i></div>
+    <details class="fl-diagnostic"><summary>Investigating the original QDC4c velocity-102 cluster</summary><p>Across 683 FL windows, louder source recordings tend to yield more velocity-102 notes with this recovered checkpoint (Pearson r = 0.876). A diagnostic half-gain rerun reduced the QDC4c clustering. All published examples below use the original recording level and unchanged MIDI predictions.</p><img src="assets/fl_velocity102_vs_audio_level.svg" alt="Scatterplot of FL recording RMS versus share of Diff-SFProxy notes at velocity 102, highlighting six new candidates and the two original QDC4c excerpts."></details>
+    <div id="fl-review-list" class="fl-review-list" aria-live="polite"><p>Loading excerpts…</p></div>
+  </main>
+  <script src="fl-review.js" defer></script>
+</body>
+</html>

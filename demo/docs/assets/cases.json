@@ -78,9 +78,237 @@
       }
     },
     {
+      "id": "fl-5xh4c-140",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · 5xh4c · 140–160 s",
+      "title": "François Leduc · guitar performance 5xh4c",
+      "instrument": "Classical guitar",
+      "window": "140–160 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-5xh4c-140",
+      "notesUrl": "assets/cases/fl-5xh4c-140/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (5xh4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.627,
+          "bstl": 0.506
+        },
+        "diffsynth": {
+          "bssl": 0.557,
+          "bstl": 0.392
+        },
+        "sfproxy": {
+          "bssl": 0.675,
+          "bstl": 0.619
+        }
+      }
+    },
+    {
+      "id": "fl-mwc4c-0",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · mwC4c · 0–20 s",
+      "title": "François Leduc · guitar performance mwC4c",
+      "instrument": "Classical guitar",
+      "window": "0–20 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-mwc4c-0",
+      "notesUrl": "assets/cases/fl-mwc4c-0/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (mwC4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.73,
+          "bstl": 0.669
+        },
+        "diffsynth": {
+          "bssl": 0.697,
+          "bstl": 0.642
+        },
+        "sfproxy": {
+          "bssl": 0.704,
+          "bstl": 0.684
+        }
+      }
+    },
+    {
+      "id": "fl-yfc4c-160",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · yfC4c · 160–180 s",
+      "title": "François Leduc · guitar performance yfC4c",
+      "instrument": "Classical guitar",
+      "window": "160–180 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-yfc4c-160",
+      "notesUrl": "assets/cases/fl-yfc4c-160/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (yfC4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.48,
+          "bstl": 0.535
+        },
+        "diffsynth": {
+          "bssl": 0.42,
+          "bstl": 0.397
+        },
+        "sfproxy": {
+          "bssl": 0.532,
+          "bstl": 0.569
+        }
+      }
+    },
+    {
+      "id": "fl-cdc4c-40",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · cDC4c · 40–60 s",
+      "title": "François Leduc · guitar performance cDC4c",
+      "instrument": "Classical guitar",
+      "window": "40–60 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-cdc4c-40",
+      "notesUrl": "assets/cases/fl-cdc4c-40/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (cDC4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.696,
+          "bstl": 0.356
+        },
+        "diffsynth": {
+          "bssl": 0.555,
+          "bstl": 0.303
+        },
+        "sfproxy": {
+          "bssl": 0.806,
+          "bstl": 0.695
+        }
+      }
+    },
+    {
+      "id": "fl-ldc4c-80",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · LDC4c · 80–100 s",
+      "title": "François Leduc · guitar performance LDC4c",
+      "instrument": "Classical guitar",
+      "window": "80–100 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-ldc4c-80",
+      "notesUrl": "assets/cases/fl-ldc4c-80/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (LDC4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.797,
+          "bstl": 0.599
+        },
+        "diffsynth": {
+          "bssl": 0.695,
+          "bstl": 0.455
+        },
+        "sfproxy": {
+          "bssl": 0.789,
+          "bstl": 0.586
+        }
+      }
+    },
+    {
+      "id": "fl-wwh4c-100",
+      "dataset": "FL",
+      "selectorLabel": "Candidate · WWh4c · 100–120 s",
+      "title": "François Leduc · guitar performance WWh4c",
+      "instrument": "Classical guitar",
+      "window": "100–120 s",
+      "description": "A 20-second guitar candidate for visual and listening review, with the same aligned notes and the recovered 5 s adapted models.",
+      "available": [
+        "reference",
+        "flat64",
+        "diffsynth",
+        "sfproxy"
+      ],
+      "assetBase": "assets/cases/fl-wwh4c-100",
+      "notesUrl": "assets/cases/fl-wwh4c-100/notes.json",
+      "velocityGroundTruth": false,
+      "provenance": "Original François Leduc recording and aligned score from the lab5090 HDF5 cache (WWh4c). Diff-Synth and Diff-SFProxy were rerun on the full piece from the recovered 5 s guitar checkpoints, 60k and 120k steps. The predicted MIDI velocities are not display-normalized. This excerpt is a review candidate, separate from the paper aggregate; no verified guitar velocity ground truth is available. Resynthesis uses FreePats Spanish Classical Guitar SFZ.",
+      "sourceUrl": "https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset",
+      "scores": {
+        "reference": {
+          "bssl": 1.0,
+          "bstl": 1.0
+        },
+        "flat64": {
+          "bssl": 0.675,
+          "bstl": 0.398
+        },
+        "diffsynth": {
+          "bssl": 0.666,
+          "bstl": 0.536
+        },
+        "sfproxy": {
+          "bssl": 0.775,
+          "bstl": 0.725
+        }
+      }
+    },
+    {
       "id": "fl-qdc4c-40",
       "dataset": "FL",
-      "selectorLabel": "Guitar performance QDC4c · 40–60 s",
+      "selectorLabel": "Current example · Guitar performance QDC4c · 40–60 s",
       "title": "François Leduc · guitar performance QDC4c",
       "instrument": "Classical guitar",
       "window": "40–60 s",
@@ -118,7 +346,7 @@
     {
       "id": "fl-qdc4c-80",
       "dataset": "FL",
-      "selectorLabel": "Guitar performance QDC4c · 80–100 s",
+      "selectorLabel": "Current example · Guitar performance QDC4c · 80–100 s",
       "title": "François Leduc · guitar performance QDC4c",
       "instrument": "Classical guitar",
       "window": "80–100 s",
