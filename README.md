@@ -109,9 +109,7 @@ Open `http://localhost:8000/`. The website is published from `backup`; `main` is
 
 ## Citation and acknowledgements
 
-The title and authors below match the [arXiv record](https://arxiv.org/abs/2608.08985).
-Final ISMIR proceedings metadata (including a possible proceedings DOI and
-page numbers) has not yet been verified.
+We release this work under CC BY 4.0 license. If you find our work or this repository useful for your research, please consider citing our paper. Feel free to contact zhanh.he.uwa@gmail.com
 
 ```bibtex
 @inproceedings{he2026beyond,
@@ -123,4 +121,4 @@ page numbers) has not yet been verified.
 }
 ```
 
-VeloEst builds on our earlier [Score-Informed AMT](https://github.com/zhanh-he/score-informed-amt) work. The research implementation was curated from [202604_midiproxy](https://github.com/zhanh-he/202604_midiproxy). See the [frontend acknowledgements](score_hpt/README.md#acknowledgement), [DDSP attribution](diff-synth/README.md), and [demo credits](https://zhanh-he.github.io/sfproxy-velocity-estimation/) for upstream code, datasets, and instruments. Component licenses and media terms apply separately; a repository-wide release license is still under review.
+VeloEst builds on our earlier work - [Score-Informed AMT](https://github.com/zhanh-he/score-informed-amt). For DDSP, see the [frontend acknowledgements](score_hpt/README.md#acknowledgement), [DDSP attribution](diff-synth/README.md).
