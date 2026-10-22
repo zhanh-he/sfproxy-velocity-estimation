@@ -9,6 +9,18 @@ These two checkpoints are provided for **inference comparison** with the onset-a
 
 Both files are copies of the corresponding 5090 research-workspace checkpoints recorded in [`../../demo/analysis/PROVENANCE.md`](../../demo/analysis/PROVENANCE.md). The proxy **backend** weights used during adaptation are a separate training dependency and are not needed to run inference with the adapted VeloEst file. These released files are piano snapshots. The 5 s adapted guitar checkpoints were subsequently recovered from a separate 5090 HDD archive and are [documented for release review](../../demo/analysis/GUITAR_RESULT_RECOVERY.md).
 
+## What is available?
+
+| Use | Availability |
+| --- | --- |
+| Piano inference: VeloEst and VeloEst + Diff-SFProxy | Both checkpoints above are bundled; no proxy backend weights are needed. |
+| Guitar inference: adapted Diff-Synth and Diff-SFProxy | Recovered and used for the listening demo, but not yet published as downloadable weights. See the [archive members and hashes](../../demo/analysis/GUITAR_RESULT_RECOVERY.md). |
+| Train or repeat adaptation | Frozen SoundFont proxy / DDSP backend checkpoints, external datasets, and complete SFZ instruments are additional dependencies. |
+
+The bundled piano weights are inference examples, not a complete checkpoint set for reproducing every paper result. The exact run for the paper's FL Diff-SFProxy aggregate remains under review.
+
+## Frontend configuration
+
 The earlier [Score-Informed AMT project](https://github.com/zhanh-he/score-informed-amt) introduced the model and supplies other pretrained choices. Its public `hpt+onset+frame+score_note_editor/100000_iterations.pth` includes a frame input. Here we selected an **onset-only** `hpt+onset+score_note_editor/120000_iterations.pth` piano checkpoint as the starting point. Set `model.input2=onset`, `model.input3=null`, and `score_informed.method=note_editor` for these files. We thank and cite the earlier work; this slightly different checkpoint selection reflects the setup used for this paper.
 
 Run [`../../scripts/infer_compare.py`](../../scripts/infer_compare.py) to produce the two predictions, a Flat 64 control, per-note CSV, and a comparison SVG. The script can also render the output through an SFZ instrument when `sfizz_render` is installed.

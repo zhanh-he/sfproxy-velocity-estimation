@@ -1,49 +1,100 @@
-# SFProxy Velocity Estimation
+<div align="center">
 
-Official implementation of **“Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies” [[PDF]](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)**, accepted at **ISMIR 2026**. This repo contains:
+## Diff-SFProxy · Beyond Piano
+### Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies
 
-- **[Online Demo (Audio & MIDI)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)**
-- **[Checkpoints and Inference Instructions](score_hpt/checkpoints/README.md)**
+**ISMIR 2026** · Zhanhong He · Hanyu Meng · David Defeng Huang · Roberto Togneri
 
-## Overview
-Many music datasets provide aligned audio and MIDI note events but lack reliable velocity labels, particularly out-of-the-piano. We explore cross-instrument MIDI velocity estimation in this label-scarce setting, using **Guitars** as target instruments.
+[![Demo](https://img.shields.io/badge/Demo-audio_%26_MIDI-4173c8)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)
+[![Paper](https://img.shields.io/badge/Paper-camera--ready_PDF-cd5c5c)](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)
+[![Weights](https://img.shields.io/badge/Weights-piano_checkpoints-c88638)](score_hpt/checkpoints/README.md)
+[![Results](https://img.shields.io/badge/Results-tables_%26_figures-708238)](demo/analysis/README.md)
 
-Starting from a velocity estimator (VeloEst) pretrained on piano, we adapt it to target instruments using real performance audio. The goal is to predict velocities whose rendering matches the dynamics of the recording in "[GAPS](https://zenodo.org/records/13962272) and [Francois Leduc (FL)](https://zenodo.org/records/10984521) datasets". We compare two adaptation strategies:
+</div>
 
-- **Diff-Synth (DDSP)**: waveform-domain supervision through a differentiable synthesiser.
-- **Diff-SFProxy**: loudness parameter-wise supervision through a differentiable proxy of a non-differentiable SoundFont renderer.
+**Diff-SFProxy adapts a piano-trained MIDI velocity estimator to new instruments using performance audio and aligned note events.** Instead of reconstructing every waveform detail, a differentiable SoundFont proxy supervises note intensity and attack through two acoustic cues. We study guitar adaptation on [GAPS](https://zenodo.org/records/13962272) and [François Leduc](https://zenodo.org/records/10984521), alongside piano evaluation on MAESTRO and SMD.
 
-Diff-SFProxy predicts two loudness-related acoustic parameters:
+<p align="center">
+  <img src="demo/paper/figure0.jpg" width="730" alt="Beyond piano: transfer a piano-trained velocity estimator to guitar"><br>
+  <sub>Same note pitch and timing; velocities adapted to the target instrument.</sub>
+</p>
 
-- **Pitch-conditioned harmonic energy (PHE)**
-- **Onset-window spectral flux (OSF)**
+## Listen, try, or reproduce
 
-This focuses the adaptation signal on velocity-dependent intensity and attack behaviour rather than full waveform reconstruction.
+| Goal | Start here |
+| --- | --- |
+| **Hear the difference** | [Interactive demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/): 24 twenty-second excerpts across four datasets, with matched audio and colorized MIDI. |
+| **Estimate velocities** | [Piano inference guide](score_hpt/README.md#use-the-released-checkpoints) and [two bundled checkpoints](score_hpt/checkpoints/README.md). Supply an aligned audio/MIDI pair. |
+| **Inspect the paper results** | [Tables and analysis](demo/analysis/README.md), [Table 1 CSV](demo/analysis/proxy_recovery.csv), and [Table 2 CSV](demo/analysis/paper_results.csv). |
+| **Train or adapt a model** | [SoundFont proxy](diff-sfproxy/README.md), [VeloEst adaptation](score_hpt/README.md), and [experiment launchers](scripts/README.md). |
 
+## How it works
+
+VeloEst reads performance audio and aligned MIDI notes, then predicts note velocities. During adaptation, VeloEst is updated through a **frozen differentiable backend**:
+
+- **Diff-Synth (DDSP baseline):** supervise reconstructed audio in the waveform domain.
+- **Diff-SFProxy (ours):** supervise **pitch-conditioned harmonic energy (PHE)** and **onset-window spectral flux (OSF)**, focusing on intensity and attack rather than full waveform reconstruction.
+
+<p align="center">
+  <img src="demo/paper/figure1.jpg" width="1000" alt="VeloEst adaptation with frozen Diff-Synth audio reconstruction or Diff-SFProxy acoustic-parameter supervision"><br>
+  <sub>Paper method overview. The main comparison uses a 10 s frontend window and a 5 s backend crop.</sub>
+</p>
+
+## Run the released piano models
+
+Clone the working release branch:
+
+```bash
+git clone --branch backup https://github.com/zhanh-he/sfproxy-velocity-estimation.git
+cd sfproxy-velocity-estimation
+```
+
+Use a compatible PyTorch environment following the [setup guide](score_hpt/README.md#setup-and-example). The included [environment snapshot](score_hpt/environment.yml) records the historical Linux/CUDA setup; it is not a minimal or portable installer.
+
+With your performance recording and its **aligned piano MIDI**, run:
+
+```bash
+python scripts/infer_compare.py \
+  --audio /path/to/performance.wav \
+  --midi /path/to/aligned_score.mid \
+  --out /path/to/comparison
+```
+
+The two required piano checkpoints are already in the repository. The output includes `veloest.mid`, `diffsfproxy.mid`, a `flat64.mid` control, `notes.csv`, `comparison.svg`, and `summary.json`. Note pitch and timing are preserved; only velocities change. This is **score-informed velocity estimation, not audio-to-MIDI transcription**.
+
+- No proxy backend checkpoint or training step is needed for this inference path.
+- Add `--reference-velocities` only if the input MIDI has verified performance velocities.
+- Add `--sfz /path/to/instrument.sfz` to render the output. Rendering additionally needs the complete SFZ instrument, [`sfizz_render`](diff-sfproxy/README.md#the-extra-renderer-dependency-sfizz_render), and `ffmpeg`.
+- Guitar inference requires a matching adapted checkpoint; the bundled adapted model is **piano**, not guitar. See the [checkpoint inventory](score_hpt/checkpoints/README.md).
 
 ## Repository layout
 
-| Directory | Purpose |
+| Folder | Contents |
 | --- | --- |
-| [`demo/`](demo/README.md) | Listening website, matched MIDI/audio, paper PDF and LaTeX source, result tables, analysis code, and slide-ready SVG figures |
-| [`diff-sfproxy/`](diff-sfproxy/README.md) | SoundFont teacher-data export, note-wise proxy training and recovery evaluation; includes `sfizz_render` setup |
-| [`score_hpt/`](score_hpt/README.md) | Onset-assisted Score-HPT/VeloEst frontend and Diff-Synth/Diff-SFProxy adaptation, inference, evaluation, and tests |
-| [`diff-synth/`](diff-synth/README.md) | Adapted piano and guitar differentiable synthesizer backends, with original-project acknowledgements |
-| [`scripts/`](scripts/README.md) | Experiment launchers for local machines and Kaya |
+| [`score_hpt/`](score_hpt/README.md) | Onset-assisted VeloEst frontend, two released piano weights, adaptation, inference, evaluation, and tests. |
+| [`diff-sfproxy/`](diff-sfproxy/README.md) | SoundFont teacher-data export, note-wise proxy training, feature extraction, and velocity-recovery evaluation. |
+| [`diff-synth/`](diff-synth/README.md) | Piano/guitar DDSP comparison backends and upstream acknowledgements. |
+| [`demo/`](demo/README.md) | Listening site, paper figures and manuscript, aggregate tables, and analysis evidence. |
+| [`scripts/`](scripts/README.md) | Inference entry point and experiment launchers for local machines and Kaya. |
 
-The code starts from the team's previous [cross-machine research repository](https://github.com/zhanh-he/202604_midiproxy). This layout separates the paper and presentation evidence from the training implementations. The two VeloEst inference checkpoints are included; large datasets, SoundFont sample libraries, and backend training checkpoints remain external. The [provenance inventory](demo/analysis/PROVENANCE.md) records recovered files and unresolved gaps.
+The implementations retain the research layout so existing imports and experiment paths keep working. Large datasets, SoundFont sample libraries, and frozen backend training checkpoints are external. For the main adaptation comparison, explicitly set `backend.backend_segment_seconds=5`; some inherited configurations still default to 2 s.
 
-## Typical order of work
+## Results and reproducibility
 
-1. Prepare MAESTRO/SMD/GAPS/François Leduc data and a local SoundFont. See [`diff-sfproxy/README.md`](diff-sfproxy/README.md) for the SFZ renderer and paths.
-2. Train or supply a SoundFont proxy checkpoint with `diff-sfproxy/` and `scripts/sfproxy/`.
-3. For immediate inference, run [`scripts/infer_compare.py`](scripts/infer_compare.py) with aligned piano audio/MIDI; its two VeloEst checkpoints are bundled. For retraining and the Diff-Synth comparison, supply the relevant backend checkpoints. See `score_hpt/` and `diff-synth/`.
-4. Run the method launchers under `scripts/route/` or `scripts/kaya/`.
-5. Rebuild paper figures with `python3 demo/analysis/build_figures.py`. Serve the demo locally with `python3 -m http.server 8000 --directory demo/docs`.
+The [online demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/) compares the original recording, Flat 64, Diff-Synth, and Diff-SFProxy on the same notes and listening window. These selected examples are **not** aggregate evaluations. Guitar datasets lack verified note-velocity labels; the paper therefore evaluates rendered loudness correlations rather than guitar velocity MAE. See the [listening-case inventory](demo/analysis/LISTENING_CASES.md) for excerpt sources and scores.
 
-The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. Some inherited configuration defaults remain at 2 s; set `backend.backend_segment_seconds=5` for the main comparison. The released piano inference path is self-contained apart from Python dependencies; end-to-end retraining still requires external data and backend checkpoints.
+The reported tables are transcribed from the camera-ready paper. Recovered 5 s guitar models support the listening examples, but the exact run behind the paper's **FL Diff-SFProxy r_BSSL = 0.777** remains unidentified. The [recovery record](demo/analysis/GUITAR_RESULT_RECOVERY.md) and [provenance inventory](demo/analysis/PROVENANCE.md) separate verified files from unresolved release items. Do not treat an example checkpoint as a reproduction of the full paper table.
 
-## Citation and release status
+To rebuild the paper-result graphics or serve the listening site locally:
+
+```bash
+python3 demo/analysis/build_figures.py
+python3 -m http.server 8000 --directory demo/docs
+```
+
+Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass.
+
+## Citation and acknowledgements
 
 ```bibtex
 @inproceedings{he2026beyond,
@@ -54,4 +105,4 @@ The main paper comparison uses a 10 s HPT input window and a 5 s backend crop. S
 }
 ```
 
-See each component README for upstream attribution. The final 5 s guitar prediction files and selected checkpoint list have not been recovered from the inspected machines; the website labels paper aggregates separately from its single MAESTRO audio example.
+VeloEst builds on our earlier [Score-Informed AMT](https://github.com/zhanh-he/score-informed-amt) work. The research implementation was curated from [202604_midiproxy](https://github.com/zhanh-he/202604_midiproxy). See the [frontend acknowledgements](score_hpt/README.md#acknowledgement), [DDSP attribution](diff-synth/README.md), and [demo credits](https://zhanh-he.github.io/sfproxy-velocity-estimation/) for upstream code, datasets, and instruments. Component licenses and media terms apply separately; a repository-wide release license is still under review.

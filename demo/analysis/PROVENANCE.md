@@ -1,6 +1,6 @@
 # Release inventory — 2026-09-29
 
-This file records the source snapshot first assembled on `camera-ready-release` and then reorganized into the five-component layout. It is for the team to review before merging to `main`.
+This file records the source snapshot first assembled on `camera-ready-release` (now renamed to `backup`) and then reorganized into the five-component layout. It is for the team to review before merging to `main`. The presentation update preserves the recovered models, media, and reported numbers; it does not resolve the outstanding release items below.
 
 ## Source code
 
