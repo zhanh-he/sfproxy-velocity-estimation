@@ -170,6 +170,9 @@ async function loadCase(id) {
   const provenance=document.getElementById("case-provenance");provenance.textContent=item.provenance;
   if (item.sourceUrl) {const link=document.createElement("a");link.href=item.sourceUrl;link.textContent=" Source and case details ↗";link.target="_blank";link.rel="noreferrer";provenance.append(link);}
   const url=new URL(location.href);url.searchParams.set("case",id);history.replaceState({},"",url);
+  document.querySelectorAll(".style-preview-links a").forEach(link => {
+    const target=new URL(link.href);target.searchParams.set("case",id);link.href=target.href;
+  });
   let notes=null;
   if (item.notesUrl) {
     try {const response=await fetch(item.notesUrl);if(!response.ok)throw new Error(`HTTP ${response.status}`);notes=await response.json();}

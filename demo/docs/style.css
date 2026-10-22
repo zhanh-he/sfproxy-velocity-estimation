@@ -79,3 +79,12 @@
 .fl-review-link:hover{text-decoration:underline}
 @media(max-width:980px){.fl-review-grid{grid-template-columns:1fr}.fl-review-head{align-items:start;flex-direction:column}.fl-review-stats{flex-wrap:wrap}}
 @media(max-width:620px){.fl-review-main{padding-top:54px}.fl-review-case{padding:18px}.fl-review-stats{gap:8px}.fl-review-stats>span{min-width:60px;padding-left:9px}}
+
+.style-preview-links{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:-12px 0 42px;padding:19px 22px;border:1px solid #486175;border-radius:12px;background:#1a2d41}
+.style-preview-links>div{display:flex;flex-direction:column;gap:3px}
+.style-preview-links strong{font-size:11px;letter-spacing:.16em;color:var(--teal)}
+.style-preview-links span{font-size:12px;color:var(--muted)}
+.style-preview-links nav{display:flex;flex-wrap:wrap;gap:8px}
+.style-preview-links a{display:inline-block;padding:9px 11px;border:1px solid #536a7f;border-radius:7px;color:#f7f2e7;font-size:12px;font-weight:750;white-space:nowrap}
+.style-preview-links a:hover,.style-preview-links a:focus-visible{border-color:var(--teal);color:var(--teal);outline:none}
+@media(max-width:900px){.style-preview-links{align-items:flex-start;flex-direction:column}}
