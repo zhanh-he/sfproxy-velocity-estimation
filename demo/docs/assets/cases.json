@@ -475,7 +475,7 @@
       "notesUrl": "assets/cases/maestro-scriabin-0/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
@@ -517,7 +517,7 @@
       "notesUrl": "assets/cases/maestro-scriabin-40/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
@@ -559,7 +559,7 @@
       "notesUrl": "assets/demo_notes.json",
       "velocityGroundTruth": true,
       "provenance": "20-second Scriabin excerpt with 137 aligned notes. Diff-Synth is a saved 5 s, 60k prediction; Diff-SFProxy was rerun from the released piano 5 s, 120k checkpoint. Card scores are computed on this excerpt, separate from full-piece and paper aggregate metrics.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
@@ -601,7 +601,7 @@
       "notesUrl": "assets/cases/maestro-scriabin-80/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
@@ -643,7 +643,7 @@
       "notesUrl": "assets/cases/maestro-scriabin-100/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAE badges are computed over this 20-second, 117-note passage. Diff-Synth is a saved 5 s, 60k run; Diff-SFProxy uses the released piano 5 s, 120k checkpoint. These case values are separate from the full-piece example and paper aggregates.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
@@ -685,7 +685,7 @@
       "notesUrl": "assets/cases/maestro-scriabin-140/notes.json",
       "velocityGroundTruth": true,
       "provenance": "MAESTRO v3 test recording of Scriabin Entragete, Op. 63 (2009). Diff-Synth is the saved 5 s 60k run; Diff-SFProxy is the released piano 5 s 120k checkpoint rerun on the aligned full piece. Each card shows this 20 s excerpt’s velocity MAE and audio correlations, not paper dataset aggregates. Resynthesis uses Salamander Grand Piano V3.",
-      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/camera-ready-release/demo/analysis/inference_example/README.md",
+      "sourceUrl": "https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/inference_example/README.md",
       "scores": {
         "reference": {
           "bssl": 1.0,
