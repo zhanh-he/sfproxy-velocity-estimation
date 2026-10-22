@@ -17,8 +17,7 @@ python -m pip install -r scripts/requirements-inference.txt
 ```
 
 Choose a PyTorch build compatible with your platform if the pinned build is
-unavailable. The verified setup, commands, outputs, and MIDI checks are in
-[`../demo/analysis/RELEASE_READINESS.md`](../demo/analysis/RELEASE_READINESS.md).
+unavailable.
 
 [`infer_compare.py`](infer_compare.py) takes one aligned audio/MIDI pair. The default `--checkpoint-set piano` compares piano-pretrained VeloEst with the piano Diff-SFProxy adaptation; `--checkpoint-set guitar` uses the same piano-pretrained control plus both bundled guitar adaptations (Diff-Synth/DDSP and Diff-SFProxy). It preserves the source MIDI's note timing, programs, tempo, and control changes while replacing note velocities. The piano set writes three MIDIs, the guitar set four, plus `notes.csv`, a 1600-pixel-wide SVG piano-roll comparison, and `summary.json`. Individual checkpoint paths can still be overridden. An optional SFZ path adds rendered WAV/MP3 audio. No dataset packing, frozen proxy backend checkpoint, or training step is needed.
 

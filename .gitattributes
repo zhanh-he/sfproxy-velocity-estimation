@@ -1,0 +1,3 @@
+# Omit backup-only review material from a future public git-archive snapshot.
+archive export-ignore
+archive/** export-ignore

@@ -78,7 +78,7 @@ instrument, `sfizz_render` and `ffmpeg`.
 
 The recovered files remain backed up outside Git. Their repository copies
 and release assets have the same SHA-256 and byte sizes as
-[`GUITAR_RESULT_RECOVERY.md`](GUITAR_RESULT_RECOVERY.md):
+[`GUITAR_RESULT_RECOVERY.md`](../../demo/analysis/GUITAR_RESULT_RECOVERY.md):
 
 | Release file | Adapted inference model | Size | SHA-256 |
 | --- | --- | ---: | --- |
@@ -103,10 +103,10 @@ The paper's FL Diff-SFProxy `r_BSSL = 0.777` has **no identified matching
 checkpoint, configuration, prediction MIDI, and evaluation record** in the
 recovered materials. The known 5 s / 120k guitar checkpoint above is tied by
 its archived path to the full 79/79 François Leduc evaluation in
-[`guitar_recovery/fl_diffsfproxy_5s_result_summary.txt`](guitar_recovery/fl_diffsfproxy_5s_result_summary.txt),
+[`guitar_recovery/fl_diffsfproxy_5s_result_summary.txt`](../../demo/analysis/guitar_recovery/fl_diffsfproxy_5s_result_summary.txt),
 which reports `r_BSSL = 0.768812` and `r_BSTL = 0.750307`. Saved prediction
-MIDIs from that run are documented under [`guitar_recovery/`](guitar_recovery/).
-The [six archived 5 s Route IV FL evaluations](guitar_recovery/fl_diffsfproxy_5s_archived_sweep.csv)
+MIDIs from that run are documented under [`guitar_recovery/`](../../demo/analysis/guitar_recovery).
+The [six archived 5 s Route IV FL evaluations](../../demo/analysis/guitar_recovery/fl_diffsfproxy_5s_archived_sweep.csv)
 range from 0.766198 to 0.772093; none rounds to 0.777. A further 5090
 archive, `transfer3_ckpt.tar.gz`, contains piano Route IV checkpoints but no
 `route4_guitar` / François Leduc entries. This search does not establish
@@ -117,7 +117,7 @@ reproduction. Author run records or a matching archive remain needed.
 ## 4. Paper and separate rights evidence
 
 The repository's camera-ready PDF is
-[`../paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf`](../paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf).
+[`../paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf`](../../demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf).
 [arXiv:2608.08985](https://arxiv.org/abs/2608.08985) verifies the title,
 four listed authors, 2026 submission, and ISMIR 2026 acceptance. The
 repository BibTeX has those fields and a conference booktitle, but no final

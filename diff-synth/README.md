@@ -30,4 +30,4 @@ python pytorch/train_ddsp.py \
   backend.backend_segment_seconds=5
 ```
 
-`score_hpt/pytorch/proxy/ddsp_piano.py` and `ddsp_guitar_synth.py` resolve these two source directories by default. Saved backend weights and training data are not included in Git; recovered locations are recorded in [`../demo/analysis/PROVENANCE.md`](../demo/analysis/PROVENANCE.md).
+`score_hpt/pytorch/proxy/ddsp_piano.py` and `ddsp_guitar_synth.py` resolve these two source directories by default. Saved frozen backend weights and training data are external to this repository; the bundled VeloEst inference checkpoints do not require them.

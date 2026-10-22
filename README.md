@@ -92,21 +92,6 @@ This is **score-informed velocity estimation, not audio-to-MIDI transcription**.
 
 The implementations retain the research layout so existing imports and experiment paths keep working. Large datasets, SoundFont sample libraries, and frozen backend training checkpoints are external. For the main adaptation comparison, explicitly set `backend.backend_segment_seconds=5`; some inherited configurations still default to 2 s.
 
-## Results and reproducibility
-
-The [online demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/) compares the original recording, Flat 64, Diff-Synth, and Diff-SFProxy on the same notes and listening window. These selected examples are **not** aggregate evaluations. Guitar datasets lack verified note-velocity labels; the paper therefore evaluates rendered loudness correlations rather than guitar velocity MAE. See the [listening-case inventory](demo/analysis/LISTENING_CASES.md) for excerpt sources and scores.
-
-The reported tables are transcribed from the camera-ready paper. Recovered 5 s guitar models support the listening examples, but the exact run behind the paper's **FL Diff-SFProxy r_BSSL = 0.777** remains unidentified. The [recovery record](demo/analysis/GUITAR_RESULT_RECOVERY.md) and [provenance inventory](demo/analysis/PROVENANCE.md) separate verified files from unresolved release items. Do not treat an example checkpoint as a reproduction of the full paper table.
-
-To rebuild the paper-result graphics or serve the listening site locally:
-
-```bash
-python3 demo/analysis/build_figures.py
-python3 -m http.server 8000 --directory demo/docs
-```
-
-Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass. See the [release-readiness audit](demo/analysis/RELEASE_READINESS.md) for the clean-environment inference check, guitar-weight provenance, FL result gap, and component-specific licensing evidence.
-
 ## Citation and acknowledgements
 
 We release this work under CC BY 4.0 license. If you find our work or this repository useful for your research, please consider citing our paper. Feel free to contact zhanh.he.uwa@gmail.com

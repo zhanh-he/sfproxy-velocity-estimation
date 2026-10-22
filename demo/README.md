@@ -5,7 +5,7 @@ This directory holds presentation material and the evidence behind the displayed
 | Path | Contents |
 | --- | --- |
 | `docs/` | Static listening site; `assets/cases.json` selects 20 s examples from MAESTRO, SMD, FL, and GAPS |
-| `analysis/` | Camera-ready Tables 1–2 as CSV, an inventory of 5090 evaluation summaries, the figure generator, analysis package, statistics, tests, and notebooks |
+| `analysis/` | Camera-ready Tables 1–2 as CSV, recovered result evidence, the figure generator, analysis package, statistics, tests, and notebooks |
 | `paper/` | Supplied camera-ready PDF and LaTeX source snapshot |
 | `scripts/` | [Documented tools](scripts/README.md) to extract, build, validate, and level the listening cases and index saved evaluations |
 
@@ -27,4 +27,4 @@ Open `http://localhost:8000/`. The paper-result SVGs under `docs/assets/` are 12
 | [`paper/figure0.jpg`](paper/figure0.jpg) | Compact visual introduction: piano-trained velocity estimation transferred to guitar. |
 | [`paper/figure1.jpg`](paper/figure1.jpg) | Paper method overview: Diff-Synth versus Diff-SFProxy adaptation. |
 
-Both are embedded with relative paths in the root README, so the preview follows the branch being viewed. The listening audio, MIDI, scores, and case selection are unchanged by this presentation update.
+Both are embedded with relative paths in the root README, so the preview follows the branch being viewed. The listening site uses the selected warm-white Gallery layout; its audio, MIDI, scores, and case selection are unchanged.

@@ -51,5 +51,4 @@ example uses onset plus frame input at 100k steps. Here we selected the
 onset-only piano 120k starting checkpoint used in this paper and thank and
 cite the earlier work. These weights support inference comparisons; the
 exact run behind the paper's FL Diff-SFProxy aggregate `r_BSSL = 0.777`
-remains unidentified. See the [release audit](../../demo/analysis/RELEASE_READINESS.md#3-fl-paper-result-provenance)
-for that distinction.
+remains unidentified, as documented in the [guitar recovery record](../../demo/analysis/GUITAR_RESULT_RECOVERY.md).
