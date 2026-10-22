@@ -110,7 +110,7 @@ function renderCard(method, item, notes) {
   const title=document.createElement("h3");title.textContent=method.title;
   if (method.key==="sfproxy") {const mark=document.createElement("span");mark.textContent="proposed";title.append(" ",mark);}
   const description=document.createElement("p");description.textContent=method.key==="reference"?(item.velocityGroundTruth?"The original performance recording and its measured note velocities.":"The original performance recording. The aligned guitar score gives note times, but no verified velocity labels."):method.description;
-  card.append(top,title,description);
+  card.append(top,title);
   if (ready) {
     const roll=document.createElement("div");roll.className="roll";roll.setAttribute("role","img");roll.setAttribute("aria-label",`${method.title} aligned MIDI notes`);
     const methodNotes=notes?.notes?.[method.key];
@@ -125,13 +125,13 @@ function renderCard(method, item, notes) {
     audio.addEventListener("play",()=>document.querySelectorAll("audio").forEach(other=>{if(other!==audio)other.pause();}));
     audioBox.append(audioLabel,audio);
     const download=document.createElement("a");download.className="download";download.href=`${item.assetBase}/${method.key}.mid`;download.download="";download.textContent="Download aligned MIDI ↓";
-    card.append(roll,audioBox,download);
+    card.append(roll,audioBox,download,description);
   } else {
     const placeholder=document.createElement("div");placeholder.className="pending-body";
     const symbol=document.createElement("span");symbol.textContent="◌";
     const message=document.createElement("strong");message.textContent=item.pending?.[method.key]||"5 s prediction pending";
     const detail=document.createElement("small");detail.textContent=method.key==="reference"?"No recording is hosted here; see the dataset source and terms below.":method.key==="flat64"&&item.dataset==="GAPS"?"A matched render can be added after dataset publication permission is obtained.":"This slot will use the same 20-second score and time window once the selected run is recovered.";
-    placeholder.append(symbol,message,detail);card.append(placeholder);
+    placeholder.append(symbol,message,detail);card.append(placeholder,description);
   }
   return card;
 }

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Audio and colorized MIDI comparison for Diff-SFProxy, an ISMIR 2026 cross-instrument velocity estimation paper.">
   <title>Beyond Piano · Diff-SFProxy demo</title>
-  <link rel="stylesheet" href="style.css?v=gallery-1">
-  <link rel="stylesheet" href="style-gallery.css?v=gallery-1">
+  <link rel="stylesheet" href="style.css?v=gallery-2">
+  <link rel="stylesheet" href="style-gallery.css?v=gallery-2">
 </head>
 <body class="gallery-layout">
   <header class="site-header">
@@ -15,29 +15,17 @@
   </header>
 
   <main id="top">
-    <section class="hero wrap">
-      <div class="eyebrow"><span class="pulse"></span> Beyond Piano · ISMIR 2026</div>
-      <h1>What if every MIDI note <em>knew how loud to play?</em></h1>
-      <p class="hero-copy">A piano-trained velocity estimator meets new instruments. Diff-SFProxy adapts it through two note-wise acoustic cues from a SoundFont, so the estimated dynamics follow the performance.</p>
-      <div class="hero-actions"><a class="button primary" href="#listen">Explore the audio demo <span>↗</span></a><a class="button secondary" href="#results">See paper results</a></div>
-      <div class="hero-facts" aria-label="Headline paper results">
-        <div><strong>0.794</strong><span>GAPS r<sub>BSSL</sub></span></div>
-        <div><strong>0.777</strong><span>FL r<sub>BSSL</sub></span></div>
-        <div><strong>+0.025</strong><span>GAPS vs zero-shot</span></div>
-      </div>
-      <p class="hero-footnote">Dataset-level values from Table 2 of the camera-ready paper. Higher r is better.</p>
-    </section>
-
     <section id="listen" class="section wrap">
-      <div class="section-heading"><div><span class="kicker">01 / LISTEN & LOOK</span><h2>One performance. Four ways to hear it.</h2></div><p>Choose a dataset and a 20-second excerpt. All four conditions share the same score notes and time window. The original recording comes first, followed by Flat 64, Diff-Synth, and Diff-SFProxy.</p></div>
+      <div class="listen-intro"><div><span class="kicker">BEYOND PIANO · ISMIR 2026 &nbsp; / &nbsp; 01 LISTEN & LOOK</span><h1>Four aligned views of the same notes.</h1></div><p>Pick a 20-second excerpt. All four rolls share the same notes; listen below each one.</p></div>
       <div class="case-toolbar">
         <div><span class="toolbar-label">DATASET</span><div class="dataset-options" id="dataset-tabs" aria-label="Choose dataset"></div></div>
         <label class="case-picker"><span class="toolbar-label">20-SECOND EXCERPT</span><select id="case-select" aria-label="Choose an excerpt"></select></label>
       </div>
       <p class="fine-print fl-review-prompt" id="fl-review-prompt" hidden>Reviewing FL guitar examples? <a href="fl-review.html">Compare the candidate excerpts side by side ↗</a></p>
-      <div class="case-heading"><div><span id="case-meta" class="kicker">Loading cases…</span><h3 id="case-title">Select a performance</h3><p id="case-description"></p></div><span id="case-coverage" class="coverage"></span></div>
+      <div class="case-heading"><div><span id="case-meta" class="kicker">Loading cases…</span><h3 id="case-title">Select a performance</h3></div><span id="case-coverage" class="coverage"></span></div>
       <div class="legend"><span>Velocity</span><i>Soft</i><span class="gradient" aria-hidden="true"></span><i>Strong</i><span class="legend-note" id="legend-note">Select any note to compare velocities</span></div>
       <div class="method-grid" id="demo-cards" aria-live="polite"></div>
+      <p id="case-description" class="case-description"></p>
       <div class="note-inspector" id="note-inspector" aria-live="polite"><div><span class="inspector-kicker">SELECTED NOTE</span><strong id="selected-note">Choose a note in any roll</strong><span id="selected-time">Use the arrows to step through the aligned excerpt.</span></div><div id="selected-velocities" class="inspector-values"></div><div class="inspector-actions"><button id="previous-note" type="button" aria-label="Previous note">←</button><button id="next-note" type="button" aria-label="Next note">→</button></div></div>
       <div class="figure-links"><a href="assets/guitar_checkpoint_comparison.svg" download>Download GAPS checkpoint figure ↗</a><a href="assets/checkpoint_comparison.svg" download>Download MAESTRO checkpoint figure ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference">Download VeloEst inference weights ↗</a></div>
       <p id="case-provenance" class="fine-print"></p>
@@ -59,6 +47,6 @@
   </main>
 
   <footer><div class="wrap footer-grid"><div><strong>Beyond Piano</strong><p>Zhanhong He · Hanyu Meng · David (Defeng) Huang · Roberto Togneri</p><p>ISMIR 2026 · Research demo</p></div><div class="footer-links"><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/tree/backup">Code repository ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf">Camera-ready paper ↗</a><a href="https://github.com/zhanh-he/sfproxy-velocity-estimation/blob/backup/demo/analysis/README.md">Data and provenance ↗</a></div></div><div class="wrap attribution">Excerpts: MAESTRO v3 (Google LLC, CC BY-NC-SA 4.0), <a href="https://resources.mpi-inf.mpg.de/SMD/">Saarland Music Data</a> (CC BY-NC-SA 3.0), <a href="https://huggingface.co/datasets/xavriley/FrancoisLeducGuitarDataset">François Leduc Guitar Dataset</a> (MIT), and <a href="https://aim-qmul.github.io/GAPS/">GAPS</a> (Riley, Guo, Edwards, and Dixon; research demo access confirmed by project team). SoundFont samples: Salamander Grand Piano V3 (Alexander Holm / FreePats, CC BY 3.0) and <a href="https://freepats.zenvoid.org/Guitar/acoustic-guitar.html">FreePats Spanish Classical Guitar</a> (CC0). Research and non-commercial presentation.</div></footer>
-  <script src="app.js?v=gallery-1" defer></script>
+  <script src="app.js?v=gallery-2" defer></script>
 </body>
 </html>
