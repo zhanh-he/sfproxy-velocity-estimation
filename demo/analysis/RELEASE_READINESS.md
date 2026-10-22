@@ -1,9 +1,11 @@
 # Release-readiness audit (backup branch, 2026-10-22)
 
-This records checks for a future public release. It does not designate a
-repository-wide license, publish the guitar weights, or claim that a listening
-example reproduces a paper aggregate. The current demo cases and paper numbers
-were not changed.
+This records checks for the public inference-weight release. The guitar
+inference weights were subsequently bundled in the repository and mirrored
+in the [three-file release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference).
+No repository-wide license was designated, and no listening example is claimed
+to reproduce a paper aggregate. The demo cases and paper numbers were not
+changed.
 
 ## 1. Standalone inference check
 
@@ -54,13 +56,13 @@ python scripts/infer_compare.py \
   --audio demo/docs/assets/cases/gaps-019-100/reference.mp3 \
   --midi demo/docs/assets/cases/gaps-019-100/reference.mid \
   --out /tmp/sfproxy-gaps-inference --device cpu \
-  --veloest-ckpt score_hpt/checkpoints/veloest_onset_only_120k.pth \
-  --diffsynth-ckpt /path/to/veloest_diffsynth_guitar_5s_60k.pth \
-  --diffsfproxy-ckpt /path/to/veloest_diffsfproxy_guitar_5s_120k.pth \
+  --checkpoint-set guitar \
   --plot-start 0 --plot-seconds 20
 ```
 
-The guitar run wrote the same six files plus `diffsynth.mid`. The input score
+The guitar run wrote the same six files plus `diffsynth.mid`. The bundled
+`--checkpoint-set guitar` run produced MIDI files byte-identical to the
+earlier explicit-checkpoint run. The input score
 does not have verified performance velocities, so `--reference-velocities`
 was omitted. For every output MIDI from both runs, `pretty_midi` found the
 same note count, pitch, onset and offset time as the input (maximum time
@@ -72,27 +74,28 @@ files, not a guarantee for every possible MIDI feature. SFZ audio rendering
 was outside the minimal Python inference run; it separately needs a complete
 instrument, `sfizz_render` and `ffmpeg`.
 
-## 2. Guitar weight release manifest (prepared, not uploaded)
+## 2. Guitar weight release manifest
 
-The recovered files are backed up outside Git. Local SHA-256 and byte sizes
-match [`GUITAR_RESULT_RECOVERY.md`](GUITAR_RESULT_RECOVERY.md):
+The recovered files remain backed up outside Git. Their repository copies
+and release assets have the same SHA-256 and byte sizes as
+[`GUITAR_RESULT_RECOVERY.md`](GUITAR_RESULT_RECOVERY.md):
 
-| Proposed release name | Adapted inference model | Size | SHA-256 |
+| Release file | Adapted inference model | Size | SHA-256 |
 | --- | --- | ---: | --- |
 | `veloest_diffsynth_guitar_5s_60k.pth` | Onset-assisted HPT VeloEst after 5 s Diff-Synth guitar adaptation, 60k steps | 20,761,532 bytes | `1712310c5b662685f7ed03371e52dd491a48e9c242d6557548a314f20ea860ee` |
 | `veloest_diffsfproxy_guitar_5s_120k.pth` | Onset-assisted HPT VeloEst after 5 s Diff-SFProxy guitar adaptation, 120k steps | 20,761,642 bytes | `2d1e3d0dff33088689ae0a10d318b369625fa89b184e36791b1c943880e38131` |
 
-Both files were also copied under their proposed names to a local staging
-directory outside Git, with a `SHA256SUMS.txt` checked against this table.
-Before publication, verify the final uploaded bytes again and record the
-destination URL and component-specific weight license. The command above
-uses the staged names. The original backup has the older
-`guitar_diffsynth_5s_60k.pth` and `guitar_diffsfproxy_5s_120k.pth` names;
-the bytes were not changed.
+The repository paths are under
+[`../../score_hpt/checkpoints/`](../../score_hpt/checkpoints/README.md).
+The [inference release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference)
+also includes `veloest_onset_only_120k.pth` (SHA-256
+`8cede73af4481661c51d7b409939489f32b208d6e971d833aac4a6e7eed438aa`).
+The original local backups had the older `guitar_diffsynth_5s_60k.pth` and
+`guitar_diffsfproxy_5s_120k.pth` names; the weight bytes were not changed.
 These are **adapted VeloEst inference checkpoints**. The frozen DDSP guitar
 synthesizer and frozen Diff-SFProxy Transformer checkpoints were used to
 train/adapt them but are **not inference inputs** and are not part of this
-two-file manifest. See the recovery record for exact 5090 archive members.
+three-file release. See the recovery record for exact 5090 archive members.
 
 ## 3. FL paper-result provenance
 
@@ -128,7 +131,7 @@ final proceedings metadata is confirmed.
 | Score-HPT frontend code | [`../../score_hpt/LICENSE`](../../score_hpt/LICENSE) is MIT; [earlier model repository](https://github.com/zhanh-he/score-informed-amt) is credited. | Confirm scope for changes and weights produced by this project. |
 | Diff-SFProxy code and project scripts | No root or component `LICENSE` file is present. | Authors choose a code license and add its scope explicitly. |
 | Diff-Synth adapted code | [Piano upstream](https://github.com/ytsrt66589/ddsp-piano-pytorch) and [guitar upstream](https://github.com/andywiggins/ddsp-guitar-synth) are credited in the component README; neither upstream GitHub repository advertises a detected license in its metadata. | Verify original permissions/terms before assigning a license to the adapted copies. |
-| Four VeloEst checkpoints | Two piano files are already in Git; two guitar files are prepared above. No checkpoint-specific grant is recorded. | Authors specify weight terms and confirm whether the guitar files go in Git or a separate release asset. |
+| Four VeloEst checkpoints | Two piano and two guitar files are in Git; the piano-pretrained and both guitar files are mirrored as release assets. No checkpoint-specific license is recorded. | Authors specify separate weight reuse terms. |
 | MAESTRO excerpts | [Official dataset page](https://magenta.tensorflow.org/datasets/maestro) states CC BY-NC-SA 4.0. | Preserve attribution and version/source in the media manifest. |
 | SMD excerpts | [Official MIDI-audio page](https://www.audiolabs-erlangen.de/resources/MIR/SMD/midi) states CC BY-NC-SA 3.0 and requests citation. | Preserve attribution and source in the media manifest. |
 | GAPS excerpts | [Current dataset card](https://huggingface.co/datasets/xavriley/GAPS) lists MIT and includes audio; the [Zenodo record](https://zenodo.org/records/17152440) points to it. The project team has separately confirmed demo-publication permission for the audio obtained through its application process. | Record which source/permission applies to the exact published files and keep the permission evidence internally. |
@@ -139,14 +142,13 @@ No single license has been assigned to all code, weights, and media. The
 items above are an evidence inventory, not a substitute for the authors'
 component-by-component release decision.
 
-## Author decisions before publication
+## Remaining author decisions
 
 1. Identify the FL run behind `r_BSSL = 0.777`, including its checkpoint,
    configuration, full-set prediction directory and evaluation summary, or
    leave the paper value explicitly unverified by the released artifacts.
-2. Approve the two proposed guitar checkpoint names, release location, and
-   weight-specific terms; confirm whether the frozen training backends should
-   have a separate future release.
+2. Specify weight reuse terms and decide whether the frozen training backends
+   should have a separate future release.
 3. Decide code terms per component, especially the Diff-Synth adaptations
    whose upstream permissions need checking.
 4. Record exact demo-media source/permission and instrument version per asset,

@@ -13,7 +13,7 @@ model.input2=onset
 model.input3=null
 ```
 
-The aligned MIDI supplies note identities and timing, the audio supplies performance evidence, and the frontend predicts note velocities. The original [score-informed-amt README](https://github.com/zhanh-he/score-informed-amt) describes other branches (`hppnet`, `dynest`, direct estimation) and `note_editor` inputs (`frame` / `exframe`). For this paper we selected the **onset-only** piano option. Its 120k checkpoint differs slightly from the upstream repository's public onset+frame 100k example; both projects share authors. We thank the earlier Score-Informed AMT work for the model and release the two paper-era piano weights in [`checkpoints/`](checkpoints/README.md).
+The aligned MIDI supplies note identities and timing, the audio supplies performance evidence, and the frontend predicts note velocities. The original [score-informed-amt README](https://github.com/zhanh-he/score-informed-amt) describes other branches (`hppnet`, `dynest`, direct estimation) and `note_editor` inputs (`frame` / `exframe`). For this paper we selected the **onset-only** piano option. Its 120k checkpoint differs slightly from the upstream repository's public onset+frame 100k example; both projects share authors. We thank the earlier Score-Informed AMT work and bundle the piano-pretrained plus piano- and guitar-adapted inference weights in [`checkpoints/`](checkpoints/README.md).
 
 ## Use the released checkpoints
 
@@ -31,6 +31,12 @@ python scripts/infer_compare.py \
 
 This writes `veloest.mid`, `diffsfproxy.mid`, `flat64.mid`, `notes.csv`, `comparison.svg`, and `summary.json`. Add `--sfz /path/to/SalamanderGrandPianoV3.sfz` to render WAV and MP3 files with `sfizz_render`. If the input MIDI contains true performance velocities, add `--reference-velocities` to report MAE; otherwise the input velocities are treated as score placeholders. See the [checkpoint details](checkpoints/README.md) and [inference script](../scripts/infer_compare.py).
 
+For guitar, use `--checkpoint-set guitar` with aligned guitar audio and MIDI;
+this loads the bundled Diff-Synth/DDSP and Diff-SFProxy guitar-adapted weights
+and also reports the piano-pretrained zero-shot control. The
+[checkpoint README](checkpoints/README.md#run-a-bundled-guitar-example) gives a
+complete command using files in this repository.
+
 ## Code map
 
 - `pytorch/config/config.yaml`: datasets, HPT inputs, loss weights, and backend paths.
@@ -40,7 +46,7 @@ This writes `veloest.mid`, `diffsfproxy.mid`, `flat64.mid`, `notes.csv`, `compar
 - `pytorch/direct_invension/`: prediction and evaluation jobs for the route variants.
 - `pytorch/proxy/`: frozen backend adapters and losses.
 - `pytorch/tests/`: frontend, evaluation, and proxy-gradient tests.
-- `checkpoints/`: the released VeloEst and VeloEst+Diff-SFProxy piano weights.
+- `checkpoints/`: bundled piano-pretrained, piano-adapted, and two guitar-adapted VeloEst inference weights.
 - [`README_scoreinf_proxy.md`](README_scoreinf_proxy.md): implementation notes and loss details retained from the research workspace.
 
 ## Setup and example

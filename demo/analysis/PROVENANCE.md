@@ -26,10 +26,10 @@ These files were verified by path, byte size, and SHA-256. The first and third a
 | Example Diff-Synth VeloEst | `checkpoints/route3_half_maestro_6k/5s+hpt+onset+score_note_editor+backend_diffsynth_piano+piano_ssm_spectral+sup0+backend1+prior0p1+sat0p2/60000_iterations.pth` | 20,761,532 | `d158caa0efa427434e7c497bd4bb95dbb6697cc2c1e382f01db8c44b465ecf97` |
 | Example Diff-SFProxy VeloEst | `checkpoints/route4_full_piano/5s+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0p5+backend0p5+prior0p1+sat0p2/120000_iterations.pth` | 20,761,642 | `d22e589b2c46b6efd4fbd307c5130b5f083abedda543fdeb50f117b1bb230343` |
 
-The SoundFont proxy and DDSP backend checkpoints used for training/adaptation remain on 5090 and are not bundled. The two released VeloEst files support the piano inference comparison. The recovered guitar adapted checkpoints are separately backed up for release review and are identified in the [guitar recovery record](GUITAR_RESULT_RECOVERY.md).
+The SoundFont proxy and DDSP backend checkpoints used for training/adaptation remain on 5090 and are not bundled. Two piano VeloEst checkpoints support the piano inference comparison; the two recovered guitar-adapted VeloEst checkpoints are now bundled for guitar inference and identified in the [guitar recovery record](GUITAR_RESULT_RECOVERY.md). The [inference release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference) mirrors the piano-pretrained and two guitar-adapted inference weights.
 
 ## Review items before merging to main
 
 1. Confirm the intended release license for the full repository, including the DDSP backend code and short demo media. The `score_hpt` component carries an MIT license, and the audio credits are in the demo footer.
-2. Decide whether to add the two recovered guitar adapted checkpoints to the public repository alongside the two already released piano inference weights.
+2. Confirm the separate reuse terms for the now-bundled VeloEst inference checkpoints.
 3. Confirm the final proceedings citation metadata and whether the paper PDF should remain in the public repository.

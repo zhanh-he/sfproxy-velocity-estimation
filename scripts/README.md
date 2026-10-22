@@ -1,6 +1,6 @@
 # Experiment launchers
 
-Run these from the repository root unless a script states otherwise. The training launchers were recovered from the 5090/Kaya research workspaces and still require external datasets and backend checkpoints. The two released VeloEst inference checkpoints are under [`../score_hpt/checkpoints/`](../score_hpt/checkpoints/README.md).
+Run these from the repository root unless a script states otherwise. The training launchers were recovered from the 5090/Kaya research workspaces and still require external datasets and backend checkpoints. Piano and guitar VeloEst inference checkpoints are bundled under [`../score_hpt/checkpoints/`](../score_hpt/checkpoints/README.md); three are also mirrored in the [inference release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference).
 
 ## Inference comparison
 
@@ -20,7 +20,7 @@ Choose a PyTorch build compatible with your platform if the pinned build is
 unavailable. The verified setup, commands, outputs, and MIDI checks are in
 [`../demo/analysis/RELEASE_READINESS.md`](../demo/analysis/RELEASE_READINESS.md).
 
-[`infer_compare.py`](infer_compare.py) takes one aligned audio/MIDI pair and runs the two released piano checkpoints by default. It preserves the source MIDI's note timing, programs, tempo, and control changes while replacing note velocities. It writes three MIDIs (Flat 64, VeloEst, VeloEst+Diff-SFProxy), `notes.csv`, a 1600 × 860 SVG piano-roll comparison, and `summary.json`. Pass `--diffsynth-ckpt` to include a fourth MIDI, Diff-Synth column, and 1600 × 1070 figure. An optional SFZ path adds rendered WAV/MP3 audio. No dataset packing, proxy backend checkpoint, or training step is needed.
+[`infer_compare.py`](infer_compare.py) takes one aligned audio/MIDI pair. The default `--checkpoint-set piano` compares piano-pretrained VeloEst with the piano Diff-SFProxy adaptation; `--checkpoint-set guitar` uses the same piano-pretrained control plus both bundled guitar adaptations (Diff-Synth/DDSP and Diff-SFProxy). It preserves the source MIDI's note timing, programs, tempo, and control changes while replacing note velocities. The piano set writes three MIDIs, the guitar set four, plus `notes.csv`, a 1600-pixel-wide SVG piano-roll comparison, and `summary.json`. Individual checkpoint paths can still be overridden. An optional SFZ path adds rendered WAV/MP3 audio. No dataset packing, frozen proxy backend checkpoint, or training step is needed.
 
 ```bash
 python scripts/infer_compare.py \
@@ -32,7 +32,16 @@ python scripts/infer_compare.py \
   --sfz /path/to/SalamanderGrandPianoV3.sfz
 ```
 
-Use `--reference-velocities` only when the input MIDI's note velocities are ground truth. Otherwise the figure shows each approach's mean velocity without an accuracy claim. For a guitar pair, pass `--diffsfproxy-ckpt /path/to/guitar_diffsfproxy_5s_120k.pth` and optionally `--diffsynth-ckpt /path/to/guitar_diffsynth_5s_60k.pth` with the piano-pretrained `--veloest-ckpt` for a zero-shot control. The recovered guitar checkpoints and the GAPS/FL demo derivation are documented in [`../demo/analysis/GUITAR_RESULT_RECOVERY.md`](../demo/analysis/GUITAR_RESULT_RECOVERY.md). Guitar score velocity is not verified ground truth, so omit `--reference-velocities`. SFZ rendering needs `sfizz_render` and `ffmpeg`; see [`../diff-sfproxy/README.md`](../diff-sfproxy/README.md).
+For an immediate guitar comparison using repository assets:
+
+```bash
+python scripts/infer_compare.py \
+  --audio demo/docs/assets/cases/gaps-019-100/reference.mp3 \
+  --midi demo/docs/assets/cases/gaps-019-100/reference.mid \
+  --out /tmp/veloest-guitar --checkpoint-set guitar
+```
+
+Use `--reference-velocities` only when input MIDI velocities are verified ground truth. Otherwise the figure shows mean velocity without an accuracy claim. The GAPS/FL score velocities are not verified ground truth, so omit that flag for guitar. The guitar checkpoint hashes and GAPS/FL demo derivation are in [`../demo/analysis/GUITAR_RESULT_RECOVERY.md`](../demo/analysis/GUITAR_RESULT_RECOVERY.md). SFZ rendering needs `sfizz_render` and `ffmpeg`; see [`../diff-sfproxy/README.md`](../diff-sfproxy/README.md).
 
 ## Training and evaluation launchers
 

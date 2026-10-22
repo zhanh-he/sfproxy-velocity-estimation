@@ -4,15 +4,13 @@ This runnable example uses GAPS test piece `019_Vpswc` on lab5090. `scripts/infe
 
 The score has no verified guitar note velocities. The figure therefore reports mean predicted velocity, not note-velocity MAE. The paper's dataset-level correlation values are in [`../paper_results.csv`](../paper_results.csv), not computed from this individual visualization. `summary.json` records checkpoint SHA-256 hashes and the inference settings. The recovered weight paths and archived evaluation evidence are in [`../GUITAR_RESULT_RECOVERY.md`](../GUITAR_RESULT_RECOVERY.md).
 
-Regenerate with the aligned source pair, the piano checkpoint, and the separately backed-up guitar checkpoints:
+Regenerate with the aligned source pair and the bundled guitar checkpoint set:
 
 ```bash
 python scripts/infer_compare.py \
   --audio /path/to/019_Vpswc.wav \
   --midi /path/to/019_Vpswc.mid \
-  --veloest-ckpt score_hpt/checkpoints/veloest_onset_only_120k.pth \
-  --diffsynth-ckpt /path/to/guitar_diffsynth_5s_60k.pth \
-  --diffsfproxy-ckpt /path/to/guitar_diffsfproxy_5s_120k.pth \
+  --checkpoint-set guitar \
   --plot-start 40 --plot-seconds 20 \
   --out /path/to/guitar_comparison
 ```

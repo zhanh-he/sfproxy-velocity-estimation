@@ -23,7 +23,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_WEIGHTS = {
     "veloest": ROOT / "score_hpt/checkpoints/veloest_onset_only_120k.pth",
-    "diffsfproxy": ROOT / "score_hpt/checkpoints/veloest_diffsfproxy_piano_5s_120k.pth",
+    "piano_diffsfproxy": ROOT / "score_hpt/checkpoints/veloest_diffsfproxy_piano_5s_120k.pth",
+    "guitar_diffsynth": ROOT / "score_hpt/checkpoints/veloest_diffsynth_guitar_5s_60k.pth",
+    "guitar_diffsfproxy": ROOT / "score_hpt/checkpoints/veloest_diffsfproxy_guitar_5s_120k.pth",
 }
 
 
@@ -32,9 +34,11 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--audio", type=Path, required=True, help="Performance audio (WAV, FLAC, or MP3).")
     p.add_argument("--midi", type=Path, required=True, help="Score aligned to the audio.")
     p.add_argument("--out", type=Path, required=True, help="Directory for predictions and figures.")
+    p.add_argument("--checkpoint-set", choices=("piano", "guitar"), default="piano",
+                   help="Select bundled piano or guitar adapted VeloEst weights (default: piano).")
     p.add_argument("--veloest-ckpt", type=Path, default=DEFAULT_WEIGHTS["veloest"])
-    p.add_argument("--diffsynth-ckpt", type=Path, help="Optional adapted Diff-Synth VeloEst checkpoint.")
-    p.add_argument("--diffsfproxy-ckpt", type=Path, default=DEFAULT_WEIGHTS["diffsfproxy"])
+    p.add_argument("--diffsynth-ckpt", type=Path, help="Override the adapted Diff-Synth VeloEst checkpoint; guitar set includes one by default.")
+    p.add_argument("--diffsfproxy-ckpt", type=Path, help="Override the adapted Diff-SFProxy VeloEst checkpoint.")
     p.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     p.add_argument("--velocity-method", choices=("onset_only", "max_frame"), default="onset_only")
     p.add_argument("--reference-velocities", action="store_true", help="The input MIDI has true note velocities; report MAE.")
@@ -150,9 +154,15 @@ def run(args: argparse.Namespace) -> dict:
 
     audio_path, midi_path = args.audio.expanduser().resolve(), args.midi.expanduser().resolve()
     weights = {"veloest": args.veloest_ckpt.expanduser().resolve()}
-    if args.diffsynth_ckpt:
-        weights["diffsynth"] = args.diffsynth_ckpt.expanduser().resolve()
-    weights["diffsfproxy"] = args.diffsfproxy_ckpt.expanduser().resolve()
+    diffsynth = args.diffsynth_ckpt
+    if diffsynth is None and args.checkpoint_set == "guitar":
+        diffsynth = DEFAULT_WEIGHTS["guitar_diffsynth"]
+    if diffsynth is not None:
+        weights["diffsynth"] = diffsynth.expanduser().resolve()
+    diffsfproxy = args.diffsfproxy_ckpt
+    if diffsfproxy is None:
+        diffsfproxy = DEFAULT_WEIGHTS[f"{args.checkpoint_set}_diffsfproxy"]
+    weights["diffsfproxy"] = diffsfproxy.expanduser().resolve()
     for path in (audio_path, midi_path, *weights.values()):
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -228,6 +238,7 @@ def run(args: argparse.Namespace) -> dict:
     summary = {
         "audio": str(audio_path), "midi": str(midi_path), "duration_seconds": round(duration, 3),
         "notes": len(notes), "device": "cuda" if use_cuda else "cpu",
+        "checkpoint_set": args.checkpoint_set,
         "model": "HPT + onset-assisted note_editor", "velocity_method": args.velocity_method,
         "reference_velocities": args.reference_velocities,
         "checkpoints": {k: {"path": str(v), "sha256": file_hash(v)} for k, v in weights.items()},

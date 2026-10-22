@@ -7,7 +7,7 @@
 [![Demo](https://img.shields.io/badge/Demo-audio_%26_MIDI-4173c8)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)
 [![Paper](https://img.shields.io/badge/Paper-camera--ready_PDF-cd5c5c)](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-2608.08985-b31b1b)](https://arxiv.org/abs/2608.08985)
-[![Weights](https://img.shields.io/badge/Weights-piano_checkpoints-c88638)](score_hpt/checkpoints/README.md)
+[![Weights](https://img.shields.io/badge/Weights-piano_%26_guitar-c88638)](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference)
 [![Results](https://img.shields.io/badge/Results-tables_%26_figures-708238)](demo/analysis/README.md)
 
 </div>
@@ -24,7 +24,7 @@
 | Goal | Start here |
 | --- | --- |
 | **Hear the difference** | [Interactive demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/): 24 twenty-second excerpts across four datasets, with matched audio and colorized MIDI. |
-| **Estimate velocities** | [Piano inference guide](score_hpt/README.md#use-the-released-checkpoints) and [two bundled checkpoints](score_hpt/checkpoints/README.md). Supply an aligned audio/MIDI pair. |
+| **Estimate velocities** | [Inference guide](scripts/README.md#inference-comparison) and [bundled piano/guitar checkpoints](score_hpt/checkpoints/README.md). Supply an aligned audio/MIDI pair. |
 | **Train or adapt a model** | [SoundFont proxy](diff-sfproxy/README.md), [VeloEst adaptation](score_hpt/README.md), and [experiment launchers](scripts/README.md). |
 
 ## How it works
@@ -39,7 +39,7 @@ VeloEst reads performance audio and aligned MIDI notes, then predicts note veloc
   <sub>Paper method overview. The main comparison uses a 10 s frontend window and a 5 s backend crop.</sub>
 </p>
 
-## Run the released piano models
+## Run the bundled piano and guitar models
 
 Clone the working release branch:
 
@@ -59,18 +59,32 @@ python scripts/infer_compare.py \
   --out /path/to/comparison
 ```
 
-The two required piano checkpoints are already in the repository. The output includes `veloest.mid`, `diffsfproxy.mid`, a `flat64.mid` control, `notes.csv`, `comparison.svg`, and `summary.json`. Note pitch and timing are preserved; only velocities change. This is **score-informed velocity estimation, not audio-to-MIDI transcription**.
+For guitar, select the two bundled 5 s adapted checkpoints. This example also
+uses audio and aligned MIDI already in the repository:
+
+```bash
+python scripts/infer_compare.py \
+  --audio demo/docs/assets/cases/gaps-019-100/reference.mp3 \
+  --midi demo/docs/assets/cases/gaps-019-100/reference.mid \
+  --out /tmp/veloest-guitar --checkpoint-set guitar
+```
+
+The piano default writes `flat64.mid`, `veloest.mid`, and `diffsfproxy.mid`;
+the guitar set also writes `diffsynth.mid`. Both write `notes.csv`,
+`comparison.svg`, and `summary.json`. Note pitch and timing are preserved;
+only velocities change. The [inference release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference)
+mirrors the original piano-pretrained and two guitar-adapted checkpoints.
+This is **score-informed velocity estimation, not audio-to-MIDI transcription**.
 
 - No proxy backend checkpoint or training step is needed for this inference path.
 - Add `--reference-velocities` only if the input MIDI has verified performance velocities.
 - Add `--sfz /path/to/instrument.sfz` to render the output. Rendering additionally needs the complete SFZ instrument, [`sfizz_render`](diff-sfproxy/README.md#the-extra-renderer-dependency-sfizz_render), and `ffmpeg`.
-- Guitar inference requires a matching adapted checkpoint; the bundled adapted model is **piano**, not guitar. See the [checkpoint inventory](score_hpt/checkpoints/README.md).
 
 ## Repository layout
 
 | Folder | Contents |
 | --- | --- |
-| [`score_hpt/`](score_hpt/README.md) | Onset-assisted VeloEst frontend, two released piano weights, adaptation, inference, evaluation, and tests. |
+| [`score_hpt/`](score_hpt/README.md) | Onset-assisted VeloEst frontend, bundled piano and guitar weights, adaptation, inference, evaluation, and tests. |
 | [`diff-sfproxy/`](diff-sfproxy/README.md) | SoundFont teacher-data export, note-wise proxy training, feature extraction, and velocity-recovery evaluation. |
 | [`diff-synth/`](diff-synth/README.md) | Piano/guitar DDSP comparison backends and upstream acknowledgements. |
 | [`demo/`](demo/README.md) | Listening site, paper figures and manuscript, aggregate tables, and analysis evidence. |
@@ -91,7 +105,7 @@ python3 demo/analysis/build_figures.py
 python3 -m http.server 8000 --directory demo/docs
 ```
 
-Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass. See the [release-readiness audit](demo/analysis/RELEASE_READINESS.md) for the clean-environment inference check, pending guitar-weight manifest, FL provenance gap, and component-specific licensing evidence.
+Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass. See the [release-readiness audit](demo/analysis/RELEASE_READINESS.md) for the clean-environment inference check, guitar-weight provenance, FL result gap, and component-specific licensing evidence.
 
 ## Citation and acknowledgements
 

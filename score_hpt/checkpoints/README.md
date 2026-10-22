@@ -1,28 +1,55 @@
-# Released piano velocity checkpoints
+# VeloEst inference checkpoints
 
-These two checkpoints are provided for **inference comparison** with the onset-assisted HPT `note_editor` in this repository. Both take aligned performance audio and piano MIDI as input. The output MIDI keeps note pitch and timing while replacing velocities.
+All four files below are bundled in this repository so a clone can run piano
+or guitar inference without a separate weight download. The [inference
+release](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference)
+also mirrors the three most useful starting points: original piano-pretrained
+VeloEst, guitar Diff-SFProxy adaptation, and guitar Diff-Synth/DDSP adaptation.
+The piano-adapted Diff-SFProxy checkpoint stays in the repository for the
+piano comparison but is not part of that three-file release.
 
-| File | Role | Training snapshot | SHA-256 |
+| File | Inference role | Snapshot | SHA-256 |
 | --- | --- | --- | --- |
-| [`veloest_onset_only_120k.pth`](veloest_onset_only_120k.pth) | Piano-trained VeloEst before target-instrument adaptation | 120,000 iterations | `8cede73af4481661c51d7b409939489f32b208d6e971d833aac4a6e7eed438aa` |
-| [`veloest_diffsfproxy_piano_5s_120k.pth`](veloest_diffsfproxy_piano_5s_120k.pth) | VeloEst adapted with a frozen Diff-SFProxy piano backend | 5 s backend crop; 120,000 iterations | `d22e589b2c46b6efd4fbd307c5130b5f083abedda543fdeb50f117b1bb230343` |
+| [`veloest_onset_only_120k.pth`](veloest_onset_only_120k.pth) | Piano-pretrained VeloEst; zero-shot guitar control | 120k steps | `8cede73af4481661c51d7b409939489f32b208d6e971d833aac4a6e7eed438aa` |
+| [`veloest_diffsfproxy_guitar_5s_120k.pth`](veloest_diffsfproxy_guitar_5s_120k.pth) | VeloEst adapted to guitar through Diff-SFProxy | 5 s backend crop, 120k steps | `2d1e3d0dff33088689ae0a10d318b369625fa89b184e36791b1c943880e38131` |
+| [`veloest_diffsynth_guitar_5s_60k.pth`](veloest_diffsynth_guitar_5s_60k.pth) | VeloEst adapted to guitar through the Diff-Synth/DDSP guitar backend | 5 s backend crop, 60k steps | `1712310c5b662685f7ed03371e52dd491a48e9c242d6557548a314f20ea860ee` |
+| [`veloest_diffsfproxy_piano_5s_120k.pth`](veloest_diffsfproxy_piano_5s_120k.pth) | VeloEst adapted with a piano Diff-SFProxy backend | 5 s backend crop, 120k steps | `d22e589b2c46b6efd4fbd307c5130b5f083abedda543fdeb50f117b1bb230343` |
 
-Both files are copies of the corresponding 5090 research-workspace checkpoints recorded in [`../../demo/analysis/PROVENANCE.md`](../../demo/analysis/PROVENANCE.md). The proxy **backend** weights used during adaptation are a separate training dependency and are not needed to run inference with the adapted VeloEst file. These released files are piano snapshots. The 5 s adapted guitar checkpoints were subsequently recovered from a separate 5090 HDD archive and are [documented for release review](../../demo/analysis/GUITAR_RESULT_RECOVERY.md).
+The guitar file hashes and original 5090 archive members are in the
+[recovery record](../../demo/analysis/GUITAR_RESULT_RECOVERY.md). The adapted
+files are **VeloEst inference weights**. Frozen Diff-SFProxy and DDSP backend
+checkpoints were used during adaptation, but they are not needed to infer
+velocities with these files. The model is onset-assisted HPT `note_editor`:
+`model.input2=onset`, `model.input3=null`, and
+`score_informed.method=note_editor`.
 
-## What is available?
+## Run a bundled guitar example
 
-| Use | Availability |
-| --- | --- |
-| Piano inference: VeloEst and VeloEst + Diff-SFProxy | Both checkpoints above are bundled; no proxy backend weights are needed. |
-| Guitar inference: adapted Diff-Synth and Diff-SFProxy | Recovered and used for the listening demo, but not yet published as downloadable weights. See the [archive members and hashes](../../demo/analysis/GUITAR_RESULT_RECOVERY.md). |
-| Train or repeat adaptation | Frozen SoundFont proxy / DDSP backend checkpoints, external datasets, and complete SFZ instruments are additional dependencies. |
+Install the [minimal inference dependencies](../../scripts/requirements-inference.txt)
+using the [inference guide](../../scripts/README.md#inference-comparison), then
+run from the repository root:
 
-The bundled piano weights are inference examples, not a complete checkpoint set for reproducing every paper result. The exact run for the paper's FL Diff-SFProxy aggregate remains under review.
+```bash
+python scripts/infer_compare.py \
+  --audio demo/docs/assets/cases/gaps-019-100/reference.mp3 \
+  --midi demo/docs/assets/cases/gaps-019-100/reference.mid \
+  --out /tmp/veloest-guitar --checkpoint-set guitar --device cpu
+```
 
-The [release-readiness audit](../../demo/analysis/RELEASE_READINESS.md#guitar-weight-release-manifest-prepared-not-uploaded) proposes clear filenames, hashes and commands for the two recovered guitar inference weights. Those files have **not** been uploaded. They are adapted VeloEst checkpoints, distinct from the frozen training backends.
+The guitar set loads all three mirrored checkpoints and writes `flat64.mid`,
+`veloest.mid`, `diffsynth.mid`, `diffsfproxy.mid`, `notes.csv`,
+`comparison.svg`, and `summary.json`. `veloest.mid` is the piano-pretrained
+zero-shot control. For piano, omit `--checkpoint-set guitar`; the default
+compares the piano-pretrained and piano-adapted weights. Use
+`--reference-velocities` only when input MIDI velocities are verified ground
+truth; the GAPS/FL aligned score velocities are not such labels. Optional
+rendered audio requires an SFZ instrument, `sfizz_render`, and `ffmpeg`.
 
-## Frontend configuration
-
-The earlier [Score-Informed AMT project](https://github.com/zhanh-he/score-informed-amt) introduced the model and supplies other pretrained choices. Its public `hpt+onset+frame+score_note_editor/100000_iterations.pth` includes a frame input. Here we selected an **onset-only** `hpt+onset+score_note_editor/120000_iterations.pth` piano checkpoint as the starting point. Set `model.input2=onset`, `model.input3=null`, and `score_informed.method=note_editor` for these files. We thank and cite the earlier work; this slightly different checkpoint selection reflects the setup used for this paper.
-
-Run [`../../scripts/infer_compare.py`](../../scripts/infer_compare.py) to produce the two predictions, a Flat 64 control, per-note CSV, and a comparison SVG. The script can also render the output through an SFZ instrument when `sfizz_render` is installed.
+The earlier [Score-Informed AMT project](https://github.com/zhanh-he/score-informed-amt)
+introduced this model and provides other pretrained choices. Its public
+example uses onset plus frame input at 100k steps. Here we selected the
+onset-only piano 120k starting checkpoint used in this paper and thank and
+cite the earlier work. These weights support inference comparisons; the
+exact run behind the paper's FL Diff-SFProxy aggregate `r_BSSL = 0.777`
+remains unidentified. See the [release audit](../../demo/analysis/RELEASE_READINESS.md#3-fl-paper-result-provenance)
+for that distinction.
