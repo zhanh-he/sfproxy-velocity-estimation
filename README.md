@@ -1,7 +1,6 @@
 <div align="center">
 
-## Diff-SFProxy · Beyond Piano
-### Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies
+### Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies
 
 **ISMIR 2026** · Zhanhong He · Hanyu Meng · David Defeng Huang · Roberto Togneri
 
@@ -16,7 +15,7 @@
 **Diff-SFProxy adapts a piano-trained MIDI velocity estimator to new instruments using performance audio and aligned note events.** Instead of reconstructing every waveform detail, a differentiable SoundFont proxy supervises note intensity and attack through two acoustic cues. We study guitar adaptation on [GAPS](https://zenodo.org/records/13962272) and [François Leduc](https://zenodo.org/records/10984521), alongside piano evaluation on MAESTRO and SMD.
 
 <p align="center">
-  <img src="demo/paper/figure0.jpg" width="730" alt="Beyond piano: transfer a piano-trained velocity estimator to guitar"><br>
+  <img src="demo/paper/figure0.jpg" width="500" alt="Beyond piano: transfer a piano-trained velocity estimator to guitar"><br>
   <sub>Same note pitch and timing; velocities adapted to the target instrument.</sub>
 </p>
 
@@ -26,7 +25,6 @@
 | --- | --- |
 | **Hear the difference** | [Interactive demo](https://zhanh-he.github.io/sfproxy-velocity-estimation/): 24 twenty-second excerpts across four datasets, with matched audio and colorized MIDI. |
 | **Estimate velocities** | [Piano inference guide](score_hpt/README.md#use-the-released-checkpoints) and [two bundled checkpoints](score_hpt/checkpoints/README.md). Supply an aligned audio/MIDI pair. |
-| **Inspect the paper results** | [Tables and analysis](demo/analysis/README.md), [Table 1 CSV](demo/analysis/proxy_recovery.csv), and [Table 2 CSV](demo/analysis/paper_results.csv). |
 | **Train or adapt a model** | [SoundFont proxy](diff-sfproxy/README.md), [VeloEst adaptation](score_hpt/README.md), and [experiment launchers](scripts/README.md). |
 
 ## How it works
@@ -37,7 +35,7 @@ VeloEst reads performance audio and aligned MIDI notes, then predicts note veloc
 - **Diff-SFProxy (ours):** supervise **pitch-conditioned harmonic energy (PHE)** and **onset-window spectral flux (OSF)**, focusing on intensity and attack rather than full waveform reconstruction.
 
 <p align="center">
-  <img src="demo/paper/figure1.jpg" width="1000" alt="VeloEst adaptation with frozen Diff-Synth audio reconstruction or Diff-SFProxy acoustic-parameter supervision"><br>
+  <img src="demo/paper/figure1.jpg" width="920" alt="VeloEst adaptation with frozen Diff-Synth audio reconstruction or Diff-SFProxy acoustic-parameter supervision"><br>
   <sub>Paper method overview. The main comparison uses a 10 s frontend window and a 5 s backend crop.</sub>
 </p>
 
