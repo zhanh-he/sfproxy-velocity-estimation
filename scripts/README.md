@@ -4,6 +4,22 @@ Run these from the repository root unless a script states otherwise. The trainin
 
 ## Inference comparison
 
+Use Python 3.11 in a new virtual environment. The small, pinned
+[`requirements-inference.txt`](requirements-inference.txt) is the tested
+inference installer; the historical `score_hpt/environment.yml` is for the
+research training environment. For example:
+
+```bash
+python3.11 -m venv .venv-infer
+. .venv-infer/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r scripts/requirements-inference.txt
+```
+
+Choose a PyTorch build compatible with your platform if the pinned build is
+unavailable. The verified setup, commands, outputs, and MIDI checks are in
+[`../demo/analysis/RELEASE_READINESS.md`](../demo/analysis/RELEASE_READINESS.md).
+
 [`infer_compare.py`](infer_compare.py) takes one aligned audio/MIDI pair and runs the two released piano checkpoints by default. It preserves the source MIDI's note timing, programs, tempo, and control changes while replacing note velocities. It writes three MIDIs (Flat 64, VeloEst, VeloEst+Diff-SFProxy), `notes.csv`, a 1600 × 860 SVG piano-roll comparison, and `summary.json`. Pass `--diffsynth-ckpt` to include a fourth MIDI, Diff-Synth column, and 1600 × 1070 figure. An optional SFZ path adds rendered WAV/MP3 audio. No dataset packing, proxy backend checkpoint, or training step is needed.
 
 ```bash

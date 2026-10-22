@@ -7,6 +7,7 @@
 
 [![Demo](https://img.shields.io/badge/Demo-audio_%26_MIDI-4173c8)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)
 [![Paper](https://img.shields.io/badge/Paper-camera--ready_PDF-cd5c5c)](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.08985-b31b1b)](https://arxiv.org/abs/2608.08985)
 [![Weights](https://img.shields.io/badge/Weights-piano_checkpoints-c88638)](score_hpt/checkpoints/README.md)
 [![Results](https://img.shields.io/badge/Results-tables_%26_figures-708238)](demo/analysis/README.md)
 
@@ -49,7 +50,7 @@ git clone --branch backup https://github.com/zhanh-he/sfproxy-velocity-estimatio
 cd sfproxy-velocity-estimation
 ```
 
-Use a compatible PyTorch environment following the [setup guide](score_hpt/README.md#setup-and-example). The included [environment snapshot](score_hpt/environment.yml) records the historical Linux/CUDA setup; it is not a minimal or portable installer.
+Install Python 3.11 and the independent [inference requirements](scripts/requirements-inference.txt) following the [inference guide](scripts/README.md#inference-comparison). The included [environment snapshot](score_hpt/environment.yml) records the historical Linux/CUDA training setup; it is not a minimal or portable installer.
 
 With your performance recording and its **aligned piano MIDI**, run:
 
@@ -92,16 +93,21 @@ python3 demo/analysis/build_figures.py
 python3 -m http.server 8000 --directory demo/docs
 ```
 
-Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass.
+Open `http://localhost:8000/`. The website is published from `backup`; `main` is not updated by this presentation pass. See the [release-readiness audit](demo/analysis/RELEASE_READINESS.md) for the clean-environment inference check, pending guitar-weight manifest, FL provenance gap, and component-specific licensing evidence.
 
 ## Citation and acknowledgements
+
+The title and authors below match the [arXiv record](https://arxiv.org/abs/2608.08985).
+Final ISMIR proceedings metadata (including a possible proceedings DOI and
+page numbers) has not yet been verified.
 
 ```bibtex
 @inproceedings{he2026beyond,
   author = {Zhanhong He and Hanyu Meng and David Defeng Huang and Roberto Togneri},
   title = {Beyond Piano: Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies},
   booktitle = {Proceedings of the International Society for Music Information Retrieval Conference},
-  year = {2026}
+  year = {2026},
+  url = {https://arxiv.org/abs/2608.08985}
 }
 ```
 

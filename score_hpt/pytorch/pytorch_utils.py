@@ -1,7 +1,5 @@
 import numpy as np
 import torch
-import matplotlib.pyplot as plt
-import wandb
 
 def move_data_to_device(x, device):
     if torch.is_tensor(x):
@@ -126,6 +124,9 @@ def _post_process_rolls(pred_vis, target_raw, onset_roll):
 
 def log_velocity_rolls(cfg, iteration, batch_output_dict, batch_data_dict):
     """Log prediction vs target velocity rolls to WandB at configured intervals."""
+    import matplotlib.pyplot as plt
+    import wandb
+
     interval = cfg.exp.eval_iteration
     if not interval or interval <= 0:
         return

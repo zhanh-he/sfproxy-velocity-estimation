@@ -17,6 +17,9 @@ The aligned MIDI supplies note identities and timing, the audio supplies perform
 
 ## Use the released checkpoints
 
+Install the separate [inference requirements](../scripts/requirements-inference.txt)
+in a Python 3.11 virtual environment; see the [inference guide](../scripts/README.md#inference-comparison).
+
 From the repository root, with a performance recording and its aligned piano score:
 
 ```bash

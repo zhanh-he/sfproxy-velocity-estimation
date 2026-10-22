@@ -6,7 +6,6 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-import h5py
 import numpy as np
 import torch
 from hydra import compose, initialize
@@ -398,6 +397,8 @@ def _process_dataset_file(
     midi_dir: Optional[Path] = None,
     gt_midi_dir: Optional[Path] = None,
 ):
+    import h5py
+
     with h5py.File(hdf5_path, "r") as hf:
         if hf.attrs["split"].decode() != "test":
             return None

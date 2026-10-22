@@ -57,11 +57,8 @@ import torch.nn as nn
 import torchaudio
 from nnAudio.Spectrogram import CQT as NNAudioCQT
 import numpy as np
-import pandas as pd
-import os, time, argparse, h5py
+import os, time, argparse
 from typing import Literal
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MaxNLocator
 
 # Utility function for feature extractor and freq_bins selection
 def get_feature_extractor_and_bins(audio_feature, sample_rate, fft_size, frames_per_second):
@@ -291,6 +288,8 @@ class LogMelExtractor(nn.Module):
 # ---------- This __main__ block is for data visualization --------------------------
 # In practice, import and use the classes above directly to PyTorch Dataset or Model.
 def save_feature_csv(features, times, columns, output_csv_path):
+    import pandas as pd
+
     os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
     df = pd.DataFrame(features, columns=columns)
     df.insert(0, "time", times)
@@ -299,6 +298,9 @@ def save_feature_csv(features, times, columns, output_csv_path):
 
 def save_feature_plot(features, times, mode, output_png_path,
         t_start=None, t_end=None, duration=None, figsize=(6,3.4), dpi=200):
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import MaxNLocator
+
     if output_png_path is None: return
     if duration and not t_end:
         t_start = 0.0 if t_start is None else t_start
@@ -332,6 +334,9 @@ def compare_sones_diff_methods(csv_files, titles):
     - Matlab2007 (ma_sone, origin BSSL, up to 24 Bark-bands)
     - Paper2018 (used MATLAB2007, origin BSSL, up to 24 Bark-bands)
     """
+    import matplotlib.pyplot as plt
+    import pandas as pd
+
     assert len(csv_files) == len(titles) and len(csv_files) >= 2
     dfs = [pd.read_csv(f) for f in csv_files]
     fig, axes = plt.subplots(len(csv_files), 1, figsize=(12, 2.5 * len(csv_files)), sharex=True)
@@ -346,6 +351,8 @@ def compare_sones_diff_methods(csv_files, titles):
     plt.tight_layout(); plt.show()
 
 if __name__ == "__main__":
+    import h5py
+
     parser = argparse.ArgumentParser(description="Extract Bark or (Log-)Mel features from .h5 waveform.")
     parser.add_argument("h5_input_path", type=str, help="Path to the input .h5 file")
     parser.add_argument("output_csv_path", type=str, help="Path to the output .csv file")

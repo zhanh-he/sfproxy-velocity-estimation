@@ -19,6 +19,8 @@ Both files are copies of the corresponding 5090 research-workspace checkpoints r
 
 The bundled piano weights are inference examples, not a complete checkpoint set for reproducing every paper result. The exact run for the paper's FL Diff-SFProxy aggregate remains under review.
 
+The [release-readiness audit](../../demo/analysis/RELEASE_READINESS.md#guitar-weight-release-manifest-prepared-not-uploaded) proposes clear filenames, hashes and commands for the two recovered guitar inference weights. Those files have **not** been uploaded. They are adapted VeloEst checkpoints, distinct from the frozen training backends.
+
 ## Frontend configuration
 
 The earlier [Score-Informed AMT project](https://github.com/zhanh-he/score-informed-amt) introduced the model and supplies other pretrained choices. Its public `hpt+onset+frame+score_note_editor/100000_iterations.pth` includes a frame input. Here we selected an **onset-only** `hpt+onset+score_note_editor/120000_iterations.pth` piano checkpoint as the starting point. Set `model.input2=onset`, `model.input3=null`, and `score_informed.method=note_editor` for these files. We thank and cite the earlier work; this slightly different checkpoint selection reflects the setup used for this paper.
