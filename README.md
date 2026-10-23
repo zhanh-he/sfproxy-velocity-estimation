@@ -41,10 +41,10 @@ VeloEst reads performance audio and aligned MIDI notes, then predicts note veloc
 
 ## Run the bundled piano and guitar models
 
-Clone the working release branch:
+Clone the public release:
 
 ```bash
-git clone --branch backup https://github.com/zhanh-he/sfproxy-velocity-estimation.git
+git clone https://github.com/zhanh-he/sfproxy-velocity-estimation.git
 cd sfproxy-velocity-estimation
 ```
 
