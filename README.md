@@ -6,9 +6,7 @@
 
 [![Demo](https://img.shields.io/badge/Demo-audio_%26_MIDI-4173c8)](https://zhanh-he.github.io/sfproxy-velocity-estimation/)
 [![Paper](https://img.shields.io/badge/Paper-camera--ready_PDF-cd5c5c)](demo/paper/2026_ISMIR_Velo_Beyond_Piano_Camera_Ready.pdf)
-[![arXiv](https://img.shields.io/badge/arXiv-2608.08985-b31b1b)](https://arxiv.org/abs/2608.08985)
 [![Weights](https://img.shields.io/badge/Weights-piano_%26_guitar-c88638)](https://github.com/zhanh-he/sfproxy-velocity-estimation/releases/tag/v0.1.0-inference)
-[![Results](https://img.shields.io/badge/Results-tables_%26_figures-708238)](demo/analysis/README.md)
 
 </div>
 
