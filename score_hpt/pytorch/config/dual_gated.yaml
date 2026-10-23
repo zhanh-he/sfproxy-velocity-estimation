@@ -1,0 +1,6 @@
+score_informed:
+  method: dual_gated
+  params:
+    hid: 48
+    n_blocks: 4
+    alpha: 0.2

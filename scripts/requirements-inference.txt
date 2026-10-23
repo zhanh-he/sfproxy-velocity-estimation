@@ -1,0 +1,14 @@
+# Tested with CPython 3.11.15 on macOS arm64, CPU inference.
+# Install this file in a fresh environment; score_hpt/environment.yml is a
+# historical training snapshot, not an inference installer.
+torch==2.2.2
+torchaudio==2.2.2
+numpy==1.26.4
+librosa==0.10.2.post1
+hydra-core==1.3.2
+pretty_midi==0.2.10
+nnAudio==0.3.3
+mido==1.3.2
+tqdm==4.66.5
+# pretty_midi 0.2.10 imports pkg_resources at runtime.
+setuptools==70.3.0

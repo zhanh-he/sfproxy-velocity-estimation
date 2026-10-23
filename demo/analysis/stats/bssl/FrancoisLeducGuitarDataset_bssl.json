@@ -1,0 +1,1362 @@
+{
+  "dataset": "FrancoisLeducGuitarDataset",
+  "audio_file_count": 88,
+  "total_frames": 827217,
+  "hist_counts": [
+    19328,
+    9059,
+    12484,
+    17536,
+    23496,
+    29507,
+    33413,
+    36877,
+    39973,
+    41932,
+    43201,
+    44475,
+    44372,
+    43091,
+    41550,
+    39140,
+    36192,
+    32926,
+    29822,
+    26909,
+    23867,
+    21171,
+    18642,
+    16125,
+    13959,
+    12324,
+    10453,
+    9195,
+    7998,
+    6860,
+    5900,
+    5211,
+    4397,
+    3781,
+    3297,
+    2806,
+    2397,
+    2009,
+    1779,
+    1532,
+    1265,
+    1071,
+    944,
+    789,
+    697,
+    538,
+    469,
+    366,
+    347,
+    271,
+    273,
+    208,
+    160,
+    145,
+    110,
+    100,
+    85,
+    77,
+    55,
+    40,
+    38,
+    26,
+    26,
+    19,
+    17,
+    18,
+    10,
+    12,
+    11,
+    7,
+    9,
+    3,
+    2,
+    5,
+    5,
+    4,
+    3,
+    0,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bin_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5,
+    33.0,
+    33.5,
+    34.0,
+    34.5,
+    35.0,
+    35.5,
+    36.0,
+    36.5,
+    37.0,
+    37.5,
+    38.0,
+    38.5,
+    39.0,
+    39.5,
+    40.0,
+    40.5,
+    41.0,
+    41.5,
+    42.0,
+    42.5,
+    43.0,
+    43.5,
+    44.0,
+    44.5,
+    45.0,
+    45.5,
+    46.0,
+    46.5,
+    47.0,
+    47.5,
+    48.0,
+    48.5,
+    49.0,
+    49.5,
+    50.0,
+    50.5,
+    51.0,
+    51.5,
+    52.0,
+    52.5,
+    53.0,
+    53.5,
+    54.0,
+    54.5,
+    55.0,
+    55.5,
+    56.0,
+    56.5,
+    57.0,
+    57.5,
+    58.0,
+    58.5,
+    59.0,
+    59.5,
+    60.0,
+    60.5,
+    61.0,
+    61.5,
+    62.0,
+    62.5,
+    63.0,
+    63.5,
+    64.0,
+    64.5,
+    65.0,
+    65.5,
+    66.0,
+    66.5,
+    67.0,
+    67.5,
+    68.0,
+    68.5,
+    69.0,
+    69.5,
+    70.0,
+    70.5,
+    71.0,
+    71.5,
+    72.0,
+    72.5,
+    73.0,
+    73.5,
+    74.0,
+    74.5,
+    75.0,
+    75.5,
+    76.0,
+    76.5,
+    77.0,
+    77.5,
+    78.0,
+    78.5,
+    79.0,
+    79.5,
+    80.0
+  ],
+  "zero_bins": [
+    [
+      38.5,
+      39.0
+    ],
+    [
+      40.0,
+      40.5
+    ],
+    [
+      41.0,
+      41.5
+    ],
+    [
+      41.5,
+      42.0
+    ],
+    [
+      42.5,
+      43.0
+    ],
+    [
+      43.0,
+      43.5
+    ],
+    [
+      43.5,
+      44.0
+    ],
+    [
+      44.0,
+      44.5
+    ],
+    [
+      44.5,
+      45.0
+    ],
+    [
+      45.0,
+      45.5
+    ],
+    [
+      46.0,
+      46.5
+    ],
+    [
+      46.5,
+      47.0
+    ],
+    [
+      47.0,
+      47.5
+    ],
+    [
+      47.5,
+      48.0
+    ],
+    [
+      48.0,
+      48.5
+    ],
+    [
+      48.5,
+      49.0
+    ],
+    [
+      49.0,
+      49.5
+    ],
+    [
+      49.5,
+      50.0
+    ],
+    [
+      50.0,
+      50.5
+    ],
+    [
+      50.5,
+      51.0
+    ],
+    [
+      51.0,
+      51.5
+    ],
+    [
+      51.5,
+      52.0
+    ],
+    [
+      52.0,
+      52.5
+    ],
+    [
+      52.5,
+      53.0
+    ],
+    [
+      53.0,
+      53.5
+    ],
+    [
+      53.5,
+      54.0
+    ],
+    [
+      54.0,
+      54.5
+    ],
+    [
+      54.5,
+      55.0
+    ],
+    [
+      55.0,
+      55.5
+    ],
+    [
+      55.5,
+      56.0
+    ],
+    [
+      56.0,
+      56.5
+    ],
+    [
+      56.5,
+      57.0
+    ],
+    [
+      57.0,
+      57.5
+    ],
+    [
+      57.5,
+      58.0
+    ],
+    [
+      58.0,
+      58.5
+    ],
+    [
+      58.5,
+      59.0
+    ],
+    [
+      59.0,
+      59.5
+    ],
+    [
+      59.5,
+      60.0
+    ],
+    [
+      60.0,
+      60.5
+    ],
+    [
+      60.5,
+      61.0
+    ],
+    [
+      61.0,
+      61.5
+    ],
+    [
+      61.5,
+      62.0
+    ],
+    [
+      62.0,
+      62.5
+    ],
+    [
+      62.5,
+      63.0
+    ],
+    [
+      63.0,
+      63.5
+    ],
+    [
+      63.5,
+      64.0
+    ],
+    [
+      64.0,
+      64.5
+    ],
+    [
+      64.5,
+      65.0
+    ],
+    [
+      65.0,
+      65.5
+    ],
+    [
+      65.5,
+      66.0
+    ],
+    [
+      66.0,
+      66.5
+    ],
+    [
+      66.5,
+      67.0
+    ],
+    [
+      67.0,
+      67.5
+    ],
+    [
+      67.5,
+      68.0
+    ],
+    [
+      68.0,
+      68.5
+    ],
+    [
+      68.5,
+      69.0
+    ],
+    [
+      69.0,
+      69.5
+    ],
+    [
+      69.5,
+      70.0
+    ],
+    [
+      70.0,
+      70.5
+    ],
+    [
+      70.5,
+      71.0
+    ],
+    [
+      71.0,
+      71.5
+    ],
+    [
+      71.5,
+      72.0
+    ],
+    [
+      72.0,
+      72.5
+    ],
+    [
+      72.5,
+      73.0
+    ],
+    [
+      73.0,
+      73.5
+    ],
+    [
+      73.5,
+      74.0
+    ],
+    [
+      74.0,
+      74.5
+    ],
+    [
+      74.5,
+      75.0
+    ],
+    [
+      75.0,
+      75.5
+    ],
+    [
+      75.5,
+      76.0
+    ],
+    [
+      76.0,
+      76.5
+    ],
+    [
+      76.5,
+      77.0
+    ],
+    [
+      77.0,
+      77.5
+    ],
+    [
+      77.5,
+      78.0
+    ],
+    [
+      78.0,
+      78.5
+    ],
+    [
+      78.5,
+      79.0
+    ],
+    [
+      79.0,
+      79.5
+    ],
+    [
+      79.5,
+      80.0
+    ]
+  ],
+  "per_file_stats": [
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/-Qh4c.mp3",
+      "mean": 6.031289100646973,
+      "median": 6.1937456130981445,
+      "std": 2.8588852882385254,
+      "min": 0.0,
+      "max": 15.570537567138672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/2DC4c.mp3",
+      "mean": 13.410381317138672,
+      "median": 14.037946701049805,
+      "std": 5.769165515899658,
+      "min": 0.0,
+      "max": 31.506446838378906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/2Y4yc.mp3",
+      "mean": 6.832449913024902,
+      "median": 6.514615058898926,
+      "std": 3.3552653789520264,
+      "min": 0.0,
+      "max": 27.428815841674805
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/2p24c.mp3",
+      "mean": 6.175906181335449,
+      "median": 5.513216018676758,
+      "std": 3.425482749938965,
+      "min": 0.0,
+      "max": 24.937389373779297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/3H74c.mp3",
+      "mean": 11.308655738830566,
+      "median": 9.965536117553711,
+      "std": 5.84951639175415,
+      "min": 0.0,
+      "max": 45.67408752441406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/3fC4c.mp3",
+      "mean": 7.027774810791016,
+      "median": 6.630305290222168,
+      "std": 3.115231990814209,
+      "min": 0.0,
+      "max": 21.399303436279297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/3p24c.mp3",
+      "mean": 9.886443138122559,
+      "median": 9.646766662597656,
+      "std": 4.621633529663086,
+      "min": 0.0,
+      "max": 39.973976135253906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/3yC4c.mp3",
+      "mean": 5.165582656860352,
+      "median": 4.8852386474609375,
+      "std": 2.6683857440948486,
+      "min": 0.0,
+      "max": 17.566329956054688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/4NC4c.mp3",
+      "mean": 6.92160177230835,
+      "median": 6.405440330505371,
+      "std": 3.4439187049865723,
+      "min": 0.0,
+      "max": 29.277132034301758
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/5C74c.mp3",
+      "mean": 7.692817211151123,
+      "median": 7.271840572357178,
+      "std": 4.458890438079834,
+      "min": 0.0,
+      "max": 25.643644332885742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/5X94c.mp3",
+      "mean": 9.411888122558594,
+      "median": 8.837642669677734,
+      "std": 4.741087436676025,
+      "min": 0.0,
+      "max": 29.91055679321289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/5xh4c.mp3",
+      "mean": 9.635215759277344,
+      "median": 9.35826301574707,
+      "std": 4.610926151275635,
+      "min": 0.0,
+      "max": 28.97992706298828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/64C4c.mp3",
+      "mean": 14.231718063354492,
+      "median": 14.11929702758789,
+      "std": 6.486525535583496,
+      "min": 0.0,
+      "max": 39.110103607177734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/6DC4c.mp3",
+      "mean": 8.289180755615234,
+      "median": 8.477983474731445,
+      "std": 4.737298965454102,
+      "min": 0.0,
+      "max": 26.234230041503906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/6p24c.mp3",
+      "mean": 8.740158081054688,
+      "median": 8.485389709472656,
+      "std": 3.9620230197906494,
+      "min": 0.0,
+      "max": 24.862184524536133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/74C4c.mp3",
+      "mean": 8.563785552978516,
+      "median": 8.15650749206543,
+      "std": 3.8772542476654053,
+      "min": 0.0,
+      "max": 32.11899948120117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/8DC4c.mp3",
+      "mean": 12.32502269744873,
+      "median": 12.737922668457031,
+      "std": 4.812680721282959,
+      "min": 0.0,
+      "max": 27.228452682495117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/8MC4c.mp3",
+      "mean": 6.804265022277832,
+      "median": 6.183330535888672,
+      "std": 3.936535358428955,
+      "min": 0.0,
+      "max": 27.700992584228516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/8km4c.mp3",
+      "mean": 3.6218361854553223,
+      "median": 3.2166290283203125,
+      "std": 1.5855432748794556,
+      "min": 0.0,
+      "max": 11.22175121307373
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/9NC4c.mp3",
+      "mean": 6.780021667480469,
+      "median": 6.5441813468933105,
+      "std": 3.3847107887268066,
+      "min": 0.0,
+      "max": 23.20516586303711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/9kC4c.mp3",
+      "mean": 5.331259727478027,
+      "median": 5.202622413635254,
+      "std": 2.3897793292999268,
+      "min": 0.0,
+      "max": 14.627168655395508
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/9wp4c.mp3",
+      "mean": 7.979080677032471,
+      "median": 7.502114772796631,
+      "std": 4.362427711486816,
+      "min": 0.0,
+      "max": 26.13671875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/ByC4c.mp3",
+      "mean": 7.17167854309082,
+      "median": 7.245438098907471,
+      "std": 1.8484866619110107,
+      "min": 0.0,
+      "max": 13.759796142578125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/C4C4c.mp3",
+      "mean": 7.980656147003174,
+      "median": 7.590265274047852,
+      "std": 3.481142997741699,
+      "min": 0.0,
+      "max": 23.406005859375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/CyC4c.mp3",
+      "mean": 4.357222557067871,
+      "median": 4.3482818603515625,
+      "std": 2.123523712158203,
+      "min": 0.0,
+      "max": 13.001350402832031
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/DMC4c.mp3",
+      "mean": 11.517228126525879,
+      "median": 10.92141056060791,
+      "std": 5.501033782958984,
+      "min": 0.0,
+      "max": 29.17619514465332
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/Fp24c.mp3",
+      "mean": 8.219429969787598,
+      "median": 8.05201530456543,
+      "std": 3.961972713470459,
+      "min": 0.0,
+      "max": 26.35409164428711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/GMC4c.mp3",
+      "mean": 7.037113666534424,
+      "median": 6.856988906860352,
+      "std": 3.213960647583008,
+      "min": 0.0,
+      "max": 24.00701332092285
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/GVC4c.mp3",
+      "mean": 5.827872276306152,
+      "median": 4.982097148895264,
+      "std": 3.8184752464294434,
+      "min": 0.0,
+      "max": 21.2747802734375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/JGDyc.mp3",
+      "mean": 14.12710952758789,
+      "median": 13.784435272216797,
+      "std": 6.4347100257873535,
+      "min": 0.0,
+      "max": 36.32899856567383
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/JkC4c.mp3",
+      "mean": 5.41358757019043,
+      "median": 5.4572930335998535,
+      "std": 2.469428777694702,
+      "min": 0.0,
+      "max": 16.799617767333984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/KNC4c.mp3",
+      "mean": 4.850945949554443,
+      "median": 4.639649391174316,
+      "std": 2.053960084915161,
+      "min": 0.0,
+      "max": 13.720010757446289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/KZh4c.mp3",
+      "mean": 5.703122138977051,
+      "median": 5.0012359619140625,
+      "std": 3.735295295715332,
+      "min": 0.0,
+      "max": 24.807647705078125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/LDC4c.mp3",
+      "mean": 8.91171932220459,
+      "median": 9.538818359375,
+      "std": 3.374821901321411,
+      "min": 0.0,
+      "max": 18.468517303466797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/LNC4c.mp3",
+      "mean": 6.695704460144043,
+      "median": 6.525672435760498,
+      "std": 3.2512080669403076,
+      "min": 0.0,
+      "max": 21.467830657958984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/LwC4c.mp3",
+      "mean": 5.177771091461182,
+      "median": 4.794567584991455,
+      "std": 2.7606201171875,
+      "min": 0.0,
+      "max": 24.400800704956055
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/MDC4c.mp3",
+      "mean": 3.8748862743377686,
+      "median": 3.6747541427612305,
+      "std": 2.1512181758880615,
+      "min": 0.0,
+      "max": 14.012499809265137
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/MtY4c.mp3",
+      "mean": 8.05173397064209,
+      "median": 7.892636775970459,
+      "std": 3.2422618865966797,
+      "min": 0.0,
+      "max": 23.958478927612305
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/NyC4c.mp3",
+      "mean": 7.966020584106445,
+      "median": 7.869015693664551,
+      "std": 3.658804178237915,
+      "min": 0.0,
+      "max": 22.362506866455078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/PQh4c.mp3",
+      "mean": 4.840237140655518,
+      "median": 4.77306604385376,
+      "std": 2.4843075275421143,
+      "min": 0.0,
+      "max": 15.353341102600098
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/QDC4c.mp3",
+      "mean": 10.833673477172852,
+      "median": 10.606038093566895,
+      "std": 4.714473724365234,
+      "min": 0.0,
+      "max": 33.54043960571289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/QyC4c.mp3",
+      "mean": 6.907334327697754,
+      "median": 6.6537556648254395,
+      "std": 2.8258726596832275,
+      "min": 0.0,
+      "max": 19.32892608642578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/R5d4c.mp3",
+      "mean": 6.652818202972412,
+      "median": 5.969719886779785,
+      "std": 3.9324748516082764,
+      "min": 0.0,
+      "max": 23.390277862548828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/SM54c.mp3",
+      "mean": 8.998136520385742,
+      "median": 8.943595886230469,
+      "std": 4.1718573570251465,
+      "min": 0.0,
+      "max": 23.147403717041016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/SXw4c.mp3",
+      "mean": 6.0605950355529785,
+      "median": 5.614582061767578,
+      "std": 3.21229887008667,
+      "min": 0.0,
+      "max": 20.108633041381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/TcC4c.mp3",
+      "mean": 7.1681742668151855,
+      "median": 7.523236274719238,
+      "std": 4.141575336456299,
+      "min": 0.0,
+      "max": 25.308422088623047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/VyC4c.mp3",
+      "mean": 7.968729019165039,
+      "median": 8.093207359313965,
+      "std": 2.959462881088257,
+      "min": 0.0,
+      "max": 17.90599250793457
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/WWh4c.mp3",
+      "mean": 9.308652877807617,
+      "median": 9.115671157836914,
+      "std": 4.669630527496338,
+      "min": 0.0,
+      "max": 28.2860164642334
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/WcC4c.mp3",
+      "mean": 6.054974555969238,
+      "median": 6.539473056793213,
+      "std": 2.4772393703460693,
+      "min": 0.0,
+      "max": 14.817668914794922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/YNC4c.mp3",
+      "mean": 7.0301833152771,
+      "median": 6.323293685913086,
+      "std": 4.079761028289795,
+      "min": 0.0,
+      "max": 24.57193946838379
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/Yp24c.mp3",
+      "mean": 8.053356170654297,
+      "median": 7.198981285095215,
+      "std": 4.289973735809326,
+      "min": 0.0,
+      "max": 25.87692642211914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/bcs4c.mp3",
+      "mean": 5.357256889343262,
+      "median": 5.256278991699219,
+      "std": 2.8840091228485107,
+      "min": 0.0,
+      "max": 19.360143661499023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/cDC4c.mp3",
+      "mean": 4.854554653167725,
+      "median": 4.755807399749756,
+      "std": 2.313161849975586,
+      "min": 0.0,
+      "max": 15.747535705566406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/cKR4c.mp3",
+      "mean": 8.358312606811523,
+      "median": 8.292452812194824,
+      "std": 3.33207106590271,
+      "min": 0.0,
+      "max": 23.006145477294922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/cMC4c.mp3",
+      "mean": 5.245483875274658,
+      "median": 4.134931564331055,
+      "std": 3.932037830352783,
+      "min": 0.0,
+      "max": 27.105928421020508
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/dfC4c.mp3",
+      "mean": 6.399609565734863,
+      "median": 6.196162223815918,
+      "std": 3.1880197525024414,
+      "min": 0.0,
+      "max": 20.558677673339844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/f4W4c.mp3",
+      "mean": 5.578120231628418,
+      "median": 5.588478088378906,
+      "std": 2.5049707889556885,
+      "min": 0.0,
+      "max": 16.20226287841797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/f964c.mp3",
+      "mean": 9.433420181274414,
+      "median": 9.402144432067871,
+      "std": 3.760847568511963,
+      "min": 0.0,
+      "max": 29.336685180664062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/g4C4c.mp3",
+      "mean": 7.739994049072266,
+      "median": 7.985099792480469,
+      "std": 3.309007406234741,
+      "min": 0.0,
+      "max": 19.621623992919922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/gfC4c.mp3",
+      "mean": 3.9330344200134277,
+      "median": 3.544651985168457,
+      "std": 2.3967854976654053,
+      "min": 0.0,
+      "max": 16.09467315673828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/gwC4c.mp3",
+      "mean": 7.9888081550598145,
+      "median": 8.233890533447266,
+      "std": 3.3733348846435547,
+      "min": 0.0,
+      "max": 28.481903076171875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/hTs4c.mp3",
+      "mean": 6.37957763671875,
+      "median": 6.099400520324707,
+      "std": 2.418560266494751,
+      "min": 0.0,
+      "max": 18.711166381835938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/hp24c.mp3",
+      "mean": 6.222666263580322,
+      "median": 5.786928176879883,
+      "std": 3.3520448207855225,
+      "min": 0.0,
+      "max": 24.5749568939209
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/hwC4c.mp3",
+      "mean": 7.468432426452637,
+      "median": 7.3085527420043945,
+      "std": 3.5163416862487793,
+      "min": 0.0,
+      "max": 23.04836082458496
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/lyC4c.mp3",
+      "mean": 10.684869766235352,
+      "median": 10.491682052612305,
+      "std": 5.029240131378174,
+      "min": 0.0,
+      "max": 31.896270751953125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/mwC4c.mp3",
+      "mean": 7.375430583953857,
+      "median": 7.483050346374512,
+      "std": 2.999436140060425,
+      "min": 0.0,
+      "max": 24.13317108154297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/n4C4c.mp3",
+      "mean": 10.03365707397461,
+      "median": 8.815037727355957,
+      "std": 6.08082389831543,
+      "min": 0.0,
+      "max": 38.393577575683594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/p4C4c.mp3",
+      "mean": 6.827590465545654,
+      "median": 6.79802131652832,
+      "std": 2.0541906356811523,
+      "min": 0.0,
+      "max": 15.277765274047852
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/qNC4c.mp3",
+      "mean": 6.513598918914795,
+      "median": 6.105327606201172,
+      "std": 3.7223668098449707,
+      "min": 0.0,
+      "max": 26.598711013793945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/qwC4c.mp3",
+      "mean": 10.128005981445312,
+      "median": 10.244050025939941,
+      "std": 4.454237461090088,
+      "min": 0.0,
+      "max": 24.27836799621582
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/rDC4c.mp3",
+      "mean": 10.136086463928223,
+      "median": 10.003040313720703,
+      "std": 4.124423503875732,
+      "min": 0.0,
+      "max": 29.498653411865234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/rwC4c.mp3",
+      "mean": 6.915428638458252,
+      "median": 6.963275909423828,
+      "std": 2.931617498397827,
+      "min": 0.0,
+      "max": 14.98344898223877
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/scC4c.mp3",
+      "mean": 8.694733619689941,
+      "median": 8.640859603881836,
+      "std": 3.8982017040252686,
+      "min": 0.0,
+      "max": 25.65805435180664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/sxh4c.mp3",
+      "mean": 5.626314163208008,
+      "median": 5.507984161376953,
+      "std": 3.0311853885650635,
+      "min": 0.0,
+      "max": 17.81758689880371
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/tp24c.mp3",
+      "mean": 6.1307220458984375,
+      "median": 5.901208877563477,
+      "std": 3.0227322578430176,
+      "min": 0.0,
+      "max": 20.720964431762695
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/wNC4c.mp3",
+      "mean": 6.334993362426758,
+      "median": 5.457252502441406,
+      "std": 4.042996406555176,
+      "min": 0.0,
+      "max": 30.31317710876465
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/xbR4c.mp3",
+      "mean": 7.841796875,
+      "median": 8.279304504394531,
+      "std": 3.793779134750366,
+      "min": 0.0,
+      "max": 20.252601623535156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/yfC4c.mp3",
+      "mean": 8.942384719848633,
+      "median": 8.529325485229492,
+      "std": 3.969719648361206,
+      "min": 0.0,
+      "max": 27.095653533935547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/audio/zzfyc.mp3",
+      "mean": 2.643211603164673,
+      "median": 2.2534658908843994,
+      "std": 1.9835714101791382,
+      "min": 0.0,
+      "max": 12.35256576538086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/-Qh4c.mp3",
+      "mean": 6.031289100646973,
+      "median": 6.1937456130981445,
+      "std": 2.8588852882385254,
+      "min": 0.0,
+      "max": 15.570537567138672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/2p24c.mp3",
+      "mean": 6.175906181335449,
+      "median": 5.513216018676758,
+      "std": 3.425482749938965,
+      "min": 0.0,
+      "max": 24.937389373779297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/5C74c.mp3",
+      "mean": 7.692817211151123,
+      "median": 7.271840572357178,
+      "std": 4.458890438079834,
+      "min": 0.0,
+      "max": 25.643644332885742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/MDC4c.mp3",
+      "mean": 3.8748862743377686,
+      "median": 3.6747541427612305,
+      "std": 2.1512181758880615,
+      "min": 0.0,
+      "max": 14.012499809265137
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/QyC4c.mp3",
+      "mean": 6.907334327697754,
+      "median": 6.6537556648254395,
+      "std": 2.8258726596832275,
+      "min": 0.0,
+      "max": 19.32892608642578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/R5d4c.mp3",
+      "mean": 6.652818202972412,
+      "median": 5.969719886779785,
+      "std": 3.9324748516082764,
+      "min": 0.0,
+      "max": 23.390277862548828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/gwC4c.mp3",
+      "mean": 7.9888081550598145,
+      "median": 8.233890533447266,
+      "std": 3.3733348846435547,
+      "min": 0.0,
+      "max": 28.481903076171875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/p4C4c.mp3",
+      "mean": 6.827590465545654,
+      "median": 6.79802131652832,
+      "std": 2.0541906356811523,
+      "min": 0.0,
+      "max": 15.277765274047852
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/FrancoisLeducGuitarDataset/test_set/rwC4c.mp3",
+      "mean": 6.915428638458252,
+      "median": 6.963275909423828,
+      "std": 2.931617498397827,
+      "min": 0.0,
+      "max": 14.98344898223877
+    }
+  ],
+  "errors": [],
+  "config": {
+    "target_sample_rate": 22050,
+    "frames_per_second": 50.0,
+    "fft_size": 1024,
+    "hist_range": [
+      0.0,
+      80.0
+    ],
+    "hist_bin_size": 0.5,
+    "device": "cpu"
+  }
+}

@@ -1,0 +1,14 @@
+torch
+librosa
+numpy
+scipy
+matplotlib
+IPython
+tqdm
+mirdata
+crepe
+ipdb
+pyFluidSynth
+midi2audio
+mido
+wandb

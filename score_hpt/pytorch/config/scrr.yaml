@@ -1,0 +1,8 @@
+score_informed:
+  method: scrr
+  params:
+    in_feats: ["vel_logits", "vel"]
+    hidden: 48
+    n_blocks: 8
+    dilations_t: [1,2,4,8,1,2,4,8]
+    alpha: 0.2

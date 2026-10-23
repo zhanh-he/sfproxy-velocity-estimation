@@ -1,0 +1,46 @@
+{
+  "audio": "/tmp/sfproxy-layout-20260929-Vrb58i/gaps_demo/pair-019.wav",
+  "midi": "/tmp/sfproxy-layout-20260929-Vrb58i/gaps_demo/pair-019.mid",
+  "duration_seconds": 156.131,
+  "notes": 462,
+  "device": "cuda",
+  "model": "HPT + onset-assisted note_editor",
+  "velocity_method": "onset_only",
+  "reference_velocities": false,
+  "checkpoints": {
+    "veloest": {
+      "path": "/media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/pretrained_checkpoints/hpt+onset+score_note_editor/120000_iterations.pth",
+      "sha256": "8cede73af4481661c51d7b409939489f32b208d6e971d833aac4a6e7eed438aa"
+    },
+    "diffsynth": {
+      "path": "/tmp/sfproxy-layout-20260929-Vrb58i/recovered/transfer2_ckpts/route3_gaps_6k/5s+auto+hpt+onset+score_note_editor+backend_diffsynth_guitar+piano_ssm_spectral+sup0+backend1+prior0p2+sat0p4/60000_iterations.pth",
+      "sha256": "1712310c5b662685f7ed03371e52dd491a48e9c242d6557548a314f20ea860ee"
+    },
+    "diffsfproxy": {
+      "path": "/tmp/sfproxy-layout-20260929-Vrb58i/recovered/transfer1_ckpts/route4_guitar_12k/5s+auto+hpt+onset+score_note_editor+backend_diffproxy+smooth_l1+sup0+backend1+prior0p2+sat0p4/120000_iterations.pth",
+      "sha256": "2d1e3d0dff33088689ae0a10d318b369625fa89b184e36791b1c943880e38131"
+    }
+  },
+  "metrics": {
+    "flat64": {
+      "mean": 64.0
+    },
+    "veloest": {
+      "mean": 74.167
+    },
+    "diffsynth": {
+      "mean": 35.526
+    },
+    "diffsfproxy": {
+      "mean": 66.387
+    }
+  },
+  "outputs": {
+    "flat64.mid": "flat64.mid",
+    "veloest.mid": "veloest.mid",
+    "diffsynth.mid": "diffsynth.mid",
+    "diffsfproxy.mid": "diffsfproxy.mid",
+    "notes.csv": "notes.csv",
+    "comparison.svg": "comparison.svg"
+  }
+}

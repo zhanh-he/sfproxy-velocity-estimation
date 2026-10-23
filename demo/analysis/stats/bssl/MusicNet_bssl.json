@@ -1,0 +1,3210 @@
+{
+  "dataset": "MusicNet",
+  "audio_file_count": 330,
+  "total_frames": 6143618,
+  "hist_counts": [
+    107332,
+    76645,
+    97965,
+    135450,
+    178387,
+    216846,
+    251293,
+    278917,
+    298679,
+    311589,
+    315946,
+    312317,
+    303349,
+    290988,
+    275664,
+    258654,
+    239658,
+    221877,
+    202516,
+    184227,
+    167381,
+    150043,
+    134666,
+    120555,
+    107564,
+    95965,
+    85852,
+    76371,
+    68902,
+    61764,
+    55596,
+    49832,
+    44504,
+    39781,
+    36059,
+    32420,
+    28921,
+    26069,
+    23012,
+    20478,
+    18697,
+    16645,
+    14649,
+    13226,
+    11775,
+    10212,
+    9078,
+    8060,
+    7017,
+    6253,
+    5477,
+    4762,
+    4296,
+    3726,
+    3123,
+    2884,
+    2375,
+    2125,
+    1867,
+    1653,
+    1430,
+    1257,
+    1120,
+    952,
+    888,
+    747,
+    645,
+    610,
+    460,
+    436,
+    414,
+    382,
+    324,
+    281,
+    207,
+    219,
+    178,
+    150,
+    126,
+    131,
+    108,
+    92,
+    89,
+    72,
+    52,
+    55,
+    42,
+    36,
+    38,
+    26,
+    25,
+    19,
+    24,
+    10,
+    9,
+    9,
+    3,
+    3,
+    5,
+    3,
+    1,
+    0,
+    3,
+    2,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bin_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5,
+    33.0,
+    33.5,
+    34.0,
+    34.5,
+    35.0,
+    35.5,
+    36.0,
+    36.5,
+    37.0,
+    37.5,
+    38.0,
+    38.5,
+    39.0,
+    39.5,
+    40.0,
+    40.5,
+    41.0,
+    41.5,
+    42.0,
+    42.5,
+    43.0,
+    43.5,
+    44.0,
+    44.5,
+    45.0,
+    45.5,
+    46.0,
+    46.5,
+    47.0,
+    47.5,
+    48.0,
+    48.5,
+    49.0,
+    49.5,
+    50.0,
+    50.5,
+    51.0,
+    51.5,
+    52.0,
+    52.5,
+    53.0,
+    53.5,
+    54.0,
+    54.5,
+    55.0,
+    55.5,
+    56.0,
+    56.5,
+    57.0,
+    57.5,
+    58.0,
+    58.5,
+    59.0,
+    59.5,
+    60.0,
+    60.5,
+    61.0,
+    61.5,
+    62.0,
+    62.5,
+    63.0,
+    63.5,
+    64.0,
+    64.5,
+    65.0,
+    65.5,
+    66.0,
+    66.5,
+    67.0,
+    67.5,
+    68.0,
+    68.5,
+    69.0,
+    69.5,
+    70.0,
+    70.5,
+    71.0,
+    71.5,
+    72.0,
+    72.5,
+    73.0,
+    73.5,
+    74.0,
+    74.5,
+    75.0,
+    75.5,
+    76.0,
+    76.5,
+    77.0,
+    77.5,
+    78.0,
+    78.5,
+    79.0,
+    79.5,
+    80.0
+  ],
+  "zero_bins": [
+    [
+      50.5,
+      51.0
+    ],
+    [
+      52.0,
+      52.5
+    ],
+    [
+      53.0,
+      53.5
+    ],
+    [
+      53.5,
+      54.0
+    ],
+    [
+      54.0,
+      54.5
+    ],
+    [
+      54.5,
+      55.0
+    ],
+    [
+      55.0,
+      55.5
+    ],
+    [
+      55.5,
+      56.0
+    ],
+    [
+      56.0,
+      56.5
+    ],
+    [
+      56.5,
+      57.0
+    ],
+    [
+      57.0,
+      57.5
+    ],
+    [
+      57.5,
+      58.0
+    ],
+    [
+      58.0,
+      58.5
+    ],
+    [
+      58.5,
+      59.0
+    ],
+    [
+      59.0,
+      59.5
+    ],
+    [
+      59.5,
+      60.0
+    ],
+    [
+      60.0,
+      60.5
+    ],
+    [
+      60.5,
+      61.0
+    ],
+    [
+      61.0,
+      61.5
+    ],
+    [
+      61.5,
+      62.0
+    ],
+    [
+      62.0,
+      62.5
+    ],
+    [
+      62.5,
+      63.0
+    ],
+    [
+      63.0,
+      63.5
+    ],
+    [
+      63.5,
+      64.0
+    ],
+    [
+      64.0,
+      64.5
+    ],
+    [
+      64.5,
+      65.0
+    ],
+    [
+      65.0,
+      65.5
+    ],
+    [
+      65.5,
+      66.0
+    ],
+    [
+      66.0,
+      66.5
+    ],
+    [
+      66.5,
+      67.0
+    ],
+    [
+      67.0,
+      67.5
+    ],
+    [
+      67.5,
+      68.0
+    ],
+    [
+      68.0,
+      68.5
+    ],
+    [
+      68.5,
+      69.0
+    ],
+    [
+      69.0,
+      69.5
+    ],
+    [
+      69.5,
+      70.0
+    ],
+    [
+      70.0,
+      70.5
+    ],
+    [
+      70.5,
+      71.0
+    ],
+    [
+      71.0,
+      71.5
+    ],
+    [
+      71.5,
+      72.0
+    ],
+    [
+      72.0,
+      72.5
+    ],
+    [
+      72.5,
+      73.0
+    ],
+    [
+      73.0,
+      73.5
+    ],
+    [
+      73.5,
+      74.0
+    ],
+    [
+      74.0,
+      74.5
+    ],
+    [
+      74.5,
+      75.0
+    ],
+    [
+      75.0,
+      75.5
+    ],
+    [
+      75.5,
+      76.0
+    ],
+    [
+      76.0,
+      76.5
+    ],
+    [
+      76.5,
+      77.0
+    ],
+    [
+      77.0,
+      77.5
+    ],
+    [
+      77.5,
+      78.0
+    ],
+    [
+      78.0,
+      78.5
+    ],
+    [
+      78.5,
+      79.0
+    ],
+    [
+      79.0,
+      79.5
+    ],
+    [
+      79.5,
+      80.0
+    ]
+  ],
+  "per_file_stats": [
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/1759.wav",
+      "mean": 7.067296981811523,
+      "median": 6.757042407989502,
+      "std": 3.5227859020233154,
+      "min": 0.0,
+      "max": 21.49666976928711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/1819.wav",
+      "mean": 7.506852149963379,
+      "median": 7.279341697692871,
+      "std": 4.027266025543213,
+      "min": 0.0,
+      "max": 23.91223907470703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2106.wav",
+      "mean": 6.690993785858154,
+      "median": 6.48881721496582,
+      "std": 3.0217204093933105,
+      "min": 0.0,
+      "max": 20.06624984741211
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2191.wav",
+      "mean": 8.883543968200684,
+      "median": 8.946349143981934,
+      "std": 4.58436918258667,
+      "min": 0.0,
+      "max": 25.95830535888672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2298.wav",
+      "mean": 5.818178653717041,
+      "median": 5.457903861999512,
+      "std": 2.2998549938201904,
+      "min": 0.0,
+      "max": 15.573503494262695
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2303.wav",
+      "mean": 6.288870334625244,
+      "median": 6.197700023651123,
+      "std": 3.107405662536621,
+      "min": 0.0,
+      "max": 16.82500457763672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2382.wav",
+      "mean": 11.336176872253418,
+      "median": 9.535691261291504,
+      "std": 7.552875518798828,
+      "min": 0.0,
+      "max": 42.918052673339844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2416.wav",
+      "mean": 17.01192855834961,
+      "median": 17.268404006958008,
+      "std": 6.090568542480469,
+      "min": 0.0,
+      "max": 36.20924377441406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2556.wav",
+      "mean": 6.646512508392334,
+      "median": 6.186819076538086,
+      "std": 3.4965145587921143,
+      "min": 0.0,
+      "max": 22.7015323638916
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/test_data/2628.wav",
+      "mean": 14.526520729064941,
+      "median": 15.22703742980957,
+      "std": 3.9841129779815674,
+      "min": 0.0,
+      "max": 29.742443084716797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1727.wav",
+      "mean": 4.94459342956543,
+      "median": 4.768105506896973,
+      "std": 2.047088146209717,
+      "min": 0.0,
+      "max": 14.639076232910156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1728.wav",
+      "mean": 5.327390670776367,
+      "median": 4.964665412902832,
+      "std": 2.6284492015838623,
+      "min": 0.0,
+      "max": 17.554460525512695
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1729.wav",
+      "mean": 5.419950008392334,
+      "median": 5.282464504241943,
+      "std": 2.219461441040039,
+      "min": 0.0,
+      "max": 16.84256935119629
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1730.wav",
+      "mean": 6.286413669586182,
+      "median": 5.796158790588379,
+      "std": 3.391160488128662,
+      "min": 0.0,
+      "max": 19.3753662109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1733.wav",
+      "mean": 7.265319347381592,
+      "median": 5.517518997192383,
+      "std": 5.285159587860107,
+      "min": 0.0,
+      "max": 49.345069885253906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1734.wav",
+      "mean": 9.642572402954102,
+      "median": 9.447832107543945,
+      "std": 4.634612560272217,
+      "min": 0.0,
+      "max": 33.38600540161133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1735.wav",
+      "mean": 11.451849937438965,
+      "median": 10.8677339553833,
+      "std": 4.723685264587402,
+      "min": 0.0,
+      "max": 49.456451416015625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1739.wav",
+      "mean": 7.282571315765381,
+      "median": 6.185418128967285,
+      "std": 4.343875408172607,
+      "min": 0.0,
+      "max": 28.87680435180664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1742.wav",
+      "mean": 4.209751605987549,
+      "median": 3.5876431465148926,
+      "std": 2.5708508491516113,
+      "min": 0.0,
+      "max": 17.76662826538086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1749.wav",
+      "mean": 6.555459022521973,
+      "median": 5.937000274658203,
+      "std": 3.9434192180633545,
+      "min": 0.0,
+      "max": 31.477001190185547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1750.wav",
+      "mean": 6.562539100646973,
+      "median": 6.110561847686768,
+      "std": 3.19295072555542,
+      "min": 0.0,
+      "max": 26.10912322998047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1751.wav",
+      "mean": 6.242155075073242,
+      "median": 5.575739860534668,
+      "std": 3.5127949714660645,
+      "min": 0.0,
+      "max": 26.169944763183594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1752.wav",
+      "mean": 8.039682388305664,
+      "median": 7.409203052520752,
+      "std": 3.5244688987731934,
+      "min": 0.0,
+      "max": 28.5684814453125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1755.wav",
+      "mean": 7.626702785491943,
+      "median": 6.69627571105957,
+      "std": 4.724485397338867,
+      "min": 0.0,
+      "max": 36.215431213378906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1756.wav",
+      "mean": 10.48865032196045,
+      "median": 9.516759872436523,
+      "std": 5.3421950340271,
+      "min": 0.0,
+      "max": 47.11062240600586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1757.wav",
+      "mean": 7.871522426605225,
+      "median": 6.988951206207275,
+      "std": 3.972529411315918,
+      "min": 0.0,
+      "max": 28.214488983154297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1758.wav",
+      "mean": 5.446534156799316,
+      "median": 4.884770393371582,
+      "std": 3.2518656253814697,
+      "min": 0.0,
+      "max": 24.885486602783203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1760.wav",
+      "mean": 8.476365089416504,
+      "median": 7.758410453796387,
+      "std": 3.796963930130005,
+      "min": 0.0,
+      "max": 36.09532165527344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1763.wav",
+      "mean": 4.838622570037842,
+      "median": 4.386410713195801,
+      "std": 2.787663698196411,
+      "min": 0.0,
+      "max": 18.94477081298828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1764.wav",
+      "mean": 4.214684009552002,
+      "median": 3.36649489402771,
+      "std": 3.0563745498657227,
+      "min": 0.0,
+      "max": 20.134075164794922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1765.wav",
+      "mean": 5.240170955657959,
+      "median": 4.9392266273498535,
+      "std": 3.040550947189331,
+      "min": 0.0,
+      "max": 18.632518768310547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1766.wav",
+      "mean": 5.953105926513672,
+      "median": 5.445219039916992,
+      "std": 3.4195218086242676,
+      "min": 0.0,
+      "max": 19.23296356201172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1768.wav",
+      "mean": 6.630958080291748,
+      "median": 6.126039505004883,
+      "std": 3.181380271911621,
+      "min": 0.0,
+      "max": 26.192333221435547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1771.wav",
+      "mean": 7.243625640869141,
+      "median": 7.066938400268555,
+      "std": 3.1603381633758545,
+      "min": 0.0,
+      "max": 24.112960815429688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1772.wav",
+      "mean": 5.371915340423584,
+      "median": 4.948607921600342,
+      "std": 2.9925553798675537,
+      "min": 0.0,
+      "max": 20.727563858032227
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1773.wav",
+      "mean": 5.152140140533447,
+      "median": 5.075148582458496,
+      "std": 2.4771840572357178,
+      "min": 0.0,
+      "max": 16.564302444458008
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1775.wav",
+      "mean": 8.32363224029541,
+      "median": 7.957664489746094,
+      "std": 3.207429885864258,
+      "min": 0.0,
+      "max": 28.355606079101562
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1776.wav",
+      "mean": 5.448728084564209,
+      "median": 4.599067687988281,
+      "std": 3.4429900646209717,
+      "min": 0.0,
+      "max": 24.80466079711914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1777.wav",
+      "mean": 6.558811187744141,
+      "median": 6.0060882568359375,
+      "std": 3.257810592651367,
+      "min": 0.0,
+      "max": 25.287654876708984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1788.wav",
+      "mean": 9.677574157714844,
+      "median": 9.26132869720459,
+      "std": 3.9259045124053955,
+      "min": 0.0,
+      "max": 31.536090850830078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1789.wav",
+      "mean": 8.202289581298828,
+      "median": 7.581700325012207,
+      "std": 3.8866443634033203,
+      "min": 0.0,
+      "max": 28.98723602294922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1790.wav",
+      "mean": 8.918910026550293,
+      "median": 8.804922103881836,
+      "std": 4.0991034507751465,
+      "min": 0.0,
+      "max": 27.285297393798828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1791.wav",
+      "mean": 9.571908950805664,
+      "median": 9.36111831665039,
+      "std": 4.053107261657715,
+      "min": 0.0,
+      "max": 28.4638729095459
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1792.wav",
+      "mean": 13.25192642211914,
+      "median": 11.953903198242188,
+      "std": 7.107988357543945,
+      "min": 0.0,
+      "max": 43.08892822265625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1793.wav",
+      "mean": 11.131747245788574,
+      "median": 10.220993995666504,
+      "std": 5.785555362701416,
+      "min": 0.0,
+      "max": 36.00135803222656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1805.wav",
+      "mean": 4.165755271911621,
+      "median": 3.9961001873016357,
+      "std": 1.9005560874938965,
+      "min": 0.0,
+      "max": 12.109923362731934
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1807.wav",
+      "mean": 4.036594390869141,
+      "median": 3.9102699756622314,
+      "std": 1.843565821647644,
+      "min": 0.0,
+      "max": 11.187155723571777
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1811.wav",
+      "mean": 6.695116996765137,
+      "median": 6.600857734680176,
+      "std": 2.8876709938049316,
+      "min": 0.0,
+      "max": 16.817508697509766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1812.wav",
+      "mean": 7.574648380279541,
+      "median": 7.203881740570068,
+      "std": 3.3740944862365723,
+      "min": 0.0,
+      "max": 21.792064666748047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1813.wav",
+      "mean": 6.843754768371582,
+      "median": 6.525546073913574,
+      "std": 3.171534538269043,
+      "min": 0.0,
+      "max": 19.827531814575195
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1817.wav",
+      "mean": 9.966017723083496,
+      "median": 10.021453857421875,
+      "std": 4.113237380981445,
+      "min": 0.0,
+      "max": 23.973758697509766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1818.wav",
+      "mean": 8.417407989501953,
+      "median": 8.429579734802246,
+      "std": 3.4604697227478027,
+      "min": 0.0,
+      "max": 19.128204345703125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1822.wav",
+      "mean": 7.6395134925842285,
+      "median": 7.322754859924316,
+      "std": 2.887263059616089,
+      "min": 0.0,
+      "max": 20.342235565185547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1824.wav",
+      "mean": 6.84321403503418,
+      "median": 6.572153568267822,
+      "std": 3.1550920009613037,
+      "min": 0.0,
+      "max": 20.444238662719727
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1828.wav",
+      "mean": 3.8638694286346436,
+      "median": 3.609602928161621,
+      "std": 2.312803030014038,
+      "min": 0.0,
+      "max": 12.805171012878418
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1829.wav",
+      "mean": 6.235164165496826,
+      "median": 5.959286689758301,
+      "std": 2.6414101123809814,
+      "min": 0.0,
+      "max": 19.24027442932129
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1835.wav",
+      "mean": 11.341309547424316,
+      "median": 11.059059143066406,
+      "std": 5.0893120765686035,
+      "min": 0.0,
+      "max": 29.33234405517578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1859.wav",
+      "mean": 5.701115608215332,
+      "median": 5.428483009338379,
+      "std": 3.201939582824707,
+      "min": 0.0,
+      "max": 21.359935760498047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1872.wav",
+      "mean": 3.9328277111053467,
+      "median": 3.8012261390686035,
+      "std": 1.9225730895996094,
+      "min": 0.0,
+      "max": 13.422340393066406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1873.wav",
+      "mean": 6.3924970626831055,
+      "median": 5.964972019195557,
+      "std": 3.003176689147949,
+      "min": 0.0,
+      "max": 21.855934143066406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1876.wav",
+      "mean": 4.590150356292725,
+      "median": 4.4163360595703125,
+      "std": 2.2821547985076904,
+      "min": 0.0,
+      "max": 17.97982406616211
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1893.wav",
+      "mean": 5.624223232269287,
+      "median": 5.406979560852051,
+      "std": 3.127049684524536,
+      "min": 0.0,
+      "max": 20.90182113647461
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1916.wav",
+      "mean": 8.64673137664795,
+      "median": 8.209165573120117,
+      "std": 3.1507742404937744,
+      "min": 0.0,
+      "max": 26.127904891967773
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1918.wav",
+      "mean": 7.400125980377197,
+      "median": 7.24803352355957,
+      "std": 3.2968215942382812,
+      "min": 0.0,
+      "max": 23.08736228942871
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1919.wav",
+      "mean": 9.206400871276855,
+      "median": 8.611494064331055,
+      "std": 3.7655935287475586,
+      "min": 0.0,
+      "max": 27.624055862426758
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1922.wav",
+      "mean": 4.138464450836182,
+      "median": 3.959796905517578,
+      "std": 2.0985329151153564,
+      "min": 0.0,
+      "max": 13.899798393249512
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1923.wav",
+      "mean": 4.811643123626709,
+      "median": 4.356863021850586,
+      "std": 2.52913498878479,
+      "min": 0.0,
+      "max": 20.896974563598633
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1931.wav",
+      "mean": 7.11441707611084,
+      "median": 6.573287010192871,
+      "std": 3.1388843059539795,
+      "min": 0.0,
+      "max": 24.461994171142578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1932.wav",
+      "mean": 7.624587535858154,
+      "median": 7.181186199188232,
+      "std": 3.60510516166687,
+      "min": 0.0,
+      "max": 26.320602416992188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/1933.wav",
+      "mean": 8.302169799804688,
+      "median": 7.585788726806641,
+      "std": 3.949985980987549,
+      "min": 0.0,
+      "max": 29.89630889892578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2075.wav",
+      "mean": 6.283549785614014,
+      "median": 6.22580623626709,
+      "std": 2.4575564861297607,
+      "min": 0.0,
+      "max": 14.107107162475586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2076.wav",
+      "mean": 5.290788173675537,
+      "median": 5.252652645111084,
+      "std": 1.9795681238174438,
+      "min": 0.0,
+      "max": 12.423492431640625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2077.wav",
+      "mean": 5.770041465759277,
+      "median": 5.835075378417969,
+      "std": 2.4390106201171875,
+      "min": 0.0,
+      "max": 14.583965301513672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2078.wav",
+      "mean": 5.496124744415283,
+      "median": 5.474941253662109,
+      "std": 2.2354884147644043,
+      "min": 0.0,
+      "max": 13.978975296020508
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2079.wav",
+      "mean": 5.173504829406738,
+      "median": 5.264672756195068,
+      "std": 1.7404588460922241,
+      "min": 0.0,
+      "max": 10.099246978759766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2080.wav",
+      "mean": 5.108039855957031,
+      "median": 5.098642826080322,
+      "std": 2.1904983520507812,
+      "min": 0.0,
+      "max": 13.909878730773926
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2081.wav",
+      "mean": 5.671691417694092,
+      "median": 5.6424560546875,
+      "std": 1.9665542840957642,
+      "min": 0.0,
+      "max": 12.49295425415039
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2082.wav",
+      "mean": 5.114841938018799,
+      "median": 5.122124195098877,
+      "std": 1.9043149948120117,
+      "min": 0.0,
+      "max": 11.482285499572754
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2083.wav",
+      "mean": 4.885793685913086,
+      "median": 4.6306962966918945,
+      "std": 2.483949899673462,
+      "min": 0.0,
+      "max": 15.43675422668457
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2104.wav",
+      "mean": 8.077858924865723,
+      "median": 7.939657688140869,
+      "std": 3.298661231994629,
+      "min": 0.0,
+      "max": 23.936763763427734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2105.wav",
+      "mean": 6.550362586975098,
+      "median": 6.682647705078125,
+      "std": 2.810331344604492,
+      "min": 0.0,
+      "max": 17.68328094482422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2112.wav",
+      "mean": 6.532588958740234,
+      "median": 5.598450183868408,
+      "std": 3.772961139678955,
+      "min": 0.0,
+      "max": 23.19164276123047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2113.wav",
+      "mean": 6.288320541381836,
+      "median": 6.2198944091796875,
+      "std": 3.290879964828491,
+      "min": 0.0,
+      "max": 18.823368072509766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2114.wav",
+      "mean": 9.470264434814453,
+      "median": 9.39345932006836,
+      "std": 4.152822017669678,
+      "min": 0.0,
+      "max": 25.621410369873047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2116.wav",
+      "mean": 10.838172912597656,
+      "median": 9.972925186157227,
+      "std": 5.690285682678223,
+      "min": 0.0,
+      "max": 32.198883056640625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2117.wav",
+      "mean": 7.269741058349609,
+      "median": 6.688826560974121,
+      "std": 3.354858875274658,
+      "min": 0.0,
+      "max": 25.2796573638916
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2118.wav",
+      "mean": 10.133035659790039,
+      "median": 9.403663635253906,
+      "std": 4.83202600479126,
+      "min": 0.0,
+      "max": 28.411197662353516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2119.wav",
+      "mean": 11.523193359375,
+      "median": 10.970434188842773,
+      "std": 5.637876987457275,
+      "min": 0.0,
+      "max": 45.207984924316406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2127.wav",
+      "mean": 13.834465026855469,
+      "median": 13.111077308654785,
+      "std": 6.214283466339111,
+      "min": 0.0,
+      "max": 46.93822479248047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2131.wav",
+      "mean": 16.5216064453125,
+      "median": 14.603337287902832,
+      "std": 9.153841972351074,
+      "min": 0.0,
+      "max": 49.661781311035156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2138.wav",
+      "mean": 8.475339889526367,
+      "median": 8.251076698303223,
+      "std": 4.22305154800415,
+      "min": 0.0,
+      "max": 25.420063018798828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2140.wav",
+      "mean": 10.939520835876465,
+      "median": 10.7835054397583,
+      "std": 4.517167568206787,
+      "min": 0.0,
+      "max": 31.088451385498047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2147.wav",
+      "mean": 9.832395553588867,
+      "median": 8.994592666625977,
+      "std": 4.515006065368652,
+      "min": 0.0,
+      "max": 34.45370864868164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2148.wav",
+      "mean": 8.587177276611328,
+      "median": 8.5269136428833,
+      "std": 3.9942467212677,
+      "min": 0.0,
+      "max": 26.405757904052734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2149.wav",
+      "mean": 6.683696269989014,
+      "median": 6.428110599517822,
+      "std": 2.6670217514038086,
+      "min": 0.0,
+      "max": 20.851478576660156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2150.wav",
+      "mean": 9.021580696105957,
+      "median": 8.804912567138672,
+      "std": 3.825970411300659,
+      "min": 0.0,
+      "max": 24.816341400146484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2151.wav",
+      "mean": 10.040518760681152,
+      "median": 9.877928733825684,
+      "std": 4.562500476837158,
+      "min": 0.0,
+      "max": 27.78063201904297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2154.wav",
+      "mean": 6.951667785644531,
+      "median": 6.686895847320557,
+      "std": 3.019679546356201,
+      "min": 0.0,
+      "max": 23.4901065826416
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2155.wav",
+      "mean": 7.332091808319092,
+      "median": 7.458498001098633,
+      "std": 3.048534631729126,
+      "min": 0.0,
+      "max": 19.330677032470703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2156.wav",
+      "mean": 8.26994800567627,
+      "median": 8.374743461608887,
+      "std": 3.4337871074676514,
+      "min": 0.0,
+      "max": 22.214889526367188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2157.wav",
+      "mean": 6.826084613800049,
+      "median": 6.353622913360596,
+      "std": 3.053983688354492,
+      "min": 0.0,
+      "max": 25.634355545043945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2158.wav",
+      "mean": 5.657513618469238,
+      "median": 4.989980697631836,
+      "std": 3.046980381011963,
+      "min": 0.0,
+      "max": 24.255123138427734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2159.wav",
+      "mean": 5.879619598388672,
+      "median": 5.332342147827148,
+      "std": 2.7666118144989014,
+      "min": 0.0,
+      "max": 21.657962799072266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2160.wav",
+      "mean": 3.440300703048706,
+      "median": 2.871346950531006,
+      "std": 1.8248260021209717,
+      "min": 0.0,
+      "max": 16.481307983398438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2161.wav",
+      "mean": 5.7061567306518555,
+      "median": 5.319662094116211,
+      "std": 2.6567583084106445,
+      "min": 0.0,
+      "max": 23.87162971496582
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2166.wav",
+      "mean": 14.808876991271973,
+      "median": 13.924745559692383,
+      "std": 7.08994197845459,
+      "min": 0.0,
+      "max": 51.79956817626953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2167.wav",
+      "mean": 11.784863471984863,
+      "median": 11.587654113769531,
+      "std": 5.02702522277832,
+      "min": 0.0,
+      "max": 38.12224578857422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2168.wav",
+      "mean": 12.786190032958984,
+      "median": 10.441789627075195,
+      "std": 8.330809593200684,
+      "min": 0.0,
+      "max": 52.62413024902344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2169.wav",
+      "mean": 17.836563110351562,
+      "median": 17.709796905517578,
+      "std": 7.206206798553467,
+      "min": 0.0,
+      "max": 47.55807876586914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2177.wav",
+      "mean": 6.785830020904541,
+      "median": 6.239338397979736,
+      "std": 3.1379852294921875,
+      "min": 0.0,
+      "max": 26.500350952148438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2178.wav",
+      "mean": 5.292035102844238,
+      "median": 4.792318344116211,
+      "std": 2.710533618927002,
+      "min": 0.0,
+      "max": 22.881662368774414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2179.wav",
+      "mean": 4.786242485046387,
+      "median": 4.2155961990356445,
+      "std": 2.652651071548462,
+      "min": 0.0,
+      "max": 21.605562210083008
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2180.wav",
+      "mean": 7.3201518058776855,
+      "median": 6.515716552734375,
+      "std": 3.7404494285583496,
+      "min": 0.0,
+      "max": 25.598285675048828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2186.wav",
+      "mean": 12.543353080749512,
+      "median": 12.012762069702148,
+      "std": 5.400557518005371,
+      "min": 0.0,
+      "max": 36.054954528808594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2194.wav",
+      "mean": 4.753296375274658,
+      "median": 4.443670272827148,
+      "std": 2.29050350189209,
+      "min": 0.0,
+      "max": 15.421150207519531
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2195.wav",
+      "mean": 6.898364543914795,
+      "median": 6.953929901123047,
+      "std": 2.9277727603912354,
+      "min": 0.0,
+      "max": 19.489654541015625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2196.wav",
+      "mean": 6.774906158447266,
+      "median": 6.730811595916748,
+      "std": 2.9396119117736816,
+      "min": 0.0,
+      "max": 18.93889045715332
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2198.wav",
+      "mean": 4.405395030975342,
+      "median": 4.108509063720703,
+      "std": 2.447313070297241,
+      "min": 0.0,
+      "max": 16.301990509033203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2200.wav",
+      "mean": 6.227147579193115,
+      "median": 6.314029693603516,
+      "std": 2.8940205574035645,
+      "min": 0.0,
+      "max": 18.481121063232422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2201.wav",
+      "mean": 4.739447593688965,
+      "median": 4.729180335998535,
+      "std": 2.1093242168426514,
+      "min": 0.0,
+      "max": 13.291418075561523
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2202.wav",
+      "mean": 10.125866889953613,
+      "median": 9.848388671875,
+      "std": 4.293478488922119,
+      "min": 0.0,
+      "max": 24.81664276123047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2203.wav",
+      "mean": 10.092029571533203,
+      "median": 10.209195137023926,
+      "std": 4.127664566040039,
+      "min": 0.0,
+      "max": 24.643634796142578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2204.wav",
+      "mean": 10.725821495056152,
+      "median": 11.156379699707031,
+      "std": 4.8546648025512695,
+      "min": 0.0,
+      "max": 23.748111724853516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2207.wav",
+      "mean": 6.7488627433776855,
+      "median": 6.713273048400879,
+      "std": 3.085770606994629,
+      "min": 0.0,
+      "max": 18.591190338134766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2208.wav",
+      "mean": 5.829060077667236,
+      "median": 5.171699523925781,
+      "std": 3.2968599796295166,
+      "min": 0.0,
+      "max": 17.110288619995117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2209.wav",
+      "mean": 7.714843273162842,
+      "median": 7.925854206085205,
+      "std": 3.6712214946746826,
+      "min": 0.0,
+      "max": 22.18392562866211
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2210.wav",
+      "mean": 4.953182697296143,
+      "median": 4.897763252258301,
+      "std": 2.428286075592041,
+      "min": 0.0,
+      "max": 15.692893981933594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2211.wav",
+      "mean": 5.413942813873291,
+      "median": 5.523027420043945,
+      "std": 2.645357131958008,
+      "min": 0.0,
+      "max": 14.74407958984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2212.wav",
+      "mean": 3.9293456077575684,
+      "median": 3.782777786254883,
+      "std": 1.9197916984558105,
+      "min": 0.0,
+      "max": 13.05958080291748
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2213.wav",
+      "mean": 5.982691287994385,
+      "median": 6.141824722290039,
+      "std": 2.770448923110962,
+      "min": 0.0,
+      "max": 17.30059051513672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2214.wav",
+      "mean": 7.369969367980957,
+      "median": 7.758223533630371,
+      "std": 3.029327869415283,
+      "min": 0.0,
+      "max": 16.885976791381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2215.wav",
+      "mean": 5.983353614807129,
+      "median": 6.0487213134765625,
+      "std": 2.8233304023742676,
+      "min": 0.0,
+      "max": 15.334787368774414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2217.wav",
+      "mean": 7.999605655670166,
+      "median": 7.841593265533447,
+      "std": 3.0800328254699707,
+      "min": 0.0,
+      "max": 20.405258178710938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2218.wav",
+      "mean": 7.749842166900635,
+      "median": 7.535358428955078,
+      "std": 3.022998332977295,
+      "min": 0.0,
+      "max": 21.98745346069336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2219.wav",
+      "mean": 7.292121410369873,
+      "median": 7.177862167358398,
+      "std": 2.596574306488037,
+      "min": 0.0,
+      "max": 18.068984985351562
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2220.wav",
+      "mean": 7.975998401641846,
+      "median": 8.017584800720215,
+      "std": 2.8554775714874268,
+      "min": 0.0,
+      "max": 18.790050506591797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2221.wav",
+      "mean": 6.030296325683594,
+      "median": 5.79771614074707,
+      "std": 2.5272271633148193,
+      "min": 0.0,
+      "max": 18.32182502746582
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2222.wav",
+      "mean": 7.779700756072998,
+      "median": 7.5297346115112305,
+      "std": 3.114229202270508,
+      "min": 0.0,
+      "max": 20.85652732849121
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2224.wav",
+      "mean": 7.06992244720459,
+      "median": 7.292195796966553,
+      "std": 3.002457618713379,
+      "min": 0.0,
+      "max": 20.767532348632812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2225.wav",
+      "mean": 6.248811721801758,
+      "median": 6.240344047546387,
+      "std": 2.585876703262329,
+      "min": 0.0,
+      "max": 16.610382080078125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2227.wav",
+      "mean": 6.333003997802734,
+      "median": 6.401185512542725,
+      "std": 2.768616199493408,
+      "min": 0.0,
+      "max": 16.051469802856445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2228.wav",
+      "mean": 6.598950386047363,
+      "median": 6.734704971313477,
+      "std": 2.8985700607299805,
+      "min": 0.0,
+      "max": 16.767051696777344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2229.wav",
+      "mean": 7.412726879119873,
+      "median": 7.526895523071289,
+      "std": 3.1548075675964355,
+      "min": 0.0,
+      "max": 22.404895782470703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2230.wav",
+      "mean": 6.006914138793945,
+      "median": 6.122348785400391,
+      "std": 2.8897478580474854,
+      "min": 0.0,
+      "max": 18.314767837524414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2231.wav",
+      "mean": 6.200264930725098,
+      "median": 6.354396820068359,
+      "std": 2.840259552001953,
+      "min": 0.0,
+      "max": 18.15072250366211
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2232.wav",
+      "mean": 5.909441947937012,
+      "median": 6.089372634887695,
+      "std": 2.8784730434417725,
+      "min": 0.0,
+      "max": 16.286819458007812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2234.wav",
+      "mean": 7.535999774932861,
+      "median": 7.702842712402344,
+      "std": 2.9589638710021973,
+      "min": 0.0,
+      "max": 17.2605037689209
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2237.wav",
+      "mean": 6.5435709953308105,
+      "median": 6.386023044586182,
+      "std": 3.1672110557556152,
+      "min": 0.0,
+      "max": 18.70907211303711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2238.wav",
+      "mean": 5.42802095413208,
+      "median": 5.580405235290527,
+      "std": 2.6302690505981445,
+      "min": 0.0,
+      "max": 17.521610260009766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2239.wav",
+      "mean": 6.584227085113525,
+      "median": 6.753051280975342,
+      "std": 2.9999582767486572,
+      "min": 0.0,
+      "max": 18.56226921081543
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2240.wav",
+      "mean": 5.5866899490356445,
+      "median": 5.670950412750244,
+      "std": 2.5339605808258057,
+      "min": 0.0,
+      "max": 17.18008041381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2241.wav",
+      "mean": 6.555775165557861,
+      "median": 6.457312107086182,
+      "std": 2.519374370574951,
+      "min": 0.0,
+      "max": 22.619556427001953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2242.wav",
+      "mean": 9.408076286315918,
+      "median": 9.205329895019531,
+      "std": 3.7119531631469727,
+      "min": 0.0,
+      "max": 24.83989715576172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2243.wav",
+      "mean": 7.645386695861816,
+      "median": 7.501960754394531,
+      "std": 2.7898268699645996,
+      "min": 0.0,
+      "max": 19.507747650146484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2244.wav",
+      "mean": 7.4415974617004395,
+      "median": 7.117942810058594,
+      "std": 2.728945255279541,
+      "min": 0.0,
+      "max": 20.85654067993164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2247.wav",
+      "mean": 7.151028156280518,
+      "median": 7.312472343444824,
+      "std": 3.6026852130889893,
+      "min": 0.0,
+      "max": 21.926359176635742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2248.wav",
+      "mean": 4.828782081604004,
+      "median": 4.678191184997559,
+      "std": 2.2670912742614746,
+      "min": 0.0,
+      "max": 14.290339469909668
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2282.wav",
+      "mean": 7.760479927062988,
+      "median": 7.1560235023498535,
+      "std": 3.7447845935821533,
+      "min": 0.0,
+      "max": 23.244380950927734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2283.wav",
+      "mean": 10.2142972946167,
+      "median": 9.579144477844238,
+      "std": 4.181090831756592,
+      "min": 0.0,
+      "max": 31.62520980834961
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2284.wav",
+      "mean": 7.460061550140381,
+      "median": 6.9881696701049805,
+      "std": 3.3414978981018066,
+      "min": 0.0,
+      "max": 27.32007598876953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2285.wav",
+      "mean": 10.815347671508789,
+      "median": 10.136602401733398,
+      "std": 4.261064052581787,
+      "min": 0.0,
+      "max": 30.06728744506836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2288.wav",
+      "mean": 14.19428825378418,
+      "median": 13.785534858703613,
+      "std": 5.519195556640625,
+      "min": 0.0,
+      "max": 44.980445861816406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2289.wav",
+      "mean": 12.9364013671875,
+      "median": 12.236733436584473,
+      "std": 5.353235244750977,
+      "min": 0.0,
+      "max": 43.163238525390625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2292.wav",
+      "mean": 6.272311210632324,
+      "median": 6.243538856506348,
+      "std": 3.0996909141540527,
+      "min": 0.0,
+      "max": 18.662145614624023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2293.wav",
+      "mean": 9.345559120178223,
+      "median": 9.34994125366211,
+      "std": 2.747359275817871,
+      "min": 0.0,
+      "max": 19.849037170410156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2294.wav",
+      "mean": 7.044991493225098,
+      "median": 6.688956260681152,
+      "std": 2.6906542778015137,
+      "min": 0.0,
+      "max": 20.734981536865234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2295.wav",
+      "mean": 7.383592128753662,
+      "median": 7.137472152709961,
+      "std": 2.932755708694458,
+      "min": 0.0,
+      "max": 19.15379524230957
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2296.wav",
+      "mean": 7.549951553344727,
+      "median": 7.413780689239502,
+      "std": 2.590747356414795,
+      "min": 0.0,
+      "max": 16.71440315246582
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2297.wav",
+      "mean": 7.082527160644531,
+      "median": 6.647067070007324,
+      "std": 3.1402323246002197,
+      "min": 0.0,
+      "max": 19.648983001708984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2300.wav",
+      "mean": 3.30226731300354,
+      "median": 2.813769817352295,
+      "std": 2.3281068801879883,
+      "min": 0.0,
+      "max": 14.891074180603027
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2302.wav",
+      "mean": 6.55808162689209,
+      "median": 6.415538787841797,
+      "std": 3.203612804412842,
+      "min": 0.0,
+      "max": 19.826244354248047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2304.wav",
+      "mean": 4.820306777954102,
+      "median": 4.822196006774902,
+      "std": 2.381898880004883,
+      "min": 0.0,
+      "max": 17.697294235229492
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2305.wav",
+      "mean": 7.182780742645264,
+      "median": 7.499370574951172,
+      "std": 3.2257001399993896,
+      "min": 0.0,
+      "max": 19.426651000976562
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2307.wav",
+      "mean": 5.978862285614014,
+      "median": 6.00331974029541,
+      "std": 3.0039775371551514,
+      "min": 0.0,
+      "max": 18.40840721130371
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2308.wav",
+      "mean": 4.658016681671143,
+      "median": 4.534714698791504,
+      "std": 2.2536280155181885,
+      "min": 0.0,
+      "max": 17.673755645751953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2310.wav",
+      "mean": 8.089095115661621,
+      "median": 8.064056396484375,
+      "std": 3.358922004699707,
+      "min": 0.0,
+      "max": 18.614490509033203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2313.wav",
+      "mean": 8.87961196899414,
+      "median": 8.079629898071289,
+      "std": 4.683704853057861,
+      "min": 0.0,
+      "max": 30.27581024169922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2314.wav",
+      "mean": 7.824662685394287,
+      "median": 7.357887268066406,
+      "std": 3.6085007190704346,
+      "min": 0.0,
+      "max": 26.8597354888916
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2315.wav",
+      "mean": 6.921182632446289,
+      "median": 6.2458038330078125,
+      "std": 3.456054449081421,
+      "min": 0.0,
+      "max": 26.012256622314453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2318.wav",
+      "mean": 9.276376724243164,
+      "median": 8.925671577453613,
+      "std": 4.391637802124023,
+      "min": 0.0,
+      "max": 34.96734619140625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2319.wav",
+      "mean": 6.250378131866455,
+      "median": 5.8348541259765625,
+      "std": 3.064284563064575,
+      "min": 0.0,
+      "max": 24.009769439697266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2320.wav",
+      "mean": 7.914780616760254,
+      "median": 7.605334281921387,
+      "std": 3.8591015338897705,
+      "min": 0.0,
+      "max": 22.598926544189453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2322.wav",
+      "mean": 8.561928749084473,
+      "median": 8.187744140625,
+      "std": 4.694878578186035,
+      "min": 0.0,
+      "max": 33.60047149658203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2325.wav",
+      "mean": 12.853595733642578,
+      "median": 12.58028793334961,
+      "std": 7.178700923919678,
+      "min": 0.0,
+      "max": 44.221431732177734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2330.wav",
+      "mean": 17.609710693359375,
+      "median": 18.505136489868164,
+      "std": 5.1516242027282715,
+      "min": 0.0,
+      "max": 32.062232971191406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2334.wav",
+      "mean": 6.387537956237793,
+      "median": 5.810506820678711,
+      "std": 3.4939160346984863,
+      "min": 0.0,
+      "max": 24.360939025878906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2335.wav",
+      "mean": 4.943098068237305,
+      "median": 4.684532165527344,
+      "std": 2.3483083248138428,
+      "min": 0.0,
+      "max": 17.87284278869629
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2336.wav",
+      "mean": 8.61379337310791,
+      "median": 7.8478312492370605,
+      "std": 4.2993927001953125,
+      "min": 0.0,
+      "max": 26.63113021850586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2341.wav",
+      "mean": 7.967822551727295,
+      "median": 7.625851631164551,
+      "std": 3.7105143070220947,
+      "min": 0.0,
+      "max": 27.08922576904297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2342.wav",
+      "mean": 11.377215385437012,
+      "median": 11.095417022705078,
+      "std": 5.002268314361572,
+      "min": 0.0,
+      "max": 32.15211486816406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2343.wav",
+      "mean": 5.750809669494629,
+      "median": 5.177764892578125,
+      "std": 3.099902629852295,
+      "min": 0.0,
+      "max": 27.962596893310547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2345.wav",
+      "mean": 7.9850358963012695,
+      "median": 7.4091796875,
+      "std": 4.084939002990723,
+      "min": 0.0,
+      "max": 28.144535064697266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2346.wav",
+      "mean": 2.8728647232055664,
+      "median": 2.707859992980957,
+      "std": 1.2601498365402222,
+      "min": 0.0,
+      "max": 9.450100898742676
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2348.wav",
+      "mean": 7.735506057739258,
+      "median": 7.351754188537598,
+      "std": 3.6633801460266113,
+      "min": 0.0,
+      "max": 27.973358154296875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2350.wav",
+      "mean": 14.139731407165527,
+      "median": 13.809518814086914,
+      "std": 4.511592864990234,
+      "min": 0.0,
+      "max": 36.98053741455078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2357.wav",
+      "mean": 4.542963981628418,
+      "median": 4.256385326385498,
+      "std": 2.312664031982422,
+      "min": 0.0,
+      "max": 14.956132888793945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2358.wav",
+      "mean": 5.120870590209961,
+      "median": 5.069555282592773,
+      "std": 2.5770657062530518,
+      "min": 0.0,
+      "max": 15.581771850585938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2359.wav",
+      "mean": 5.61033821105957,
+      "median": 5.280004501342773,
+      "std": 2.9143404960632324,
+      "min": 0.0,
+      "max": 22.835092544555664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2364.wav",
+      "mean": 8.333902359008789,
+      "median": 7.449128150939941,
+      "std": 5.497489929199219,
+      "min": 0.0,
+      "max": 31.91034698486328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2365.wav",
+      "mean": 12.543965339660645,
+      "median": 12.191842079162598,
+      "std": 5.706152439117432,
+      "min": 0.0,
+      "max": 35.03831481933594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2366.wav",
+      "mean": 11.19743537902832,
+      "median": 10.619988441467285,
+      "std": 5.48582649230957,
+      "min": 0.0,
+      "max": 35.44179916381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2368.wav",
+      "mean": 10.930854797363281,
+      "median": 9.647518157958984,
+      "std": 5.931966781616211,
+      "min": 0.0,
+      "max": 33.7354850769043
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2371.wav",
+      "mean": 4.971412181854248,
+      "median": 4.740797519683838,
+      "std": 2.8820600509643555,
+      "min": 0.0,
+      "max": 18.0573673248291
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2372.wav",
+      "mean": 6.011814594268799,
+      "median": 5.751657962799072,
+      "std": 3.1920266151428223,
+      "min": 0.0,
+      "max": 19.600685119628906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2373.wav",
+      "mean": 6.560985088348389,
+      "median": 6.33363151550293,
+      "std": 2.715987205505371,
+      "min": 0.0,
+      "max": 20.69415855407715
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2374.wav",
+      "mean": 8.157633781433105,
+      "median": 7.9567413330078125,
+      "std": 3.253422737121582,
+      "min": 0.0,
+      "max": 23.77078628540039
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2376.wav",
+      "mean": 10.901039123535156,
+      "median": 9.751789093017578,
+      "std": 6.635967254638672,
+      "min": 0.0,
+      "max": 36.33919143676758
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2377.wav",
+      "mean": 10.137842178344727,
+      "median": 9.070512771606445,
+      "std": 5.47679328918457,
+      "min": 0.0,
+      "max": 41.70860290527344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2379.wav",
+      "mean": 12.975090026855469,
+      "median": 12.093314170837402,
+      "std": 6.902618408203125,
+      "min": 0.0,
+      "max": 40.20964813232422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2381.wav",
+      "mean": 11.643560409545898,
+      "median": 9.0723237991333,
+      "std": 8.534920692443848,
+      "min": 0.0,
+      "max": 51.105316162109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2383.wav",
+      "mean": 8.5767183303833,
+      "median": 7.990090370178223,
+      "std": 4.644801139831543,
+      "min": 0.0,
+      "max": 34.41583251953125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2384.wav",
+      "mean": 14.010512351989746,
+      "median": 13.691028594970703,
+      "std": 6.843138694763184,
+      "min": 0.0,
+      "max": 44.52935791015625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2388.wav",
+      "mean": 7.057729721069336,
+      "median": 7.154132843017578,
+      "std": 4.095714569091797,
+      "min": 0.0,
+      "max": 25.393390655517578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2389.wav",
+      "mean": 5.224643230438232,
+      "median": 4.801958084106445,
+      "std": 2.6546473503112793,
+      "min": 0.0,
+      "max": 19.270233154296875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2390.wav",
+      "mean": 9.410149574279785,
+      "median": 9.208242416381836,
+      "std": 2.9614880084991455,
+      "min": 0.0,
+      "max": 27.362384796142578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2391.wav",
+      "mean": 10.975960731506348,
+      "median": 11.842252731323242,
+      "std": 7.0096893310546875,
+      "min": 0.0,
+      "max": 35.449546813964844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2392.wav",
+      "mean": 8.555278778076172,
+      "median": 7.665729522705078,
+      "std": 4.957475662231445,
+      "min": 0.0,
+      "max": 29.526037216186523
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2393.wav",
+      "mean": 15.248870849609375,
+      "median": 15.533300399780273,
+      "std": 4.9911017417907715,
+      "min": 0.0,
+      "max": 32.17192077636719
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2397.wav",
+      "mean": 9.136188507080078,
+      "median": 8.270210266113281,
+      "std": 5.623013019561768,
+      "min": 0.0,
+      "max": 36.437530517578125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2398.wav",
+      "mean": 6.081551551818848,
+      "median": 5.646082878112793,
+      "std": 2.9828743934631348,
+      "min": 0.0,
+      "max": 26.4133358001709
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2403.wav",
+      "mean": 7.498979091644287,
+      "median": 6.772700309753418,
+      "std": 4.204798221588135,
+      "min": 0.0,
+      "max": 26.225704193115234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2404.wav",
+      "mean": 6.438811779022217,
+      "median": 6.0627055168151855,
+      "std": 2.9194788932800293,
+      "min": 0.0,
+      "max": 27.664535522460938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2405.wav",
+      "mean": 7.98862361907959,
+      "median": 7.30491828918457,
+      "std": 4.143964767456055,
+      "min": 0.0,
+      "max": 23.55715560913086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2406.wav",
+      "mean": 6.656141757965088,
+      "median": 5.882665157318115,
+      "std": 3.7725231647491455,
+      "min": 0.0,
+      "max": 29.915863037109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2410.wav",
+      "mean": 5.434446811676025,
+      "median": 5.095798015594482,
+      "std": 2.845682144165039,
+      "min": 0.0,
+      "max": 20.09805679321289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2411.wav",
+      "mean": 7.537282943725586,
+      "median": 7.227353096008301,
+      "std": 3.460691213607788,
+      "min": 0.0,
+      "max": 20.666767120361328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2415.wav",
+      "mean": 14.810080528259277,
+      "median": 14.865007400512695,
+      "std": 5.314512252807617,
+      "min": 0.0,
+      "max": 33.948490142822266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2417.wav",
+      "mean": 17.321975708007812,
+      "median": 17.434633255004883,
+      "std": 6.005112171173096,
+      "min": 0.0,
+      "max": 35.39194869995117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2420.wav",
+      "mean": 12.008605003356934,
+      "median": 11.382954597473145,
+      "std": 6.15489387512207,
+      "min": 0.0,
+      "max": 39.37458038330078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2422.wav",
+      "mean": 6.017416954040527,
+      "median": 5.86850643157959,
+      "std": 2.7586324214935303,
+      "min": 0.0,
+      "max": 20.769786834716797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2423.wav",
+      "mean": 3.855292320251465,
+      "median": 3.792022228240967,
+      "std": 1.7872740030288696,
+      "min": 0.0,
+      "max": 12.272530555725098
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2424.wav",
+      "mean": 5.117032051086426,
+      "median": 4.92347526550293,
+      "std": 2.6854352951049805,
+      "min": 0.0,
+      "max": 13.745464324951172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2431.wav",
+      "mean": 6.7104692459106445,
+      "median": 5.766394138336182,
+      "std": 4.264455318450928,
+      "min": 0.0,
+      "max": 29.735435485839844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2432.wav",
+      "mean": 8.058361053466797,
+      "median": 6.1301422119140625,
+      "std": 5.750573635101318,
+      "min": 0.0,
+      "max": 35.2343864440918
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2433.wav",
+      "mean": 3.871669292449951,
+      "median": 3.67370343208313,
+      "std": 2.3591387271881104,
+      "min": 0.0,
+      "max": 17.17409896850586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2436.wav",
+      "mean": 8.915597915649414,
+      "median": 8.421077728271484,
+      "std": 4.074730396270752,
+      "min": 0.0,
+      "max": 31.34679412841797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2441.wav",
+      "mean": 9.89982795715332,
+      "median": 9.297698974609375,
+      "std": 4.815771579742432,
+      "min": 0.0,
+      "max": 40.385345458984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2442.wav",
+      "mean": 8.585108757019043,
+      "median": 8.163814544677734,
+      "std": 4.664290428161621,
+      "min": 0.0,
+      "max": 34.16331481933594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2443.wav",
+      "mean": 6.0498046875,
+      "median": 5.334596633911133,
+      "std": 3.335237741470337,
+      "min": 0.0,
+      "max": 32.11301803588867
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2444.wav",
+      "mean": 8.975931167602539,
+      "median": 8.948720932006836,
+      "std": 4.162980556488037,
+      "min": 0.0,
+      "max": 36.65098571777344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2451.wav",
+      "mean": 6.206339359283447,
+      "median": 6.099277973175049,
+      "std": 3.084723949432373,
+      "min": 0.0,
+      "max": 21.54998016357422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2462.wav",
+      "mean": 8.102045059204102,
+      "median": 7.668771743774414,
+      "std": 4.780359268188477,
+      "min": 0.0,
+      "max": 27.676414489746094
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2463.wav",
+      "mean": 10.497735977172852,
+      "median": 10.213587760925293,
+      "std": 5.207947254180908,
+      "min": 0.0,
+      "max": 30.04595184326172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2466.wav",
+      "mean": 10.707834243774414,
+      "median": 10.22624683380127,
+      "std": 5.850265026092529,
+      "min": 0.0,
+      "max": 36.00750732421875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2471.wav",
+      "mean": 4.7442307472229,
+      "median": 4.2431559562683105,
+      "std": 2.9360363483428955,
+      "min": 0.0,
+      "max": 21.786422729492188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2472.wav",
+      "mean": 8.856025695800781,
+      "median": 8.684256553649902,
+      "std": 3.884293556213379,
+      "min": 0.0,
+      "max": 29.85910415649414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2473.wav",
+      "mean": 8.950024604797363,
+      "median": 8.794612884521484,
+      "std": 3.70967435836792,
+      "min": 0.0,
+      "max": 31.385940551757812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2476.wav",
+      "mean": 7.201669216156006,
+      "median": 6.823512077331543,
+      "std": 4.486213684082031,
+      "min": 0.0,
+      "max": 32.77744674682617
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2477.wav",
+      "mean": 11.017749786376953,
+      "median": 10.627001762390137,
+      "std": 5.904775619506836,
+      "min": 0.0,
+      "max": 38.521759033203125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2478.wav",
+      "mean": 13.101676940917969,
+      "median": 12.797178268432617,
+      "std": 5.070960521697998,
+      "min": 0.0,
+      "max": 35.57536315917969
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2480.wav",
+      "mean": 11.549507141113281,
+      "median": 10.406549453735352,
+      "std": 5.868524074554443,
+      "min": 0.0,
+      "max": 36.68878936767578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2481.wav",
+      "mean": 10.974689483642578,
+      "median": 10.751636505126953,
+      "std": 5.124645709991455,
+      "min": 0.0,
+      "max": 29.78099250793457
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2482.wav",
+      "mean": 10.327132225036621,
+      "median": 9.565938949584961,
+      "std": 5.232320308685303,
+      "min": 0.0,
+      "max": 32.56818771362305
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2483.wav",
+      "mean": 10.904065132141113,
+      "median": 10.123150825500488,
+      "std": 5.015610694885254,
+      "min": 0.0,
+      "max": 34.39488983154297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2486.wav",
+      "mean": 3.519502639770508,
+      "median": 2.9406909942626953,
+      "std": 2.4177660942077637,
+      "min": 0.0,
+      "max": 15.63153076171875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2487.wav",
+      "mean": 5.361941814422607,
+      "median": 5.22990608215332,
+      "std": 2.663085460662842,
+      "min": 0.0,
+      "max": 16.121740341186523
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2488.wav",
+      "mean": 6.032937526702881,
+      "median": 5.777400016784668,
+      "std": 2.5468571186065674,
+      "min": 0.0,
+      "max": 19.4984073638916
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2490.wav",
+      "mean": 2.6015636920928955,
+      "median": 1.9345741271972656,
+      "std": 2.2266547679901123,
+      "min": 0.0,
+      "max": 16.437110900878906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2491.wav",
+      "mean": 5.268993854522705,
+      "median": 4.840463638305664,
+      "std": 3.1385674476623535,
+      "min": 0.0,
+      "max": 18.269954681396484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2492.wav",
+      "mean": 5.283886432647705,
+      "median": 4.583196640014648,
+      "std": 3.3004255294799805,
+      "min": 0.0,
+      "max": 21.017175674438477
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2494.wav",
+      "mean": 13.551311492919922,
+      "median": 12.48019027709961,
+      "std": 7.072312355041504,
+      "min": 0.0,
+      "max": 34.6165771484375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2497.wav",
+      "mean": 10.282340049743652,
+      "median": 9.173295021057129,
+      "std": 6.345792770385742,
+      "min": 0.0,
+      "max": 31.974205017089844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2501.wav",
+      "mean": 3.197681427001953,
+      "median": 3.1278953552246094,
+      "std": 1.4293166399002075,
+      "min": 0.0,
+      "max": 12.37911605834961
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2502.wav",
+      "mean": 4.912808895111084,
+      "median": 4.665486812591553,
+      "std": 2.090946912765503,
+      "min": 0.0,
+      "max": 16.552255630493164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2504.wav",
+      "mean": 7.144778728485107,
+      "median": 7.036384105682373,
+      "std": 3.184380531311035,
+      "min": 0.0,
+      "max": 18.73590087890625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2505.wav",
+      "mean": 6.25139856338501,
+      "median": 5.858060836791992,
+      "std": 2.8321094512939453,
+      "min": 0.0,
+      "max": 19.3302001953125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2506.wav",
+      "mean": 5.932974338531494,
+      "median": 5.579178810119629,
+      "std": 3.36690092086792,
+      "min": 0.0,
+      "max": 18.80488395690918
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2507.wav",
+      "mean": 6.5715203285217285,
+      "median": 6.3376054763793945,
+      "std": 3.1424314975738525,
+      "min": 0.0,
+      "max": 21.36410903930664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2509.wav",
+      "mean": 6.086084365844727,
+      "median": 5.543569564819336,
+      "std": 3.412363290786743,
+      "min": 0.0,
+      "max": 23.162752151489258
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2510.wav",
+      "mean": 3.5851197242736816,
+      "median": 3.0635058879852295,
+      "std": 2.3423118591308594,
+      "min": 0.0,
+      "max": 18.254257202148438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2512.wav",
+      "mean": 6.745350360870361,
+      "median": 6.318556308746338,
+      "std": 3.146442174911499,
+      "min": 0.0,
+      "max": 20.616079330444336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2514.wav",
+      "mean": 9.396949768066406,
+      "median": 7.964416027069092,
+      "std": 5.53857946395874,
+      "min": 0.0,
+      "max": 32.0692138671875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2516.wav",
+      "mean": 16.198787689208984,
+      "median": 16.811254501342773,
+      "std": 6.259354591369629,
+      "min": 0.0,
+      "max": 35.1069221496582
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2521.wav",
+      "mean": 7.941685676574707,
+      "median": 7.299912452697754,
+      "std": 4.017498016357422,
+      "min": 0.0,
+      "max": 36.12410354614258
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2522.wav",
+      "mean": 8.041380882263184,
+      "median": 7.212401866912842,
+      "std": 4.905327796936035,
+      "min": 0.0,
+      "max": 36.340553283691406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2523.wav",
+      "mean": 6.841377258300781,
+      "median": 6.2266845703125,
+      "std": 3.641364097595215,
+      "min": 0.0,
+      "max": 31.349689483642578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2527.wav",
+      "mean": 7.745582580566406,
+      "median": 7.220412731170654,
+      "std": 3.72995924949646,
+      "min": 0.0,
+      "max": 26.772151947021484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2528.wav",
+      "mean": 4.950343132019043,
+      "median": 4.4410014152526855,
+      "std": 2.7510907649993896,
+      "min": 0.0,
+      "max": 26.48446273803711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2529.wav",
+      "mean": 7.943666934967041,
+      "median": 7.672236442565918,
+      "std": 4.102399826049805,
+      "min": 0.0,
+      "max": 34.44287109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2530.wav",
+      "mean": 8.731443405151367,
+      "median": 8.5103759765625,
+      "std": 4.910091876983643,
+      "min": 0.0,
+      "max": 34.052825927734375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2531.wav",
+      "mean": 6.917512893676758,
+      "median": 6.271326541900635,
+      "std": 3.6208434104919434,
+      "min": 0.0,
+      "max": 32.216888427734375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2532.wav",
+      "mean": 6.4258599281311035,
+      "median": 5.548874855041504,
+      "std": 4.415326118469238,
+      "min": 0.0,
+      "max": 26.317665100097656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2533.wav",
+      "mean": 4.595512866973877,
+      "median": 3.361116409301758,
+      "std": 3.479897975921631,
+      "min": 0.0,
+      "max": 24.894956588745117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2537.wav",
+      "mean": 8.440398216247559,
+      "median": 8.513824462890625,
+      "std": 2.979149103164673,
+      "min": 0.0,
+      "max": 22.821680068969727
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2538.wav",
+      "mean": 6.4285454750061035,
+      "median": 6.210142135620117,
+      "std": 2.592283010482788,
+      "min": 0.0,
+      "max": 16.696884155273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2540.wav",
+      "mean": 5.511266231536865,
+      "median": 5.195084571838379,
+      "std": 2.8930959701538086,
+      "min": 0.0,
+      "max": 17.677148818969727
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2542.wav",
+      "mean": 7.430091381072998,
+      "median": 7.006922721862793,
+      "std": 3.9271254539489746,
+      "min": 0.0,
+      "max": 27.712345123291016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2550.wav",
+      "mean": 8.287775993347168,
+      "median": 8.311678886413574,
+      "std": 3.960291624069214,
+      "min": 0.0,
+      "max": 30.639795303344727
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2555.wav",
+      "mean": 5.462902069091797,
+      "median": 5.100278377532959,
+      "std": 3.1136667728424072,
+      "min": 0.0,
+      "max": 24.00543975830078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2557.wav",
+      "mean": 5.164061546325684,
+      "median": 4.712882995605469,
+      "std": 2.8056557178497314,
+      "min": 0.0,
+      "max": 23.45896339416504
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2560.wav",
+      "mean": 8.772981643676758,
+      "median": 8.36164379119873,
+      "std": 5.037515640258789,
+      "min": 0.0,
+      "max": 38.22679901123047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2562.wav",
+      "mean": 11.508313179016113,
+      "median": 9.939172744750977,
+      "std": 6.680435657501221,
+      "min": 0.0,
+      "max": 36.246742248535156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2564.wav",
+      "mean": 5.361382007598877,
+      "median": 4.77833366394043,
+      "std": 2.843280076980591,
+      "min": 0.0,
+      "max": 22.09908676147461
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2566.wav",
+      "mean": 8.650879859924316,
+      "median": 8.301477432250977,
+      "std": 3.708338499069214,
+      "min": 0.0,
+      "max": 29.45294189453125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2567.wav",
+      "mean": 4.859999656677246,
+      "median": 4.071659564971924,
+      "std": 3.2877259254455566,
+      "min": 0.0,
+      "max": 21.45212173461914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2568.wav",
+      "mean": 5.018044471740723,
+      "median": 4.661177635192871,
+      "std": 2.049325466156006,
+      "min": 0.0,
+      "max": 16.501628875732422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2570.wav",
+      "mean": 9.931507110595703,
+      "median": 10.012496948242188,
+      "std": 3.2937846183776855,
+      "min": 0.0,
+      "max": 21.818265914916992
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2571.wav",
+      "mean": 7.81138801574707,
+      "median": 7.989447116851807,
+      "std": 2.931025981903076,
+      "min": 0.0,
+      "max": 20.560348510742188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2572.wav",
+      "mean": 9.715818405151367,
+      "median": 9.634645462036133,
+      "std": 3.21640944480896,
+      "min": 0.0,
+      "max": 22.63391876220703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2573.wav",
+      "mean": 10.11771297454834,
+      "median": 10.437848091125488,
+      "std": 3.5483336448669434,
+      "min": 0.0,
+      "max": 27.917970657348633
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2575.wav",
+      "mean": 3.840510368347168,
+      "median": 3.5789361000061035,
+      "std": 1.9377106428146362,
+      "min": 0.0,
+      "max": 17.44509506225586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2576.wav",
+      "mean": 6.542064189910889,
+      "median": 6.323835372924805,
+      "std": 3.0144994258880615,
+      "min": 0.0,
+      "max": 23.21169662475586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2581.wav",
+      "mean": 7.358975887298584,
+      "median": 6.802508354187012,
+      "std": 4.224565505981445,
+      "min": 0.0,
+      "max": 28.112045288085938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2582.wav",
+      "mean": 8.54945182800293,
+      "median": 8.285123825073242,
+      "std": 2.758418321609497,
+      "min": 0.0,
+      "max": 23.1698055267334
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2586.wav",
+      "mean": 4.807549953460693,
+      "median": 4.593746185302734,
+      "std": 2.7862133979797363,
+      "min": 0.0,
+      "max": 18.694232940673828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2588.wav",
+      "mean": 6.154120445251465,
+      "median": 5.901732444763184,
+      "std": 2.93017840385437,
+      "min": 0.0,
+      "max": 19.52483367919922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2590.wav",
+      "mean": 6.642690181732178,
+      "median": 5.627765655517578,
+      "std": 4.399569988250732,
+      "min": 0.0,
+      "max": 28.49779510498047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2591.wav",
+      "mean": 9.05471420288086,
+      "median": 8.995742797851562,
+      "std": 3.5745439529418945,
+      "min": 0.0,
+      "max": 28.709991455078125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2593.wav",
+      "mean": 7.65238094329834,
+      "median": 7.583045959472656,
+      "std": 3.35522198677063,
+      "min": 0.0,
+      "max": 24.0457706451416
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2594.wav",
+      "mean": 6.992222309112549,
+      "median": 6.726014137268066,
+      "std": 3.596071481704712,
+      "min": 0.0,
+      "max": 30.481168746948242
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2595.wav",
+      "mean": 5.8539042472839355,
+      "median": 5.468728065490723,
+      "std": 2.9144294261932373,
+      "min": 0.0,
+      "max": 24.402870178222656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2596.wav",
+      "mean": 9.872635841369629,
+      "median": 9.707901000976562,
+      "std": 4.1274590492248535,
+      "min": 0.0,
+      "max": 34.165626525878906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2603.wav",
+      "mean": 8.741411209106445,
+      "median": 8.23808479309082,
+      "std": 5.475526332855225,
+      "min": 0.0,
+      "max": 36.2490119934082
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2607.wav",
+      "mean": 4.280791282653809,
+      "median": 4.081964492797852,
+      "std": 1.9578205347061157,
+      "min": 0.0,
+      "max": 13.675143241882324
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2608.wav",
+      "mean": 6.34710693359375,
+      "median": 6.118936061859131,
+      "std": 2.787558078765869,
+      "min": 0.0,
+      "max": 18.924678802490234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2611.wav",
+      "mean": 5.234054088592529,
+      "median": 4.535416126251221,
+      "std": 3.387394905090332,
+      "min": 0.0,
+      "max": 26.21967887878418
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2614.wav",
+      "mean": 3.065552234649658,
+      "median": 2.0458173751831055,
+      "std": 3.0723068714141846,
+      "min": 0.0,
+      "max": 19.774471282958984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2618.wav",
+      "mean": 6.161759376525879,
+      "median": 6.016141891479492,
+      "std": 3.1135613918304443,
+      "min": 0.0,
+      "max": 18.91470718383789
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2619.wav",
+      "mean": 4.60768985748291,
+      "median": 4.291921138763428,
+      "std": 2.5703282356262207,
+      "min": 0.0,
+      "max": 18.747169494628906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2620.wav",
+      "mean": 6.843439102172852,
+      "median": 6.862148284912109,
+      "std": 2.8832240104675293,
+      "min": 0.0,
+      "max": 18.205490112304688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2621.wav",
+      "mean": 12.770975112915039,
+      "median": 11.053754806518555,
+      "std": 7.041117191314697,
+      "min": 0.0,
+      "max": 46.15119934082031
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2622.wav",
+      "mean": 10.476207733154297,
+      "median": 8.35741138458252,
+      "std": 7.131711483001709,
+      "min": 0.0,
+      "max": 39.514862060546875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2626.wav",
+      "mean": 15.238204002380371,
+      "median": 15.3763427734375,
+      "std": 2.908658266067505,
+      "min": 0.0,
+      "max": 29.17249298095703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2627.wav",
+      "mean": 14.392197608947754,
+      "median": 14.48672866821289,
+      "std": 2.7330446243286133,
+      "min": 0.0,
+      "max": 27.2567195892334
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2629.wav",
+      "mean": 15.010677337646484,
+      "median": 15.258718490600586,
+      "std": 3.375558853149414,
+      "min": 0.0,
+      "max": 32.817657470703125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2632.wav",
+      "mean": 4.811835289001465,
+      "median": 4.58277702331543,
+      "std": 2.5810387134552,
+      "min": 0.0,
+      "max": 22.16337776184082
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2633.wav",
+      "mean": 5.912934303283691,
+      "median": 5.85688591003418,
+      "std": 3.034928321838379,
+      "min": 0.0,
+      "max": 22.52431869506836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2659.wav",
+      "mean": 14.801539421081543,
+      "median": 14.4926176071167,
+      "std": 6.51760721206665,
+      "min": 0.0,
+      "max": 44.05855178833008
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2677.wav",
+      "mean": 5.589154243469238,
+      "median": 5.1749114990234375,
+      "std": 2.9049136638641357,
+      "min": 0.0,
+      "max": 22.38812255859375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/MusicNet/musicnet/train_data/2678.wav",
+      "mean": 5.4928436279296875,
+      "median": 5.23197603225708,
+      "std": 2.430933713912964,
+      "min": 0.0,
+      "max": 17.677955627441406
+    }
+  ],
+  "errors": [],
+  "config": {
+    "target_sample_rate": 22050,
+    "frames_per_second": 50.0,
+    "fft_size": 1024,
+    "hist_range": [
+      0.0,
+      80.0
+    ],
+    "hist_bin_size": 0.5,
+    "device": "cpu"
+  }
+}

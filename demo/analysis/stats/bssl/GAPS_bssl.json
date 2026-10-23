@@ -1,0 +1,3846 @@
+{
+  "dataset": "GAPS",
+  "audio_file_count": 404,
+  "total_frames": 4217321,
+  "hist_counts": [
+    251207,
+    58952,
+    66214,
+    80576,
+    94389,
+    109873,
+    127211,
+    141148,
+    155676,
+    166279,
+    174217,
+    178973,
+    180611,
+    179229,
+    176043,
+    170042,
+    164515,
+    156933,
+    148548,
+    139862,
+    131234,
+    122220,
+    113644,
+    104048,
+    95697,
+    87226,
+    78888,
+    70648,
+    62921,
+    56221,
+    49937,
+    44166,
+    38450,
+    33555,
+    29149,
+    25553,
+    21904,
+    18854,
+    16563,
+    14050,
+    11989,
+    10376,
+    8795,
+    7531,
+    6286,
+    5611,
+    4701,
+    4025,
+    3448,
+    2765,
+    2480,
+    2008,
+    1791,
+    1526,
+    1289,
+    1129,
+    959,
+    789,
+    739,
+    602,
+    498,
+    377,
+    341,
+    304,
+    281,
+    205,
+    210,
+    135,
+    120,
+    88,
+    101,
+    61,
+    57,
+    51,
+    38,
+    34,
+    28,
+    23,
+    18,
+    13,
+    16,
+    13,
+    10,
+    8,
+    5,
+    7,
+    3,
+    3,
+    3,
+    2,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bin_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5,
+    33.0,
+    33.5,
+    34.0,
+    34.5,
+    35.0,
+    35.5,
+    36.0,
+    36.5,
+    37.0,
+    37.5,
+    38.0,
+    38.5,
+    39.0,
+    39.5,
+    40.0,
+    40.5,
+    41.0,
+    41.5,
+    42.0,
+    42.5,
+    43.0,
+    43.5,
+    44.0,
+    44.5,
+    45.0,
+    45.5,
+    46.0,
+    46.5,
+    47.0,
+    47.5,
+    48.0,
+    48.5,
+    49.0,
+    49.5,
+    50.0,
+    50.5,
+    51.0,
+    51.5,
+    52.0,
+    52.5,
+    53.0,
+    53.5,
+    54.0,
+    54.5,
+    55.0,
+    55.5,
+    56.0,
+    56.5,
+    57.0,
+    57.5,
+    58.0,
+    58.5,
+    59.0,
+    59.5,
+    60.0,
+    60.5,
+    61.0,
+    61.5,
+    62.0,
+    62.5,
+    63.0,
+    63.5,
+    64.0,
+    64.5,
+    65.0,
+    65.5,
+    66.0,
+    66.5,
+    67.0,
+    67.5,
+    68.0,
+    68.5,
+    69.0,
+    69.5,
+    70.0,
+    70.5,
+    71.0,
+    71.5,
+    72.0,
+    72.5,
+    73.0,
+    73.5,
+    74.0,
+    74.5,
+    75.0,
+    75.5,
+    76.0,
+    76.5,
+    77.0,
+    77.5,
+    78.0,
+    78.5,
+    79.0,
+    79.5,
+    80.0
+  ],
+  "zero_bins": [
+    [
+      45.0,
+      45.5
+    ],
+    [
+      46.0,
+      46.5
+    ],
+    [
+      47.0,
+      47.5
+    ],
+    [
+      48.0,
+      48.5
+    ],
+    [
+      48.5,
+      49.0
+    ],
+    [
+      49.0,
+      49.5
+    ],
+    [
+      49.5,
+      50.0
+    ],
+    [
+      50.0,
+      50.5
+    ],
+    [
+      50.5,
+      51.0
+    ],
+    [
+      51.0,
+      51.5
+    ],
+    [
+      51.5,
+      52.0
+    ],
+    [
+      52.0,
+      52.5
+    ],
+    [
+      52.5,
+      53.0
+    ],
+    [
+      53.0,
+      53.5
+    ],
+    [
+      53.5,
+      54.0
+    ],
+    [
+      54.0,
+      54.5
+    ],
+    [
+      54.5,
+      55.0
+    ],
+    [
+      55.0,
+      55.5
+    ],
+    [
+      55.5,
+      56.0
+    ],
+    [
+      56.0,
+      56.5
+    ],
+    [
+      56.5,
+      57.0
+    ],
+    [
+      57.0,
+      57.5
+    ],
+    [
+      57.5,
+      58.0
+    ],
+    [
+      58.0,
+      58.5
+    ],
+    [
+      58.5,
+      59.0
+    ],
+    [
+      59.0,
+      59.5
+    ],
+    [
+      59.5,
+      60.0
+    ],
+    [
+      60.0,
+      60.5
+    ],
+    [
+      60.5,
+      61.0
+    ],
+    [
+      61.0,
+      61.5
+    ],
+    [
+      61.5,
+      62.0
+    ],
+    [
+      62.0,
+      62.5
+    ],
+    [
+      62.5,
+      63.0
+    ],
+    [
+      63.0,
+      63.5
+    ],
+    [
+      63.5,
+      64.0
+    ],
+    [
+      64.0,
+      64.5
+    ],
+    [
+      64.5,
+      65.0
+    ],
+    [
+      65.0,
+      65.5
+    ],
+    [
+      65.5,
+      66.0
+    ],
+    [
+      66.0,
+      66.5
+    ],
+    [
+      66.5,
+      67.0
+    ],
+    [
+      67.0,
+      67.5
+    ],
+    [
+      67.5,
+      68.0
+    ],
+    [
+      68.0,
+      68.5
+    ],
+    [
+      68.5,
+      69.0
+    ],
+    [
+      69.0,
+      69.5
+    ],
+    [
+      69.5,
+      70.0
+    ],
+    [
+      70.0,
+      70.5
+    ],
+    [
+      70.5,
+      71.0
+    ],
+    [
+      71.0,
+      71.5
+    ],
+    [
+      71.5,
+      72.0
+    ],
+    [
+      72.0,
+      72.5
+    ],
+    [
+      72.5,
+      73.0
+    ],
+    [
+      73.0,
+      73.5
+    ],
+    [
+      73.5,
+      74.0
+    ],
+    [
+      74.0,
+      74.5
+    ],
+    [
+      74.5,
+      75.0
+    ],
+    [
+      75.0,
+      75.5
+    ],
+    [
+      75.5,
+      76.0
+    ],
+    [
+      76.0,
+      76.5
+    ],
+    [
+      76.5,
+      77.0
+    ],
+    [
+      77.0,
+      77.5
+    ],
+    [
+      77.5,
+      78.0
+    ],
+    [
+      78.0,
+      78.5
+    ],
+    [
+      78.5,
+      79.0
+    ],
+    [
+      79.0,
+      79.5
+    ],
+    [
+      79.5,
+      80.0
+    ]
+  ],
+  "per_file_stats": [
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/001_mvswc.wav",
+      "mean": 7.707865238189697,
+      "median": 7.523972988128662,
+      "std": 3.5571393966674805,
+      "min": 0.0,
+      "max": 34.868167877197266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/002_XSswc.wav",
+      "mean": 6.436945915222168,
+      "median": 5.618290901184082,
+      "std": 4.7993669509887695,
+      "min": 0.0,
+      "max": 21.451013565063477
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/003_HSswc.wav",
+      "mean": 6.361508369445801,
+      "median": 5.936615467071533,
+      "std": 3.369093894958496,
+      "min": 8.973056964123316e-08,
+      "max": 21.368053436279297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/004_JSswc.wav",
+      "mean": 8.375313758850098,
+      "median": 6.981053829193115,
+      "std": 6.841428279876709,
+      "min": 0.0,
+      "max": 35.472869873046875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/005_dSswc.wav",
+      "mean": 3.430539131164551,
+      "median": 3.454223155975342,
+      "std": 1.75777006149292,
+      "min": 0.0,
+      "max": 11.31524658203125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/006_ZSswc.wav",
+      "mean": 5.15310525894165,
+      "median": 5.085556983947754,
+      "std": 2.5376009941101074,
+      "min": 0.0,
+      "max": 17.05118179321289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/007_LSswc.wav",
+      "mean": 11.104020118713379,
+      "median": 11.018844604492188,
+      "std": 3.511540412902832,
+      "min": 0.0,
+      "max": 25.780115127563477
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/008_PSswc.wav",
+      "mean": 7.938805103302002,
+      "median": 7.911496639251709,
+      "std": 3.311290979385376,
+      "min": 0.0,
+      "max": 22.58083724975586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/009_xSswc.wav",
+      "mean": 9.376285552978516,
+      "median": 9.447509765625,
+      "std": 3.767674684524536,
+      "min": 0.0,
+      "max": 21.814897537231445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/010_QSswc.wav",
+      "mean": 8.935080528259277,
+      "median": 8.860658645629883,
+      "std": 4.757687091827393,
+      "min": 0.0,
+      "max": 31.408222198486328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/011_nSswc.wav",
+      "mean": 7.1078596115112305,
+      "median": 7.074871063232422,
+      "std": 3.503373861312866,
+      "min": 0.0,
+      "max": 26.160812377929688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/012_tSswc.wav",
+      "mean": 6.836596965789795,
+      "median": 6.7735490798950195,
+      "std": 3.0271809101104736,
+      "min": 0.0,
+      "max": 21.997028350830078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/013_gSswc.wav",
+      "mean": 10.424560546875,
+      "median": 11.402656555175781,
+      "std": 4.978379726409912,
+      "min": 0.0,
+      "max": 24.998579025268555
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/014_vSswc.wav",
+      "mean": 7.856863498687744,
+      "median": 7.806497573852539,
+      "std": 3.3147552013397217,
+      "min": 0.0,
+      "max": 24.664369583129883
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/015_SSswc.wav",
+      "mean": 3.7575716972351074,
+      "median": 3.025181770324707,
+      "std": 3.031291961669922,
+      "min": 0.0,
+      "max": 30.7860107421875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/016_pSswc.wav",
+      "mean": 7.515735149383545,
+      "median": 7.119134902954102,
+      "std": 4.419735431671143,
+      "min": 0.0,
+      "max": 29.82470703125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/017_Npswc.wav",
+      "mean": 10.968001365661621,
+      "median": 12.18974781036377,
+      "std": 5.896245002746582,
+      "min": 0.0,
+      "max": 30.40243911743164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/018_cpswc.wav",
+      "mean": 6.107132911682129,
+      "median": 6.194385051727295,
+      "std": 3.831550359725952,
+      "min": 0.0,
+      "max": 21.349227905273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/019_Vpswc.wav",
+      "mean": 6.020426273345947,
+      "median": 6.100982666015625,
+      "std": 3.2416162490844727,
+      "min": 0.0,
+      "max": 16.04975128173828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/020_Mpswc.wav",
+      "mean": 9.04638671875,
+      "median": 8.873542785644531,
+      "std": 4.971665382385254,
+      "min": 0.0,
+      "max": 26.916439056396484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/021_kpswc.wav",
+      "mean": 7.7735395431518555,
+      "median": 7.331629753112793,
+      "std": 4.235131740570068,
+      "min": 0.0,
+      "max": 38.08161544799805
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/022_wpswc.wav",
+      "mean": 7.800078868865967,
+      "median": 7.7270731925964355,
+      "std": 4.100483417510986,
+      "min": 0.0,
+      "max": 25.76618766784668
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/023_Ypswc.wav",
+      "mean": 5.121162414550781,
+      "median": 5.111843585968018,
+      "std": 2.949532985687256,
+      "min": 0.0,
+      "max": 17.328327178955078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/024_lpswc.wav",
+      "mean": 4.403594493865967,
+      "median": 4.36359977722168,
+      "std": 2.484677314758301,
+      "min": 0.0,
+      "max": 14.31478214263916
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/025_zpswc.wav",
+      "mean": 9.87492847442627,
+      "median": 9.79491138458252,
+      "std": 5.088244438171387,
+      "min": 0.0,
+      "max": 26.662796020507812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/026_Rpswc.wav",
+      "mean": 7.075439929962158,
+      "median": 6.779024600982666,
+      "std": 3.242847442626953,
+      "min": 0.0,
+      "max": 21.797847747802734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/027_Zpswc.wav",
+      "mean": 8.352806091308594,
+      "median": 7.492727279663086,
+      "std": 5.556764125823975,
+      "min": 0.0,
+      "max": 35.29132843017578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/028_Fpswc.wav",
+      "mean": 5.974023342132568,
+      "median": 5.8794097900390625,
+      "std": 2.963949680328369,
+      "min": 0.0,
+      "max": 17.17597007751465
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/029_tpswc.wav",
+      "mean": 10.267195701599121,
+      "median": 10.363004684448242,
+      "std": 4.489530086517334,
+      "min": 0.0,
+      "max": 27.186832427978516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/030_rpswc.wav",
+      "mean": 8.292848587036133,
+      "median": 7.866663932800293,
+      "std": 4.468104362487793,
+      "min": 0.0,
+      "max": 28.400428771972656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/031_vpswc.wav",
+      "mean": 7.361274242401123,
+      "median": 7.858935832977295,
+      "std": 4.4048309326171875,
+      "min": 0.0,
+      "max": 23.640071868896484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/032_YN1wc.wav",
+      "mean": 9.025968551635742,
+      "median": 9.742405891418457,
+      "std": 5.934940338134766,
+      "min": 0.0,
+      "max": 34.269466400146484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/033_LN1wc.wav",
+      "mean": 14.243124008178711,
+      "median": 13.416748046875,
+      "std": 6.738500118255615,
+      "min": 0.0,
+      "max": 42.80659484863281
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/034_QN1wc.wav",
+      "mean": 8.504412651062012,
+      "median": 8.619111061096191,
+      "std": 4.704769611358643,
+      "min": 0.0,
+      "max": 26.79109764099121
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/035_GN1wc.wav",
+      "mean": 7.330496788024902,
+      "median": 7.970090866088867,
+      "std": 3.804409980773926,
+      "min": 0.0,
+      "max": 19.491798400878906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/036_SN1wc.wav",
+      "mean": 7.0356597900390625,
+      "median": 7.578592777252197,
+      "std": 4.6006011962890625,
+      "min": 0.0,
+      "max": 27.802993774414062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/037_pN1wc.wav",
+      "mean": 7.885575294494629,
+      "median": 7.434711456298828,
+      "std": 4.986813068389893,
+      "min": 0.0,
+      "max": 33.2584228515625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/038_Vc1wc.wav",
+      "mean": 10.634940147399902,
+      "median": 10.71766471862793,
+      "std": 3.3847408294677734,
+      "min": 0.0,
+      "max": 24.473365783691406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/039_Mc1wc.wav",
+      "mean": 8.0187349319458,
+      "median": 8.694053649902344,
+      "std": 3.9065394401550293,
+      "min": 0.0,
+      "max": 20.601341247558594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/040_Rc1wc.wav",
+      "mean": 7.775410175323486,
+      "median": 7.156017780303955,
+      "std": 3.92324161529541,
+      "min": 0.0,
+      "max": 30.410144805908203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/041_Xc1wc.wav",
+      "mean": 6.427455902099609,
+      "median": 6.200247764587402,
+      "std": 2.388655185699463,
+      "min": 0.0,
+      "max": 19.686912536621094
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/042_qc1wc.wav",
+      "mean": 6.798554420471191,
+      "median": 6.915579319000244,
+      "std": 3.8595802783966064,
+      "min": 0.0,
+      "max": 20.197040557861328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/043_bc1wc.wav",
+      "mean": 7.297837257385254,
+      "median": 7.2505388259887695,
+      "std": 3.557086229324341,
+      "min": 0.0,
+      "max": 27.589372634887695
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/044_Zc1wc.wav",
+      "mean": 9.32509708404541,
+      "median": 9.333381652832031,
+      "std": 5.314243793487549,
+      "min": 0.0,
+      "max": 29.977209091186523
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/045_jc1wc.wav",
+      "mean": 5.910879135131836,
+      "median": 5.669742107391357,
+      "std": 3.026578903198242,
+      "min": 0.0,
+      "max": 23.96050262451172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/046_Pc1wc.wav",
+      "mean": 8.170741081237793,
+      "median": 8.190817832946777,
+      "std": 4.504091739654541,
+      "min": 0.0,
+      "max": 26.30552101135254
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/047_xc1wc.wav",
+      "mean": 16.02481460571289,
+      "median": 16.429981231689453,
+      "std": 6.972613334655762,
+      "min": 0.0,
+      "max": 41.55889892578125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/048_Qc1wc.wav",
+      "mean": 6.287105560302734,
+      "median": 5.982215881347656,
+      "std": 5.002529621124268,
+      "min": 0.0,
+      "max": 26.335729598999023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/049_Fc1wc.wav",
+      "mean": 7.770207405090332,
+      "median": 7.522727966308594,
+      "std": 3.478243589401245,
+      "min": 0.0,
+      "max": 24.923965454101562
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/050_gc1wc.wav",
+      "mean": 4.864414691925049,
+      "median": 4.884037971496582,
+      "std": 2.2113895416259766,
+      "min": 0.0,
+      "max": 13.757232666015625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/051_rc1wc.wav",
+      "mean": 8.838667869567871,
+      "median": 9.148319244384766,
+      "std": 5.735497951507568,
+      "min": 0.0,
+      "max": 31.304288864135742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/052_hc1wc.wav",
+      "mean": 6.343247890472412,
+      "median": 6.266700744628906,
+      "std": 2.5283939838409424,
+      "min": 0.0,
+      "max": 17.673429489135742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/053_vc1wc.wav",
+      "mean": 9.366907119750977,
+      "median": 9.729711532592773,
+      "std": 5.8542375564575195,
+      "min": 0.0,
+      "max": 26.09786605834961
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/054_Sc1wc.wav",
+      "mean": 7.1216864585876465,
+      "median": 7.008813381195068,
+      "std": 3.2134923934936523,
+      "min": 0.0,
+      "max": 23.384937286376953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/055_cV1wc.wav",
+      "mean": 10.503416061401367,
+      "median": 11.442914009094238,
+      "std": 5.243505477905273,
+      "min": 0.0,
+      "max": 25.12316131591797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/056_fV1wc.wav",
+      "mean": 5.15895414352417,
+      "median": 4.477505207061768,
+      "std": 3.241769790649414,
+      "min": 0.0,
+      "max": 21.281246185302734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/057_MV1wc.wav",
+      "mean": 2.951061964035034,
+      "median": 2.7886710166931152,
+      "std": 2.342733144760132,
+      "min": 0.0,
+      "max": 12.912222862243652
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/058_lV1wc.wav",
+      "mean": 4.70460319519043,
+      "median": 4.868103981018066,
+      "std": 2.570647954940796,
+      "min": 0.0,
+      "max": 13.537210464477539
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/059_zV1wc.wav",
+      "mean": 4.969310760498047,
+      "median": 4.988545894622803,
+      "std": 3.2480273246765137,
+      "min": 0.0,
+      "max": 18.096874237060547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/060_XV1wc.wav",
+      "mean": 8.248737335205078,
+      "median": 8.101693153381348,
+      "std": 4.847060680389404,
+      "min": 0.0,
+      "max": 29.476348876953125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/061_qV1wc.wav",
+      "mean": 11.16708755493164,
+      "median": 11.416906356811523,
+      "std": 3.411278009414673,
+      "min": 0.7601926326751709,
+      "max": 45.89887619018555
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/062_TV1wc.wav",
+      "mean": 13.05327033996582,
+      "median": 13.130355834960938,
+      "std": 6.1290788650512695,
+      "min": 0.0,
+      "max": 30.812503814697266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/063_bV1wc.wav",
+      "mean": 7.7631964683532715,
+      "median": 7.216519355773926,
+      "std": 4.686373710632324,
+      "min": 0.0,
+      "max": 32.61674499511719
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/064_sV1wc.wav",
+      "mean": 9.663633346557617,
+      "median": 9.638885498046875,
+      "std": 4.177903175354004,
+      "min": 0.0,
+      "max": 28.137298583984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/065_WV1wc.wav",
+      "mean": 9.28337287902832,
+      "median": 9.293725967407227,
+      "std": 3.8354997634887695,
+      "min": 0.0,
+      "max": 27.567501068115234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/066_LV1wc.wav",
+      "mean": 8.958757400512695,
+      "median": 8.939266204833984,
+      "std": 4.500237464904785,
+      "min": 0.0,
+      "max": 22.925045013427734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/067_jV1wc.wav",
+      "mean": 9.389904022216797,
+      "median": 9.234529495239258,
+      "std": 4.606115341186523,
+      "min": 0.0,
+      "max": 31.69859504699707
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/068_PV1wc.wav",
+      "mean": 10.406974792480469,
+      "median": 10.134910583496094,
+      "std": 4.702644348144531,
+      "min": 0.0,
+      "max": 35.76478958129883
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/069_KV1wc.wav",
+      "mean": 10.10677433013916,
+      "median": 9.963278770446777,
+      "std": 4.331002712249756,
+      "min": 0.0,
+      "max": 29.90374755859375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/070_xV1wc.wav",
+      "mean": 8.46477222442627,
+      "median": 8.581969261169434,
+      "std": 2.9078805446624756,
+      "min": 0.0,
+      "max": 18.141929626464844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/071_QV1wc.wav",
+      "mean": 10.497281074523926,
+      "median": 10.238054275512695,
+      "std": 4.801297664642334,
+      "min": 0.0,
+      "max": 26.547321319580078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/072_nV1wc.wav",
+      "mean": 9.506599426269531,
+      "median": 8.95700740814209,
+      "std": 5.001457214355469,
+      "min": 0.0,
+      "max": 31.831912994384766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/073_FV1wc.wav",
+      "mean": 5.902187824249268,
+      "median": 5.9648261070251465,
+      "std": 2.6705682277679443,
+      "min": 0.0,
+      "max": 15.122888565063477
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/074_gV1wc.wav",
+      "mean": 6.126605987548828,
+      "median": 5.820544242858887,
+      "std": 2.476912021636963,
+      "min": 1.5074405670166016,
+      "max": 18.20058250427246
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/075_rV1wc.wav",
+      "mean": 10.99867057800293,
+      "median": 10.478849411010742,
+      "std": 5.220112323760986,
+      "min": 0.0,
+      "max": 35.874183654785156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/076_hV1wc.wav",
+      "mean": 8.260040283203125,
+      "median": 8.53864574432373,
+      "std": 3.396299362182617,
+      "min": 0.0,
+      "max": 23.092731475830078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/077_vV1wc.wav",
+      "mean": 5.036742210388184,
+      "median": 4.936108112335205,
+      "std": 3.1620066165924072,
+      "min": 0.0,
+      "max": 17.846107482910156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/078_SV1wc.wav",
+      "mean": 9.08328914642334,
+      "median": 9.279878616333008,
+      "std": 4.567872047424316,
+      "min": 0.0,
+      "max": 26.066606521606445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/079_pV1wc.wav",
+      "mean": 11.102898597717285,
+      "median": 10.908304214477539,
+      "std": 3.565894365310669,
+      "min": 0.0,
+      "max": 23.77246856689453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/080_Nf1wc.wav",
+      "mean": 15.137212753295898,
+      "median": 15.836463928222656,
+      "std": 4.475203990936279,
+      "min": 0.0,
+      "max": 28.067726135253906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/081_cf1wc.wav",
+      "mean": 16.21885108947754,
+      "median": 16.551776885986328,
+      "std": 4.479382514953613,
+      "min": 0.0,
+      "max": 35.10724639892578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/082_Vf1wc.wav",
+      "mean": 6.027216911315918,
+      "median": 5.778079986572266,
+      "std": 3.5965561866760254,
+      "min": 0.0,
+      "max": 20.523517608642578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/083_ff1wc.wav",
+      "mean": 11.158561706542969,
+      "median": 11.760747909545898,
+      "std": 4.821807384490967,
+      "min": 0.0,
+      "max": 22.945114135742188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/084_Mf1wc.wav",
+      "mean": 8.199762344360352,
+      "median": 8.51839828491211,
+      "std": 4.746303081512451,
+      "min": 0.0,
+      "max": 22.476825714111328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/085_kf1wc.wav",
+      "mean": 3.9275200366973877,
+      "median": 3.4752674102783203,
+      "std": 2.308511734008789,
+      "min": 0.0,
+      "max": 15.932645797729492
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/086_yf1wc.wav",
+      "mean": 9.74262809753418,
+      "median": 10.321374893188477,
+      "std": 4.930103778839111,
+      "min": 0.0,
+      "max": 26.697473526000977
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/087_wf1wc.wav",
+      "mean": 4.266163349151611,
+      "median": 3.9138970375061035,
+      "std": 3.193506956100464,
+      "min": 0.0,
+      "max": 18.528186798095703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/088_Yf1wc.wav",
+      "mean": 10.01063346862793,
+      "median": 10.229445457458496,
+      "std": 5.995237827301025,
+      "min": 0.0,
+      "max": 28.544809341430664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/089_lf1wc.wav",
+      "mean": 6.107132911682129,
+      "median": 6.194385051727295,
+      "std": 3.831550359725952,
+      "min": 0.0,
+      "max": 21.349227905273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/090_zf1wc.wav",
+      "mean": 10.542871475219727,
+      "median": 10.400209426879883,
+      "std": 4.248573303222656,
+      "min": 0.0,
+      "max": 26.813432693481445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/091_Rf1wc.wav",
+      "mean": 11.069411277770996,
+      "median": 11.78143310546875,
+      "std": 5.373928546905518,
+      "min": 0.0,
+      "max": 33.50636291503906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/092_Xf1wc.wav",
+      "mean": 10.122201919555664,
+      "median": 9.729652404785156,
+      "std": 5.690254211425781,
+      "min": 0.0,
+      "max": 33.109474182128906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/093_qf1wc.wav",
+      "mean": 6.794687271118164,
+      "median": 6.675963401794434,
+      "std": 3.4557433128356934,
+      "min": 0.0,
+      "max": 23.348796844482422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/094_Hf1wc.wav",
+      "mean": 5.155004024505615,
+      "median": 5.160952091217041,
+      "std": 2.6969423294067383,
+      "min": 0.0,
+      "max": 21.47055435180664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/095_Tf1wc.wav",
+      "mean": 8.987011909484863,
+      "median": 8.952173233032227,
+      "std": 4.47084903717041,
+      "min": 0.0,
+      "max": 29.96619987487793
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/096_bf1wc.wav",
+      "mean": 10.560766220092773,
+      "median": 10.861226081848145,
+      "std": 3.5665411949157715,
+      "min": 0.0,
+      "max": 24.029399871826172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/097_df1wc.wav",
+      "mean": 6.562597274780273,
+      "median": 6.578640937805176,
+      "std": 2.8550448417663574,
+      "min": 0.0,
+      "max": 17.809276580810547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/098_Wf1wc.wav",
+      "mean": 12.998851776123047,
+      "median": 12.520065307617188,
+      "std": 5.047744274139404,
+      "min": 0.0,
+      "max": 38.7205924987793
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/099_Zf1wc.wav",
+      "mean": 3.867971658706665,
+      "median": 3.2790627479553223,
+      "std": 3.1456265449523926,
+      "min": 2.7599744498729706e-05,
+      "max": 22.04251480102539
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/100_Lf1wc.wav",
+      "mean": 2.4652693271636963,
+      "median": 2.026479721069336,
+      "std": 2.1048176288604736,
+      "min": 0.0,
+      "max": 18.541664123535156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/101_jf1wc.wav",
+      "mean": 7.763567924499512,
+      "median": 7.009422779083252,
+      "std": 5.1354899406433105,
+      "min": 0.0,
+      "max": 26.793498992919922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/102_Pf1wc.wav",
+      "mean": 6.741126537322998,
+      "median": 6.001059055328369,
+      "std": 4.002803325653076,
+      "min": 0.0,
+      "max": 25.473541259765625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/103_Kf1wc.wav",
+      "mean": 4.163578987121582,
+      "median": 3.6035499572753906,
+      "std": 3.3051140308380127,
+      "min": 0.0,
+      "max": 30.392330169677734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/104_xf1wc.wav",
+      "mean": 6.196101188659668,
+      "median": 5.839297294616699,
+      "std": 4.142483234405518,
+      "min": 0.0,
+      "max": 27.18655776977539
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/105_Qf1wc.wav",
+      "mean": 5.946479320526123,
+      "median": 5.653249740600586,
+      "std": 3.7863192558288574,
+      "min": 0.0,
+      "max": 23.627330780029297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/106_nf1wc.wav",
+      "mean": 5.783547878265381,
+      "median": 4.721768379211426,
+      "std": 4.781979084014893,
+      "min": 0.0,
+      "max": 35.45436477661133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/107_Ff1wc.wav",
+      "mean": 5.071622371673584,
+      "median": 3.6089584827423096,
+      "std": 5.268500804901123,
+      "min": 0.0,
+      "max": 29.795934677124023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/108_gf1wc.wav",
+      "mean": 9.999034881591797,
+      "median": 10.211997032165527,
+      "std": 5.245129585266113,
+      "min": 0.0,
+      "max": 29.39287567138672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/109_Gf1wc.wav",
+      "mean": 8.381550788879395,
+      "median": 8.522247314453125,
+      "std": 3.088634490966797,
+      "min": 0.0,
+      "max": 20.440702438354492
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/110_rf1wc.wav",
+      "mean": 4.948886394500732,
+      "median": 4.015233993530273,
+      "std": 3.7323360443115234,
+      "min": 0.0,
+      "max": 28.442909240722656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/111_hf1wc.wav",
+      "mean": 8.572308540344238,
+      "median": 8.5790376663208,
+      "std": 3.154569625854492,
+      "min": 0.0,
+      "max": 24.566789627075195
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/112_mf1wc.wav",
+      "mean": 8.933993339538574,
+      "median": 9.005865097045898,
+      "std": 3.903571367263794,
+      "min": 0.0,
+      "max": 24.52992057800293
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/113_vf1wc.wav",
+      "mean": 8.185707092285156,
+      "median": 8.219327926635742,
+      "std": 3.7231802940368652,
+      "min": 0.0,
+      "max": 28.996017456054688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/114_Sf1wc.wav",
+      "mean": 7.35499906539917,
+      "median": 7.1205596923828125,
+      "std": 4.384179592132568,
+      "min": 0.0,
+      "max": 26.984224319458008
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/115_pf1wc.wav",
+      "mean": 10.107986450195312,
+      "median": 10.587921142578125,
+      "std": 4.3502020835876465,
+      "min": 0.0,
+      "max": 29.352100372314453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/116_ND1wc.wav",
+      "mean": 15.630806922912598,
+      "median": 15.811423301696777,
+      "std": 7.109838485717773,
+      "min": 0.0,
+      "max": 37.572975158691406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/117_cD1wc.wav",
+      "mean": 7.487753868103027,
+      "median": 8.123453140258789,
+      "std": 3.828026533126831,
+      "min": 0.0,
+      "max": 18.746809005737305
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/118_VD1wc.wav",
+      "mean": 13.174148559570312,
+      "median": 12.17255973815918,
+      "std": 5.888543605804443,
+      "min": 0.0,
+      "max": 32.634063720703125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/119_fD1wc.wav",
+      "mean": 5.917674541473389,
+      "median": 6.179963111877441,
+      "std": 3.767280340194702,
+      "min": 0.0,
+      "max": 20.51386260986328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/120_MD1wc.wav",
+      "mean": 8.053500175476074,
+      "median": 8.262343406677246,
+      "std": 4.961792945861816,
+      "min": 0.0,
+      "max": 27.48749542236328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/121_wD1wc.wav",
+      "mean": 6.107132911682129,
+      "median": 6.194385051727295,
+      "std": 3.831550359725952,
+      "min": 0.0,
+      "max": 21.349227905273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/122_YD1wc.wav",
+      "mean": 6.3907365798950195,
+      "median": 6.02295446395874,
+      "std": 4.316714286804199,
+      "min": 0.0,
+      "max": 25.50119972229004
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/123_lD1wc.wav",
+      "mean": 3.2951059341430664,
+      "median": 2.8295211791992188,
+      "std": 2.3382489681243896,
+      "min": 0.0,
+      "max": 18.736539840698242
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/124_zD1wc.wav",
+      "mean": 6.867586612701416,
+      "median": 7.15109920501709,
+      "std": 4.320782661437988,
+      "min": 0.0,
+      "max": 21.95138931274414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/125_RD1wc.wav",
+      "mean": 7.98392391204834,
+      "median": 8.544452667236328,
+      "std": 4.5409746170043945,
+      "min": 0.0,
+      "max": 26.744956970214844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/126_XD1wc.wav",
+      "mean": 5.613765716552734,
+      "median": 5.597980976104736,
+      "std": 2.1571638584136963,
+      "min": 0.0,
+      "max": 15.891298294067383
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/127_qD1wc.wav",
+      "mean": 7.3940863609313965,
+      "median": 7.217433929443359,
+      "std": 2.7654190063476562,
+      "min": 0.0,
+      "max": 25.042808532714844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/128_HD1wc.wav",
+      "mean": 6.113969802856445,
+      "median": 6.214636325836182,
+      "std": 2.4735703468322754,
+      "min": 0.0,
+      "max": 17.005779266357422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/129_TD1wc.wav",
+      "mean": 11.86719036102295,
+      "median": 12.47504997253418,
+      "std": 3.269808292388916,
+      "min": 0.0,
+      "max": 21.628162384033203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/130_JD1wc.wav",
+      "mean": 9.019142150878906,
+      "median": 8.587640762329102,
+      "std": 4.127204895019531,
+      "min": 0.009539581835269928,
+      "max": 28.094135284423828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/131_bD1wc.wav",
+      "mean": 9.320455551147461,
+      "median": 9.250116348266602,
+      "std": 3.8268961906433105,
+      "min": 0.0,
+      "max": 26.714879989624023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/132_sD1wc.wav",
+      "mean": 15.855616569519043,
+      "median": 15.568107604980469,
+      "std": 6.861490726470947,
+      "min": 0.0,
+      "max": 41.57434844970703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/133_ZD1wc.wav",
+      "mean": 10.289718627929688,
+      "median": 11.25737476348877,
+      "std": 4.381762981414795,
+      "min": 0.0,
+      "max": 20.153606414794922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/134_LD1wc.wav",
+      "mean": 12.235955238342285,
+      "median": 12.22913932800293,
+      "std": 5.0603108406066895,
+      "min": 0.0,
+      "max": 36.97770690917969
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/135_jD1wc.wav",
+      "mean": 10.873581886291504,
+      "median": 10.20956802368164,
+      "std": 6.220797538757324,
+      "min": 0.0,
+      "max": 38.08909225463867
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/136_xD1wc.wav",
+      "mean": 9.27231216430664,
+      "median": 9.571054458618164,
+      "std": 5.88026237487793,
+      "min": 0.0,
+      "max": 32.75180435180664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/137_QD1wc.wav",
+      "mean": 11.209087371826172,
+      "median": 12.012666702270508,
+      "std": 6.026416301727295,
+      "min": 0.0,
+      "max": 26.549156188964844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/138_nD1wc.wav",
+      "mean": 12.688063621520996,
+      "median": 13.417997360229492,
+      "std": 4.477267742156982,
+      "min": 0.0,
+      "max": 25.360660552978516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/139_FD1wc.wav",
+      "mean": 11.457596778869629,
+      "median": 11.686138153076172,
+      "std": 6.449827671051025,
+      "min": 0.0,
+      "max": 38.54707336425781
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/140_tD1wc.wav",
+      "mean": 9.465582847595215,
+      "median": 9.651838302612305,
+      "std": 4.2478861808776855,
+      "min": 0.0,
+      "max": 28.29242706298828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/141_gD1wc.wav",
+      "mean": 8.187668800354004,
+      "median": 8.139448165893555,
+      "std": 2.673931121826172,
+      "min": 0.0,
+      "max": 20.593303680419922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/142_GD1wc.wav",
+      "mean": 9.309097290039062,
+      "median": 9.199795722961426,
+      "std": 5.292890548706055,
+      "min": 0.0,
+      "max": 31.315513610839844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/143_rD1wc.wav",
+      "mean": 8.48246955871582,
+      "median": 9.53548812866211,
+      "std": 5.093086242675781,
+      "min": 0.0,
+      "max": 23.119611740112305
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/144_SD1wc.wav",
+      "mean": 4.886821269989014,
+      "median": 4.966212749481201,
+      "std": 3.0823559761047363,
+      "min": 0.0,
+      "max": 14.475664138793945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/145_pD1wc.wav",
+      "mean": 9.747946739196777,
+      "median": 9.748125076293945,
+      "std": 2.9592132568359375,
+      "min": 0.0,
+      "max": 20.91983413696289
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/146_NM1wc.wav",
+      "mean": 7.197934627532959,
+      "median": 7.728161811828613,
+      "std": 4.702120780944824,
+      "min": 0.0,
+      "max": 22.483325958251953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/147_VM1wc.wav",
+      "mean": 7.642787933349609,
+      "median": 7.882981300354004,
+      "std": 4.714681625366211,
+      "min": 0.0,
+      "max": 30.84636688232422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/148_fM1wc.wav",
+      "mean": 5.460562229156494,
+      "median": 4.711447238922119,
+      "std": 4.150022506713867,
+      "min": 0.0,
+      "max": 23.804397583007812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/149_MM1wc.wav",
+      "mean": 8.123565673828125,
+      "median": 7.956809043884277,
+      "std": 3.157731056213379,
+      "min": 0.0,
+      "max": 24.48049545288086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/150_kM1wc.wav",
+      "mean": 5.6929240226745605,
+      "median": 5.987783908843994,
+      "std": 2.863147020339966,
+      "min": 0.0,
+      "max": 15.487281799316406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/151_wM1wc.wav",
+      "mean": 6.489562511444092,
+      "median": 6.437246322631836,
+      "std": 2.8701343536376953,
+      "min": 0.0,
+      "max": 16.920053482055664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/152_YM1wc.wav",
+      "mean": 12.791010856628418,
+      "median": 13.293065071105957,
+      "std": 3.8579936027526855,
+      "min": 0.0,
+      "max": 26.932376861572266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/153_lM1wc.wav",
+      "mean": 7.051452159881592,
+      "median": 6.816149711608887,
+      "std": 3.027811288833618,
+      "min": 0.08034825325012207,
+      "max": 23.336557388305664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/154_zM1wc.wav",
+      "mean": 6.107132911682129,
+      "median": 6.194385051727295,
+      "std": 3.831550359725952,
+      "min": 0.0,
+      "max": 21.349227905273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/155_zf1wc.wav",
+      "mean": 10.542871475219727,
+      "median": 10.400209426879883,
+      "std": 4.248573303222656,
+      "min": 0.0,
+      "max": 26.813434600830078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/156_RM1wc.wav",
+      "mean": 5.71308708190918,
+      "median": 5.744356155395508,
+      "std": 1.921766996383667,
+      "min": 0.0,
+      "max": 18.848222732543945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/157_XM1wc.wav",
+      "mean": 8.688230514526367,
+      "median": 7.820786952972412,
+      "std": 4.803811073303223,
+      "min": 0.0,
+      "max": 32.50922775268555
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/158_qM1wc.wav",
+      "mean": 3.7266385555267334,
+      "median": 3.6715126037597656,
+      "std": 1.879594326019287,
+      "min": 0.0009051123051904142,
+      "max": 14.559600830078125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/159_TM1wc.wav",
+      "mean": 10.075406074523926,
+      "median": 9.627983093261719,
+      "std": 5.53184700012207,
+      "min": 0.0,
+      "max": 35.228214263916016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/160_bM1wc.wav",
+      "mean": 4.741975784301758,
+      "median": 4.730228424072266,
+      "std": 2.69588565826416,
+      "min": 0.0,
+      "max": 16.839046478271484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/161_sM1wc.wav",
+      "mean": 6.495937824249268,
+      "median": 7.135468006134033,
+      "std": 3.7415947914123535,
+      "min": 0.0,
+      "max": 30.92083740234375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/162_WM1wc.wav",
+      "mean": 6.102471828460693,
+      "median": 5.798588275909424,
+      "std": 3.209444046020508,
+      "min": 0.0,
+      "max": 19.079294204711914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/163_ZM1wc.wav",
+      "mean": 4.222415924072266,
+      "median": 3.994469165802002,
+      "std": 2.476302146911621,
+      "min": 0.0,
+      "max": 17.712421417236328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/164_LM1wc.wav",
+      "mean": 7.127593040466309,
+      "median": 7.578841209411621,
+      "std": 3.1975576877593994,
+      "min": 0.0,
+      "max": 20.132850646972656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/165_jM1wc.wav",
+      "mean": 9.432101249694824,
+      "median": 9.419866561889648,
+      "std": 3.7221953868865967,
+      "min": 0.0,
+      "max": 23.91118812561035
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/166_PM1wc.wav",
+      "mean": 14.63453197479248,
+      "median": 14.271150588989258,
+      "std": 5.498328685760498,
+      "min": 0.0,
+      "max": 44.66684341430664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/167_KM1wc.wav",
+      "mean": 8.097909927368164,
+      "median": 8.370996475219727,
+      "std": 3.944349527359009,
+      "min": 0.0,
+      "max": 21.704879760742188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/168_QM1wc.wav",
+      "mean": 12.271499633789062,
+      "median": 12.407659530639648,
+      "std": 3.5164005756378174,
+      "min": 0.0,
+      "max": 27.222572326660156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/169_nM1wc.wav",
+      "mean": 6.656333923339844,
+      "median": 6.490981101989746,
+      "std": 2.691439390182495,
+      "min": 0.0,
+      "max": 18.05587387084961
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/170_FM1wc.wav",
+      "mean": 7.406230926513672,
+      "median": 6.73591947555542,
+      "std": 4.405304908752441,
+      "min": 0.0,
+      "max": 32.533145904541016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/171_tM1wc.wav",
+      "mean": 12.320348739624023,
+      "median": 12.359612464904785,
+      "std": 3.7620785236358643,
+      "min": 0.0,
+      "max": 24.103057861328125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/172_GM1wc.wav",
+      "mean": 7.2182722091674805,
+      "median": 6.743888854980469,
+      "std": 4.219302654266357,
+      "min": 0.0,
+      "max": 37.58659362792969
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/173_GM1wc.wav",
+      "mean": 7.2182722091674805,
+      "median": 6.743888854980469,
+      "std": 4.219302654266357,
+      "min": 0.0,
+      "max": 37.58659362792969
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/174_rM1wc.wav",
+      "mean": 8.566010475158691,
+      "median": 7.732303619384766,
+      "std": 5.16269588470459,
+      "min": 0.0,
+      "max": 28.231870651245117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/175_hM1wc.wav",
+      "mean": 8.372963905334473,
+      "median": 8.164392471313477,
+      "std": 4.923998832702637,
+      "min": 0.0,
+      "max": 27.957138061523438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/176_mM1wc.wav",
+      "mean": 6.912978172302246,
+      "median": 6.567268371582031,
+      "std": 3.62804913520813,
+      "min": 0.0,
+      "max": 20.938892364501953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/177_vM1wc.wav",
+      "mean": 9.532208442687988,
+      "median": 9.347249984741211,
+      "std": 4.749572277069092,
+      "min": 0.0,
+      "max": 26.00288963317871
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/178_SM1wc.wav",
+      "mean": 10.546236991882324,
+      "median": 10.921953201293945,
+      "std": 4.929769515991211,
+      "min": 0.0,
+      "max": 31.890037536621094
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/179_pM1wc.wav",
+      "mean": 6.347784519195557,
+      "median": 6.31538200378418,
+      "std": 2.698866844177246,
+      "min": 0.0,
+      "max": 18.736480712890625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/180_Nk1wc.wav",
+      "mean": 9.005607604980469,
+      "median": 8.978239059448242,
+      "std": 4.907417297363281,
+      "min": 0.0,
+      "max": 27.07006072998047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/181_ck1wc.wav",
+      "mean": 7.780208587646484,
+      "median": 7.810632705688477,
+      "std": 2.9401278495788574,
+      "min": 0.0,
+      "max": 18.577301025390625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/182_Vk1wc.wav",
+      "mean": 7.086343288421631,
+      "median": 7.160897254943848,
+      "std": 4.6244916915893555,
+      "min": 0.0,
+      "max": 29.53057861328125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/183_fk1wc.wav",
+      "mean": 9.80402660369873,
+      "median": 9.599811553955078,
+      "std": 3.901423215866089,
+      "min": 0.0,
+      "max": 32.875648498535156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/184_Mk1wc.wav",
+      "mean": 11.737652778625488,
+      "median": 12.502739906311035,
+      "std": 4.980144023895264,
+      "min": 0.0,
+      "max": 35.65708923339844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/185_kk1wc.wav",
+      "mean": 4.549467086791992,
+      "median": 4.132842063903809,
+      "std": 3.4559245109558105,
+      "min": 0.0,
+      "max": 18.2923583984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/186_lk1wc.wav",
+      "mean": 9.150192260742188,
+      "median": 9.692221641540527,
+      "std": 3.479757785797119,
+      "min": 0.0,
+      "max": 20.62329864501953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/187_zk1wc.wav",
+      "mean": 4.112555980682373,
+      "median": 3.923983097076416,
+      "std": 1.8638604879379272,
+      "min": 0.0,
+      "max": 12.650978088378906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/188_Rk1wc.wav",
+      "mean": 9.78809928894043,
+      "median": 10.727815628051758,
+      "std": 4.2427077293396,
+      "min": 0.0,
+      "max": 32.15700149536133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/189_qk1wc.wav",
+      "mean": 7.23985481262207,
+      "median": 6.7595014572143555,
+      "std": 4.747498512268066,
+      "min": 0.0,
+      "max": 35.01139831542969
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/190_Hk1wc.wav",
+      "mean": 6.45089054107666,
+      "median": 6.394381523132324,
+      "std": 2.7744011878967285,
+      "min": 0.0,
+      "max": 16.18633270263672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/191_bk1wc.wav",
+      "mean": 6.899295330047607,
+      "median": 6.344903945922852,
+      "std": 4.35113525390625,
+      "min": 0.0,
+      "max": 27.088735580444336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/192_sk1wc.wav",
+      "mean": 9.51175308227539,
+      "median": 10.621013641357422,
+      "std": 5.294310569763184,
+      "min": 0.0,
+      "max": 25.869976043701172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/193_dk1wc.wav",
+      "mean": 8.833514213562012,
+      "median": 8.411216735839844,
+      "std": 3.9033145904541016,
+      "min": 0.0,
+      "max": 29.36150360107422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/194_Wk1wc.wav",
+      "mean": 6.621263027191162,
+      "median": 6.585866928100586,
+      "std": 2.615297555923462,
+      "min": 0.0,
+      "max": 15.436773300170898
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/195_Zk1wc.wav",
+      "mean": 6.626624584197998,
+      "median": 6.027295112609863,
+      "std": 3.8000943660736084,
+      "min": 0.0,
+      "max": 30.335805892944336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/196_Lk1wc.wav",
+      "mean": 6.743666172027588,
+      "median": 6.450536251068115,
+      "std": 3.392937421798706,
+      "min": 0.0,
+      "max": 20.582141876220703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/197_jk1wc.wav",
+      "mean": 9.698673248291016,
+      "median": 10.546058654785156,
+      "std": 3.9495365619659424,
+      "min": 0.0,
+      "max": 21.44794464111328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/198_Kk1wc.wav",
+      "mean": 4.572299957275391,
+      "median": 4.890750408172607,
+      "std": 2.6796376705169678,
+      "min": 0.0,
+      "max": 13.752452850341797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/199_Qk1wc.wav",
+      "mean": 4.062364101409912,
+      "median": 3.530880928039551,
+      "std": 3.0800483226776123,
+      "min": 0.0,
+      "max": 17.074039459228516
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/200_nk1wc.wav",
+      "mean": 7.544437408447266,
+      "median": 7.742058753967285,
+      "std": 3.5629007816314697,
+      "min": 0.0,
+      "max": 25.022693634033203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/201_gk1wc.wav",
+      "mean": 3.650508165359497,
+      "median": 3.3199143409729004,
+      "std": 2.146942615509033,
+      "min": 0.0,
+      "max": 15.93568229675293
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/202_rk1wc.wav",
+      "mean": 15.493341445922852,
+      "median": 15.316878318786621,
+      "std": 6.576496601104736,
+      "min": 0.0,
+      "max": 44.591758728027344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/203_hk1wc.wav",
+      "mean": 10.866215705871582,
+      "median": 11.751575469970703,
+      "std": 5.136629104614258,
+      "min": 0.0,
+      "max": 25.776580810546875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/204_mk1wc.wav",
+      "mean": 6.492598533630371,
+      "median": 5.473785877227783,
+      "std": 5.198300361633301,
+      "min": 0.0,
+      "max": 31.361160278320312
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/205_vk1wc.wav",
+      "mean": 9.187933921813965,
+      "median": 9.349454879760742,
+      "std": 5.339305400848389,
+      "min": 0.0,
+      "max": 29.546388626098633
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/206_Sk1wc.wav",
+      "mean": 12.820066452026367,
+      "median": 13.139592170715332,
+      "std": 4.853697776794434,
+      "min": 0.0,
+      "max": 31.35554313659668
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/207_pk1wc.wav",
+      "mean": 2.9503374099731445,
+      "median": 2.988563060760498,
+      "std": 1.3942605257034302,
+      "min": 0.0,
+      "max": 8.236616134643555
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/208_c41wc.wav",
+      "mean": 6.387037754058838,
+      "median": 6.280345916748047,
+      "std": 4.279693126678467,
+      "min": 0.0,
+      "max": 23.51939582824707
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/209_V41wc.wav",
+      "mean": 11.87353801727295,
+      "median": 12.139432907104492,
+      "std": 6.1148271560668945,
+      "min": 0.0,
+      "max": 30.573741912841797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/210_f41wc.wav",
+      "mean": 13.544686317443848,
+      "median": 14.169387817382812,
+      "std": 7.100135803222656,
+      "min": 0.0,
+      "max": 39.60801315307617
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/211_M41wc.wav",
+      "mean": 9.535890579223633,
+      "median": 9.431501388549805,
+      "std": 3.825065851211548,
+      "min": 0.0,
+      "max": 28.572633743286133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/212_y41wc.wav",
+      "mean": 11.078104019165039,
+      "median": 10.757085800170898,
+      "std": 3.562070369720459,
+      "min": 0.0,
+      "max": 28.633882522583008
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/213_l41wc.wav",
+      "mean": 6.584078311920166,
+      "median": 6.576951026916504,
+      "std": 3.290700674057007,
+      "min": 0.0,
+      "max": 20.77570343017578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/214_z41wc.wav",
+      "mean": 10.678836822509766,
+      "median": 11.059895515441895,
+      "std": 3.9436612129211426,
+      "min": 0.0,
+      "max": 24.326416015625
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/215_R41wc.wav",
+      "mean": 9.323768615722656,
+      "median": 9.909821510314941,
+      "std": 4.441764831542969,
+      "min": 0.0,
+      "max": 26.260971069335938
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/216_X41wc.wav",
+      "mean": 11.965645790100098,
+      "median": 11.653143882751465,
+      "std": 6.652441024780273,
+      "min": 0.0,
+      "max": 38.989112854003906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/217_q41wc.wav",
+      "mean": 4.433102130889893,
+      "median": 4.340226173400879,
+      "std": 1.7913919687271118,
+      "min": 0.2941809594631195,
+      "max": 16.607891082763672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/218_T41wc.wav",
+      "mean": 3.4775428771972656,
+      "median": 3.1587767601013184,
+      "std": 2.145124673843384,
+      "min": 0.0,
+      "max": 15.28902816772461
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/219_J41wc.wav",
+      "mean": 7.200289726257324,
+      "median": 7.744518280029297,
+      "std": 4.001862525939941,
+      "min": 0.0,
+      "max": 21.08915901184082
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/220_s41wc.wav",
+      "mean": 4.2382049560546875,
+      "median": 4.146617412567139,
+      "std": 2.0954136848449707,
+      "min": 0.0,
+      "max": 18.56976890563965
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/221_d41wc.wav",
+      "mean": 9.016523361206055,
+      "median": 9.181806564331055,
+      "std": 3.710866928100586,
+      "min": 0.0,
+      "max": 21.211349487304688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/222_W41wc.wav",
+      "mean": 5.403782844543457,
+      "median": 5.059721946716309,
+      "std": 2.845669746398926,
+      "min": 0.0,
+      "max": 21.72274398803711
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/223_Z41wc.wav",
+      "mean": 14.0604248046875,
+      "median": 14.507143020629883,
+      "std": 6.915802478790283,
+      "min": 0.0,
+      "max": 35.220882415771484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/224_L41wc.wav",
+      "mean": 10.413945198059082,
+      "median": 9.890420913696289,
+      "std": 5.561157703399658,
+      "min": 0.0,
+      "max": 35.993736267089844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/225_j41wc.wav",
+      "mean": 7.795333385467529,
+      "median": 6.476726531982422,
+      "std": 5.16334867477417,
+      "min": 0.0,
+      "max": 39.028282165527344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/226_P41wc.wav",
+      "mean": 6.328221797943115,
+      "median": 5.884742736816406,
+      "std": 3.775191307067871,
+      "min": 0.0,
+      "max": 24.079368591308594
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/227_x41wc.wav",
+      "mean": 9.331814765930176,
+      "median": 9.535975456237793,
+      "std": 4.806480884552002,
+      "min": 0.0,
+      "max": 25.025554656982422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/228_Q41wc.wav",
+      "mean": 7.455752372741699,
+      "median": 7.357783317565918,
+      "std": 3.359086036682129,
+      "min": 0.0,
+      "max": 24.447526931762695
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/229_n41wc.wav",
+      "mean": 5.238539695739746,
+      "median": 4.934503555297852,
+      "std": 3.406808853149414,
+      "min": 0.0,
+      "max": 19.058673858642578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/230_r41wc.wav",
+      "mean": 6.537555694580078,
+      "median": 6.476266860961914,
+      "std": 2.1885430812835693,
+      "min": 0.0,
+      "max": 15.095890045166016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/231_h41wc.wav",
+      "mean": 6.120326995849609,
+      "median": 6.488533973693848,
+      "std": 3.226027250289917,
+      "min": 0.0,
+      "max": 20.03190040588379
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/232_m41wc.wav",
+      "mean": 12.227736473083496,
+      "median": 12.880119323730469,
+      "std": 5.3287353515625,
+      "min": 0.0,
+      "max": 28.660682678222656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/233_v41wc.wav",
+      "mean": 12.086865425109863,
+      "median": 12.24409008026123,
+      "std": 4.526082515716553,
+      "min": 0.021210381761193275,
+      "max": 33.349365234375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/234_S41wc.wav",
+      "mean": 10.532614707946777,
+      "median": 11.160408020019531,
+      "std": 4.822330951690674,
+      "min": 0.0,
+      "max": 25.24498176574707
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/235_Ny1wc.wav",
+      "mean": 5.388973236083984,
+      "median": 5.077319145202637,
+      "std": 2.9670162200927734,
+      "min": 0.0,
+      "max": 21.160003662109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/236_Vy1wc.wav",
+      "mean": 8.665529251098633,
+      "median": 9.027688980102539,
+      "std": 4.592103004455566,
+      "min": 0.0,
+      "max": 26.405567169189453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/237_fy1wc.wav",
+      "mean": 4.966324806213379,
+      "median": 4.962177276611328,
+      "std": 2.1155588626861572,
+      "min": 0.0,
+      "max": 18.88217544555664
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/238_My1wc.wav",
+      "mean": 14.164897918701172,
+      "median": 15.360487937927246,
+      "std": 5.270953178405762,
+      "min": 0.0,
+      "max": 29.193363189697266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/239_wy1wc.wav",
+      "mean": 6.114588260650635,
+      "median": 6.598508834838867,
+      "std": 3.6061832904815674,
+      "min": 0.0,
+      "max": 20.85325813293457
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/240_Yy1wc.wav",
+      "mean": 4.9482855796813965,
+      "median": 3.887279510498047,
+      "std": 4.831841945648193,
+      "min": 0.0,
+      "max": 31.22419548034668
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/241_ly1wc.wav",
+      "mean": 14.13469123840332,
+      "median": 14.483036041259766,
+      "std": 4.66606330871582,
+      "min": 0.0,
+      "max": 33.13324737548828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/242_Ry1wc.wav",
+      "mean": 4.953134059906006,
+      "median": 4.936405181884766,
+      "std": 2.0939080715179443,
+      "min": 0.0,
+      "max": 13.692697525024414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/243_Ry1wc.wav",
+      "mean": 4.953134059906006,
+      "median": 4.936405181884766,
+      "std": 2.0939080715179443,
+      "min": 0.0,
+      "max": 13.692697525024414
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/244_Xy1wc.wav",
+      "mean": 7.684672832489014,
+      "median": 7.364238262176514,
+      "std": 2.613675355911255,
+      "min": 0.0,
+      "max": 17.903257369995117
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/245_qy1wc.wav",
+      "mean": 4.920047283172607,
+      "median": 4.8228535652160645,
+      "std": 2.2542366981506348,
+      "min": 0.0,
+      "max": 18.631439208984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/246_Hy1wc.wav",
+      "mean": 10.29020881652832,
+      "median": 10.554810523986816,
+      "std": 3.711923837661743,
+      "min": 0.0,
+      "max": 23.01992416381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/247_sy1wc.wav",
+      "mean": 9.86561393737793,
+      "median": 10.021122932434082,
+      "std": 3.8743767738342285,
+      "min": 0.0,
+      "max": 23.792634963989258
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/248_dy1wc.wav",
+      "mean": 7.086343288421631,
+      "median": 7.160897254943848,
+      "std": 4.6244916915893555,
+      "min": 0.0,
+      "max": 29.53057861328125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/249_Wy1wc.wav",
+      "mean": 12.338874816894531,
+      "median": 12.476154327392578,
+      "std": 4.273021697998047,
+      "min": 0.49748867750167847,
+      "max": 27.690155029296875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/250_Ly1wc.wav",
+      "mean": 7.145598888397217,
+      "median": 6.141615867614746,
+      "std": 5.439118385314941,
+      "min": 0.0,
+      "max": 24.765880584716797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/251_jy1wc.wav",
+      "mean": 5.983830451965332,
+      "median": 5.585921764373779,
+      "std": 3.8915092945098877,
+      "min": 0.0,
+      "max": 22.636005401611328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/252_Py1wc.wav",
+      "mean": 15.272049903869629,
+      "median": 16.271474838256836,
+      "std": 4.954347610473633,
+      "min": 0.0,
+      "max": 26.890331268310547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/253_Ky1wc.wav",
+      "mean": 6.858872890472412,
+      "median": 7.241828918457031,
+      "std": 4.7657623291015625,
+      "min": 0.0,
+      "max": 20.78851318359375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/254_Qy1wc.wav",
+      "mean": 6.47982120513916,
+      "median": 5.892871379852295,
+      "std": 5.378413677215576,
+      "min": 0.0,
+      "max": 28.821224212646484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/255_ny1wc.wav",
+      "mean": 11.833222389221191,
+      "median": 11.436762809753418,
+      "std": 6.50799560546875,
+      "min": 0.0,
+      "max": 34.255226135253906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/256_Fy1wc.wav",
+      "mean": 11.614938735961914,
+      "median": 11.080279350280762,
+      "std": 6.6666107177734375,
+      "min": 0.0,
+      "max": 34.73786163330078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/257_ty1wc.wav",
+      "mean": 7.0913519859313965,
+      "median": 6.699464321136475,
+      "std": 5.152122974395752,
+      "min": 0.0,
+      "max": 33.29566955566406
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/258_gy1wc.wav",
+      "mean": 5.525077819824219,
+      "median": 5.415190696716309,
+      "std": 2.5183088779449463,
+      "min": 0.3135611414909363,
+      "max": 18.849380493164062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/259_ry1wc.wav",
+      "mean": 7.566494941711426,
+      "median": 6.600880146026611,
+      "std": 5.404958724975586,
+      "min": 0.0,
+      "max": 32.711151123046875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/260_hy1wc.wav",
+      "mean": 6.718682765960693,
+      "median": 6.944615840911865,
+      "std": 3.778856039047241,
+      "min": 0.0,
+      "max": 23.9166316986084
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/261_py1wc.wav",
+      "mean": 5.715316295623779,
+      "median": 5.60555362701416,
+      "std": 3.366664409637451,
+      "min": 0.0,
+      "max": 31.12787437438965
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/262_Nw1wc.wav",
+      "mean": 9.149384498596191,
+      "median": 7.94268798828125,
+      "std": 6.216188430786133,
+      "min": 0.0,
+      "max": 37.505332946777344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/263_cw1wc.wav",
+      "mean": 10.100988388061523,
+      "median": 9.83467960357666,
+      "std": 5.4585442543029785,
+      "min": 0.0,
+      "max": 42.79307556152344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/264_fw1wc.wav",
+      "mean": 14.716160774230957,
+      "median": 14.853082656860352,
+      "std": 5.48337459564209,
+      "min": 0.0,
+      "max": 42.94126892089844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/265_yw1wc.wav",
+      "mean": 8.028406143188477,
+      "median": 7.949806213378906,
+      "std": 3.496478319168091,
+      "min": 0.0,
+      "max": 23.328689575195312
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/266_lw1wc.wav",
+      "mean": 8.721683502197266,
+      "median": 8.774157524108887,
+      "std": 5.0301032066345215,
+      "min": 0.0,
+      "max": 29.51214599609375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/267_Rw1wc.wav",
+      "mean": 5.5851850509643555,
+      "median": 5.552450656890869,
+      "std": 3.407104015350342,
+      "min": 0.0,
+      "max": 21.363582611083984
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/268_qw1wc.wav",
+      "mean": 8.010480880737305,
+      "median": 7.5016770362854,
+      "std": 3.8914928436279297,
+      "min": 0.0,
+      "max": 35.611751556396484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/269_Hw1wc.wav",
+      "mean": 5.6706085205078125,
+      "median": 5.085738182067871,
+      "std": 3.6240768432617188,
+      "min": 0.0,
+      "max": 23.826950073242188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/270_Jw1wc.wav",
+      "mean": 8.538649559020996,
+      "median": 8.185519218444824,
+      "std": 6.315661907196045,
+      "min": 0.0,
+      "max": 35.41847229003906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/271_bw1wc.wav",
+      "mean": 5.1595258712768555,
+      "median": 4.834311485290527,
+      "std": 3.327590227127075,
+      "min": 0.0,
+      "max": 21.821746826171875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/272_dw1wc.wav",
+      "mean": 10.95317268371582,
+      "median": 11.980175018310547,
+      "std": 5.220808506011963,
+      "min": 0.0,
+      "max": 29.272716522216797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/273_Ww1wc.wav",
+      "mean": 11.906771659851074,
+      "median": 12.031036376953125,
+      "std": 5.174522876739502,
+      "min": 0.0,
+      "max": 29.632457733154297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/274_Zw1wc.wav",
+      "mean": 12.83984661102295,
+      "median": 13.529666900634766,
+      "std": 4.5352559089660645,
+      "min": 0.0,
+      "max": 27.148635864257812
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/275_Lw1wc.wav",
+      "mean": 7.810967445373535,
+      "median": 6.545111656188965,
+      "std": 5.292408466339111,
+      "min": 0.0,
+      "max": 32.320430755615234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/276_jw1wc.wav",
+      "mean": 7.874607086181641,
+      "median": 7.857034683227539,
+      "std": 3.461622953414917,
+      "min": 0.03384861350059509,
+      "max": 20.44842529296875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/277_Pw1wc.wav",
+      "mean": 12.403557777404785,
+      "median": 12.377671241760254,
+      "std": 4.3625264167785645,
+      "min": 0.0,
+      "max": 28.812416076660156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/278_Kw1wc.wav",
+      "mean": 17.2749080657959,
+      "median": 18.200559616088867,
+      "std": 4.737182140350342,
+      "min": 0.0,
+      "max": 26.326250076293945
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/279_xw1wc.wav",
+      "mean": 7.584517955780029,
+      "median": 7.693254470825195,
+      "std": 5.331704616546631,
+      "min": 0.0,
+      "max": 31.723756790161133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/280_nw1wc.wav",
+      "mean": 16.28235626220703,
+      "median": 16.474285125732422,
+      "std": 5.172878265380859,
+      "min": 0.0,
+      "max": 33.58480453491211
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/281_tw1wc.wav",
+      "mean": 12.074726104736328,
+      "median": 12.273137092590332,
+      "std": 5.696331977844238,
+      "min": 0.0,
+      "max": 32.69729232788086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/282_Gw1wc.wav",
+      "mean": 12.016969680786133,
+      "median": 12.369949340820312,
+      "std": 3.8309850692749023,
+      "min": 0.0,
+      "max": 27.291757583618164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/283_rw1wc.wav",
+      "mean": 9.3951997756958,
+      "median": 8.982551574707031,
+      "std": 5.255373001098633,
+      "min": 0.0,
+      "max": 27.495845794677734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/284_hw1wc.wav",
+      "mean": 10.329879760742188,
+      "median": 10.6631498336792,
+      "std": 3.956824779510498,
+      "min": 0.0,
+      "max": 31.37596893310547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/285_mw1wc.wav",
+      "mean": 7.775282382965088,
+      "median": 7.936367034912109,
+      "std": 2.8901867866516113,
+      "min": 0.0,
+      "max": 16.83609390258789
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/286_pw1wc.wav",
+      "mean": 4.206327438354492,
+      "median": 3.740727424621582,
+      "std": 2.8084614276885986,
+      "min": 0.0,
+      "max": 18.047611236572266
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/287_NY1wc.wav",
+      "mean": 5.373857498168945,
+      "median": 5.588284492492676,
+      "std": 2.991716146469116,
+      "min": 0.0,
+      "max": 17.800792694091797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/288_cY1wc.wav",
+      "mean": 7.361379623413086,
+      "median": 7.574990749359131,
+      "std": 5.5554070472717285,
+      "min": 0.0,
+      "max": 29.912235260009766
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/289_fY1wc.wav",
+      "mean": 9.675614356994629,
+      "median": 10.108732223510742,
+      "std": 5.227275848388672,
+      "min": 0.0,
+      "max": 28.711997985839844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/290_MY1wc.wav",
+      "mean": 9.521045684814453,
+      "median": 9.661754608154297,
+      "std": 7.273007392883301,
+      "min": 0.0,
+      "max": 34.90625762939453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/291_3Sswc.wav",
+      "mean": 6.235759735107422,
+      "median": 6.698273658752441,
+      "std": 4.354171276092529,
+      "min": 0.0,
+      "max": 20.21373176574707
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/292_8Sswc.wav",
+      "mean": 12.54961109161377,
+      "median": 11.90188217163086,
+      "std": 5.021517753601074,
+      "min": 0.0,
+      "max": 35.870723724365234
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/293_7Sswc.wav",
+      "mean": 8.353693962097168,
+      "median": 9.246021270751953,
+      "std": 4.560593605041504,
+      "min": 0.0,
+      "max": 23.90549659729004
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/294_BSswc.wav",
+      "mean": 6.583591938018799,
+      "median": 6.475611686706543,
+      "std": 2.8547604084014893,
+      "min": 0.0,
+      "max": 19.624652862548828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/295_-Sswc.wav",
+      "mean": 5.495113849639893,
+      "median": 5.264644622802734,
+      "std": 2.8425257205963135,
+      "min": 0.0,
+      "max": 17.9544734954834
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/296_6Sswc.wav",
+      "mean": 10.323858261108398,
+      "median": 9.929309844970703,
+      "std": 6.375637054443359,
+      "min": 0.0,
+      "max": 29.18408203125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/297_2pswc.wav",
+      "mean": 7.1080241203308105,
+      "median": 7.2248735427856445,
+      "std": 3.388209104537964,
+      "min": 0.0,
+      "max": 20.96344757080078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/298_Cpswc.wav",
+      "mean": 10.018264770507812,
+      "median": 11.779594421386719,
+      "std": 6.341037273406982,
+      "min": 0.0,
+      "max": 26.491901397705078
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/299_3pswc.wav",
+      "mean": 6.925270080566406,
+      "median": 6.363373279571533,
+      "std": 5.765713214874268,
+      "min": 0.0,
+      "max": 30.794179916381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/300_3N1wc.wav",
+      "mean": 4.963213920593262,
+      "median": 4.779236793518066,
+      "std": 2.5800411701202393,
+      "min": 0.0,
+      "max": 16.32465362548828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/301_7N1wc.wav",
+      "mean": 7.339202880859375,
+      "median": 7.252925872802734,
+      "std": 2.763303279876709,
+      "min": 0.0,
+      "max": 21.167560577392578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/302_BN1wc.wav",
+      "mean": 4.118095397949219,
+      "median": 3.8644795417785645,
+      "std": 2.5576796531677246,
+      "min": 0.0,
+      "max": 20.736974716186523
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/303_5N1wc.wav",
+      "mean": 4.6305623054504395,
+      "median": 4.144343376159668,
+      "std": 3.010004758834839,
+      "min": 0.0,
+      "max": 26.27332878112793
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/304_Dc1wc.wav",
+      "mean": 8.508488655090332,
+      "median": 8.828104972839355,
+      "std": 4.245431423187256,
+      "min": 0.0,
+      "max": 26.032161712646484
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/305_Cc1wc.wav",
+      "mean": 8.157812118530273,
+      "median": 8.253473281860352,
+      "std": 4.0472636222839355,
+      "min": 0.0,
+      "max": 23.910003662109375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/306_7c1wc.wav",
+      "mean": 12.841693878173828,
+      "median": 13.407196044921875,
+      "std": 5.7446794509887695,
+      "min": 0.0,
+      "max": 28.11016273498535
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/307_5c1wc.wav",
+      "mean": 13.454582214355469,
+      "median": 13.65628433227539,
+      "std": 6.684084415435791,
+      "min": 0.0,
+      "max": 34.537452697753906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/308_6c1wc.wav",
+      "mean": 6.990723133087158,
+      "median": 7.024859428405762,
+      "std": 4.1872968673706055,
+      "min": 0.0,
+      "max": 21.61017417907715
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/309_DV1wc.wav",
+      "mean": 6.2389326095581055,
+      "median": 5.5792741775512695,
+      "std": 4.241657257080078,
+      "min": 0.0,
+      "max": 27.07346534729004
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/310_2V1wc.wav",
+      "mean": 8.182276725769043,
+      "median": 9.050827026367188,
+      "std": 5.372732162475586,
+      "min": 0.0,
+      "max": 27.169034957885742
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/311_CV1wc.wav",
+      "mean": 8.566271781921387,
+      "median": 8.286054611206055,
+      "std": 3.6393325328826904,
+      "min": 0.0,
+      "max": 21.267372131347656
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/312_1V1wc.wav",
+      "mean": 9.507368087768555,
+      "median": 9.402472496032715,
+      "std": 2.948671579360962,
+      "min": 0.0,
+      "max": 23.746828079223633
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/313_8V1wc.wav",
+      "mean": 15.047643661499023,
+      "median": 14.557385444641113,
+      "std": 9.000422477722168,
+      "min": 0.0,
+      "max": 41.276527404785156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/314_7V1wc.wav",
+      "mean": 8.656974792480469,
+      "median": 10.203086853027344,
+      "std": 4.890448093414307,
+      "min": 0.0,
+      "max": 18.319992065429688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/315_BV1wc.wav",
+      "mean": 8.326425552368164,
+      "median": 8.485033988952637,
+      "std": 4.696990489959717,
+      "min": 0.0,
+      "max": 25.326011657714844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/316_-V1wc.wav",
+      "mean": 6.107132911682129,
+      "median": 6.194385051727295,
+      "std": 3.831550359725952,
+      "min": 0.0,
+      "max": 21.349227905273438
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/317_5V1wc.wav",
+      "mean": 4.952653408050537,
+      "median": 4.937375545501709,
+      "std": 2.093648910522461,
+      "min": 0.0,
+      "max": 13.713144302368164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/318_5V1wc.wav",
+      "mean": 4.952653408050537,
+      "median": 4.937375545501709,
+      "std": 2.09364914894104,
+      "min": 0.0,
+      "max": 13.713144302368164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/319_6V1wc.wav",
+      "mean": 6.567802906036377,
+      "median": 6.575033187866211,
+      "std": 3.8992080688476562,
+      "min": 0.0,
+      "max": 19.141372680664062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/320_4f1wc.wav",
+      "mean": 7.417325019836426,
+      "median": 7.311708927154541,
+      "std": 4.6090240478515625,
+      "min": 0.0,
+      "max": 24.591522216796875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/321_2f1wc.wav",
+      "mean": 4.249618053436279,
+      "median": 4.179427623748779,
+      "std": 3.0168426036834717,
+      "min": 0.0,
+      "max": 30.08331298828125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/322_3f1wc.wav",
+      "mean": 10.010198593139648,
+      "median": 10.32166862487793,
+      "std": 5.729099750518799,
+      "min": 0.0,
+      "max": 33.493614196777344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/323_8f1wc.wav",
+      "mean": 7.950064182281494,
+      "median": 8.150394439697266,
+      "std": 4.838262557983398,
+      "min": 0.0,
+      "max": 27.15870475769043
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/324_7f1wc.wav",
+      "mean": 8.958596229553223,
+      "median": 9.16738510131836,
+      "std": 4.573319911956787,
+      "min": 0.0,
+      "max": 26.487524032592773
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/325_9f1wc.wav",
+      "mean": 8.364811897277832,
+      "median": 8.312910079956055,
+      "std": 3.7746448516845703,
+      "min": 0.0,
+      "max": 22.42141342163086
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/326_-f1wc.wav",
+      "mean": 8.134861946105957,
+      "median": 7.925983905792236,
+      "std": 3.1942765712738037,
+      "min": 0.0,
+      "max": 24.656341552734375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/327_6f1wc.wav",
+      "mean": 7.547943592071533,
+      "median": 7.4619293212890625,
+      "std": 3.2507641315460205,
+      "min": 0.0,
+      "max": 17.55087661743164
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/328_DD1wc.wav",
+      "mean": 6.8076629638671875,
+      "median": 6.523616313934326,
+      "std": 2.931525468826294,
+      "min": 0.0,
+      "max": 17.689857482910156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/329_4D1wc.wav",
+      "mean": 7.979516983032227,
+      "median": 8.310279846191406,
+      "std": 4.12905216217041,
+      "min": 0.0,
+      "max": 26.004304885864258
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/330_3D1wc.wav",
+      "mean": 8.582158088684082,
+      "median": 8.338703155517578,
+      "std": 3.374030828475952,
+      "min": 0.0,
+      "max": 27.48816680908203
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/331_1D1wc.wav",
+      "mean": 5.012730121612549,
+      "median": 4.629317283630371,
+      "std": 2.8595190048217773,
+      "min": 0.0,
+      "max": 21.451934814453125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/332_8D1wc.wav",
+      "mean": 4.353474140167236,
+      "median": 4.326543807983398,
+      "std": 1.4687681198120117,
+      "min": 0.0,
+      "max": 18.36799430847168
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/333_7D1wc.wav",
+      "mean": 6.012774467468262,
+      "median": 5.993220806121826,
+      "std": 4.240598678588867,
+      "min": 0.0,
+      "max": 20.7833194732666
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/334_BD1wc.wav",
+      "mean": 15.010905265808105,
+      "median": 14.904041290283203,
+      "std": 5.206561088562012,
+      "min": 0.0,
+      "max": 32.521095275878906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/335_9D1wc.wav",
+      "mean": 4.721434116363525,
+      "median": 4.785737991333008,
+      "std": 2.8250315189361572,
+      "min": 0.0,
+      "max": 13.308141708374023
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/336_-D1wc.wav",
+      "mean": 8.891497611999512,
+      "median": 8.793861389160156,
+      "std": 3.1849379539489746,
+      "min": 0.0,
+      "max": 28.538623809814453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/337_6D1wc.wav",
+      "mean": 4.299349784851074,
+      "median": 4.135097980499268,
+      "std": 2.1226871013641357,
+      "min": 0.0,
+      "max": 11.79832649230957
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/338_DM1wc.wav",
+      "mean": 8.540804862976074,
+      "median": 8.498697280883789,
+      "std": 3.9536631107330322,
+      "min": 0.0,
+      "max": 26.820192337036133
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/339_4M1wc.wav",
+      "mean": 7.041829586029053,
+      "median": 7.750842094421387,
+      "std": 5.006046295166016,
+      "min": 0.0,
+      "max": 22.983394622802734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/340_3M1wc.wav",
+      "mean": 5.498653888702393,
+      "median": 5.691013336181641,
+      "std": 3.2420878410339355,
+      "min": 0.0,
+      "max": 20.014251708984375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/341_1M1wc.wav",
+      "mean": 6.703402042388916,
+      "median": 7.9401469230651855,
+      "std": 4.5130767822265625,
+      "min": 0.0,
+      "max": 19.860698699951172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/342_8M1wc.wav",
+      "mean": 7.4829559326171875,
+      "median": 8.315014839172363,
+      "std": 4.678959846496582,
+      "min": 0.0,
+      "max": 26.556346893310547
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/343_9M1wc.wav",
+      "mean": 2.7360055446624756,
+      "median": 2.4674487113952637,
+      "std": 1.9462031126022339,
+      "min": 0.0,
+      "max": 12.321934700012207
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/344_-M1wc.wav",
+      "mean": 7.307772159576416,
+      "median": 6.756465435028076,
+      "std": 3.7904882431030273,
+      "min": 0.0013829634990543127,
+      "max": 20.593374252319336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/345_5M1wc.wav",
+      "mean": 5.627132892608643,
+      "median": 4.653943061828613,
+      "std": 4.662924289703369,
+      "min": 0.0,
+      "max": 26.40880584716797
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/346_Dk1wc.wav",
+      "mean": 5.276658535003662,
+      "median": 5.327380180358887,
+      "std": 1.9083232879638672,
+      "min": 0.0,
+      "max": 17.43349838256836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/347_4k1wc.wav",
+      "mean": 5.9516754150390625,
+      "median": 6.133525371551514,
+      "std": 2.8844969272613525,
+      "min": 0.0,
+      "max": 14.52359390258789
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/348_Ck1wc.wav",
+      "mean": 10.946747779846191,
+      "median": 10.875374794006348,
+      "std": 6.0751519203186035,
+      "min": 0.0,
+      "max": 35.33835220336914
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/349_3k1wc.wav",
+      "mean": 4.738391876220703,
+      "median": 4.81528377532959,
+      "std": 2.6807379722595215,
+      "min": 0.0,
+      "max": 16.261648178100586
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/350_1k1wc.wav",
+      "mean": 7.488537788391113,
+      "median": 7.292600631713867,
+      "std": 5.090339660644531,
+      "min": 0.0,
+      "max": 31.51636505126953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/351_8k1wc.wav",
+      "mean": 9.552326202392578,
+      "median": 9.508602142333984,
+      "std": 6.148763179779053,
+      "min": 0.0,
+      "max": 33.0850830078125
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/352_7k1wc.wav",
+      "mean": 12.795455932617188,
+      "median": 13.726598739624023,
+      "std": 3.659273386001587,
+      "min": 0.0,
+      "max": 21.325511932373047
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/353_9k1wc.wav",
+      "mean": 9.237236022949219,
+      "median": 9.294529914855957,
+      "std": 4.622692108154297,
+      "min": 0.0,
+      "max": 25.04315948486328
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/354_-k1wc.wav",
+      "mean": 7.509695053100586,
+      "median": 7.874886512756348,
+      "std": 3.765162706375122,
+      "min": 0.0,
+      "max": 20.576946258544922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/355_5k1wc.wav",
+      "mean": 5.080320358276367,
+      "median": 4.825991630554199,
+      "std": 2.1462130546569824,
+      "min": 0.0,
+      "max": 19.039722442626953
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/356_6k1wc.wav",
+      "mean": 9.37768840789795,
+      "median": 9.826102256774902,
+      "std": 4.602398872375488,
+      "min": 0.0,
+      "max": 24.288082122802734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/357_D41wc.wav",
+      "mean": 7.068430423736572,
+      "median": 6.629842758178711,
+      "std": 4.195107460021973,
+      "min": 0.0,
+      "max": 31.028404235839844
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/358_441wc.wav",
+      "mean": 4.096010684967041,
+      "median": 4.018983840942383,
+      "std": 2.4608867168426514,
+      "min": 0.0,
+      "max": 13.305448532104492
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/359_C41wc.wav",
+      "mean": 5.747433185577393,
+      "median": 5.427766799926758,
+      "std": 2.682962417602539,
+      "min": 0.024824369698762894,
+      "max": 22.481704711914062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/360_341wc.wav",
+      "mean": 12.606122970581055,
+      "median": 13.04184627532959,
+      "std": 4.30264949798584,
+      "min": 0.0,
+      "max": 24.80117416381836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/361_141wc.wav",
+      "mean": 8.66447925567627,
+      "median": 8.771363258361816,
+      "std": 3.2063944339752197,
+      "min": 0.0,
+      "max": 19.764385223388672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/362_741wc.wav",
+      "mean": 9.272724151611328,
+      "median": 10.63199234008789,
+      "std": 6.6926422119140625,
+      "min": 0.0,
+      "max": 38.466468811035156
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/363_F41wc.wav",
+      "mean": 4.98986291885376,
+      "median": 4.856754302978516,
+      "std": 2.844862461090088,
+      "min": 0.0,
+      "max": 18.47101593017578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/364_541wc.wav",
+      "mean": 8.970785140991211,
+      "median": 8.880647659301758,
+      "std": 4.399779319763184,
+      "min": 0.0,
+      "max": 28.02847671508789
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/365_4y1wc.wav",
+      "mean": 6.193796634674072,
+      "median": 6.073639392852783,
+      "std": 2.792057514190674,
+      "min": 0.0,
+      "max": 18.02130889892578
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/366_2y1wc.wav",
+      "mean": 7.564303874969482,
+      "median": 7.200691223144531,
+      "std": 6.112122058868408,
+      "min": 0.0,
+      "max": 26.21181869506836
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/367_3y1wc.wav",
+      "mean": 6.951452732086182,
+      "median": 6.431025505065918,
+      "std": 3.5007247924804688,
+      "min": 0.0,
+      "max": 26.040470123291016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/368_1y1wc.wav",
+      "mean": 12.785187721252441,
+      "median": 13.448695182800293,
+      "std": 7.399168968200684,
+      "min": 0.0,
+      "max": 36.15252685546875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/369_By1wc.wav",
+      "mean": 3.3083596229553223,
+      "median": 3.294588088989258,
+      "std": 1.9165797233581543,
+      "min": 0.0,
+      "max": 12.198101043701172
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/370_9y1wc.wav",
+      "mean": 5.915231704711914,
+      "median": 5.749608039855957,
+      "std": 3.0101265907287598,
+      "min": 0.0,
+      "max": 20.625186920166016
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/371_6y1wc.wav",
+      "mean": 10.426427841186523,
+      "median": 10.352851867675781,
+      "std": 5.108804225921631,
+      "min": 0.0,
+      "max": 37.18827438354492
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/372_Dw1wc.wav",
+      "mean": 8.54258918762207,
+      "median": 8.938755989074707,
+      "std": 3.6508126258850098,
+      "min": 0.0,
+      "max": 20.632610321044922
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/373_4w1wc.wav",
+      "mean": 6.525181293487549,
+      "median": 6.044558048248291,
+      "std": 3.532172679901123,
+      "min": 0.0,
+      "max": 21.663684844970703
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/374_3w1wc.wav",
+      "mean": 16.148479461669922,
+      "median": 15.880972862243652,
+      "std": 5.827088356018066,
+      "min": 0.0,
+      "max": 47.705535888671875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/375_1w1wc.wav",
+      "mean": 7.943393230438232,
+      "median": 7.855649471282959,
+      "std": 3.761530637741089,
+      "min": 0.0,
+      "max": 24.24550437927246
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/376_8w1wc.wav",
+      "mean": 4.928599834442139,
+      "median": 4.642477035522461,
+      "std": 2.6550090312957764,
+      "min": 0.0,
+      "max": 21.50433349609375
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/377_7w1wc.wav",
+      "mean": 7.022408962249756,
+      "median": 7.503759384155273,
+      "std": 4.915017604827881,
+      "min": 0.0,
+      "max": 30.215961456298828
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/378_9w1wc.wav",
+      "mean": 7.12937068939209,
+      "median": 7.0817461013793945,
+      "std": 4.030343055725098,
+      "min": 0.0,
+      "max": 22.090232849121094
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/379_5w1wc.wav",
+      "mean": 5.525077819824219,
+      "median": 5.415190696716309,
+      "std": 2.5183088779449463,
+      "min": 0.3135611414909363,
+      "max": 18.849380493164062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/380_1c1wc.wav",
+      "mean": 8.07910442352295,
+      "median": 6.876338958740234,
+      "std": 7.190134048461914,
+      "min": 0.0,
+      "max": 42.43388366699219
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/381_9V1wc.wav",
+      "mean": 9.610074043273926,
+      "median": 9.62388801574707,
+      "std": 4.379007339477539,
+      "min": 0.0,
+      "max": 31.158058166503906
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/382_Jf1wc.wav",
+      "mean": 4.813518524169922,
+      "median": 4.2698774337768555,
+      "std": 3.4587910175323486,
+      "min": 0.0,
+      "max": 27.844451904296875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/383_5f1wc.wav",
+      "mean": 8.403377532958984,
+      "median": 8.559075355529785,
+      "std": 1.9433538913726807,
+      "min": 0.0,
+      "max": 15.336960792541504
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/384_2D1wc.wav",
+      "mean": 9.428243637084961,
+      "median": 10.851823806762695,
+      "std": 5.777658939361572,
+      "min": 0.0,
+      "max": 23.868139266967773
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/385_mD1wc.wav",
+      "mean": 11.41789436340332,
+      "median": 11.31530475616455,
+      "std": 4.043170928955078,
+      "min": 0.0,
+      "max": 25.194292068481445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/386_HM1wc.wav",
+      "mean": 7.2748517990112305,
+      "median": 7.378817558288574,
+      "std": 3.7398624420166016,
+      "min": 0.0,
+      "max": 19.719234466552734
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/387_BM1wc.wav",
+      "mean": 8.511974334716797,
+      "median": 8.56462287902832,
+      "std": 1.5698295831680298,
+      "min": 0.0,
+      "max": 14.891162872314453
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/388_Yk1wc.wav",
+      "mean": 5.28904914855957,
+      "median": 5.900932312011719,
+      "std": 3.6491434574127197,
+      "min": 0.0,
+      "max": 14.947969436645508
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/389_2k1wc.wav",
+      "mean": 8.913805961608887,
+      "median": 8.713438034057617,
+      "std": 3.4341835975646973,
+      "min": 0.0,
+      "max": 28.06676483154297
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/390_Tk1wc.wav",
+      "mean": 7.230834007263184,
+      "median": 7.667265892028809,
+      "std": 3.058962345123291,
+      "min": 0.0,
+      "max": 16.237998962402344
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/391_Bk1wc.wav",
+      "mean": 8.119659423828125,
+      "median": 7.916543006896973,
+      "std": 4.346006393432617,
+      "min": 0.0,
+      "max": 25.60297966003418
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/392_Pk1wc.wav",
+      "mean": 3.7999207973480225,
+      "median": 3.458092212677002,
+      "std": 2.4217731952667236,
+      "min": 0.0,
+      "max": 18.6492919921875
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/393_xk1wc.wav",
+      "mean": 14.180609703063965,
+      "median": 14.537416458129883,
+      "std": 4.968442916870117,
+      "min": 0.0,
+      "max": 30.04451560974121
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/394_tk1wc.wav",
+      "mean": 7.746572971343994,
+      "median": 7.3940324783325195,
+      "std": 4.670570373535156,
+      "min": 0.0,
+      "max": 27.885610580444336
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/395_w41wc.wav",
+      "mean": 5.856505870819092,
+      "median": 5.647525787353516,
+      "std": 4.123924732208252,
+      "min": 0.0,
+      "max": 21.957002639770508
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/396_241wc.wav",
+      "mean": 7.092471122741699,
+      "median": 6.6134033203125,
+      "std": 4.3834967613220215,
+      "min": 0.0,
+      "max": 31.449722290039062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/397_841wc.wav",
+      "mean": 4.862729549407959,
+      "median": 4.8946051597595215,
+      "std": 3.6931521892547607,
+      "min": 0.0,
+      "max": 22.770919799804688
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/398_B41wc.wav",
+      "mean": 9.612800598144531,
+      "median": 9.813620567321777,
+      "std": 5.401873588562012,
+      "min": 0.0,
+      "max": 28.52547264099121
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/399_g41wc.wav",
+      "mean": 5.869832992553711,
+      "median": 6.034749507904053,
+      "std": 3.443068265914917,
+      "min": 0.0,
+      "max": 19.215007781982422
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/400_by1wc.wav",
+      "mean": 14.034826278686523,
+      "median": 14.984067916870117,
+      "std": 4.7639312744140625,
+      "min": 0.0,
+      "max": 29.237838745117188
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/401_Sy1wc.wav",
+      "mean": 8.510233879089355,
+      "median": 8.611360549926758,
+      "std": 2.8998007774353027,
+      "min": 0.0,
+      "max": 19.799819946289062
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/Bc1wc.wav",
+      "mean": 9.730056762695312,
+      "median": 9.131828308105469,
+      "std": 6.328075885772705,
+      "min": 0.0,
+      "max": 38.06719207763672
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/CM1wc.wav",
+      "mean": 10.542871475219727,
+      "median": 10.400209426879883,
+      "std": 4.248573303222656,
+      "min": 0.0,
+      "max": 26.813432693481445
+    },
+    {
+      "path": "/media/mengh/SharedData/zhanh/Dataset/GAPS/audio/mN1wc.wav",
+      "mean": 7.305278778076172,
+      "median": 7.222075462341309,
+      "std": 3.8709189891815186,
+      "min": 0.0,
+      "max": 20.6148681640625
+    }
+  ],
+  "errors": [],
+  "config": {
+    "target_sample_rate": 22050,
+    "frames_per_second": 50.0,
+    "fft_size": 1024,
+    "hist_range": [
+      0.0,
+      80.0
+    ],
+    "hist_bin_size": 0.5,
+    "device": "cpu"
+  }
+}

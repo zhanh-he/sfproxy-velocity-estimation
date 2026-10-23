@@ -1,0 +1,30 @@
+Metadata
+CHECKPOINT_PATH = /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/checkpoints/route3_gaps_6k/5s+auto+hpt+onset+score_note_editor+backend_diffsynth_guitar+piano_ssm_spectral+sup0+backend1+prior0p2+sat0p4/60000_iterations.pth
+DATASET_TYPE = francoisleduc
+EVAL_SCOPE = full
+EFFECTIVE_SPLIT = full
+RESOLVED_SPLIT = all
+COMPUTE_VELOCITY_MAE = False
+INSTRUMENT_KEY = guitar
+
+Summary
+  dataset: francoisleduc
+  label: route3_francoisleduc_full_guitar_5s_auto_hpt_onset_score_note_editor_backend_diffsynth_guitar_piano_ssm_spectral_sup0_ba
+  num_items/ok/fail: 79/79/0
+  instrument: /media/mengh/SharedData/zhanh/202604_midiproxy_data/soundfont/SpanishClassicalGuitar/SpanishClassicalGuitar-20190618.sfz
+  prediction_dir: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route3/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffsynth_guitar_piano_ssm_spectral_sup0_backend1_prior0p2_sat0p4_60000_iter/pred_midis
+  manifest: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route3_eval/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffsynth_guitar_piano_ssm_spectral_sup0_backend1_prior0p2_sat0p4_60000_iter/route3_francoisleduc_full_guitar_5s_auto_hpt_onset_score_note_editor_backend_diffsynth_guitar_piano_ssm_spectral_sup0_ba_manifest.json
+  out_dir: /media/mengh/SharedData/zhanh/202604_midiproxy_data/score_hpt/workspaces/route3_eval/francoisleduc_full_guitar/5s_auto_hpt_onset_score_note_editor_backend_diffsynth_guitar_piano_ssm_spectral_sup0_backend1_prior0p2_sat0p4_60000_iter
+  requested_split: full
+  effective_split: full
+  resolved_split: all
+  compute_velocity_mae: False
+  bstl_source: raw ntot metrics from data_analysis.evaluation.bssl_eval
+velocity_mae (0-127): disabled
+
+real_vs_synth_pred_bssl
+  pearson     cosine      mae         spearman
+  0.645489    0.802022    0.859339    0.691382
+real_vs_synth_pred_bstl
+  pearson     cosine      mae         spearman
+  0.546537    0.867557    4.420011    0.550588
