@@ -104,4 +104,4 @@ We release this work under CC BY 4.0 license. If you find our work or this repos
 }
 ```
 
-VeloEst builds on our earlier work - [Score-Informed AMT](https://github.com/zhanh-he/score-informed-amt). For DDSP, see the [frontend acknowledgements](score_hpt/README.md#acknowledgement), [DDSP attribution](diff-synth/README.md).
+VeloEst builds on our earlier work - [Score-Informed AMT](https://github.com/zhanh-he/score-informed-amt). For DDSP, see [DDSP attribution](diff-synth/README.md).
